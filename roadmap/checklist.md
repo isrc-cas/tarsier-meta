@@ -14,7 +14,7 @@
 
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| QEMU                     | √         | √          | √      | √      | √        | √      |        |         |        |        | √          |
+| QEMU                     | √         | √          | √      | √      | √        | √      |        |         |        |        |           |
 | 全志哪吒D1               | √         |            | √      | √      | √        | √      |        |         |        |        |           |
 | 赛昉VisionFive           | √         |            | √      | √      | √        | √      |        |         |        |        | √          |
 | HiFive Unleashed         |           | √          | √      |        | √        |        |        |         |        |        |           |
