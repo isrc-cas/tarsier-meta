@@ -6,7 +6,7 @@
 
 | openEuler                                                    | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------------------------------------------ | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| [iscas仓库](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/) |            |        |        |          |        |        |         |        |        |           |
+| [iscas仓库](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/) |            |        |        |          |        |        |         |        |        |   [官方仓库](http://archive.build.openkylin.top/openkylin)        |
 
 
 
@@ -14,11 +14,11 @@
 
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| QEMU                     | √         | √          | √      | √      | √        | √      |        |         |        |        |           |
+| QEMU                     | √         | √          | √      | √      | √        | √      |        |         |        |        | √          |
 | 全志哪吒D1               | √         |            | √      | √      | √        | √      |        |         |        |        |           |
-| 赛昉VisionFive           | √         |            | √      | √      | √        | √      |        |         |        |        |           |
+| 赛昉VisionFive           | √         |            | √      | √      | √        | √      |        |         |        |        | √          |
 | HiFive Unleashed         |           | √          | √      |        | √        |        |        |         |        |        |           |
-| HiFive Unmatched         | √         | √          | √      | √      | √        | √      |        |         |        |        |           |
+| HiFive Unmatched         | √         | √          | √      | √      | √        | √      |        |         |        |        | √          |
 | PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |
 |                          |           |            |        |        |          |        |        |         |        |        |           |
 |                          |           |            |        |        |          |        |        |         |        |        |           |
