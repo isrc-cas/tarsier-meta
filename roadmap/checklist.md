@@ -6,7 +6,7 @@
 
 | openEuler                                                    | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------------------------------------------ | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| [iscas仓库](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/) |            |        |        |          | [官方仓库](https://fedorapeople.org/groups/risc-v/disk-images/)       |        |         |        |        |   [官方仓库](http://archive.build.openkylin.top/openkylin)        |
+| [iscas仓库](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/) |            |        |        |          | [官方仓库](https://fedorapeople.org/groups/risc-v/disk-images/) |        | [官方仓库](http://pkgmir.geo.freebsd.org/FreeBSD:14:riscv64/) |        |        | [官方仓库](http://archive.build.openkylin.top/openkylin) |
 
 
 
@@ -14,7 +14,7 @@
 
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| QEMU                     | √         | √          | √      | √      | √        | √      |        |         |        |        |           |
+| QEMU                     | √         | √          | √      | √      | √        | √      |        | √ |        |        |           |
 | 全志哪吒D1               | √         |            | √      | √      | √        | √      |        |         |        |        |           |
 | 赛昉VisionFive           | √         |            | √      | √      | √        | √      |        |         |        |        | √          |
 | HiFive Unleashed         |           | √          | √      |        | √        |        |        |         |        |        |           |
