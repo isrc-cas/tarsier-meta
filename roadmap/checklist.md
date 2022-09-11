@@ -16,11 +16,11 @@
 
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
-| QEMU                     | √         | √          | √      | √      | √        | √      |        | √       |        |        |           |
-| 全志哪吒 D1              | √         | √          | √      | √      | √        | √      |        |         |        |        |           |
-| 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      |        |         |        |        | √         |
+| QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |
+| 全志哪吒 D1              | √         | √          | √      | √      | √        | √      |        |         |        | √      |           |
+| 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |
 | HiFive Unleashed         |           | √          | √      |        | √        |        |        |         |        |        |           |
-| HiFive Unmatched         | √         | √          | √      | √      | √        | √      |        |         |        |        | √         |
+| HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |
 | PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
