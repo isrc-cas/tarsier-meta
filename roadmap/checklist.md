@@ -2,11 +2,11 @@
 
 ## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
 
-| openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   |
-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- |
-| [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsd] |        |        | [官方仓库][openkylin] |
-| [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  |
-| [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] |  |  |  | |
+| 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   |
+|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- |
+| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [官方仓库][openkylin] |
+| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  |||||
+| Wiki 支持页 | [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  |  | |
 
 [oeRepo]: https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/
 [archrv]: https://archriscv.felixc.at/
@@ -14,7 +14,10 @@
 [fedora]: https://fedorapeople.org/groups/risc-v/disk-images/
 [ubuntuImage]: https://cdimage.ubuntu.com/releases/22.04.1/release/
 [debImage]: https://gitlab.com/api/v4/projects/giomasce%2Fdqib/jobs/artifacts/master/download?job=convert_riscv64-virt
-[freebsd]: http://pkgmir.geo.freebsd.org/FreeBSD:14:riscv64/
+
+[freebsdImage]: https://download.freebsd.org/ftp/snapshots/VM-IMAGES/14.0-CURRENT/riscv64/Latest/
+[freebsdwiki]: https://wiki.freebsd.org/riscv
+
 [openkylin]: http://archive.build.openkylin.top/openkylin
 
 [oeOBS]: https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V
@@ -32,10 +35,10 @@
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin |
 | ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- |
 | QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |
-| 全志哪吒 D1              | √         | √          | √      | √      | √        | √      |  √     |         |        | √      |           |
+| 全志哪吒 D1              | √         | √          | √      | √      | √        | √      | √      |         |        | √      |           |
 | 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |
-| HiFive Unleashed         |           | √          | √      |        | √        |        |        |         |        |        |           |
-| HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |
+| HiFive Unleashed         |           | √          | √      |        | √        |        |        | √       |        |        |           |
+| HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      | √       |        |        | √         |
 | PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |
 
 
