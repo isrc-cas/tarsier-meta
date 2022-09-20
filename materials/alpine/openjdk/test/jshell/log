@@ -1,0 +1,32 @@
+Aug 20, 2022 12:31:02 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+This command is not for general use and should only be run as the result of a call to
+ProcessBuilder.start() or Runtime.exec() in a java application
+This command is not for general use and should only be run as the result of a call to
+ProcessBuilder.start() or Runtime.exec() in a java application
+This command is not for general use and should only be run as the result of a call to
+ProcessBuilder.start() or Runtime.exec() in a java application
+Launching JShell execution engine threw: FailOverExecutionControlProvider: FAILED: 0:jdi:hostname(127.0.0.1) --
+  Exception: java.lang.InternalError: Failed remote listen: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 990, exit value: 1 @ com.sun.jdi.SocketListen (defaults: timeout=, port=, localAddress=) -- {timeout=timeout=5000, port=port=55907, localAddress=localAddress=127.0.0.1}
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.reportLaunchFail(JdiInitiator.java:300)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.listenTarget(JdiInitiator.java:199)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.<init>(JdiInitiator.java:111)
+                  jdk.jshell/jdk.jshell.execution.JdiDefaultExecutionControl.create(JdiDefaultExecutionControl.java:103)
+                  jdk.jshell/jdk.jshell.execution.JdiExecutionControlProvider.generate(JdiExecutionControlProvider.java:152)
+      cause: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 990, exit value: 1
+FailOverExecutionControlProvider: FAILED: 1:jdi:launch(true) --
+  Exception: java.lang.InternalError: Failed remote launch: java.util.concurrent.ExecutionException: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 994, exit value: 1 @ com.sun.jdi.CommandLineLaunch (defaults: home=/opt/jdk, options=, main=, suspend=true, quote=", vmexec=java) -- {home=home=/opt/jdk, options=options=, main=main=jdk.jshell.execution.RemoteExecutionControl 44437, suspend=suspend=true, quote=quote=", vmexec=vmexec=java}
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.reportLaunchFail(JdiInitiator.java:300)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.launchTarget(JdiInitiator.java:141)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.<init>(JdiInitiator.java:110)
+                  jdk.jshell/jdk.jshell.execution.JdiDefaultExecutionControl.create(JdiDefaultExecutionControl.java:103)
+                  jdk.jshell/jdk.jshell.execution.JdiExecutionControlProvider.generate(JdiExecutionControlProvider.java:152)
+      cause: java.util.concurrent.ExecutionException: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 994, exit value: 1
+FailOverExecutionControlProvider: FAILED: 2:jdi --
+  Exception: java.lang.InternalError: Failed remote listen: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 997, exit value: 1 @ com.sun.jdi.SocketListen (defaults: timeout=, port=, localAddress=) -- {timeout=timeout=5000, port=port=41169, localAddress=localAddress=}
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.reportLaunchFail(JdiInitiator.java:300)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.listenTarget(JdiInitiator.java:199)
+                  jdk.jshell/jdk.jshell.execution.JdiInitiator.<init>(JdiInitiator.java:111)
+                  jdk.jshell/jdk.jshell.execution.JdiDefaultExecutionControl.create(JdiDefaultExecutionControl.java:103)
+                  jdk.jshell/jdk.jshell.execution.JdiExecutionControlProvider.generate(JdiExecutionControlProvider.java:152)
+      cause: java.io.IOException: Cannot run program "/opt/jdk/bin/java": error=0, Failed to exec spawn helper: pid: 997, exit value: 1

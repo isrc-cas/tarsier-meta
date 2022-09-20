@@ -1,0 +1,2010 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000000000000, pid=146, tid=150
+#
+# JRE version: OpenJDK Runtime Environment (19.0) (build 19-internal+0-adhoc.xnn.portola)
+# Java VM: OpenJDK 64-Bit Zero VM (19-internal+0-adhoc.xnn.portola, interpreted mode, compressed oops, compressed class ptrs, serial gc, linux-riscv64)
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" (or dumping to /root/core.146)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xmx256M -Xms32M -Xverify:none org.jetbrains.kotlin.preloading.Preloader -cp /opt/kotlinc/lib/kotlin-compiler.jar org.jetbrains.kotlin.cli.jvm.K2JVMCompiler --version
+
+Host: riscv64, 16 cores, 31G, Alpine Linux edge
+Time: Mon Aug 22 01:40:11 2022 CST elapsed time: 20.683598 seconds (0d 0h 0m 20s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000004002fda050):  JavaThread "main" [_thread_in_native, id=150, stack(0x0000004002df3000,0x0000004002f73af0)]
+
+Stack: [0x0000004002df3000,0x0000004002f73af0],  sp=0x0000004002eb28b0,  free space=766k
+Java frames:
+ 0x0000004002f72150: unboxed parameter[3]  = 0x0000004002f72248
+ 0x0000004002f72158: unboxed parameter[2]  = 0x0000004002f72250
+ 0x0000004002f72160: parameter[0] (JNIEnv) = 0x0000004002eb42e8
+ 0x0000004002f72168: parameter[1] (mirror) = 0x0000004002eb42c0
+ 0x0000004002f72170: parameter[2]          = 0x0000004002f72158
+ 0x0000004002f72178: parameter[3]          = 0x0000004002f72150
+ 0x0000004002f72180: parameter[4]          = 0x0000004002f72240
+ 0x0000004002f72188: parameter[5]          = 0x0000004002f72238
+ 0x0000004002f72190: parameter[6]          = 0x0000004002f72230
+ 0x0000004002f72198: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f721a0: istate->_bcp          = 0x0000000000000000
+ 0x0000004002f721a8: istate->_locals       = 0x0000004002f72250
+ 0x0000004002f721b0: istate->_constants    = 0x00000040096a6af8
+ 0x0000004002f721b8: istate->_method       = jdk.internal.loader.NativeLibraries.load(Ljdk/internal/loader/NativeLibraries$NativeLibraryImpl;Ljava/lang/String;ZZZ)Z
+ 0x0000004002f721c0: istate->_mirror       = 0x00000000f57f2c80
+ 0x0000004002f721c8: istate->_stack        = 0x0000004002f72190
+ 0x0000004002f721d0: istate->_msg          = 0x0000004000000002
+ 0x0000004002f721d8: istate->_result       = 0x0000000000000000
+ 0x0000004002f721e0: (istate->_result)     = 0x0000004002f721a8
+ 0x0000004002f721e8: (istate->_result)     = 0x0000000000000009
+ 0x0000004002f721f0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f721f8: istate->_oop_temp     = 0x00000000f57f2c80
+ 0x0000004002f72200: istate->_stack_base   = 0x0000004002f72198
+ 0x0000004002f72208: istate->_stack_limit  = 0x0000004002f72190
+ 0x0000004002f72210: istate->_monitor_base = 0x0000004002f72198
+ 0x0000004002f72218: istate->_self_link    = 0x0000004002f72198
+ 0x0000004002f72220: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72228: next_frame            = 0x0000004002f722e8
+
+ 0x0000004002f72230: local[4]              = 0x0000004000000001
+ 0x0000004002f72238: local[3]              = 0x0000000000000001
+ 0x0000004002f72240: local[2]              = 0x0000000000000000
+ 0x0000004002f72248: local[1]              = 0x00000000f1776ee0
+ 0x0000004002f72250: local[0]              = 0x00000000f1777078
+ 0x0000004002f72258: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72260: istate->_bcp          = 0x00000040096be3fc (bci 60)
+ 0x0000004002f72268: istate->_locals       = 0x0000004002f722f0
+ 0x0000004002f72270: istate->_constants    = 0x00000040096be640
+ 0x0000004002f72278: istate->_method       = jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open()Z
+ 0x0000004002f72280: istate->_mirror       = 0x00000000f57f20a0
+ 0x0000004002f72288: istate->_stack        = 0x0000004002f72228
+ 0x0000004002f72290: istate->_msg          = 0x0000000000000008
+ 0x0000004002f72298: istate->_result       = 0x00000040096a6788
+ 0x0000004002f722a0: (istate->_result)     = 0x0000004003013198
+ 0x0000004002f722a8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f722b0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f722b8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f722c0: istate->_stack_base   = 0x0000004002f72258
+ 0x0000004002f722c8: istate->_stack_limit  = 0x0000004002f72220
+ 0x0000004002f722d0: istate->_monitor_base = 0x0000004002f72258
+ 0x0000004002f722d8: istate->_self_link    = 0x0000004002f72258
+ 0x0000004002f722e0: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f722e8: next_frame            = 0x0000004002f72388
+
+ 0x0000004002f722f0: local[0]              = 0x00000000f1777078
+ 0x0000004002f722f8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72300: istate->_bcp          = 0x00000040096a5eda (bci 258)
+ 0x0000004002f72308: istate->_locals       = 0x0000004002f723e0
+ 0x0000004002f72310: istate->_constants    = 0x00000040096a6af8
+ 0x0000004002f72318: istate->_method       = jdk.internal.loader.NativeLibraries.loadLibrary(Ljava/lang/Class;Ljava/lang/String;Z)Ljdk/internal/loader/NativeLibrary;
+ 0x0000004002f72320: istate->_mirror       = 0x00000000f57f2c80
+ 0x0000004002f72328: istate->_stack        = 0x0000004002f722e8
+ 0x0000004002f72330: istate->_msg          = 0x0000000000000008
+ 0x0000004002f72338: istate->_result       = 0x00000040096be418
+ 0x0000004002f72340: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72348: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72350: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72358: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72360: istate->_stack_base   = 0x0000004002f722f8
+ 0x0000004002f72368: istate->_stack_limit  = 0x0000004002f722b8
+ 0x0000004002f72370: istate->_monitor_base = 0x0000004002f722f8
+ 0x0000004002f72378: istate->_self_link    = 0x0000004002f722f8
+ 0x0000004002f72380: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72388: next_frame            = 0x0000004002f72478
+
+ 0x0000004002f72390: local[10]             = 0x0000000000000000
+ 0x0000004002f72398: local[9]              = 0x0000000000000000
+ 0x0000004002f723a0: local[8]              = 0x0000000000000000
+ 0x0000004002f723a8: local[7]              = 0x0000000000000000
+ 0x0000004002f723b0: local[6]              = 0x00000000f1777078
+ 0x0000004002f723b8: local[5]              = 0x0000000000000000
+ 0x0000004002f723c0: local[4]              = 0x00000000f12a2988
+ 0x0000004002f723c8: local[3]              = 0x0000000000000000
+ 0x0000004002f723d0: local[2]              = 0x00000000f1776ee0
+ 0x0000004002f723d8: local[1]              = 0x00000000f1336d38
+ 0x0000004002f723e0: local[0]              = 0x00000000f12a3300
+ 0x0000004002f723e8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f723f0: istate->_bcp          = 0x00000040096a5cfb (bci 51)
+ 0x0000004002f723f8: istate->_locals       = 0x0000004002f724a0
+ 0x0000004002f72400: istate->_constants    = 0x00000040096a6af8
+ 0x0000004002f72408: istate->_method       = jdk.internal.loader.NativeLibraries.loadLibrary(Ljava/lang/Class;Ljava/io/File;)Ljdk/internal/loader/NativeLibrary;
+ 0x0000004002f72410: istate->_mirror       = 0x00000000f57f2c80
+ 0x0000004002f72418: istate->_stack        = 0x0000004002f723c0
+ 0x0000004002f72420: istate->_msg          = 0x0000000000000008
+ 0x0000004002f72428: istate->_result       = 0x00000040096a6050
+ 0x0000004002f72430: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72438: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72440: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72448: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72450: istate->_stack_base   = 0x0000004002f723e8
+ 0x0000004002f72458: istate->_stack_limit  = 0x0000004002f723b8
+ 0x0000004002f72460: istate->_monitor_base = 0x0000004002f723e8
+ 0x0000004002f72468: istate->_self_link    = 0x0000004002f723e8
+ 0x0000004002f72470: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72478: next_frame            = 0x0000004002f72538
+
+ 0x0000004002f72480: local[4]              = 0x0000000000000000
+ 0x0000004002f72488: local[3]              = 0x00000000f1776ee0
+ 0x0000004002f72490: local[2]              = 0x00000000f1776e68
+ 0x0000004002f72498: local[1]              = 0x00000000f1336d38
+ 0x0000004002f724a0: local[0]              = 0x00000000f12a3300
+ 0x0000004002f724a8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f724b0: istate->_bcp          = 0x0000004009425fdf (bci 31)
+ 0x0000004002f724b8: istate->_locals       = 0x0000004002f72560
+ 0x0000004002f724c0: istate->_constants    = 0x0000004009538318
+ 0x0000004002f724c8: istate->_method       = java.lang.ClassLoader.loadLibrary(Ljava/lang/Class;Ljava/io/File;)Ljdk/internal/loader/NativeLibrary;
+ 0x0000004002f724d0: istate->_mirror       = 0x00000000f5800248
+ 0x0000004002f724d8: istate->_stack        = 0x0000004002f72488
+ 0x0000004002f724e0: istate->_msg          = 0x0000004000000008
+ 0x0000004002f724e8: istate->_result       = 0x00000040096a5d50
+ 0x0000004002f724f0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f724f8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72500: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72508: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72510: istate->_stack_base   = 0x0000004002f724a8
+ 0x0000004002f72518: istate->_stack_limit  = 0x0000004002f72478
+ 0x0000004002f72520: istate->_monitor_base = 0x0000004002f724a8
+ 0x0000004002f72528: istate->_self_link    = 0x0000004002f724a8
+ 0x0000004002f72530: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72538: next_frame            = 0x0000004002f725f8
+
+ 0x0000004002f72540: local[4]              = 0x0000000000000000
+ 0x0000004002f72548: local[3]              = 0x00000000f12a3300
+ 0x0000004002f72550: local[2]              = 0x00000000f12a2988
+ 0x0000004002f72558: local[1]              = 0x00000000f1776e68
+ 0x0000004002f72560: local[0]              = 0x00000000f1336d38
+ 0x0000004002f72568: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72570: istate->_bcp          = 0x0000004009599e8d (bci 61)
+ 0x0000004002f72578: istate->_locals       = 0x0000004002f72620
+ 0x0000004002f72580: istate->_constants    = 0x000000400959a2a0
+ 0x0000004002f72588: istate->_method       = java.lang.Runtime.load0(Ljava/lang/Class;Ljava/lang/String;)V
+ 0x0000004002f72590: istate->_mirror       = 0x00000000f57f8fe8
+ 0x0000004002f72598: istate->_stack        = 0x0000004002f72550
+ 0x0000004002f725a0: istate->_msg          = 0x0000004000000008
+ 0x0000004002f725a8: istate->_result       = 0x0000004009426058
+ 0x0000004002f725b0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f725b8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f725c0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f725c8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f725d0: istate->_stack_base   = 0x0000004002f72568
+ 0x0000004002f725d8: istate->_stack_limit  = 0x0000004002f72538
+ 0x0000004002f725e0: istate->_monitor_base = 0x0000004002f72568
+ 0x0000004002f725e8: istate->_self_link    = 0x0000004002f72568
+ 0x0000004002f725f0: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f725f8: next_frame            = 0x0000004002f726b8
+
+ 0x0000004002f72600: local[4]              = 0x00000000f1776e68
+ 0x0000004002f72608: local[3]              = 0x0000000000000000
+ 0x0000004002f72610: local[2]              = 0x00000000f1735d28
+ 0x0000004002f72618: local[1]              = 0x00000000f1336d38
+ 0x0000004002f72620: local[0]              = 0x00000000f58155f0
+ 0x0000004002f72628: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72630: istate->_bcp          = 0x000000400942b06f (bci 7)
+ 0x0000004002f72638: istate->_locals       = 0x0000004002f726c0
+ 0x0000004002f72640: istate->_constants    = 0x0000004009541ab8
+ 0x0000004002f72648: istate->_method       = java.lang.System.load(Ljava/lang/String;)V
+ 0x0000004002f72650: istate->_mirror       = 0x00000000f58002c8
+ 0x0000004002f72658: istate->_stack        = 0x0000004002f72608
+ 0x0000004002f72660: istate->_msg          = 0x0000004000000008
+ 0x0000004002f72668: istate->_result       = 0x0000004009599ee0
+ 0x0000004002f72670: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72678: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72680: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72688: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72690: istate->_stack_base   = 0x0000004002f72628
+ 0x0000004002f72698: istate->_stack_limit  = 0x0000004002f72600
+ 0x0000004002f726a0: istate->_monitor_base = 0x0000004002f72628
+ 0x0000004002f726a8: istate->_self_link    = 0x0000004002f72628
+ 0x0000004002f726b0: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f726b8: next_frame            = 0x0000004002f72758
+
+ 0x0000004002f726c0: local[0]              = 0x00000000f1735d28
+ 0x0000004002f726c8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f726d0: istate->_bcp          = 0x0000004009b068ac (bci 4)
+ 0x0000004002f726d8: istate->_locals       = 0x0000004002f72780
+ 0x0000004002f726e0: istate->_constants    = 0x0000004009b06b38
+ 0x0000004002f726e8: istate->_method       = org.fusesource.hawtjni.runtime.Library.load(Ljava/util/ArrayList;Ljava/io/File;)Z
+ 0x0000004002f726f0: istate->_mirror       = 0x00000000f1336d38
+ 0x0000004002f726f8: istate->_stack        = 0x0000004002f726b8
+ 0x0000004002f72700: istate->_msg          = 0x0000004000000008
+ 0x0000004002f72708: istate->_result       = 0x000000400942b090
+ 0x0000004002f72710: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72718: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f72720: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72728: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72730: istate->_stack_base   = 0x0000004002f726c8
+ 0x0000004002f72738: istate->_stack_limit  = 0x0000004002f72698
+ 0x0000004002f72740: istate->_monitor_base = 0x0000004002f726c8
+ 0x0000004002f72748: istate->_self_link    = 0x0000004002f726c8
+ 0x0000004002f72750: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72758: next_frame            = 0x0000004002f72818
+
+ 0x0000004002f72760: local[4]              = 0x0000000000000000
+ 0x0000004002f72768: local[3]              = 0x0000000000000000
+ 0x0000004002f72770: local[2]              = 0x00000000f1735c98
+ 0x0000004002f72778: local[1]              = 0x00000000f133b2a0
+ 0x0000004002f72780: local[0]              = 0x00000000f1336f48
+ 0x0000004002f72788: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72790: istate->_bcp          = 0x0000004009b06005 (bci 253)
+ 0x0000004002f72798: istate->_locals       = 0x0000004002f72888
+ 0x0000004002f727a0: istate->_constants    = 0x0000004009b06b38
+ 0x0000004002f727a8: istate->_method       = org.fusesource.hawtjni.runtime.Library.extractAndLoad(Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+ 0x0000004002f727b0: istate->_mirror       = 0x00000000f1336d38
+ 0x0000004002f727b8: istate->_stack        = 0x0000004002f72768
+ 0x0000004002f727c0: istate->_msg          = 0x0000000000000008
+ 0x0000004002f727c8: istate->_result       = 0x0000004009b06938
+ 0x0000004002f727d0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f727d8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f727e0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f727e8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f727f0: istate->_stack_base   = 0x0000004002f72788
+ 0x0000004002f727f8: istate->_stack_limit  = 0x0000004002f72738
+ 0x0000004002f72800: istate->_monitor_base = 0x0000004002f72788
+ 0x0000004002f72808: istate->_self_link    = 0x0000004002f72788
+ 0x0000004002f72810: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72818: next_frame            = 0x0000004002f72920
+
+ 0x0000004002f72820: local[13]             = 0x00000000f1735c98
+ 0x0000004002f72828: local[12]             = 0x00000000f16e4c00
+ 0x0000004002f72830: local[11]             = 0x00000000f16e4e08
+ 0x0000004002f72838: local[10]             = 0x00000000f16e4b28
+ 0x0000004002f72840: local[9]              = 0x00000000f16e4af0
+ 0x0000004002f72848: local[8]              = 0x0000000000000008
+ 0x0000004002f72850: local[7]              = 0x00000000f16e3108
+ 0x0000004002f72858: local[6]              = 0x00000000f16dbff0
+ 0x0000004002f72860: local[5]              = 0x00000000f133b4e8
+ 0x0000004002f72868: local[4]              = 0x00000000f133b4e8
+ 0x0000004002f72870: local[3]              = 0x00000000f133b488
+ 0x0000004002f72878: local[2]              = 0x0000000000000000
+ 0x0000004002f72880: local[1]              = 0x00000000f133b2a0
+ 0x0000004002f72888: local[0]              = 0x00000000f1336f48
+ 0x0000004002f72890: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72898: istate->_bcp          = 0x0000004009b0545c (bci 412)
+ 0x0000004002f728a0: istate->_locals       = 0x0000004002f72980
+ 0x0000004002f728a8: istate->_constants    = 0x0000004009b06b38
+ 0x0000004002f728b0: istate->_method       = org.fusesource.hawtjni.runtime.Library.doLoad()V
+ 0x0000004002f728b8: istate->_mirror       = 0x00000000f1336d38
+ 0x0000004002f728c0: istate->_stack        = 0x0000004002f72858
+ 0x0000004002f728c8: istate->_msg          = 0x0000004000000008
+ 0x0000004002f728d0: istate->_result       = 0x0000004009b060d0
+ 0x0000004002f728d8: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f728e0: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f728e8: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f728f0: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f728f8: istate->_stack_base   = 0x0000004002f72890
+ 0x0000004002f72900: istate->_stack_limit  = 0x0000004002f72848
+ 0x0000004002f72908: istate->_monitor_base = 0x0000004002f72890
+ 0x0000004002f72910: istate->_self_link    = 0x0000004002f72890
+ 0x0000004002f72918: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72920: next_frame            = 0x0000004002f72a28
+
+ 0x0000004002f72928: local[11]             = 0x00000000f133b488
+ 0x0000004002f72930: local[10]             = 0x0000000000000001
+ 0x0000004002f72938: local[9]              = 0x0000000000000003
+ 0x0000004002f72940: local[8]              = 0x00000000f133b2b8
+ 0x0000004002f72948: local[7]              = 0x00000000f133b4e8
+ 0x0000004002f72950: local[6]              = 0x0000000000000000
+ 0x0000004002f72958: local[5]              = 0x0000000000000000
+ 0x0000004002f72960: local[4]              = 0x00000000f133b4e8
+ 0x0000004002f72968: local[3]              = 0x00000000f133b2b8
+ 0x0000004002f72970: local[2]              = 0x00000000f133b2a0
+ 0x0000004002f72978: local[1]              = 0x0000000000000000
+ 0x0000004002f72980: local[0]              = 0x00000000f1336f48
+ 0x0000004002f72988: monitor[0]->_lock     = 0x0000000000000001
+ 0x0000004002f72990: monitor[0]->_obj      = 0x00000000f1336f48
+ 0x0000004002f72998: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f729a0: istate->_bcp          = 0x0000004009b05211 (bci 9)
+ 0x0000004002f729a8: istate->_locals       = 0x0000004002f72a30
+ 0x0000004002f729b0: istate->_constants    = 0x0000004009b06b38
+ 0x0000004002f729b8: istate->_method       = org.fusesource.hawtjni.runtime.Library.load()V
+ 0x0000004002f729c0: istate->_mirror       = 0x00000000f1336d38
+ 0x0000004002f729c8: istate->_stack        = 0x0000004002f72978
+ 0x0000004002f729d0: istate->_msg          = 0x0000004000000008
+ 0x0000004002f729d8: istate->_result       = 0x0000004009b055b8
+ 0x0000004002f729e0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f729e8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f729f0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f729f8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72a00: istate->_stack_base   = 0x0000004002f72988
+ 0x0000004002f72a08: istate->_stack_limit  = 0x0000004002f72968
+ 0x0000004002f72a10: istate->_monitor_base = 0x0000004002f72998
+ 0x0000004002f72a18: istate->_self_link    = 0x0000004002f72998
+ 0x0000004002f72a20: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72a28: next_frame            = 0x0000004002f72ac8
+
+ 0x0000004002f72a30: local[0]              = 0x00000000f1336f48
+ 0x0000004002f72a38: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72a40: istate->_bcp          = 0x0000004009b03619 (bci 17)
+ 0x0000004002f72a48: istate->_locals       = 0x0000004002f72ac8
+ 0x0000004002f72a50: istate->_constants    = 0x0000004009b036d0
+ 0x0000004002f72a58: istate->_method       = org.fusesource.jansi.internal.CLibrary.<clinit>()V
+ 0x0000004002f72a60: istate->_mirror       = 0x00000000f1336940
+ 0x0000004002f72a68: istate->_stack        = 0x0000004002f72a28
+ 0x0000004002f72a70: istate->_msg          = 0x0000004000000008
+ 0x0000004002f72a78: istate->_result       = 0x0000004009b05238
+ 0x0000004002f72a80: (istate->_result)     = 0x0000004003013168
+ 0x0000004002f72a88: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f72a90: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72a98: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72aa0: istate->_stack_base   = 0x0000004002f72a38
+ 0x0000004002f72aa8: istate->_stack_limit  = 0x0000004002f72a08
+ 0x0000004002f72ab0: istate->_monitor_base = 0x0000004002f72a38
+ 0x0000004002f72ab8: istate->_self_link    = 0x0000004002f72a38
+ 0x0000004002f72ac0: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72ac8: next_frame            = 0x0000004002f72ae0
+
+ 0x0000004002f72ad0: call_wrapper          = 0x0000004002eb4e80
+ 0x0000004002f72ad8: frame_type            = ENTRY_FRAME
+ 0x0000004002f72ae0: next_frame            = 0x0000004002f72ba0
+
+ 0x0000004002f72ae8: local[4]              = 0x0000000000000002
+ 0x0000004002f72af0: local[3]              = 0x0000004002f72ba0
+ 0x0000004002f72af8: local[2]              = 0x0000000000000000
+ 0x0000004002f72b00: local[1]              = 0x00000000f580b3a8
+ 0x0000004002f72b08: local[0]              = 0x0000000000000001
+ 0x0000004002f72b10: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72b18: istate->_bcp          = 0x000000400985668d (bci 21)
+ 0x0000004002f72b20: istate->_locals       = 0x0000004002f72bb0
+ 0x0000004002f72b28: istate->_constants    = 0x0000004009856d20
+ 0x0000004002f72b30: istate->_method       = org.jetbrains.kotlin.cli.common.messages.PlainTextMessageRenderer.<clinit>()V
+ 0x0000004002f72b38: istate->_mirror       = 0x00000000f12f0878
+ 0x0000004002f72b40: istate->_stack        = 0x0000004002f72b08
+ 0x0000004002f72b48: istate->_msg          = 0x0000004000000003
+ 0x0000004002f72b50: istate->_result       = 0x000000400940a300
+ 0x0000004002f72b58: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72b60: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72b68: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72b70: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72b78: istate->_stack_base   = 0x0000004002f72b10
+ 0x0000004002f72b80: istate->_stack_limit  = 0x0000004002f72ae0
+ 0x0000004002f72b88: istate->_monitor_base = 0x0000004002f72b10
+ 0x0000004002f72b90: istate->_self_link    = 0x0000004002f72b10
+ 0x0000004002f72b98: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72ba0: next_frame            = 0x0000004002f72bc8
+
+ 0x0000004002f72ba8: local[1]              = 0x0000000000000000
+ 0x0000004002f72bb0: local[0]              = 0x0000000000000000
+ 0x0000004002f72bb8: call_wrapper          = 0x0000004002eb5a00
+ 0x0000004002f72bc0: frame_type            = ENTRY_FRAME
+ 0x0000004002f72bc8: next_frame            = 0x0000004002f72c78
+
+ 0x0000004002f72bd0: local[2]              = 0x0000004002f72c78
+ 0x0000004002f72bd8: local[1]              = 0x00000000f12f0540
+ 0x0000004002f72be0: local[0]              = 0x00000000f12f0540
+ 0x0000004002f72be8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72bf0: istate->_bcp          = 0x000000400984785a (bci 10)
+ 0x0000004002f72bf8: istate->_locals       = 0x0000004002f72c78
+ 0x0000004002f72c00: istate->_constants    = 0x0000004009847928
+ 0x0000004002f72c08: istate->_method       = org.jetbrains.kotlin.cli.common.messages.MessageRenderer.<clinit>()V
+ 0x0000004002f72c10: istate->_mirror       = 0x00000000f12f0080
+ 0x0000004002f72c18: istate->_stack        = 0x0000004002f72be0
+ 0x0000004002f72c20: istate->_msg          = 0x0000004000000003
+ 0x0000004002f72c28: istate->_result       = 0x0000004009854100
+ 0x0000004002f72c30: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72c38: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f72c40: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72c48: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72c50: istate->_stack_base   = 0x0000004002f72be8
+ 0x0000004002f72c58: istate->_stack_limit  = 0x0000004002f72bc8
+ 0x0000004002f72c60: istate->_monitor_base = 0x0000004002f72be8
+ 0x0000004002f72c68: istate->_self_link    = 0x0000004002f72be8
+ 0x0000004002f72c70: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72c78: next_frame            = 0x0000004002f72c90
+
+ 0x0000004002f72c80: call_wrapper          = 0x0000004002eb6440
+ 0x0000004002f72c88: frame_type            = ENTRY_FRAME
+ 0x0000004002f72c90: next_frame            = 0x0000004002f72d50
+
+ 0x0000004002f72c98: local[4]              = 0x0000004002f72c18
+ 0x0000004002f72ca0: local[3]              = 0x0000000000000002
+ 0x0000004002f72ca8: local[2]              = 0x0000004002f72d50
+ 0x0000004002f72cb0: local[1]              = 0x0000000000000000
+ 0x0000004002f72cb8: local[0]              = 0x0000000000000000
+ 0x0000004002f72cc0: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72cc8: istate->_bcp          = 0x0000004009845ba7 (bci 7)
+ 0x0000004002f72cd0: istate->_locals       = 0x0000004002f72d60
+ 0x0000004002f72cd8: istate->_constants    = 0x0000004009846330
+ 0x0000004002f72ce0: istate->_method       = org.jetbrains.kotlin.cli.common.CLITool$Companion.defaultMessageRenderer()Lorg/jetbrains/kotlin/cli/common/messages/MessageRenderer;
+ 0x0000004002f72ce8: istate->_mirror       = 0x00000000f12c23e8
+ 0x0000004002f72cf0: istate->_stack        = 0x0000004002f72cb0
+ 0x0000004002f72cf8: istate->_msg          = 0x0000004000000003
+ 0x0000004002f72d00: istate->_result       = 0x000000400942a6b8
+ 0x0000004002f72d08: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72d10: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f72d18: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72d20: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72d28: istate->_stack_base   = 0x0000004002f72cc0
+ 0x0000004002f72d30: istate->_stack_limit  = 0x0000004002f72c90
+ 0x0000004002f72d38: istate->_monitor_base = 0x0000004002f72cc0
+ 0x0000004002f72d40: istate->_self_link    = 0x0000004002f72cc0
+ 0x0000004002f72d48: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72d50: next_frame            = 0x0000004002f72df8
+
+ 0x0000004002f72d58: local[1]              = 0x0000000000000000
+ 0x0000004002f72d60: local[0]              = 0x00000000f12c2558
+ 0x0000004002f72d68: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72d70: istate->_bcp          = 0x0000004009845f48 (bci 8)
+ 0x0000004002f72d78: istate->_locals       = 0x0000004002f72e28
+ 0x0000004002f72d80: istate->_constants    = 0x0000004009846330
+ 0x0000004002f72d88: istate->_method       = org.jetbrains.kotlin.cli.common.CLITool$Companion.doMainNoExit$default(Lorg/jetbrains/kotlin/cli/common/CLITool$Companion;Lorg/jetbrains/kotlin/cli/common/CLITool;[Ljava/lang/String;Lorg/jetbrains/kotlin/cli/common/messages/MessageRenderer;ILjava/lang/Object;)Lorg/jetbrains/kotlin/cli/common/ExitCode;
+ 0x0000004002f72d90: istate->_mirror       = 0x00000000f12c23e8
+ 0x0000004002f72d98: istate->_stack        = 0x0000004002f72d58
+ 0x0000004002f72da0: istate->_msg          = 0x0000004000000008
+ 0x0000004002f72da8: istate->_result       = 0x0000004009845c38
+ 0x0000004002f72db0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72db8: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72dc0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72dc8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72dd0: istate->_stack_base   = 0x0000004002f72d68
+ 0x0000004002f72dd8: istate->_stack_limit  = 0x0000004002f72d38
+ 0x0000004002f72de0: istate->_monitor_base = 0x0000004002f72d68
+ 0x0000004002f72de8: istate->_self_link    = 0x0000004002f72d68
+ 0x0000004002f72df0: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72df8: next_frame            = 0x0000004002f72ec0
+
+ 0x0000004002f72e00: local[5]              = 0x0000000000000000
+ 0x0000004002f72e08: local[4]              = 0x0000004000000004
+ 0x0000004002f72e10: local[3]              = 0x0000000000000000
+ 0x0000004002f72e18: local[2]              = 0x00000000f12c2008
+ 0x0000004002f72e20: local[1]              = 0x00000000f12ef318
+ 0x0000004002f72e28: local[0]              = 0x00000000f12c2558
+ 0x0000004002f72e30: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72e38: istate->_bcp          = 0x0000004009845cf8 (bci 56)
+ 0x0000004002f72e40: istate->_locals       = 0x0000004002f72ef0
+ 0x0000004002f72e48: istate->_constants    = 0x0000004009846330
+ 0x0000004002f72e50: istate->_method       = org.jetbrains.kotlin.cli.common.CLITool$Companion.doMain(Lorg/jetbrains/kotlin/cli/common/CLITool;[Ljava/lang/String;)V
+ 0x0000004002f72e58: istate->_mirror       = 0x00000000f12c23e8
+ 0x0000004002f72e60: istate->_stack        = 0x0000004002f72df8
+ 0x0000004002f72e68: istate->_msg          = 0x0000004000000008
+ 0x0000004002f72e70: istate->_result       = 0x0000004009845f60
+ 0x0000004002f72e78: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72e80: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72e88: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72e90: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72e98: istate->_stack_base   = 0x0000004002f72e30
+ 0x0000004002f72ea0: istate->_stack_limit  = 0x0000004002f72df0
+ 0x0000004002f72ea8: istate->_monitor_base = 0x0000004002f72e30
+ 0x0000004002f72eb0: istate->_self_link    = 0x0000004002f72e30
+ 0x0000004002f72eb8: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72ec0: next_frame            = 0x0000004002f72f88
+
+ 0x0000004002f72ec8: local[5]              = 0x0000000000000000
+ 0x0000004002f72ed0: local[4]              = 0x0000000000000000
+ 0x0000004002f72ed8: local[3]              = 0x0000000000000000
+ 0x0000004002f72ee0: local[2]              = 0x00000000f12c2008
+ 0x0000004002f72ee8: local[1]              = 0x00000000f12ef318
+ 0x0000004002f72ef0: local[0]              = 0x00000000f12c2558
+ 0x0000004002f72ef8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72f00: istate->_bcp          = 0x0000004009846a14 (bci 20)
+ 0x0000004002f72f08: istate->_locals       = 0x0000004002f72f98
+ 0x0000004002f72f10: istate->_constants    = 0x0000004009846c90
+ 0x0000004002f72f18: istate->_method       = org.jetbrains.kotlin.cli.jvm.K2JVMCompiler$Companion.main([Ljava/lang/String;)V
+ 0x0000004002f72f20: istate->_mirror       = 0x00000000f12c26d8
+ 0x0000004002f72f28: istate->_stack        = 0x0000004002f72ed8
+ 0x0000004002f72f30: istate->_msg          = 0x0000000000000008
+ 0x0000004002f72f38: istate->_result       = 0x0000004009845d68
+ 0x0000004002f72f40: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72f48: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72f50: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f72f58: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f72f60: istate->_stack_base   = 0x0000004002f72ef8
+ 0x0000004002f72f68: istate->_stack_limit  = 0x0000004002f72ed0
+ 0x0000004002f72f70: istate->_monitor_base = 0x0000004002f72ef8
+ 0x0000004002f72f78: istate->_self_link    = 0x0000004002f72ef8
+ 0x0000004002f72f80: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f72f88: next_frame            = 0x0000004002f73030
+
+ 0x0000004002f72f90: local[1]              = 0x00000000f12c2008
+ 0x0000004002f72f98: local[0]              = 0x00000000f12c2818
+ 0x0000004002f72fa0: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f72fa8: istate->_bcp          = 0x000000400981b384 (bci 4)
+ 0x0000004002f72fb0: istate->_locals       = 0x0000004002f73038
+ 0x0000004002f72fb8: istate->_constants    = 0x0000004009821388
+ 0x0000004002f72fc0: istate->_method       = org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.main([Ljava/lang/String;)V
+ 0x0000004002f72fc8: istate->_mirror       = 0x00000000f12a3cc8
+ 0x0000004002f72fd0: istate->_stack        = 0x0000004002f72f88
+ 0x0000004002f72fd8: istate->_msg          = 0x0000000000000008
+ 0x0000004002f72fe0: istate->_result       = 0x0000004009846a40
+ 0x0000004002f72fe8: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f72ff0: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f72ff8: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73000: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73008: istate->_stack_base   = 0x0000004002f72fa0
+ 0x0000004002f73010: istate->_stack_limit  = 0x0000004002f72f80
+ 0x0000004002f73018: istate->_monitor_base = 0x0000004002f72fa0
+ 0x0000004002f73020: istate->_self_link    = 0x0000004002f72fa0
+ 0x0000004002f73028: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73030: next_frame            = 0x0000004002f730d0
+
+ 0x0000004002f73038: local[0]              = 0x00000000f12c2008
+ 0x0000004002f73040: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f73048: istate->_bcp          = 0x0000004009849aba (bci 10)
+ 0x0000004002f73050: istate->_locals       = 0x0000004002f730e8
+ 0x0000004002f73058: istate->_constants    = 0x0000004009849bd8
+ 0x0000004002f73060: istate->_method       = java.lang.invoke.LambdaForm$DMH+0x0000000100084c00.invokeStatic(Ljava/lang/Object;Ljava/lang/Object;)V
+ 0x0000004002f73068: istate->_mirror       = 0x00000000f12c5c60
+ 0x0000004002f73070: istate->_stack        = 0x0000004002f73030
+ 0x0000004002f73078: istate->_msg          = 0x0000004000000008
+ 0x0000004002f73080: istate->_result       = 0x00000040098e34a8
+ 0x0000004002f73088: (istate->_result)     = 0x000000400301ca98
+ 0x0000004002f73090: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f73098: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f730a0: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f730a8: istate->_stack_base   = 0x0000004002f73040
+ 0x0000004002f730b0: istate->_stack_limit  = 0x0000004002f73020
+ 0x0000004002f730b8: istate->_monitor_base = 0x0000004002f73040
+ 0x0000004002f730c0: istate->_self_link    = 0x0000004002f73040
+ 0x0000004002f730c8: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f730d0: next_frame            = 0x0000004002f73180
+
+ 0x0000004002f730d8: local[2]              = 0x00000000f12c2958
+ 0x0000004002f730e0: local[1]              = 0x00000000f12c2008
+ 0x0000004002f730e8: local[0]              = 0x00000000f12c5d88
+ 0x0000004002f730f0: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f730f8: istate->_bcp          = 0x000000400984d2f1 (bci 33)
+ 0x0000004002f73100: istate->_locals       = 0x0000004002f731b0
+ 0x0000004002f73108: istate->_constants    = 0x000000400984d410
+ 0x0000004002f73110: istate->_method       = java.lang.invoke.LambdaForm$MH+0x0000000100086800.invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+ 0x0000004002f73118: istate->_mirror       = 0x00000000f12eb520
+ 0x0000004002f73120: istate->_stack        = 0x0000004002f730d8
+ 0x0000004002f73128: istate->_msg          = 0x0000004000000008
+ 0x0000004002f73130: istate->_result       = 0x00000040098e35b8
+ 0x0000004002f73138: (istate->_result)     = 0x000000400301ca88
+ 0x0000004002f73140: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f73148: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73150: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73158: istate->_stack_base   = 0x0000004002f730f0
+ 0x0000004002f73160: istate->_stack_limit  = 0x0000004002f730d0
+ 0x0000004002f73168: istate->_monitor_base = 0x0000004002f730f0
+ 0x0000004002f73170: istate->_self_link    = 0x0000004002f730f0
+ 0x0000004002f73178: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73180: next_frame            = 0x0000004002f73248
+
+ 0x0000004002f73188: local[5]              = 0x00000000f12c5d88
+ 0x0000004002f73190: local[4]              = 0x00000000f12c2008
+ 0x0000004002f73198: local[3]              = 0x00000000f12e1e78
+ 0x0000004002f731a0: local[2]              = 0x00000000f12c2008
+ 0x0000004002f731a8: local[1]              = 0x00000000f5830fe0
+ 0x0000004002f731b0: local[0]              = 0x00000000f12e8588
+ 0x0000004002f731b8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f731c0: istate->_bcp          = 0x000000400984daec (bci 20)
+ 0x0000004002f731c8: istate->_locals       = 0x0000004002f73268
+ 0x0000004002f731d0: istate->_constants    = 0x000000400984dc08
+ 0x0000004002f731d8: istate->_method       = java.lang.invoke.LambdaForm$MH+0x0000000100086c00.invokeExact_MT(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+ 0x0000004002f731e0: istate->_mirror       = 0x00000000f12eed40
+ 0x0000004002f731e8: istate->_stack        = 0x0000004002f73198
+ 0x0000004002f731f0: istate->_msg          = 0x0000000000000008
+ 0x0000004002f731f8: istate->_result       = 0x00000040097c1040
+ 0x0000004002f73200: (istate->_result)     = 0x000000400301ca88
+ 0x0000004002f73208: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f73210: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73218: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73220: istate->_stack_base   = 0x0000004002f731b8
+ 0x0000004002f73228: istate->_stack_limit  = 0x0000004002f73190
+ 0x0000004002f73230: istate->_monitor_base = 0x0000004002f731b8
+ 0x0000004002f73238: istate->_self_link    = 0x0000004002f731b8
+ 0x0000004002f73240: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73248: next_frame            = 0x0000004002f73300
+
+ 0x0000004002f73250: local[3]              = 0x00000000f5803cf8
+ 0x0000004002f73258: local[2]              = 0x00000000f12c2008
+ 0x0000004002f73260: local[1]              = 0x00000000f5830fe0
+ 0x0000004002f73268: local[0]              = 0x00000000f12e8588
+ 0x0000004002f73270: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f73278: istate->_bcp          = 0x0000004009972abf (bci 55)
+ 0x0000004002f73280: istate->_locals       = 0x0000004002f73318
+ 0x0000004002f73288: istate->_constants    = 0x00000040099733c8
+ 0x0000004002f73290: istate->_method       = jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+ 0x0000004002f73298: istate->_mirror       = 0x00000000f57e5f70
+ 0x0000004002f732a0: istate->_stack        = 0x0000004002f73248
+ 0x0000004002f732a8: istate->_msg          = 0x0000000000000008
+ 0x0000004002f732b0: istate->_result       = 0x000000400984daf8
+ 0x0000004002f732b8: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f732c0: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f732c8: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f732d0: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f732d8: istate->_stack_base   = 0x0000004002f73270
+ 0x0000004002f732e0: istate->_stack_limit  = 0x0000004002f73230
+ 0x0000004002f732e8: istate->_monitor_base = 0x0000004002f73270
+ 0x0000004002f732f0: istate->_self_link    = 0x0000004002f73270
+ 0x0000004002f732f8: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73300: next_frame            = 0x0000004002f733b0
+
+ 0x0000004002f73308: local[2]              = 0x00000000f12c1ff0
+ 0x0000004002f73310: local[1]              = 0x00000000f5830fe0
+ 0x0000004002f73318: local[0]              = 0x00000000f12eb638
+ 0x0000004002f73320: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f73328: istate->_bcp          = 0x0000004009972787 (bci 23)
+ 0x0000004002f73330: istate->_locals       = 0x0000004002f733d0
+ 0x0000004002f73338: istate->_constants    = 0x00000040099733c8
+ 0x0000004002f73340: istate->_method       = jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+ 0x0000004002f73348: istate->_mirror       = 0x00000000f57e5f70
+ 0x0000004002f73350: istate->_stack        = 0x0000004002f73300
+ 0x0000004002f73358: istate->_msg          = 0x0000004000000008
+ 0x0000004002f73360: istate->_result       = 0x0000004009972b38
+ 0x0000004002f73368: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f73370: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f73378: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73380: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73388: istate->_stack_base   = 0x0000004002f73320
+ 0x0000004002f73390: istate->_stack_limit  = 0x0000004002f732f8
+ 0x0000004002f73398: istate->_monitor_base = 0x0000004002f73320
+ 0x0000004002f733a0: istate->_self_link    = 0x0000004002f73320
+ 0x0000004002f733a8: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f733b0: next_frame            = 0x0000004002f73468
+
+ 0x0000004002f733b8: local[3]              = 0x0000000000000000
+ 0x0000004002f733c0: local[2]              = 0x00000000f12c1ff0
+ 0x0000004002f733c8: local[1]              = 0x00000000f5830fe0
+ 0x0000004002f733d0: local[0]              = 0x00000000f12eb638
+ 0x0000004002f733d8: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f733e0: istate->_bcp          = 0x000000400946b176 (bci 102)
+ 0x0000004002f733e8: istate->_locals       = 0x0000004002f73498
+ 0x0000004002f733f0: istate->_constants    = 0x000000400955d8c8
+ 0x0000004002f733f8: istate->_method       = java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+ 0x0000004002f73400: istate->_mirror       = 0x00000000f57fdae0
+ 0x0000004002f73408: istate->_stack        = 0x0000004002f733b8
+ 0x0000004002f73410: istate->_msg          = 0x0000004000000008
+ 0x0000004002f73418: istate->_result       = 0x0000004009972858
+ 0x0000004002f73420: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f73428: (istate->_result)     = 0x0000000000000005
+ 0x0000004002f73430: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73438: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73440: istate->_stack_base   = 0x0000004002f733d8
+ 0x0000004002f73448: istate->_stack_limit  = 0x0000004002f733a0
+ 0x0000004002f73450: istate->_monitor_base = 0x0000004002f733d8
+ 0x0000004002f73458: istate->_self_link    = 0x0000004002f733d8
+ 0x0000004002f73460: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73468: next_frame            = 0x0000004002f73530
+
+ 0x0000004002f73470: local[5]              = 0x00000000f12eb638
+ 0x0000004002f73478: local[4]              = 0x00000000f57dc4c0
+ 0x0000004002f73480: local[3]              = 0x0000000000000000
+ 0x0000004002f73488: local[2]              = 0x00000000f12c1ff0
+ 0x0000004002f73490: local[1]              = 0x00000000f5830fe0
+ 0x0000004002f73498: local[0]              = 0x00000000f12a62e8
+ 0x0000004002f734a0: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f734a8: istate->_bcp          = 0x00000040098117cc (bci 180)
+ 0x0000004002f734b0: istate->_locals       = 0x0000004002f73590
+ 0x0000004002f734b8: istate->_constants    = 0x0000004009812308
+ 0x0000004002f734c0: istate->_method       = org.jetbrains.kotlin.preloading.Preloader.run([Ljava/lang/String;)V
+ 0x0000004002f734c8: istate->_mirror       = 0x00000000f57dc4c0
+ 0x0000004002f734d0: istate->_stack        = 0x0000004002f73480
+ 0x0000004002f734d8: istate->_msg          = 0x0000000000000008
+ 0x0000004002f734e0: istate->_result       = 0x000000400946b1e8
+ 0x0000004002f734e8: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f734f0: (istate->_result)     = 0x0000004000000003
+ 0x0000004002f734f8: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f73500: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73508: istate->_stack_base   = 0x0000004002f734a0
+ 0x0000004002f73510: istate->_stack_limit  = 0x0000004002f73448
+ 0x0000004002f73518: istate->_monitor_base = 0x0000004002f734a0
+ 0x0000004002f73520: istate->_self_link    = 0x0000004002f734a0
+ 0x0000004002f73528: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73530: next_frame            = 0x0000004002f73628
+
+ 0x0000004002f73538: local[11]             = 0x0000000000000000
+ 0x0000004002f73540: local[10]             = 0x00000000f58073d8
+ 0x0000004002f73548: local[9]              = 0x00000000f12bfac0
+ 0x0000004002f73550: local[8]              = 0x00000000f12a62e8
+ 0x0000004002f73558: local[7]              = 0x00000000f12a3cc8
+ 0x0000004002f73560: local[6]              = 0x00000000f12a2988
+ 0x0000004002f73568: local[5]              = 0x00000000f5800788
+ 0x0000004002f73570: local[4]              = 0x00000000f57dbff8
+ 0x0000004002f73578: local[3]              = 0x00000000f58030a8
+ 0x0000004002f73580: local[2]              = 0x000008c245caa68a
+ 0x0000004002f73588: local[1]              = 0x0000000000000000
+ 0x0000004002f73590: local[0]              = 0x00000000f5803088
+ 0x0000004002f73598: istate->_thread       = 0x0000004002fda050
+ 0x0000004002f735a0: istate->_bcp          = 0x0000004009811613 (bci 59)
+ 0x0000004002f735a8: istate->_locals       = 0x0000004002f73640
+ 0x0000004002f735b0: istate->_constants    = 0x0000004009812308
+ 0x0000004002f735b8: istate->_method       = org.jetbrains.kotlin.preloading.Preloader.main([Ljava/lang/String;)V
+ 0x0000004002f735c0: istate->_mirror       = 0x00000000f57dc4c0
+ 0x0000004002f735c8: istate->_stack        = 0x0000004002f73588
+ 0x0000004002f735d0: istate->_msg          = 0x0000004000000008
+ 0x0000004002f735d8: istate->_result       = 0x00000040098118b8
+ 0x0000004002f735e0: (istate->_result)     = 0x0000004003013160
+ 0x0000004002f735e8: (istate->_result)     = 0x0000000000000003
+ 0x0000004002f735f0: istate->_prev_link    = 0x0000000000000000
+ 0x0000004002f735f8: istate->_oop_temp     = 0x0000000000000000
+ 0x0000004002f73600: istate->_stack_base   = 0x0000004002f73598
+ 0x0000004002f73608: istate->_stack_limit  = 0x0000004002f73570
+ 0x0000004002f73610: istate->_monitor_base = 0x0000004002f73598
+ 0x0000004002f73618: istate->_self_link    = 0x0000004002f73598
+ 0x0000004002f73620: frame_type            = INTERPRETER_FRAME
+ 0x0000004002f73628: next_frame            = 0x0000004002f73658
+
+ 0x0000004002f73630: local[2]              = 0x0000000000000000
+ 0x0000004002f73638: local[1]              = 0x00000000f58030d0
+ 0x0000004002f73640: local[0]              = 0x00000000f5803088
+ 0x0000004002f73648: call_wrapper          = 0x0000004002f73710
+ 0x0000004002f73650: frame_type            = ENTRY_FRAME
+ 0x0000004002f73658: next_frame            = 0x0000000000000000
+
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000118
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000000400e67dca0, length=8, elements={
+0x0000004002fda050, 0x0000004002fda570, 0x000000400d9dd060, 0x000000400d9dd560,
+0x000000400dd47030, 0x000000400dd47570, 0x000000400dd47ae0, 0x000000400e661ad0
+}
+
+Java Threads: ( => current thread )
+=>0x0000004002fda050 JavaThread "main" [_thread_in_native, id=150, stack(0x0000004002df3000,0x0000004002f73af0)]
+  0x0000004002fda570 JavaThread "Reference Handler" daemon [_thread_blocked, id=152, stack(0x000000400d85c000,0x000000400d9dcad8)]
+  0x000000400d9dd060 JavaThread "Finalizer" daemon [_thread_blocked, id=153, stack(0x000000400d9e0000,0x000000400db60ad8)]
+  0x000000400d9dd560 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=154, stack(0x000000400dbc6000,0x000000400dd46ad8)]
+  0x000000400dd47030 JavaThread "Service Thread" daemon [_thread_blocked, id=155, stack(0x000000400dd48000,0x000000400dec8ad8)]
+  0x000000400dd47570 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=156, stack(0x000000400dec9000,0x000000400e049ad8)]
+  0x000000400dd47ae0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=157, stack(0x000000400e102000,0x000000400e282ad8)]
+  0x000000400e661ad0 JavaThread "Notification Thread" daemon [_thread_blocked, id=158, stack(0x000000400e686000,0x000000400e806ad8)]
+
+Other Threads:
+  0x00000040052a32f0 VMThread "VM Thread" [stack: 0x000000400d753000,0x000000400d853ad8] [id=151]
+  0x000000400dbc5560 WatcherThread "VM Periodic Task Thread" [stack: 0x000000400e809000,0x000000400e909ad8] [id=159]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000f0000000, size: 256 MB, Compressed Oops mode: 32-bit
+
+Compressed class space mapped at: 0x0000000100000000-0x0000000140000000, reserved size: 1073741824
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x140000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ CPUs: 16 total, 16 available
+ Memory: 31896M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Min Capacity: 32M
+ Heap Initial Capacity: 32M
+ Heap Max Capacity: 256M
+ Pre-touch: Disabled
+
+Heap:
+ def new generation   total 69440K, used 32101K [0x00000000f0000000, 0x00000000f4b50000, 0x00000000f5550000)
+  eden space 61760K,  39% used [0x00000000f0000000, 0x00000000f17d9470, 0x00000000f3c50000)
+  from space 7680K,  99% used [0x00000000f43d0000, 0x00000000f4b4fff0, 0x00000000f4b50000)
+  to   space 7680K,   0% used [0x00000000f3c50000, 0x00000000f3c50000, 0x00000000f43d0000)
+ tenured generation   total 154108K, used 117380K [0x00000000f5550000, 0x00000000febcf000, 0x0000000100000000)
+   the space 154108K,  76% used [0x00000000f5550000, 0x00000000fc7f1218, 0x00000000fc7f1400, 0x00000000febcf000)
+ Metaspace       used 7703K, committed 8000K, reserved 1114112K
+  class space    used 723K, committed 832K, reserved 1048576K
+
+Card table byte_map: [0x0000004005099000,0x000000400511a000] _byte_map_base: 0x0000004004919000
+
+Polling page: 0x0000004002fb2000
+
+Metaspace:
+
+Usage:
+  Non-class:      6.82 MB used.
+      Class:    723.61 KB used.
+       Both:      7.52 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       7.00 MB ( 11%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     832.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       7.81 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  952.00 KB
+       Class:  3.18 MB
+        Both:  4.11 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: off
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 144.
+num_arena_deaths: 6.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 125.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 6.
+num_chunks_taken_from_freelist: 181.
+num_chunk_merges: 1.
+num_chunk_splits: 124.
+num_chunks_enlarged: 84.
+num_inconsistent_stats: 0.
+
+CodeCache: size=32768Kb used=104Kb max_used=104Kb free=32663Kb
+ bounds [0x0000004003013000, 0x000000400303b000, 0x0000004005013000]
+ total_blobs=318 nmethods=0 adapters=310
+ compilation: disabled (interpreter mode)
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (0 events):
+No events
+
+GC Heap History (20 events):
+Event: 14.332 GC heap before
+{Heap before GC invocations=13 (full 0):
+ def new generation   total 9792K, used 1087K [0x00000000f0000000, 0x00000000f0aa0000, 0x00000000f5550000)
+  eden space 8704K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f0880000)
+  from space 1088K,  99% used [0x00000000f0990000, 0x00000000f0a9fff8, 0x00000000f0aa0000)
+  to   space 1088K,   0% used [0x00000000f0880000, 0x00000000f0880000, 0x00000000f0990000)
+ tenured generation   total 24384K, used 24368K [0x00000000f5550000, 0x00000000f6d20000, 0x0000000100000000)
+   the space 24384K,  99% used [0x00000000f5550000, 0x00000000f6d1c1b8, 0x00000000f6d1c200, 0x00000000f6d20000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 14.346 GC heap after
+{Heap after GC invocations=13 (full 1):
+ def new generation   total 18368K, used 1087K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,   6% used [0x00000000f0000000, 0x00000000f010fff8, 0x00000000f1000000)
+  from space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+  to   space 1984K,   0% used [0x00000000f11f0000, 0x00000000f11f0000, 0x00000000f13e0000)
+ tenured generation   total 40616K, used 24368K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  59% used [0x00000000f5550000, 0x00000000f6d1c1b8, 0x00000000f6d1c200, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 14.660 GC heap before
+{Heap before GC invocations=13 (full 1):
+ def new generation   total 18368K, used 16384K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K, 100% used [0x00000000f0000000, 0x00000000f1000000, 0x00000000f1000000)
+  from space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+  to   space 1984K,   0% used [0x00000000f11f0000, 0x00000000f11f0000, 0x00000000f13e0000)
+ tenured generation   total 40616K, used 24368K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  59% used [0x00000000f5550000, 0x00000000f6d1c1b8, 0x00000000f6d1c200, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 14.667 GC heap after
+{Heap after GC invocations=14 (full 1):
+ def new generation   total 18368K, used 1983K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1000000)
+  from space 1984K,  99% used [0x00000000f11f0000, 0x00000000f13dfff8, 0x00000000f13e0000)
+  to   space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+ tenured generation   total 40616K, used 31049K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  76% used [0x00000000f5550000, 0x00000000f73a25d8, 0x00000000f73a2600, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.006 GC heap before
+{Heap before GC invocations=14 (full 1):
+ def new generation   total 18368K, used 18313K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,  99% used [0x00000000f0000000, 0x00000000f0ff25a8, 0x00000000f1000000)
+  from space 1984K,  99% used [0x00000000f11f0000, 0x00000000f13dfff8, 0x00000000f13e0000)
+  to   space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+ tenured generation   total 40616K, used 31049K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  76% used [0x00000000f5550000, 0x00000000f73a25d8, 0x00000000f73a2600, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.011 GC heap after
+{Heap after GC invocations=15 (full 1):
+ def new generation   total 18368K, used 1984K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1000000)
+  from space 1984K, 100% used [0x00000000f1000000, 0x00000000f11f0000, 0x00000000f11f0000)
+  to   space 1984K,   0% used [0x00000000f11f0000, 0x00000000f11f0000, 0x00000000f13e0000)
+ tenured generation   total 40616K, used 39176K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  96% used [0x00000000f5550000, 0x00000000f7b92298, 0x00000000f7b92400, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.407 GC heap before
+{Heap before GC invocations=15 (full 1):
+ def new generation   total 18368K, used 18368K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K, 100% used [0x00000000f0000000, 0x00000000f1000000, 0x00000000f1000000)
+  from space 1984K, 100% used [0x00000000f1000000, 0x00000000f11f0000, 0x00000000f11f0000)
+  to   space 1984K,   0% used [0x00000000f11f0000, 0x00000000f11f0000, 0x00000000f13e0000)
+ tenured generation   total 40616K, used 39176K [0x00000000f5550000, 0x00000000f7cfa000, 0x0000000100000000)
+   the space 40616K,  96% used [0x00000000f5550000, 0x00000000f7b92298, 0x00000000f7b92400, 0x00000000f7cfa000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.412 GC heap after
+{Heap after GC invocations=16 (full 1):
+ def new generation   total 18368K, used 1983K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1000000)
+  from space 1984K,  99% used [0x00000000f11f0000, 0x00000000f13dfff8, 0x00000000f13e0000)
+  to   space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+ tenured generation   total 47528K, used 47392K [0x00000000f5550000, 0x00000000f83ba000, 0x0000000100000000)
+   the space 47528K,  99% used [0x00000000f5550000, 0x00000000f8398028, 0x00000000f8398200, 0x00000000f83ba000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.413 GC heap before
+{Heap before GC invocations=16 (full 1):
+ def new generation   total 18368K, used 1983K [0x00000000f0000000, 0x00000000f13e0000, 0x00000000f5550000)
+  eden space 16384K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1000000)
+  from space 1984K,  99% used [0x00000000f11f0000, 0x00000000f13dfff8, 0x00000000f13e0000)
+  to   space 1984K,   0% used [0x00000000f1000000, 0x00000000f1000000, 0x00000000f11f0000)
+ tenured generation   total 47528K, used 47392K [0x00000000f5550000, 0x00000000f83ba000, 0x0000000100000000)
+   the space 47528K,  99% used [0x00000000f5550000, 0x00000000f8398028, 0x00000000f8398200, 0x00000000f83ba000)
+ Metaspace       used 6106K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 15.429 GC heap after
+{Heap after GC invocations=16 (full 2):
+ def new generation   total 35712K, used 1848K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,   5% used [0x00000000f0000000, 0x00000000f01ce020, 0x00000000f1f10000)
+  from space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+  to   space 3904K,   0% used [0x00000000f22e0000, 0x00000000f22e0000, 0x00000000f26b0000)
+ tenured generation   total 79216K, used 47528K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  59% used [0x00000000f5550000, 0x00000000f83ba000, 0x00000000f83ba000, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 16.190 GC heap before
+{Heap before GC invocations=16 (full 2):
+ def new generation   total 35712K, used 31724K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,  99% used [0x00000000f0000000, 0x00000000f1efb350, 0x00000000f1f10000)
+  from space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+  to   space 3904K,   0% used [0x00000000f22e0000, 0x00000000f22e0000, 0x00000000f26b0000)
+ tenured generation   total 79216K, used 47528K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  59% used [0x00000000f5550000, 0x00000000f83ba000, 0x00000000f83ba000, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 16.199 GC heap after
+{Heap after GC invocations=17 (full 2):
+ def new generation   total 35712K, used 3904K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1f10000)
+  from space 3904K, 100% used [0x00000000f22e0000, 0x00000000f26b0000, 0x00000000f26b0000)
+  to   space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+ tenured generation   total 79216K, used 60550K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  76% used [0x00000000f5550000, 0x00000000f90719f0, 0x00000000f9071a00, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 16.944 GC heap before
+{Heap before GC invocations=17 (full 2):
+ def new generation   total 35712K, used 35712K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K, 100% used [0x00000000f0000000, 0x00000000f1f10000, 0x00000000f1f10000)
+  from space 3904K, 100% used [0x00000000f22e0000, 0x00000000f26b0000, 0x00000000f26b0000)
+  to   space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+ tenured generation   total 79216K, used 60550K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  76% used [0x00000000f5550000, 0x00000000f90719f0, 0x00000000f9071a00, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 16.953 GC heap after
+{Heap after GC invocations=18 (full 2):
+ def new generation   total 35712K, used 3903K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1f10000)
+  from space 3904K,  99% used [0x00000000f1f10000, 0x00000000f22dfff8, 0x00000000f22e0000)
+  to   space 3904K,   0% used [0x00000000f22e0000, 0x00000000f22e0000, 0x00000000f26b0000)
+ tenured generation   total 79216K, used 76416K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  96% used [0x00000000f5550000, 0x00000000f9ff0090, 0x00000000f9ff0200, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 17.761 GC heap before
+{Heap before GC invocations=18 (full 2):
+ def new generation   total 35712K, used 35711K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K, 100% used [0x00000000f0000000, 0x00000000f1f10000, 0x00000000f1f10000)
+  from space 3904K,  99% used [0x00000000f1f10000, 0x00000000f22dfff8, 0x00000000f22e0000)
+  to   space 3904K,   0% used [0x00000000f22e0000, 0x00000000f22e0000, 0x00000000f26b0000)
+ tenured generation   total 79216K, used 76416K [0x00000000f5550000, 0x00000000fa2ac000, 0x0000000100000000)
+   the space 79216K,  96% used [0x00000000f5550000, 0x00000000f9ff0090, 0x00000000f9ff0200, 0x00000000fa2ac000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 17.772 GC heap after
+{Heap after GC invocations=19 (full 2):
+ def new generation   total 35712K, used 3904K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1f10000)
+  from space 3904K, 100% used [0x00000000f22e0000, 0x00000000f26b0000, 0x00000000f26b0000)
+  to   space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+ tenured generation   total 92464K, used 92345K [0x00000000f5550000, 0x00000000faf9c000, 0x0000000100000000)
+   the space 92464K,  99% used [0x00000000f5550000, 0x00000000faf7e718, 0x00000000faf7e800, 0x00000000faf9c000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 17.772 GC heap before
+{Heap before GC invocations=19 (full 2):
+ def new generation   total 35712K, used 3904K [0x00000000f0000000, 0x00000000f26b0000, 0x00000000f5550000)
+  eden space 31808K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f1f10000)
+  from space 3904K, 100% used [0x00000000f22e0000, 0x00000000f26b0000, 0x00000000f26b0000)
+  to   space 3904K,   0% used [0x00000000f1f10000, 0x00000000f1f10000, 0x00000000f22e0000)
+ tenured generation   total 92464K, used 92345K [0x00000000f5550000, 0x00000000faf9c000, 0x0000000100000000)
+   the space 92464K,  99% used [0x00000000f5550000, 0x00000000faf7e718, 0x00000000faf7e800, 0x00000000faf9c000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 17.793 GC heap after
+{Heap after GC invocations=19 (full 3):
+ def new generation   total 69440K, used 3785K [0x00000000f0000000, 0x00000000f4b50000, 0x00000000f5550000)
+  eden space 61760K,   6% used [0x00000000f0000000, 0x00000000f03b2718, 0x00000000f3c50000)
+  from space 7680K,   0% used [0x00000000f3c50000, 0x00000000f3c50000, 0x00000000f43d0000)
+  to   space 7680K,   0% used [0x00000000f43d0000, 0x00000000f43d0000, 0x00000000f4b50000)
+ tenured generation   total 154108K, used 92464K [0x00000000f5550000, 0x00000000febcf000, 0x0000000100000000)
+   the space 154108K,  59% used [0x00000000f5550000, 0x00000000faf9c000, 0x00000000faf9c000, 0x00000000febcf000)
+ Metaspace       used 6101K, committed 6272K, reserved 1114112K
+  class space    used 543K, committed 640K, reserved 1048576K
+}
+Event: 19.259 GC heap before
+{Heap before GC invocations=19 (full 3):
+ def new generation   total 69440K, used 61760K [0x00000000f0000000, 0x00000000f4b50000, 0x00000000f5550000)
+  eden space 61760K, 100% used [0x00000000f0000000, 0x00000000f3c50000, 0x00000000f3c50000)
+  from space 7680K,   0% used [0x00000000f3c50000, 0x00000000f3c50000, 0x00000000f43d0000)
+  to   space 7680K,   0% used [0x00000000f43d0000, 0x00000000f43d0000, 0x00000000f4b50000)
+ tenured generation   total 154108K, used 92464K [0x00000000f5550000, 0x00000000febcf000, 0x0000000100000000)
+   the space 154108K,  59% used [0x00000000f5550000, 0x00000000faf9c000, 0x00000000faf9c000, 0x00000000febcf000)
+ Metaspace       used 6108K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+Event: 19.278 GC heap after
+{Heap after GC invocations=20 (full 3):
+ def new generation   total 69440K, used 7679K [0x00000000f0000000, 0x00000000f4b50000, 0x00000000f5550000)
+  eden space 61760K,   0% used [0x00000000f0000000, 0x00000000f0000000, 0x00000000f3c50000)
+  from space 7680K,  99% used [0x00000000f43d0000, 0x00000000f4b4fff0, 0x00000000f4b50000)
+  to   space 7680K,   0% used [0x00000000f3c50000, 0x00000000f3c50000, 0x00000000f43d0000)
+ tenured generation   total 154108K, used 117380K [0x00000000f5550000, 0x00000000febcf000, 0x0000000100000000)
+   the space 154108K,  76% used [0x00000000f5550000, 0x00000000fc7f1218, 0x00000000fc7f1400, 0x00000000febcf000)
+ Metaspace       used 6108K, committed 6272K, reserved 1114112K
+  class space    used 545K, committed 640K, reserved 1048576K
+}
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (20 events):
+Event: 20.639 Loading class java/io/Reader done
+Event: 20.639 Loading class java/io/BufferedReader done
+Event: 20.648 Loading class java/lang/invoke/BoundMethodHandle$Species_LLL
+Event: 20.648 Loading class java/lang/invoke/BoundMethodHandle$Species_LLL done
+Event: 20.678 Loading class java/nio/file/attribute/PosixFileAttributeView
+Event: 20.678 Loading class java/nio/file/attribute/FileOwnerAttributeView
+Event: 20.678 Loading class java/nio/file/attribute/FileOwnerAttributeView done
+Event: 20.678 Loading class java/nio/file/attribute/PosixFileAttributeView done
+Event: 20.678 Loading class sun/nio/fs/UnixFileAttributeViews$Posix
+Event: 20.679 Loading class sun/nio/fs/UnixFileAttributeViews$Posix done
+Event: 20.679 Loading class java/util/RegularEnumSet$EnumSetIterator
+Event: 20.679 Loading class java/util/RegularEnumSet$EnumSetIterator done
+Event: 20.679 Loading class sun/nio/fs/UnixFileModeAttribute$1
+Event: 20.679 Loading class sun/nio/fs/UnixFileModeAttribute$1 done
+Event: 20.679 Loading class java/io/DeleteOnExitHook
+Event: 20.680 Loading class java/io/DeleteOnExitHook done
+Event: 20.680 Loading class java/io/DeleteOnExitHook$1
+Event: 20.680 Loading class java/io/DeleteOnExitHook$1 done
+Event: 20.680 Loading class java/io/FileOutputStream$1
+Event: 20.680 Loading class java/io/FileOutputStream$1 done
+
+Classes unloaded (3 events):
+Event: 15.419 Thread 0x00000040052a32f0 Unloading class 0x0000000100004800 'java/lang/invoke/LambdaForm$MH+0x0000000100004800'
+Event: 15.419 Thread 0x00000040052a32f0 Unloading class 0x0000000100004400 'java/lang/invoke/LambdaForm$BMH+0x0000000100004400'
+Event: 15.419 Thread 0x00000040052a32f0 Unloading class 0x0000000100003400 'java/lang/invoke/LambdaForm$DMH+0x0000000100003400'
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 20.490 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16ddef0}> (0x00000000f16ddef0) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.490 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16de3b0}> (0x00000000f16de3b0) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.490 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16de870}> (0x00000000f16de870) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.490 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16ded30}> (0x00000000f16ded30) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.491 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16df1e8}> (0x00000000f16df1e8) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.491 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16df6a8}> (0x00000000f16df6a8) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.491 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16dfb70}> (0x00000000f16dfb70) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.491 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e0030}> (0x00000000f16e0030) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.492 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e04f8}> (0x00000000f16e04f8) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.492 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e09c8}> (0x00000000f16e09c8) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.492 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e0e88}> (0x00000000f16e0e88) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.492 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e1348}> (0x00000000f16e1348) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.493 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e1818}> (0x00000000f16e1818) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.493 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e1ce8}> (0x00000000f16e1ce8) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.493 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e21b0}> (0x00000000f16e21b0) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.493 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e2678}> (0x00000000f16e2678) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.494 Thread 0x0000004002fda050 Exception <a 'sun/nio/fs/UnixException'{0x00000000f16e2b40}> (0x00000000f16e2b40) 
+thrown [src/hotspot/share/prims/jni.cpp, line 516]
+Event: 20.625 Thread 0x0000004002fda050 Exception <a 'java/lang/NoSuchMethodError'{0x00000000f1743a10}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object)'> (0x00000000f1743a10) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 765]
+Event: 20.664 Thread 0x0000004002fda050 Exception <a 'java/lang/NoSuchMethodError'{0x00000000f176afa0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000f176afa0) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 765]
+Event: 20.674 Thread 0x0000004002fda050 Exception <a 'java/lang/NoSuchMethodError'{0x00000000f1773030}: 'java.lang.Object java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000f1773030) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 765]
+
+VM Operations (20 events):
+Event: 13.806 Executing VM operation: GenCollectForAllocation
+Event: 13.808 Executing VM operation: GenCollectForAllocation done
+Event: 14.051 Executing VM operation: GenCollectForAllocation
+Event: 14.054 Executing VM operation: GenCollectForAllocation done
+Event: 14.329 Executing VM operation: GenCollectForAllocation
+Event: 14.347 Executing VM operation: GenCollectForAllocation done
+Event: 14.660 Executing VM operation: GenCollectForAllocation
+Event: 14.667 Executing VM operation: GenCollectForAllocation done
+Event: 15.006 Executing VM operation: GenCollectForAllocation
+Event: 15.011 Executing VM operation: GenCollectForAllocation done
+Event: 15.407 Executing VM operation: GenCollectForAllocation
+Event: 15.429 Executing VM operation: GenCollectForAllocation done
+Event: 16.190 Executing VM operation: GenCollectForAllocation
+Event: 16.200 Executing VM operation: GenCollectForAllocation done
+Event: 16.944 Executing VM operation: GenCollectForAllocation
+Event: 16.953 Executing VM operation: GenCollectForAllocation done
+Event: 17.761 Executing VM operation: GenCollectForAllocation
+Event: 17.793 Executing VM operation: GenCollectForAllocation done
+Event: 19.259 Executing VM operation: GenCollectForAllocation
+Event: 19.278 Executing VM operation: GenCollectForAllocation done
+
+Events (20 events):
+Event: 0.015 Protecting memory [0x0000004002df3000,0x0000004002df6000] with protection modes 0
+Event: 0.020 Loaded shared library /opt/jdk/lib/libjava.so
+Event: 0.101 Thread 0x0000004002fda050 Thread added: 0x0000004002fda050
+Event: 0.128 Thread 0x0000004002fda570 Thread added: 0x0000004002fda570
+Event: 0.128 Protecting memory [0x000000400d85c000,0x000000400d85f000] with protection modes 0
+Event: 0.129 Thread 0x000000400d9dd060 Thread added: 0x000000400d9dd060
+Event: 0.129 Protecting memory [0x000000400d9e0000,0x000000400d9e3000] with protection modes 0
+Event: 0.162 Thread 0x000000400d9dd560 Thread added: 0x000000400d9dd560
+Event: 0.162 Protecting memory [0x000000400dbc6000,0x000000400dbc9000] with protection modes 0
+Event: 0.162 Thread 0x000000400dd47030 Thread added: 0x000000400dd47030
+Event: 0.162 Protecting memory [0x000000400dd48000,0x000000400dd4b000] with protection modes 0
+Event: 0.162 Thread 0x000000400dd47570 Thread added: 0x000000400dd47570
+Event: 0.163 Protecting memory [0x000000400dec9000,0x000000400decc000] with protection modes 0
+Event: 0.186 Loaded shared library /opt/jdk/lib/libnio.so
+Event: 0.195 Thread 0x000000400dd47ae0 Thread added: 0x000000400dd47ae0
+Event: 0.196 Protecting memory [0x000000400e102000,0x000000400e105000] with protection modes 0
+Event: 0.280 Loaded shared library /opt/jdk/lib/libnet.so
+Event: 12.869 Thread 0x000000400e661ad0 Thread added: 0x000000400e661ad0
+Event: 12.869 Protecting memory [0x000000400e686000,0x000000400e689000] with protection modes 0
+Event: 12.884 Loaded shared library /opt/jdk/lib/libzip.so
+
+
+Dynamic libraries:
+f0000000-f4b50000 rw-p 00000000 00:00 0 
+f4b50000-f5550000 ---p 00000000 00:00 0 
+f5550000-febcf000 rw-p 00000000 00:00 0 
+febcf000-100000000 ---p 00000000 00:00 0 
+100000000-100020000 rw-p 00000000 00:00 0 
+100020000-100040000 rw-p 00000000 00:00 0 
+100040000-1000a0000 rw-p 00000000 00:00 0 
+1000a0000-1000c0000 ---p 00000000 00:00 0 
+1000c0000-1000f0000 rw-p 00000000 00:00 0 
+1000f0000-140000000 ---p 00000000 00:00 0 
+4000000000-4000001000 r--p 00000000 08:01 68158666                       /opt/jdk/bin/java
+4000001000-4000002000 r--p 00000000 08:01 68158666                       /opt/jdk/bin/java
+4000002000-4000003000 rw-p 00001000 08:01 68158666                       /opt/jdk/bin/java
+4000003000-4000004000 ---p 00000000 00:00 0 
+4000004000-4000017000 rw-p 00000000 00:00 0 
+4002003000-4002004000 ---p 00000000 00:00 0 
+4002004000-4002804000 rw-p 00000000 00:00 0 
+4002804000-400288f000 r--p 00000000 08:01 67109374                       /lib/ld-musl-riscv64.so.1
+400288f000-4002891000 rw-p 0008a000 08:01 67109374                       /lib/ld-musl-riscv64.so.1
+4002891000-4002893000 rw-p 00000000 00:00 0 
+4002893000-4002894000 r--p 00000000 00:00 0 
+4002894000-40028a5000 r--p 00000000 08:01 67109378                       /lib/libz.so.1.2.12
+40028a5000-40028a6000 r--p 00010000 08:01 67109378                       /lib/libz.so.1.2.12
+40028a6000-40028a7000 rw-p 00011000 08:01 67109378                       /lib/libz.so.1.2.12
+40028a7000-40028b2000 r--p 00000000 08:01 67901166                       /opt/jdk/lib/libjli.so
+40028b2000-40028b3000 r--p 0000a000 08:01 67901166                       /opt/jdk/lib/libjli.so
+40028b3000-40028b4000 rw-p 0000b000 08:01 67901166                       /opt/jdk/lib/libjli.so
+40028b5000-4002d76000 r--p 00000000 08:01 68032861                       /opt/jdk/lib/zero/libjvm.so
+4002d76000-4002d8f000 r--p 004c1000 08:01 68032861                       /opt/jdk/lib/zero/libjvm.so
+4002d8f000-4002da9000 rw-p 004da000 08:01 68032861                       /opt/jdk/lib/zero/libjvm.so
+4002da9000-4002dc6000 rw-p 00000000 00:00 0 
+4002dc6000-4002dcd000 r--p 00000000 08:01 67641244                       /usr/lib/libffi.so.8.1.0
+4002dcd000-4002dce000 r--p 00006000 08:01 67641244                       /usr/lib/libffi.so.8.1.0
+4002dce000-4002dcf000 rw-p 00007000 08:01 67641244                       /usr/lib/libffi.so.8.1.0
+4002dcf000-4002df3000 rw-p 00000000 00:00 0 
+4002df3000-4002df6000 ---p 00000000 00:00 0 
+4002df6000-4002f74000 rw-p 00000000 00:00 0 
+4002f79000-4002f7a000 rw-p 00000000 00:00 0 
+4002f7a000-4002f7b000 r--s 00000000 103:02 57149011                      /etc/localtime
+4002f7c000-4002f93000 r--p 00000000 08:01 67901167                       /opt/jdk/lib/libjimage.so
+4002f93000-4002f95000 r--p 00016000 08:01 67901167                       /opt/jdk/lib/libjimage.so
+4002f95000-4002f96000 rw-p 00018000 08:01 67901167                       /opt/jdk/lib/libjimage.so
+4002f96000-4002fa8000 rw-p 00000000 00:00 0 
+4002faf000-4002fb0000 rw-p 00000000 00:00 0 
+4002fb2000-4002fb3000 ---p 00000000 00:00 0 
+4002fb3000-4002fb4000 r--p 00000000 00:00 0 
+4002fb4000-4002fcb000 rw-p 00000000 00:00 0 
+4002fd1000-4002fd9000 rw-s 00000000 00:2a 10                             /tmp/hsperfdata_root/146
+4002fd9000-4002ff3000 rw-p 00000000 00:00 0 
+4002ff3000-4003010000 r--p 00000000 08:01 67901151                       /opt/jdk/lib/libjava.so
+4003010000-4003011000 r--p 0001c000 08:01 67901151                       /opt/jdk/lib/libjava.so
+4003011000-4003013000 rw-p 0001d000 08:01 67901151                       /opt/jdk/lib/libjava.so
+4003013000-400303b000 rw-p 00000000 00:00 0 
+400303b000-4005013000 ---p 00000000 00:00 0 
+4005013000-4005014000 rw-p 00000000 00:00 0 
+4005014000-4005093000 ---p 00000000 00:00 0 
+4005093000-40050bf000 rw-p 00000000 00:00 0 
+40050bf000-40050c3000 ---p 00000000 00:00 0 
+40050c3000-400510f000 rw-p 00000000 00:00 0 
+400510f000-4005119000 ---p 00000000 00:00 0 
+4005119000-4005169000 rw-p 00000000 00:00 0 
+4005169000-4005173000 ---p 00000000 00:00 0 
+4005173000-40052a4000 rw-p 00000000 00:00 0 
+4009400000-4009800000 rw-p 00000000 00:00 0 
+4009800000-4009880000 rw-p 00000000 00:00 0 
+4009880000-4009900000 rw-p 00000000 00:00 0 
+4009900000-4009ae0000 rw-p 00000000 00:00 0 
+4009ae0000-4009b00000 ---p 00000000 00:00 0 
+4009b00000-4009b20000 rw-p 00000000 00:00 0 
+4009b20000-400d400000 ---p 00000000 00:00 0 
+400d6a5000-400d6b3000 rw-p 00000000 00:00 0 
+400d6bf000-400d6c7000 rw-p 00000000 00:00 0 
+400d6d5000-400d70d000 rw-p 00000000 00:00 0 
+400d71d000-400d725000 rw-p 00000000 00:00 0 
+400d735000-400d73e000 rw-p 00000000 00:00 0 
+400d747000-400d751000 rw-p 00000000 00:00 0 
+400d751000-400d752000 ---p 00000000 00:00 0 
+400d752000-400d85c000 rw-p 00000000 00:00 0 
+400d85c000-400d85f000 ---p 00000000 00:00 0 
+400d85f000-400d9e0000 rw-p 00000000 00:00 0 
+400d9e0000-400d9e3000 ---p 00000000 00:00 0 
+400d9e3000-400db69000 rw-p 00000000 00:00 0 
+400db78000-400db88000 rw-p 00000000 00:00 0 
+400dba1000-400dbb3000 rw-p 00000000 00:00 0 
+400dbbc000-400dbc6000 rw-p 00000000 00:00 0 
+400dbc6000-400dbc9000 ---p 00000000 00:00 0 
+400dbc9000-400dd48000 rw-p 00000000 00:00 0 
+400dd48000-400dd4b000 ---p 00000000 00:00 0 
+400dd4b000-400dec9000 rw-p 00000000 00:00 0 
+400dec9000-400decc000 ---p 00000000 00:00 0 
+400decc000-400e054000 rw-p 00000000 00:00 0 
+400e062000-400e072000 rw-p 00000000 00:00 0 
+400e07c000-400e095000 rw-p 00000000 00:00 0 
+400e095000-400e0a4000 r--p 00000000 08:01 67901159                       /opt/jdk/lib/libnio.so
+400e0a4000-400e0a5000 r--p 0000f000 08:01 67901159                       /opt/jdk/lib/libnio.so
+400e0a5000-400e0a6000 rw-p 00010000 08:01 67901159                       /opt/jdk/lib/libnio.so
+400e0a6000-400e0aa000 rw-p 00000000 00:00 0 
+400e0aa000-400e0b5000 r--p 00000000 08:01 67901148                       /opt/jdk/lib/libnet.so
+400e0b5000-400e0b6000 r--p 0000a000 08:01 67901148                       /opt/jdk/lib/libnet.so
+400e0b6000-400e0b7000 rw-p 0000b000 08:01 67901148                       /opt/jdk/lib/libnet.so
+400e0b7000-400e0e8000 rw-p 00000000 00:00 0 
+400e0f2000-400e102000 rw-p 00000000 00:00 0 
+400e102000-400e105000 ---p 00000000 00:00 0 
+400e105000-400e2a3000 rw-p 00000000 00:00 0 
+400e2bb000-400e2d3000 rw-p 00000000 00:00 0 
+400e2dc000-400e2e4000 rw-p 00000000 00:00 0 
+400e2f0000-400e2f4000 rw-p 00000000 00:00 0 
+400e301000-400e309000 rw-p 00000000 00:00 0 
+400e30f000-400e317000 rw-p 00000000 00:00 0 
+400e318000-400e32f000 rw-p 00000000 00:00 0 
+400e332000-400e342000 rw-p 00000000 00:00 0 
+400e344000-400e365000 rw-p 00000000 00:00 0 
+400e36c000-400e370000 rw-p 00000000 00:00 0 
+400e37d000-400e385000 rw-p 00000000 00:00 0 
+400e386000-400e387000 rw-p 00000000 00:00 0 
+400e389000-400e38a000 rw-p 00000000 00:00 0 
+400e395000-400e39d000 rw-p 00000000 00:00 0 
+400e3c8000-400e3ca000 rw-p 00000000 00:00 0 
+400e636000-400e63a000 rw-p 00000000 00:00 0 
+400e63b000-400e686000 rw-p 00000000 00:00 0 
+400e686000-400e689000 ---p 00000000 00:00 0 
+400e689000-400e807000 rw-p 00000000 00:00 0 
+400e807000-400e808000 ---p 00000000 00:00 0 
+400e808000-400e90a000 rw-p 00000000 00:00 0 
+400e913000-400e93b000 rw-p 00000000 00:00 0 
+400e93c000-400e942000 r--p 00000000 08:01 67901141                       /opt/jdk/lib/libzip.so
+400e942000-400e943000 r--p 00005000 08:01 67901141                       /opt/jdk/lib/libzip.so
+400e943000-400e944000 rw-p 00006000 08:01 67901141                       /opt/jdk/lib/libzip.so
+400e944000-400e94d000 rw-p 00000000 00:00 0 
+400e950000-400e960000 rw-p 00000000 00:00 0 
+400e961000-400e965000 rw-p 00000000 00:00 0 
+400e9e6000-400e9ef000 rw-p 00000000 00:00 0 
+400f310000-400f314000 rw-p 00000000 00:00 0 
+4011476000-401147a000 rw-p 00000000 00:00 0 
+4011687000-4011690000 rw-p 00000000 00:00 0 
+4011999000-40119a2000 rw-p 00000000 00:00 0 
+4011b2f000-4011b38000 rw-p 00000000 00:00 0 
+4011b49000-4011b5c000 rw-p 00000000 00:00 0 
+4011b6c000-4011b75000 rw-p 00000000 00:00 0 
+4011b82000-4011b8d000 rw-p 00000000 00:00 0 
+4011b91000-4011ba1000 rw-p 00000000 00:00 0 
+4011bab000-4011bad000 rw-p 00000000 00:00 0 
+4011bbd000-4011bc5000 rw-p 00000000 00:00 0 
+4011bd9000-4011be1000 rw-p 00000000 00:00 0 
+4011bf9000-4011c01000 rw-p 00000000 00:00 0 
+4011c05000-4011c06000 rw-p 00000000 00:00 0 
+4011c16000-4011c30000 rw-p 00000000 00:00 0 
+4011c39000-4011c41000 rw-p 00000000 00:00 0 
+4011c43000-4011ccd000 rw-p 00000000 00:00 0 
+4011cd8000-4011ce0000 rw-p 00000000 00:00 0 
+4011ce5000-4011ce7000 rw-p 00000000 00:00 0 
+4011cf8000-4011d01000 rw-p 00000000 00:00 0 
+4011d0a000-4011d0b000 rw-p 00000000 00:00 0 
+4011d0c000-4011f0e000 r--p 00000000 00:2a 11                             /tmp/libjansi-15191024065775121652.so
+4011f0e000-4011f0f000 rw-p 00002000 00:2a 11                             /tmp/libjansi-15191024065775121652.so
+555556466000-55555667a000 rw-p 00000000 00:00 0                          [heap]
+7fee7c000000-7fee7c021000 rw-p 00000000 00:00 0 
+7fee7c021000-7fee80000000 ---p 00000000 00:00 0 
+7fee80000000-7fee80021000 rw-p 00000000 00:00 0 
+7fee80021000-7fee84000000 ---p 00000000 00:00 0 
+7fee84000000-7fee84021000 rw-p 00000000 00:00 0 
+7fee84021000-7fee88000000 ---p 00000000 00:00 0 
+7fee88000000-7fee88021000 rw-p 00000000 00:00 0 
+7fee88021000-7fee8c000000 ---p 00000000 00:00 0 
+7fee8c000000-7fee8c021000 rw-p 00000000 00:00 0 
+7fee8c021000-7fee90000000 ---p 00000000 00:00 0 
+7fee90000000-7fee90021000 rw-p 00000000 00:00 0 
+7fee90021000-7fee94000000 ---p 00000000 00:00 0 
+7fee94000000-7fee94021000 rw-p 00000000 00:00 0 
+7fee94021000-7fee98000000 ---p 00000000 00:00 0 
+7fee98000000-7fee98021000 rw-p 00000000 00:00 0 
+7fee98021000-7fee9c000000 ---p 00000000 00:00 0 
+7fee9c000000-7fee9cd5b000 rw-p 00000000 00:00 0 
+7fee9cd5b000-7feea0000000 ---p 00000000 00:00 0 
+7feea0000000-7feea005d000 rw-p 00000000 00:00 0 
+7feea005d000-7feea4000000 ---p 00000000 00:00 0 
+7feea4000000-7feeabfff000 rwxp 00000000 00:00 0 
+7feeabfff000-7feeac000000 ---p 00000000 00:00 0 
+7feeac000000-7feeac021000 rw-p 00000000 00:00 0 
+7feeac021000-7feeb0000000 ---p 00000000 00:00 0 
+7feeb1af6000-7feeb1af7000 ---p 00000000 00:00 0 
+7feeb1af7000-7feeb1b37000 rw-p 00000000 00:00 0 
+7feeb1b37000-7feeb1b38000 ---p 00000000 00:00 0 
+7feeb1b38000-7feeb1b78000 rw-p 00000000 00:00 0 
+7feeb1b78000-7feeb1b79000 ---p 00000000 00:00 0 
+7feeb1b79000-7feeb1bb9000 rw-p 00000000 00:00 0 
+7feeb1bb9000-7feeb1bba000 ---p 00000000 00:00 0 
+7feeb1bba000-7feeb1cfb000 rw-p 00000000 00:00 0 
+7feeb1cfb000-7feeb1cfc000 ---p 00000000 00:00 0 
+7feeb1cfc000-7feeb1d3c000 rw-p 00000000 00:00 0 
+7feeb1d3c000-7feeb1d3d000 ---p 00000000 00:00 0 
+7feeb1d3d000-7feeb1d7d000 rw-p 00000000 00:00 0 
+7feeb1d7d000-7feeb1d7e000 ---p 00000000 00:00 0 
+7feeb1d7e000-7feeb1dbe000 rw-p 00000000 00:00 0 
+7feeb1dbe000-7feeb1dbf000 ---p 00000000 00:00 0 
+7feeb1dbf000-7feeb1dff000 rw-p 00000000 00:00 0 
+7feeb1dff000-7feeb1e00000 ---p 00000000 00:00 0 
+7feeb1e00000-7feeb2600000 rw-p 00000000 00:00 0 
+7feeb2600000-7feeb2649000 r--p 00000000 103:02 57204828                  /usr/bin/qemu-riscv64-static
+7feeb2649000-7feeb28b0000 r-xp 00049000 103:02 57204828                  /usr/bin/qemu-riscv64-static
+7feeb28b0000-7feeb293f000 r--p 002b0000 103:02 57204828                  /usr/bin/qemu-riscv64-static
+7feeb293f000-7feeb29b1000 r--p 0033e000 103:02 57204828                  /usr/bin/qemu-riscv64-static
+7feeb29b1000-7feeb29bf000 rw-p 003b0000 103:02 57204828                  /usr/bin/qemu-riscv64-static
+7feeb29bf000-7feeb29e2000 rw-p 00000000 00:00 0 
+7feeb2a1f000-7feeb2a20000 ---p 00000000 00:00 0 
+7feeb2a20000-7feeb2a60000 rw-p 00000000 00:00 0 
+7feeb2a60000-7feeb2a61000 ---p 00000000 00:00 0 
+7feeb2a61000-7feeb2aa1000 rw-p 00000000 00:00 0 
+7ffc5a58c000-7ffc5a5ad000 rw-p 00000000 00:00 0                          [stack]
+7ffc5a5b4000-7ffc5a5b8000 r--p 00000000 00:00 0                          [vvar]
+7ffc5a5b8000-7ffc5a5ba000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+
+VM Arguments:
+jvm_args: -Xmx256M -Xms32M -Xverify:none 
+java_command: org.jetbrains.kotlin.preloading.Preloader -cp /opt/kotlinc/lib/kotlin-compiler.jar org.jetbrains.kotlin.cli.jvm.K2JVMCompiler --version
+java_class_path (initial): /opt/kotlinc/lib/kotlin-preloader.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+   size_t InitialHeapSize                          = 33554432                                  {product} {command line}
+   size_t MaxHeapSize                              = 268435456                                 {product} {command line}
+   size_t MaxNewSize                               = 89456640                                  {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 196608                                    {product} {ergonomic}
+   size_t MinHeapSize                              = 33554432                                  {product} {command line}
+   size_t NewSize                                  = 11141120                                  {product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+   size_t OldSize                                  = 22413312                                  {product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 268435456                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseSerialGC                              = true                                      {product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=/opt/jdk
+PATH=/opt/kotlinc/bin:/opt/jdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+LD_LIBRARY_PATH=/opt/jdk/lib/zero:/opt/jdk/lib:/opt/jdk/../lib
+LANG=C.UTF-8
+
+Signal Handlers:
+   SIGSEGV: 
+[timeout occurred during error reporting in step "printing signal handlers"] after 30 s.
+
+---------------  S Y S T E M  ---------------
+
+OS:
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.15.0_alpha20210804
+PRETTY_NAME="Alpine Linux edge"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://bugs.alpinelinux.org/"
+uname: Linux 5.19.2-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 17 Aug 2022 13:48:51 +0000 riscv64
+OS uptime: 0 days 2:41 hours
+libc: musl - unknown musl - unknown 
+rlimit (soft/hard): STACK 8192k/infinity , CORE 0k/0k , NPROC 127503/127503 , NOFILE 524288/524288 , AS infinity/infinity , CPU infinity/infinity , DATA infinity/infinity , FSIZE infinity/infinity , MEMLOCK 8192k/8192k
+load average: 1.38 0.63 0.53
+
+/proc/meminfo:
+MemTotal:       32662180 kB
+MemFree:        15539484 kB
+MemAvailable:   27228184 kB
+Buffers:          402388 kB
+Cached:         11128684 kB
+SwapCached:            0 kB
+Active:          2904064 kB
+Inactive:       12673540 kB
+Active(anon):      12112 kB
+Inactive(anon):  4279640 kB
+Active(file):    2891952 kB
+Inactive(file):  8393900 kB
+Unevictable:        5552 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               388 kB
+Writeback:             0 kB
+AnonPages:       3953904 kB
+Mapped:          1871052 kB
+Shmem:            245204 kB
+KReclaimable:     876008 kB
+Slab:            1076896 kB
+SReclaimable:     876008 kB
+SUnreclaim:       200888 kB
+KernelStack:       13648 kB
+PageTables:        35836 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    16331088 kB
+Committed_AS:    8669524 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       98944 kB
+VmallocChunk:          0 kB
+Percpu:            12416 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1351680 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:    172032 kB
+FilePmdMapped:     67584 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      841620 kB
+DirectMap2M:    14675968 kB
+DirectMap1G:    18874368 kB
+
+/sys/kernel/mm/transparent_hugepage/enabled: [always] madvise never
+/sys/kernel/mm/transparent_hugepage/defrag (defrag/compaction efforts parameter): always defer defer+madvise [madvise] never
+
+Process Memory:
+Virtual Size: 2316964K (peak: 2316992K)
+Resident Set Size: 248696K (peak: 248696K) (anon: 240528K, file: 8072K, shmem: 96K)
+Swapped out: 0K
+
+/proc/sys/kernel/threads-max (system-wide limit on the number of threads): 255007
+/proc/sys/vm/max_map_count (maximum number of memory map areas a process may have): 65530
+/proc/sys/kernel/pid_max (system-wide limit on number of process identifiers): 4194304
+
+container (cgroup) information:
+container_type: cgroupv2
+cpu_cpuset_cpus: not supported
+cpu_memory_nodes: not supported
+active_processor_count: 16
+cpu_quota: no quota
+cpu_period: 100000
+cpu_shares: no shares
+memory_limit_in_bytes: unlimited
+memory_and_swap_limit_in_bytes: unlimited
+memory_soft_limit_in_bytes: unlimited
+memory_usage_in_bytes: 369192960
+memory_max_usage_in_bytes: not supported
+maximum number of tasks: unlimited
+current number of tasks: 17
+
+Steal ticks since vm start: 0
+Steal ticks percentage since vm start:  0.000
+
+CPU: total 16 (initial active 16) 
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 8
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 4899.855
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 1
+cpu cores	: 8
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 2
+cpu cores	: 8
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 3
+cpu cores	: 8
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 8
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 5
+cpu cores	: 8
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 6
+cpu cores	: 8
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 5000.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 7
+cpu cores	: 8
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 5000.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 0
+cpu cores	: 8
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 4901.399
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 1
+cpu cores	: 8
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 2
+cpu cores	: 8
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 3
+cpu cores	: 8
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 4
+cpu cores	: 8
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 5
+cpu cores	: 8
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 6
+cpu cores	: 8
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 167
+model name	: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+stepping	: 1
+microcode	: 0x54
+cpu MHz		: 800.000
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 16
+core id		: 7
+cpu cores	: 8
+apicid		: 15
+initial apicid	: 15
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 27
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs pml ept_mode_based_exec tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs mmio_stale_data retbleed eibrs_pbrsb
+bogomips	: 7202.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+Online cpus: 0-15
+Offline cpus: 
+
+Memory: 4k page, physical 32662180k(15539484k free), swap 0k(0k free)
+Page Sizes: 4k
+
+vm_info: OpenJDK 64-Bit Zero VM (19-internal+0-adhoc.xnn.portola) for linux-riscv64-musl JRE (19-internal+0-adhoc.xnn.portola), built on Aug 19 2022 17:45:09 by "xnn" with gcc 12.1.0
+
+END.
