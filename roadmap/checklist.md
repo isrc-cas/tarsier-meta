@@ -3,9 +3,9 @@
 ## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
 
 | 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine |
-|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ | 
-| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [官方仓库][openkylin] | [官方仓库][alpineImage] |
-| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  ||||| [官方软件包][alpineAPK]
+|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ |
+| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
+| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  ||||[官方仓库][openkylin]| [官方软件包][alpineAPK]|
 | Wiki 支持页 | [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  |  | | |
 
 [oeRepo]: https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/
@@ -20,6 +20,8 @@
 [freebsdwiki]: https://wiki.freebsd.org/riscv
 
 [openkylin]: http://archive.build.openkylin.top/openkylin
+[openkylinlzuImage]: https://mirror.lzu.edu.cn/openkylin-cdimage/
+[openkylin163Image]: https://mirrors.163.com/openkylin-cd/
 
 [oeOBS]: https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V
 [debBuildD]: https://buildd.debian.org/status/architecture.php?suite=unstable&a=riscv64&priority=
