@@ -133,290 +133,157 @@ dpkg: 警告: 无法找到软件包 libfprint0:riscv64 的文件列表，现假�
 正在设置 python3-setuptools (65.3.0-ok5) ...
 正在设置 python3-pip (20.0.2-ok1) ...
 正在处理用于 man-db (2.9.1-ok2) 的触发器 ...
-openkylin@openkylin:~$ sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy
-sudo: 无法解析主机：openkylin: 未知的名称或服务
-Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+root@openkylin:~/cmake# pip3 install pip-hello-world
 /usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 1.13.1-unknown is an invalid version and will not be supported in a future release
   warnings.warn(
 /usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 2.3.0-ok2 is an invalid version and will not be supported in a future release
   warnings.warn(
 /usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.1.36ubuntu1 is an invalid version and will not be supported in a future release
   warnings.warn(
-Collecting numpy
-  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0a/88/f4f0c7a982efdf7bf22f283acf6009b29a9cc5835b684a49f8d3a4adb22f/numpy-1.23.3.tar.gz (10.7 MB)
-     |████████████████████████████████| 10.7 MB 44 kB/s 
-  Installing build dependencies ... done
-  Getting requirements to build wheel ... done
-    Preparing wheel metadata ... done
-Building wheels for collected packages: numpy
-  Building wheel for numpy (PEP 517) ... error
+Collecting pip-hello-world
+  Downloading pip-hello-world-0.1.tar.gz (1.4 kB)
+Building wheels for collected packages: pip-hello-world
+  Building wheel for pip-hello-world (setup.py) ... error
   ERROR: Command errored out with exit status 1:
-   command: /usr/bin/python3 /tmp/tmpf0_ymx7p build_wheel /tmp/tmpygqawshm
-       cwd: /tmp/pip-install-2n1owai4/numpy
-  Complete output (258 lines):
-  Processing numpy/random/_bounded_integers.pxd.in
-  Processing numpy/random/bit_generator.pyx
-  Processing numpy/random/_sfc64.pyx
-  Processing numpy/random/mtrand.pyx
-  Processing numpy/random/_philox.pyx
-  Processing numpy/random/_pcg64.pyx
-  Processing numpy/random/_generator.pyx
-  Processing numpy/random/_mt19937.pyx
-  Processing numpy/random/_common.pyx
-  Processing numpy/random/_bounded_integers.pyx.in
-  Cythonizing sources
-  INFO: blas_opt_info:
-  INFO: blas_armpl_info:
-  INFO: customize UnixCCompiler
-  INFO:   libraries armpl_lp64_mp not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: blas_mkl_info:
-  INFO:   libraries mkl_rt not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: blis_info:
-  INFO:   libraries blis not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: openblas_info:
-  INFO:   libraries openblas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: accelerate_info:
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_3_10_blas_threads_info:
-  INFO: Setting PTATLAS=ATLAS
-  INFO:   libraries tatlas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_3_10_blas_info:
-  INFO:   libraries satlas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_blas_threads_info:
-  INFO: Setting PTATLAS=ATLAS
-  INFO:   libraries ptf77blas,ptcblas,atlas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_blas_info:
-  INFO:   libraries f77blas,cblas,atlas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: blas_info:
-  INFO:   libraries blas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: blas_src_info:
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO:   NOT AVAILABLE
-  INFO:
-  non-existing path in 'numpy/distutils': 'site.cfg'
-  INFO: lapack_opt_info:
-  INFO: lapack_armpl_info:
-  INFO:   libraries armpl_lp64_mp not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: lapack_mkl_info:
-  INFO:   libraries mkl_rt not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: openblas_lapack_info:
-  INFO:   libraries openblas not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: openblas_clapack_info:
-  INFO:   libraries openblas,lapack not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: flame_info:
-  INFO:   libraries flame not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_3_10_threads_info:
-  INFO: Setting PTATLAS=ATLAS
-  INFO:   libraries tatlas,tatlas not found in /usr/local/lib
-  INFO:   libraries tatlas,tatlas not found in /usr/lib
-  INFO: <class 'numpy.distutils.system_info.atlas_3_10_threads_info'>
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_3_10_info:
-  INFO:   libraries satlas,satlas not found in /usr/local/lib
-  INFO:   libraries satlas,satlas not found in /usr/lib
-  INFO: <class 'numpy.distutils.system_info.atlas_3_10_info'>
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_threads_info:
-  INFO: Setting PTATLAS=ATLAS
-  INFO:   libraries ptf77blas,ptcblas,atlas not found in /usr/local/lib
-  INFO:   libraries ptf77blas,ptcblas,atlas not found in /usr/lib
-  INFO: <class 'numpy.distutils.system_info.atlas_threads_info'>
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: atlas_info:
-  INFO:   libraries f77blas,cblas,atlas not found in /usr/local/lib
-  INFO:   libraries f77blas,cblas,atlas not found in /usr/lib
-  INFO: <class 'numpy.distutils.system_info.atlas_info'>
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: lapack_info:
-  INFO:   libraries lapack not found in ['/usr/local/lib', '/usr/lib']
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: lapack_src_info:
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO:   NOT AVAILABLE
-  INFO:
-  INFO: numpy_linalg_lapack_lite:
-  INFO:   FOUND:
-  INFO:     language = c
-  INFO:     define_macros = [('HAVE_BLAS_ILP64', None), ('BLAS_SYMBOL_SUFFIX', '64_')]
-  INFO:
+   command: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-aar5mx4_
+       cwd: /tmp/pip-install-livftszj/pip-hello-world/
+  Complete output (66 lines):
   running bdist_wheel
   running build
-  running config_cc
-  INFO: unifing config_cc, config, build_clib, build_ext, build commands --compiler options
-  running config_fc
-  INFO: unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
-  running build_src
-  INFO: build_src
-  INFO: building py_modules sources
+  running build_py
   creating build
-  creating build/src.linux-riscv64-3.8
-  creating build/src.linux-riscv64-3.8/numpy
-  creating build/src.linux-riscv64-3.8/numpy/distutils
-  INFO: building library "npymath" sources
-  WARN: Could not locate executable armflang
-  WARN: Could not locate executable gfortran
-  WARN: Could not locate executable f95
-  WARN: Could not locate executable ifort
-  WARN: Could not locate executable ifc
-  WARN: Could not locate executable lf95
-  WARN: Could not locate executable pgfortran
-  WARN: Could not locate executable nvfortran
-  WARN: Could not locate executable f90
-  WARN: Could not locate executable f77
-  WARN: Could not locate executable fort
-  WARN: Could not locate executable efort
-  WARN: Could not locate executable efc
-  WARN: Could not locate executable g77
-  WARN: Could not locate executable g95
-  WARN: Could not locate executable pathf95
-  WARN: Could not locate executable nagfor
-  WARN: Could not locate executable frt
-  WARN: don't know how to compile Fortran code on platform 'posix'
-  Running from numpy source directory.
-  setup.py:86: DeprecationWarning:
-  
-    `numpy.distutils` is deprecated since NumPy 1.23.0, as a result
-    of the deprecation of `distutils` itself. It will be removed for
-    Python >= 3.12. For older Python versions it will remain present.
-    It is recommended to use `setuptools < 60.0` for those Python versions.
-    For more details, see:
-      https://numpy.org/devdocs/reference/distutils_status_migration.html
-  
-  
-    import numpy.distutils.command.sdist
-  /tmp/pip-install-2n1owai4/numpy/numpy/distutils/system_info.py:2077: UserWarning:
-      Optimized (vendor) Blas libraries are not found.
-      Falls back to netlib Blas library which has worse performance.
-      A better performance should be easily gained by switching
-      Blas library.
-    if self._calc_info(blas):
-  /tmp/pip-install-2n1owai4/numpy/numpy/distutils/system_info.py:2077: UserWarning:
-      Blas (http://www.netlib.org/blas/) libraries not found.
-      Directories to search for the libraries can be specified in the
-      numpy/distutils/site.cfg file (section [blas]) or by setting
-      the BLAS environment variable.
-    if self._calc_info(blas):
-  /tmp/pip-install-2n1owai4/numpy/numpy/distutils/system_info.py:2077: UserWarning:
-      Blas (http://www.netlib.org/blas/) sources not found.
-      Directories to search for the sources can be specified in the
-      numpy/distutils/site.cfg file (section [blas_src]) or by setting
-      the BLAS_SRC environment variable.
-    if self._calc_info(blas):
-  /tmp/pip-install-2n1owai4/numpy/numpy/distutils/system_info.py:1902: UserWarning:
-      Lapack (http://www.netlib.org/lapack/) libraries not found.
-      Directories to search for the libraries can be specified in the
-      numpy/distutils/site.cfg file (section [lapack]) or by setting
-      the LAPACK environment variable.
-    return getattr(self, '_calc_info_{}'.format(name))()
-  /tmp/pip-install-2n1owai4/numpy/numpy/distutils/system_info.py:1902: UserWarning:
-      Lapack (http://www.netlib.org/lapack/) sources not found.
-      Directories to search for the sources can be specified in the
-      numpy/distutils/site.cfg file (section [lapack_src]) or by setting
-      the LAPACK_SRC environment variable.
-    return getattr(self, '_calc_info_{}'.format(name))()
-  Warning: attempted relative import with no known parent package
-  /tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/dist.py:275: UserWarning: Unknown distribution option: 'define_macros'
-    warnings.warn(msg)
-  
-  
-  [Errno 2] No such file or directory: 'riscv64-linux-gnu-gcc'
-  
-  
+  creating build/lib
+  creating build/lib/helloworld
+  copying helloworld/__init__.py -> build/lib/helloworld
+  copying helloworld/hello.py -> build/lib/helloworld
+  creating build/lib/helloworld/images
+  copying helloworld/images/__init__.py -> build/lib/helloworld/images
+  running egg_info
+  writing pip_hello_world.egg-info/PKG-INFO
+  writing dependency_links to pip_hello_world.egg-info/dependency_links.txt
+  writing top-level names to pip_hello_world.egg-info/top_level.txt
+  reading manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  writing manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+  copying helloworld/images/hello.gif -> build/lib/helloworld/images
+  /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+    warnings.warn(
+  installing to build/bdist.linux-riscv64/wheel
+  running install
+  running install_lib
   Traceback (most recent call last):
-    File "/tmp/tmpf0_ymx7p", line 280, in <module>
-      main()
-    File "/tmp/tmpf0_ymx7p", line 263, in main
-      json_out['return_val'] = hook(**hook_input['kwargs'])
-    File "/tmp/tmpf0_ymx7p", line 204, in build_wheel
-      return _build_backend().build_wheel(wheel_directory, config_settings,
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/build_meta.py", line 230, in build_wheel
-      return self._build_with_temp_dir(['bdist_wheel'], '.whl',
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/build_meta.py", line 215, in _build_with_temp_dir
-      self.run_setup()
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/build_meta.py", line 267, in run_setup
-      super(_BuildMetaLegacyBackend,
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/build_meta.py", line 158, in run_setup
-      exec(compile(code, __file__, 'exec'), locals())
-    File "setup.py", line 494, in <module>
-      setup_package()
-    File "setup.py", line 486, in setup_package
-      setup(**metadata)
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/core.py", line 169, in setup
-      return old_setup(**new_attr)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/__init__.py", line 153, in setup
+    File "<string>", line 1, in <module>
+    File "/tmp/pip-install-livftszj/pip-hello-world/setup.py", line 3, in <module>
+      setup(
+    File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
       return distutils.core.setup(**attrs)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 148, in setup
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+      return run_commands(dist)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
       dist.run_commands()
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 967, in run_commands
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
       self.run_command(cmd)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 986, in run_command
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
       cmd_obj.run()
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 299, in run
-      self.run_command('build')
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 313, in run_command
+    File "/usr/lib/python3/dist-packages/wheel/bdist_wheel.py", line 259, in run
+      self.run_command('install')
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
       self.distribution.run_command(command)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 986, in run_command
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
       cmd_obj.run()
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/command/build.py", line 62, in run
-      old_build.run(self)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/command/build.py", line 135, in run
+    File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+      return orig.install.run(self)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
       self.run_command(cmd_name)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 313, in run_command
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
       self.distribution.run_command(command)
-    File "/tmp/pip-build-env-4fsizza8/overlay/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 986, in run_command
-      cmd_obj.run()
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/command/build_src.py", line 144, in run
-      self.build_sources()
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/command/build_src.py", line 155, in build_sources
-      self.build_library_sources(*libname_info)
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/command/build_src.py", line 288, in build_library_sources
-      sources = self.generate_sources(sources, (lib_name, build_info))
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/distutils/command/build_src.py", line 378, in generate_sources
-      source = func(extension, build_dir)
-    File "/tmp/pip-install-2n1owai4/numpy/numpy/core/setup.py", line 758, in get_mathlib_info
-      raise RuntimeError(
-  RuntimeError: Broken toolchain: cannot link a simple C program.
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+      cmd_obj.ensure_finalized()
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+      self.finalize_options()
+    File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+      self.set_undefined_options('install',('install_layout','install_layout'))
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+      setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+      raise AttributeError(attr)
+  AttributeError: install_layout
   ----------------------------------------
-  ERROR: Failed building wheel for numpy
-Failed to build numpy
-ERROR: Could not build wheels for numpy which use PEP 517 and cannot be installed directly
-openkylin@openkylin:~$ 
+  ERROR: Failed building wheel for pip-hello-world
+  Running setup.py clean for pip-hello-world
+Failed to build pip-hello-world
+Installing collected packages: pip-hello-world
+    Running setup.py install for pip-hello-world ... error
+    ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-n827wdkv/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/pip-hello-world
+         cwd: /tmp/pip-install-livftszj/pip-hello-world/
+    Complete output (56 lines):
+    running install
+    /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+      warnings.warn(
+    running build
+    running build_py
+    creating build
+    creating build/lib
+    creating build/lib/helloworld
+    copying helloworld/__init__.py -> build/lib/helloworld
+    copying helloworld/hello.py -> build/lib/helloworld
+    creating build/lib/helloworld/images
+    copying helloworld/images/__init__.py -> build/lib/helloworld/images
+    running egg_info
+    writing pip_hello_world.egg-info/PKG-INFO
+    writing dependency_links to pip_hello_world.egg-info/dependency_links.txt
+    writing top-level names to pip_hello_world.egg-info/top_level.txt
+    reading manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+    copying helloworld/images/hello.gif -> build/lib/helloworld/images
+    running install_lib
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-install-livftszj/pip-hello-world/setup.py", line 3, in <module>
+        setup(
+      File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+        return run_commands(dist)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+        dist.run_commands()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+        self.run_command(cmd)
+      File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+        super().run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+        cmd_obj.run()
+      File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+        return orig.install.run(self)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
+        self.run_command(cmd_name)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+        super().run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+        cmd_obj.ensure_finalized()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+        self.finalize_options()
+      File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+        self.set_undefined_options('install',('install_layout','install_layout'))
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+        setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+        raise AttributeError(attr)
+    AttributeError: install_layout
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-n827wdkv/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/pip-hello-world Check the logs for full command output.
+root@openkylin:~/cmake# 
+
 root@openkylin:~# python3 -m test --matchfile tests.txt | tee py38_testlog.txt
 == CPython 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
 == Linux-5.18.0-rc4-starfive-rc5-riscv64-with-glibc2.28 little-endian
