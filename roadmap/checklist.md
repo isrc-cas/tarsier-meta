@@ -50,16 +50,16 @@
 
 | 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
 | --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
-| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        |        |           |        |
-|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        |        |           |        |
-|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        |        |           |        |
-|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        |           |        |
-|                 | cmake         |           |            |        |        |          | ✅ cmake-3.24.1   |        |         |        |        |           |        |
-| 语言            | perl          |           |            |        |        |          |                 |        |         |        |        |           |        |
-|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        |        |           |        |
-|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        |        |           |        |
+| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        |        | ✅ gcc-10 |        |
+|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        |        | ✅ gdb-9.1 |        |
+|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        |        | ✅ llvm-10.0.0 |        |
+|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        | ✅ clang-10.0.0 |        |
+|                 | cmake         |           |            |        |        |          | ✅ cmake-3.24.1   |        |         |        |        | ✅ cmake-3.16.3 |        |
+| 语言            | perl          |           |            |        |        |          |                 |        |         |        |        | ✅ perl-5.30.0 |        |
+|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        |        | ✅ python-3.8 |        |
+|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        |        | ✅ rust-1.59.0 |        |
 |                 | ruby          |           |            |        |        |          |                 |        |         |        |        |           |        |
-|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        |        |           |        |
+|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        |        | ✅ openjdk-8 |        |
 |                 | Nodejs        |           |            |        |        |          | ⚠️             |        |         |        |        |           |        |
 |                 | Ocaml         |           |            |        |        |          |                |        |         |        |        |           |        |
 |                 | golang        |           |            |        |        |          | ✅ golang-1.19 |        |         |        |        |           |        |
