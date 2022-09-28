@@ -68,44 +68,44 @@
 |                 | obs-server    |           |            |        |        |          |        |        |❌|        |        |           |        |
 | 容器            | runc          |           |            |        |        |          |        |        |❌|        |        |           |        |
 |                 | docker        |           |            |        |        |          |        |        |⚠️ 非官方支持|        |        | ✅ docker.io-19.03.8 |        |
-| 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | KDE           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | LXDE          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | GNOME         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Deepin        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MATE          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | LXQT          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Enlightenment |           |            |        |        |          |        |        |         |        |        |           |        |
-| 浏览器          | firefox       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | chromium      |           |            |        |        |          |        |        |         |        |        |           |        |
-| 图像浏览编辑    | GIMP          |           |            |        |        |          |        |        |         |        |        |           |        |
-| 多媒体播放器    | VLC           |           |            |        |        |          |        |        |         |        |        |           |        |
-| 办公软件        | LibreOffice   |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Thunderbird   |           |            |        |        |          |        |        |         |        |        |           |        |
-| IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        |
-| DataBase              | sqlite        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Mysql         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | postgresql    |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MongoDB       |           |            |        |        |          |        |        |         |        |        |           |        |
-| http/web 服务器 | Apache2       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Nginx         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | HAProxy       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Lighttpd      |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Tengine       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Squid         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Varnish       |           |            |        |        |          |        |        |         |        |        |           |        |
-| web             | flask         |           |            |        |        |          |        |        |         |        |        |           |        |
-| 大数据          | HBase         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Hadoop        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | hive          |           |            |        |        |          |        |        |         |        |        |           |        |
-| 中间件          | Redis         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MemCache      |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | mybatis       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Dubbo         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | zookeeper     |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | numpy         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | scipy         |           |            |        |        |          |        |        |         |        |        |           |        |
-| 机器学习        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        |
+| 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | KDE           |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | LXDE          |           |            |        |        |          |        |        |✔️ lubuntu-desktop-22.04.3|        |        |           |        |
+|                 | GNOME         |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | Deepin        |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | MATE          |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | LXQT          |           |            |        |        |          |        |        |✔️ lubuntu-desktop-22.04.3|        |        |           |        |
+|                 | Enlightenment |           |            |        |        |          |        |        |✔️ enlightenment-0.25.3-1         |        |        |           |        |
+| 浏览器          | firefox       |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | chromium      |           |            |        |        |          |        |        |❌|        |        |           |        |
+| 图像浏览编辑    | GIMP          |           |            |        |        |          |        |        |✔️ gimp-2.10.30-1build1|        |        |           |        |
+| 多媒体播放器    | VLC           |           |            |        |        |          |        |        |✔️ vlc-3.0.16-1build7|        |        |           |        |
+| 办公软件        | LibreOffice   |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | Thunderbird   |           |            |        |        |          |        |        |❌|        |        |           |        |
+| IDE             | eclipse       |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | VSCode        |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | PyCharm       |           |            |        |        |          |        |        |❌|        |        |           |        |
+| DataBase              | sqlite        |           |            |        |        |          |        |✔️ sqlite3/jammy 3.37.2-2|         |        |        |           |        |
+|                 | Mysql         |           |            |        |        |          |        |        |✔️ mysql-server-8.0.30-0ubuntu0.22.04.1|        |        |           |        |
+|                 | postgresql    |           |            |        |        |          |        |        |✔️ postgresql-14+238 all|        |        |           |        |
+|                 | MongoDB       |           |            |        |        |          |        |        |❌|        |        |           |        |
+| http/web 服务器 | Apache2       |           |            |        |        |          |        |        |✔️ apache2-2.4.52-1ubuntu4.1|        |        |           |        |
+|                 | Nginx         |           |            |        |        |          |        |        |✔️ nginx-1.18.0-6ubuntu14.2|        |        |           |        |
+|                 | HAProxy       |           |            |        |        |          |        |        |✔️ haproxy 2.4.18-0ubuntu1|        |        |           |        |
+|                 | Lighttpd      |           |            |        |        |          |        |        |✔️ lighttpd 1.4.63-1ubuntu3|        |        |           |        |
+|                 | Tengine       |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | Squid         |           |            |        |        |          |        |        |✔️ squid-5.2-1ubuntu4.1|        |        |           |        |
+|                 | Varnish       |           |            |        |        |          |        |        |✔️ varnish 6.6.1-1ubuntu0.2|        |        |           |        |
+| web             | flask         |           |            |        |        |          |        |        |❌|        |        |           |        |
+| 大数据          | HBase         |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | Hadoop        |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | hive          |           |            |        |        |          |        |        |❌|        |        |           |        |
+| 中间件          | Redis         |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | MemCache      |           |            |        |        |          |        |        |memcached-1.6.14-1|        |        |           |        |
+|                 | mybatis       |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | Dubbo         |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | zookeeper     |           |            |        |        |          |        |        |✔️ zookeeper-bin-3.4.13-6ubuntu4|        |        |           |        |
+|                 | numpy         |           |            |        |        |          |        |        |✔️ python3-numpy-1.21.5-1build2|        |        |           |        |
+|                 | scipy         |           |            |        |        |          |        |        |✔️ python3-scipy-1.8.0-1exp2ubuntu1|        |        |           |        |
+| 机器学习        | tensorflow    |           |            |        |        |          |        |        |❌|        |        |           |        |
 | ……              |               |           |            |        |        |          |        |        |         |        |        |           |        |
