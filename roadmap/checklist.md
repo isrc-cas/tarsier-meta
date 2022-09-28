@@ -4,8 +4,8 @@
 
 | 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine |
 |-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ |
-| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
-| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  ||||[官方仓库][openkylin]| [官方软件包][alpineAPK]|
+| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 详见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
+| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |由 [Ubuntu-ports](ubuntu-ports) 一并提供，无独立仓库。||||[官方仓库][openkylin]| [官方软件包][alpineAPK]|
 | Wiki 支持页 | [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  |  | | |
 
 [oeRepo]: https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/
@@ -13,6 +13,7 @@
 [suseimage]: https://download.opensuse.org/ports/riscv/tumbleweed/images/
 [fedora]: https://fedorapeople.org/groups/risc-v/disk-images/
 [ubuntuImage]: https://cdimage.ubuntu.com/releases/22.04.1/release/
+[ubuntu-ports]: http://ports.ubuntu.com/ubuntu-ports/
 [debImage]: https://gitlab.com/api/v4/projects/giomasce%2Fdqib/jobs/artifacts/master/download?job=convert_riscv64-virt
 [alpineImage]: https://dl-cdn.alpinelinux.org/alpine/edge/releases/riscv64/
 
@@ -33,7 +34,6 @@
 [DebWiki]: https://wiki.debian.org/RISC-V
 [UbuntuWiki]: https://wiki.ubuntu.com/RISC-V
 
-
 ## 流行 Linux 发行版 for RISC-V 硬件适配情况（主流 RISC-V 开发板）
 
 | 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
@@ -45,30 +45,29 @@
 | HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      | √       |        |        | √         |        |
 | PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |        |
 
-
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
 
 | 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
 | --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
-| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 |        |
-|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |        |
-|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 |        |
-|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        | ✅ clang-10.0.0 |        |
-|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |         |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 |        |
-| 语言            | perl          |           |            |        |        |          |                 |        |         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 |        |
-|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        | ✅	python-3.10.2       | ✅ python-3.8 |        |
-|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |        |
-|                 | ruby          |           |            |        |        |          |                 |        |         |        |        |           |        |
-|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |        |
-|                 | Nodejs        |           |            |        |        |          | ⚠️             |        |         |        |        | ✅ nodejs-12.22.9 |  |
-|                 | Ocaml         |           |            |        |        |          |                |        |         |        | ✅ ocaml-4.12.0-3       |           |        | 
-|                 | golang        |           |            |        |        |          | ✅ golang-1.19 |        |         |        |        |           |        |
-|                 | erlang        |           |            |        |        |          |        |        |         |        |        |           |        |
-| 构建工具        | obs           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        |
-| 容器            | runc          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | docker        |           |            |        |        |          |        |        |         |        |        | ✅ docker.io-19.03.8 |        |
+| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |✔️ gcc-12.1.1|         |        | ✅ gcc-12.0.1 | ✅ gcc-10 |        |
+|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |✔️ gdb-12.0.90|         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |        |
+|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |✔️ llvm-14.0.0|         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 |        |
+|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |✔️ clang-14.0.0|         |        |        | ✅ clang-10.0.0 |        |
+|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |✔️ cmake-3.22.1|        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 |        |
+| 语言            | perl          |           |            |        |        |          |                 |✔️ perl-5.34.0|         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 |        |
+|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |✔️ python3-3.10.6|         |        | ✅ python-3.10.2       | ✅ python-3.8 |        |
+|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |✔️ rust-1.59.0|         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |        |
+|                 | ruby          |           |            |        |        |          |                 |✔️ ruby3.0-3.0.2|         |        |        |           |        |
+|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |✔️ OpenJDK-18.0.2|         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |        |
+|                 | Nodejs        |           |            |        |        |          | ⚠️             |❌|         |        |        | ✅ nodejs-12.22.9 |  |
+|                 | Ocaml         |           |            |        |        |          |                |✔️ ocaml-4.13.1-3|         |        | ✅ ocaml-4.12.0-3       |           |        |
+|                 | golang        |           |            |        |        |          | ✅ golang-1.19 |✔️ golang-go-1.18|         |        |        |           |        |
+|                 | erlang        |           |            |        |        |          |        |        |✔️ erlang-24.2.1|        |        |           |        |
+| 构建工具        | obs           |           |            |        |        |          |        |        |✔️ obs-build-20210120-1|        |        |           |        |
+|                 | osc           |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | obs-server    |           |            |        |        |          |        |        |❌|        |        |           |        |
+| 容器            | runc          |           |            |        |        |          |        |        |❌|        |        |           |        |
+|                 | docker        |           |            |        |        |          |        |        |⚠️ 非官方支持|        |        | ✅ docker.io-19.03.8 |        |
 | 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | KDE           |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | LXDE          |           |            |        |        |          |        |        |         |        |        |           |        |
@@ -86,7 +85,7 @@
 | IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        |
-| DB              | sqlite        |           |            |        |        |          |        |        |         |        |        |           |        |
+| DataBase              | sqlite        |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | Mysql         |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | postgresql    |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | MongoDB       |           |            |        |        |          |        |        |         |        |        |           |        |
