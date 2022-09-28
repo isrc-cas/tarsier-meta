@@ -2,56 +2,48 @@
 
 ## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
 
-| 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine | OpenBSD |
-|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ | ------- |
-| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] | [官方镜像仓库][gentoo-mirror], [RISC-V overlay][riscv-overlay] | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        | [官方仓库][OpenAnolis Image]       | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
-| 软件包仓库 | [openEuler OBS][oeOBS] | [GitHub][archrvpkg] |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  |||[OpenAnolis 增补][OpenAnolis]|[官方仓库][openkylin]| [官方软件包][alpineAPK]|
-| Wiki 支持页 | [RISC-V SIG 组][oerv] |  | [RISC-V 项目页][gentoo-riscv-proj] | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  | [OpenAnolis RISC-V SIG 组][OpenAnolis SIG] | | |
+| 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine |
+|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ |
+| 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 详见 Wiki 页 | [官方仓库][freebsdImage] |        |        | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
+| 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |由 [Ubuntu-ports](ubuntu-ports) 一并提供，无独立仓库。||||[官方仓库][openkylin]| [官方软件包][alpineAPK]|
+| Wiki 支持页 | [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  |  | | |
 
-潜在对象：
-
-- Manjaro <https://repo-riscv.manjaro.org/README>
-
-[oerepo]: https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/
+[oeRepo]: https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/
 [archrv]: https://archriscv.felixc.at/
-[gentoo-mirror]: https://github.com/gentoo-mirror/gentoo
-[riscv-overlay]: https://github.com/gentoo/riscv
-[archrvpkg]: https://github.com/felixonmars/archriscv-packages
 [suseimage]: https://download.opensuse.org/ports/riscv/tumbleweed/images/
 [fedora]: https://fedorapeople.org/groups/risc-v/disk-images/
-[ubuntuimage]: https://cdimage.ubuntu.com/releases/22.04.1/release/
-[debimage]: https://gitlab.com/api/v4/projects/giomasce%2Fdqib/jobs/artifacts/master/download?job=convert_riscv64-virt
-[alpineimage]: https://dl-cdn.alpinelinux.org/alpine/edge/releases/riscv64/
-[freebsdimage]: https://download.freebsd.org/ftp/snapshots/VM-IMAGES/14.0-CURRENT/riscv64/Latest/
+[ubuntuImage]: https://cdimage.ubuntu.com/releases/22.04.1/release/
+[ubuntu-ports]: http://ports.ubuntu.com/ubuntu-ports/
+[debImage]: https://gitlab.com/api/v4/projects/giomasce%2Fdqib/jobs/artifacts/master/download?job=convert_riscv64-virt
+[alpineImage]: https://dl-cdn.alpinelinux.org/alpine/edge/releases/riscv64/
+
+[freebsdImage]: https://download.freebsd.org/ftp/snapshots/VM-IMAGES/14.0-CURRENT/riscv64/Latest/
 [freebsdwiki]: https://wiki.freebsd.org/riscv
+
 [openkylin]: http://archive.build.openkylin.top/openkylin
-[openkylinlzuimage]: https://mirror.lzu.edu.cn/openkylin-cdimage/
-[openkylin163image]: https://mirrors.163.com/openkylin-cd/
-[oeobs]: https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V
-[debbuildd]: https://buildd.debian.org/status/architecture.php?suite=unstable&a=riscv64&priority=
-[suseobs]: https://build.opensuse.org/project/show/openSUSE:Factory:RISCV
-[alpineapk]: https://pkgs.alpinelinux.org/packages?arch=riscv64
+[openkylinlzuImage]: https://mirror.lzu.edu.cn/openkylin-cdimage/
+[openkylin163Image]: https://mirrors.163.com/openkylin-cd/
+
+[oeOBS]: https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V
+[debBuildD]: https://buildd.debian.org/status/architecture.php?suite=unstable&a=riscv64&priority=
+[suseOBS]: https://build.opensuse.org/project/show/openSUSE:Factory:RISCV
+[alpineAPK]: https://pkgs.alpinelinux.org/packages?arch=riscv64
+
 [oerv]: https://gitee.com/openEuler/RISC-V
-[gentoo-riscv-proj]: https://wiki.gentoo.org/wiki/Project:RISC-V
 [suseWiki]: https://en.opensuse.org/Category:RISC-V
 [DebWiki]: https://wiki.debian.org/RISC-V
 [UbuntuWiki]: https://wiki.ubuntu.com/RISC-V
-[OpenAnolis]: http://build.openanolis.cn/kojifiles/repos/anolis-riscv64-repo-external
-[OpenAnolis Image]: http://build.openanolis.cn/kojifiles/rsync/alt/
-[OpenAnolis SIG]: https://openanolis.cn/sig/RISC-V
 
 ## 流行 Linux 发行版 for RISC-V 硬件适配情况（主流 RISC-V 开发板）
 
-使用非发行版软件源中的内核启动（如从厂商源码编译）也视作可以启动
-| 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine | OpenBSD |
-| ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- | ------ | ------- |
+| 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
+| ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- | ------ |
 | QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |        |
 | 全志哪吒 D1              | √         | √          | √      | √      | √        | √      | √      |         |        | √      |           |        |
 | 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |        |
 | HiFive Unleashed         |           | √          | √      | √      | √        |        |        | √       |        |        |           |        |
 | HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      | √       |        |        | √         |        |
 | PolarFire SoC Icicle Kit |           | √          |        | √      | √        | √      |        |         |        |        |           |        |
-
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
 
