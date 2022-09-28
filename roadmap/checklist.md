@@ -75,7 +75,7 @@
 |                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        ||
 | 容器            | runc          |           |            | ✅ runc-1.1.3 |        |          |        |        |         |        |        |           |        ||
-|                 | docker        |           | ✅ docker-20.10.17 | ✅ docker-20.10.17 |        | ✅ docker-20.10.17 |        |        |  |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  ||
+|                 | docker        |           | ✅ docker-20.10.17 | ✅ docker-20.10.17 |        | ✅ docker-20.10.17 |        |        |  |        |        |  | ✅ docker-20.10.18  ||
 | 桌面            | Xfce Desktop  |           |            | ✅ xfce4-meta-4.16 | ✅ xfce4-4.16 |  |        |        |         |        |        |           |        ||
 |                 | KDE           |           |            | ✅ plasma-meta-5.25.5 | ✅ kde-5:129 |  |        |        |         |        |        |           |        ||
 |                 | LXDE          |           |            | ✅ lxde-meta-0.5.5 | ✅ lxde-11 |  |        |        |         |        |        |           |        ||
@@ -93,9 +93,9 @@
 | IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        ||
-| DB              | sqlite        |           | ✅ sqlite-3.39.1 | ✅ sqlite-3.39.3 | ✅ sqlite-2.8.17 | ✅ sqlite-3.39.3 |        |        |         |        |  ✅      |           |        ||
-|                 | mariadb(Mysql) |           | ✅ mariadb-10.9.3 | ✅ mysql-8.0.27 | ✅ mariadb-1:10.6.8 | ⚠️ |        |        |         |        |        |           |        ||
-|                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        |           |        ||
+| DB              | sqlite        |           | ✅ sqlite-3.39.1 | ✅ sqlite-3.39.3 | ✅ sqlite-2.8.17 | ✅ sqlite-3.39.3 |        |        |         |        |  ✅      | ✅ sqlite-3.31.1 |        ||
+|                 | mariadb(Mysql) |           | ✅ mariadb-10.9.3 | ✅ mysql-8.0.27 | ✅ mariadb-1:10.6.8 | ⚠️ |        |        |         |        |        | ✅ mysql-8.0 |        ||
+|                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        | ✅ postgresql-12.2 |        ||
 |                 | MongoDB       |           |            |        | ⚠️ | ⚠️ |        |        |         |        |        |           |        ||
 | http/web 服务器 | Apache2       |           | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-22.4.54 |        |        |         |        |        |           |        ||
 |                 | Nginx         |           | ✅ nginx-1.22.0 |        | ⚠️  | ✅ nginx-1.23.1 | ✅ nginx-1.23.1 |        |         |        |        |           |        ||
@@ -116,5 +116,5 @@
 |                 | numpy         |           |            | ✅ numpy-1.23.3 | ✅ numpy-1:1.21.5 |  |        |        |         |        |        |           |        ||
 |                 | scipy         |           |            | ✅ scipy-1.9.1 | ✅ scipy-1.8.1 |   |        |        |         |        |        |           |        ||
 | 机器学习        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
-|                 | openssl       |           | ✅ 1.1.1.q                             |        |        |          |                 |        |         |        |                                                |                      |        |
-[^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay
+|                 | openssl       |           | ✅ 1.1.1.q                             |        |        |          |                 |        |         |        |                                                | ✅ 1.1.1.f |  ||
+|[^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay|||||||||||||||
