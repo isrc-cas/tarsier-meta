@@ -53,25 +53,25 @@
 
 | 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
 | --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
-| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 |        |
-|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |        |
-|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 |        |
-|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        | ✅ clang-10.0.0 |        |
-|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |         |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 |        |
-| 语言            | perl          |           |            |        |        |          |                 |        |         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 |        |
-|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        | ✅	python-3.10.2       | ✅ python-3.8 |        |
-|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |        |
-|                 | ruby          |           |            |        |        |          |                 |        |         |        |        |           |        |
-|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |        |
-|                 | Nodejs        |           |            |        |        |          | ⚠️             |        |         |        | ✅ nodejs-v16.15.1 | ✅ nodejs-12.22.9 |  |
+| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 | ✅ gcc-12.1.1  |
+|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |✅ gdb-12.1 |
+|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 | ✅ llvm-14.0.6   |
+|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        | ✅ clang-10.0.0 | ✅ clang-14.0.6 |
+|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |         |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 | ✅ cmake-3.24.2 |
+| 语言            | perl          |           |            |        |        |          |                 |        |         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 | ✅ perl-5.36.0 |
+|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        | ✅	python-3.10.2       | ✅ python-3.8 | ✅ python-3.10.7 |
+|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |         |
+|                 | ruby          |           |            |        |        |          |                 |        |         |        |        |           | ✅ ruby-3.1.2  |
+|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |         |
+|                 | Nodejs        |           |            |        |        |          | ⚠️             |        |         |        | ✅ nodejs-v16.15.1 | ✅ nodejs-12.22.9 | ✅ nodejs-16.17.0   |
 |                 | Ocaml         |           |            |        |        |          |                |        |         |        | ✅ ocaml-4.12.0-3       |           |        | 
 |                 | golang        |           |            |        |        |          | ✅ golang-1.19 |        |         |        | ✅ golang-1.18.3       |           |        |
-|                 | erlang        |           |            |        |        |          |        |        |         |        |        |           |        |
+|                 | erlang        |           |            |        |        |          |        |        |         |        |        |           | ✅ erlang-25.0.3 |
 | 构建工具        | obs           |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        |
 | 容器            | runc          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | docker        |           |            |        |        |          |        |        |         |        |        | ✅ docker.io-19.03.8 |        |
+|                 | docker        |           |            |        |        |          |        |        |         |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  |
 | 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |         |        |        |           |        | 
 |                 | KDE           |           |            |        |        |          |        |        |         |        |        |           |        |
 |                 | LXDE          |           |            |        |        |          |        |        |         |        |        |           |        |
