@@ -1,0 +1,149 @@
+DB:
+  MongoDB:
+    openSUSE: ⚠️
+  Mysql:
+    openSUSE: ⚠️
+  postgresql:
+    openSUSE: ✅ postgresql-14.5
+  sqlite:
+    Anolis: ✅
+    openSUSE: ✅ sqlite-3.39.3
+IDE:
+  PyCharm: {}
+  VSCode: {}
+  eclipse: {}
+http/web 服务器:
+  Apache2:
+    openSUSE: ✅ apache-22.4.54
+  HAProxy: {}
+  Lighttpd:
+    openSUSE: ✅ lighttpd-1.4.66
+  Nginx:
+    openSUSE: ✅ nginx-1.23.1
+  Squid:
+    openSUSE: ✅ squid-5.7
+  Tengine: {}
+  Varnish: {}
+web:
+  flask: {}
+……:
+  ? ''
+  : {}
+中间件:
+  Dubbo: {}
+  MemCache: {}
+  Redis:
+    openSUSE: ✅ redis-7.0.5
+  mybatis: {}
+  numpy: {}
+  scipy: {}
+  zookeeper: {}
+办公软件:
+  LibreOffice:
+    Anolis: ✅
+  Thunderbird: {}
+图像浏览编辑:
+  GIMP: {}
+多媒体播放器:
+  VLC: {}
+大数据:
+  HBase: {}
+  Hadoop: {}
+  hive: {}
+容器:
+  docker:
+    Alpine: ✅ docker-20.10.18
+    openKylin: ✅ docker.io-19.03.8
+    openSUSE: ✅ docker-20.10.17
+  runc: {}
+机器学习:
+  tensorflow: {}
+构建工具:
+  obs: {}
+  obs-server: {}
+  osc: {}
+桌面:
+  Deepin: {}
+  Enlightenment: {}
+  GNOME: {}
+  KDE: {}
+  LXDE: {}
+  LXQT: {}
+  MATE: {}
+  Xfce Desktop: {}
+浏览器:
+  chromium:
+    Anolis: ✅
+  firefox:
+    Anolis: ✅
+编译器工具链:
+  clang:
+    Alpine: ✅ clang-14.0.6
+    Fedora: ✅ clang-14.0.5
+    openKylin: ✅ clang-10.0.0
+    openSUSE: ✅ clang-14.0.6
+  cmake:
+    Alpine: ✅ cmake-3.24.2
+    Anolis: ✅ cmake-3.22.2
+    Fedora: ✅ cmake-3.24.1
+    openKylin: ✅ cmake-3.16.3
+    openSUSE: ✅ cmake-3.24.2
+  gcc:
+    Alpine: ✅ gcc-12.1.1
+    Anolis: ✅ gcc-12.0.1
+    Fedora: ✅ gcc-12.1.1
+    openKylin: ✅ gcc-10
+    openSUSE: ✅ gcc-12.2.1
+  gdb:
+    Alpine: ✅ gdb-12.1
+    Anolis: ✅ gdb-11.2
+    Fedora: ✅ gdb-12.1
+    openKylin: ✅ gdb-9.1
+    openSUSE: ✅ gdb-12.1
+  llvm:
+    Alpine: ✅ llvm-14.0.6
+    Anolis: ✅ llvm-13.0.1
+    Fedora: ✅ llvm-14.0.5
+    openKylin: ✅ llvm-10.0.0
+    openSUSE: ✅ llvm-14.0.6
+语言:
+  Nodejs:
+    Alpine: ✅ nodejs-16.17.0
+    Anolis: ✅ nodejs-v16.15.1
+    Fedora: ⚠️
+    openKylin: ✅ nodejs-12.22.9
+    openSUSE: ✅ nodejs-18.9.0
+  Ocaml:
+    Anolis: ✅ ocaml-4.12.0-3
+    openSUSE: ✅ ocaml-4.14.0
+  erlang:
+    Alpine: ✅ erlang-25.0.3
+    openSUSE: ✅ erlang-25.0.4
+  golang:
+    Anolis: ✅ golang-1.18.3
+    Fedora: ✅ golang-1.19
+    openSUSE: ✅ go-1.19
+  openJDK:
+    Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
+    Fedora: ✅ openjdk-11
+    openKylin: ✅ openjdk-8
+    openSUSE: ✅ openjdk-1.8/11/17/18
+  perl:
+    Alpine: ✅ perl-5.36.0
+    Anolis: ⚠️ perl-5.34.0
+    openKylin: ✅ perl-5.30.0
+    openSUSE: ✅ perl-5.36.0
+  python:
+    Alpine: ✅ python-3.10.7
+    Anolis: ✅ python-3.10.2
+    Fedora: ✅ python-3.9.7
+    openKylin: ✅ python-3.8
+    openSUSE: ✅ python-3.10.7
+  ruby:
+    Alpine: ✅ ruby-3.1.2
+    openSUSE: ✅ ruby-3.1
+  rust:
+    Anolis: ✅ rust-1.58.1
+    Fedora: ✅ rust-1.63.0
+    openKylin: ✅ rust-1.59.0
+    openSUSE: ✅ rust-1.63.0
