@@ -48,9 +48,9 @@
 | QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |        |
 | 全志哪吒 D1              | √         | √          | √      | √      | √        | √      | √      |         |        | √      |           |        |
 | 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |        |
-| HiFive Unleashed         |           | √          | √      |        | √        |        |        | √       |        |        |           |        |
+| HiFive Unleashed         |           | √          | √      | √      | √        |        |        | √       |        |        |           |        |
 | HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      | √       |        |        | √         |        |
-| PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |        |
+| PolarFire SoC Icicle Kit |           | √          |        | √      | √        | √      |        |         |        |        |           |        |
 
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
@@ -74,22 +74,22 @@
 | 构建工具        | obs           |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        ||
-| 容器            | runc          |           |            | ✅ runc-1.1.3 |        |          |        |        |         |        |        |           |        ||
-|                 | docker        |           | ✅ docker-20.10.17 | ✅ docker-20.10.17 |        | ✅ docker-20.10.17 |        |        |  |        |        |  | ✅ docker-20.10.18  ||
+| 容器            | runc          |           |            | ✅ runc-1.1.3 | ✅ runc-1.1.4    |          |        |        |         |        |        |           |        ||
+|                 | docker        |           | ✅ docker-20.10.17 | ✅ docker-20.10.17 | ✅ docker-20.10.17  | ✅ docker-20.10.17 |        |        |  |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  ||
 | 桌面            | Xfce Desktop  |           |            | ✅ xfce4-meta-4.16 | ✅ xfce4-4.16 |  |        |        |         |        |        |           |        ||
-|                 | KDE           |           |            | ✅ plasma-meta-5.25.5 | ✅ kde-5:129 |  |        |        |         |        |        |           |        ||
-|                 | LXDE          |           |            | ✅ lxde-meta-0.5.5 | ✅ lxde-11 |  |        |        |         |        |        |           |        ||
+|                 | KDE           |           |            | ✅ plasma-meta-5.25.5 | ✅ plasma-desktop-5.25.5 |  |        |        |         |        |        |           |        ||
+|                 | LXDE          |           |            | ✅ lxde-meta-0.5.5 | ✅ lxdm-0.5.3 |  |        |        |         |        |        |           |        ||
 |                 | GNOME         |           |            | ✅ gnome-40.0 | ✅ gnome-1:42 |  |        |        |         |        |        |           |        ||
 |                 | Deepin        |           |            | ✅ dde-meta-20.0 [^1] |        | ] |        |        |         |        |        |           |        ||
 |                 | MATE          |           |            | ✅ mate-1.24 |        |  |        |        |         |        |        |           |        ||
-|                 | LXQT          |           |            | ✅ lxqt-meta-1.1.0 | ✅ lxqt-30 |  |        |        |         |        |        |           |        ||
-|                 | Enlightenment |           |            | ✅ enlightenment-0.25.4 |        |  |        |        |         |        |        |           |        ||
+|                 | LXQT          |           |            | ✅ lxqt-meta-1.1.0 | ✅ lxqt-meta-30 |  |        |        |         |        |        |           |        ||
+|                 | Enlightenment |           |            | ✅ enlightenment-0.25.4 | ✅ enlightenment-0.25.4  |  |        |        |         |        |        |           |        ||
 | 浏览器          | firefox       |           |            | ✅ firefox-103.0.1 | ⚠️ |  |        |        | ⚠️ |        |  ✅      |           |        ||
 |                 | chromium      |           |            | ✅ chromium-98.0.4750.0 | ⚠️ |  |        |        | ✅ |        |  ✅      |           |        ||
-| 图像浏览编辑    | GIMP          |           |            | ✅ gimp-2.10.32 |        |  |        |        |         |        |        |           |        ||
-| 多媒体播放器    | VLC           |           |            | ✅ vlc-3.0.17 |        ||        |        |         |        |        |           |        ||
-| 办公软件        | LibreOffice   |           |            | ✅ |        |          |        |        | ⚠️ |        | ✅       |           |        ||
-|                 | Thunderbird   |           |            | ✅ thunderbird-94.0-beta1 |        |  |        |        |         |        |        |           |        ||
+| 图像浏览编辑    | GIMP          |           |            | ✅ gimp-2.10.32 | ✅ gimp-2.10.32   |  |        |        |         |        |        |           |        ||
+| 多媒体播放器    | VLC           |           |            | ✅ vlc-3.0.17 | ✅ vlc-3.0.17.4  ||        |        |         |        |        |           |        ||
+| 办公软件        | LibreOffice   |           |            | ✅ | ⚠️      |          |        |        | ⚠️ |        | ✅       |           |        ||
+|                 | Thunderbird   |           |            | ✅ thunderbird-94.0-beta1 | ⚠️      |  |        |        |         |        |        |           |        ||
 | IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        ||
@@ -98,7 +98,7 @@
 |                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        | ✅ postgresql-12.2 |        ||
 |                 | MongoDB       |           |            |        | ⚠️ | ⚠️ |        |        |         |        |        |           |        ||
 | http/web 服务器 | Apache2       |           | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-22.4.54 |        |        |         |        |        |           |        ||
-|                 | Nginx         |           | ✅ nginx-1.22.0 |        | ⚠️  | ✅ nginx-1.23.1 | ✅ nginx-1.23.1 |        |         |        |        |           |        ||
+|                 | Nginx         |           | ✅ nginx-1.22.0 |        | ✅ nginx-1.22.0 | ✅ nginx-1.23.1 | ✅ nginx-1.23.1 |        |         |        |        |           |        ||
 |                 | HAProxy       |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | Lighttpd      |           |            | ✅ lighttpd-1.4.67 | ✅ lighttpd-1.4.67 | ✅ lighttpd-1.4.66 |        |        |         |        |        |           |        ||
 |                 | Tengine       |           |            |        | ⚠️ |          |        |        |         |        |        |           |        ||
@@ -115,6 +115,6 @@
 |                 | zookeeper     |           |            |        | ✅ zookeeper-3.8.0 |          |        |        |         |        |        |           |        ||
 |                 | numpy         |           |            | ✅ numpy-1.23.3 | ✅ numpy-1:1.21.5 |  |        |        |         |        |        |           |        ||
 |                 | scipy         |           |            | ✅ scipy-1.9.1 | ✅ scipy-1.8.1 |   |        |        |         |        |        |           |        ||
-| 机器学习        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
-|                 | openssl       |           | ✅ 1.1.1.q                             |        |        |          |                 |        |         |        |                                                | ✅ 1.1.1.f |  ||
-|[^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay|||||||||||||||
+| 其他        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | openssl       |           | ✅ 1.1.1.q                             |        | ✅ 3.0.5       |          |                 |        |         |        |                                                |                      |        |
+[^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay
