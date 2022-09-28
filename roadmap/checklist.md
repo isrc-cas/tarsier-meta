@@ -93,9 +93,9 @@
 | IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        ||
-| DB              | sqlite        |           | ✅ sqlite-3.39.1 | ✅ sqlite-3.39.3 | ✅ sqlite-2.8.17 | ✅ sqlite-3.39.3 |        |        |         |        |  ✅      |           |        ||
-|                 | mariadb(Mysql) |           | ✅ mariadb-10.9.3 | ✅ mysql-8.0.27 | ✅ mariadb-1:10.6.8 | ⚠️ |        |        |         |        |        |           |        ||
-|                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        |           |        ||
+| DB              | sqlite        |           | ✅ sqlite-3.39.1 | ✅ sqlite-3.39.3 | ✅ sqlite-2.8.17 | ✅ sqlite-3.39.3 |        |        |         |        |  ✅      | ✅ sqlite-3.31.1 |        ||
+|                 | mariadb(Mysql) |           | ✅ mariadb-10.9.3 | ✅ mysql-8.0.27 | ✅ mariadb-1:10.6.8 | ⚠️ |        |        |         |        |        | ✅ mysql-8.0 |        ||
+|                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        | ✅ postgresql-12.2 |        ||
 |                 | MongoDB       |           |            |        | ⚠️ | ⚠️ |        |        |         |        |        |           |        ||
 | http/web 服务器 | Apache2       |           | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-22.4.54 |        |        |         |        |        |           |        ||
 |                 | Nginx         |           | ✅ nginx-1.22.0 |        | ✅ nginx-1.22.0 | ✅ nginx-1.23.1 | ✅ nginx-1.23.1 |        |         |        |        |           |        ||
@@ -115,6 +115,6 @@
 |                 | zookeeper     |           |            |        | ✅ zookeeper-3.8.0 |          |        |        |         |        |        |           |        ||
 |                 | numpy         |           |            | ✅ numpy-1.23.3 | ✅ numpy-1:1.21.5 |  |        |        |         |        |        |           |        ||
 |                 | scipy         |           |            | ✅ scipy-1.9.1 | ✅ scipy-1.8.1 |   |        |        |         |        |        |           |        ||
-| 机器学习        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
+| 其他        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
 |                 | openssl       |           | ✅ 1.1.1.q                             |        | ✅ 3.0.5       |          |                 |        |         |        |                                                |                      |        |
 [^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay
