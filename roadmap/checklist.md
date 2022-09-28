@@ -51,65 +51,65 @@
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
 
-| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
-| --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
-| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 | ✅ gcc-12.1.1  |
-|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |✅ gdb-12.1 |
-|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 | ✅ llvm-14.0.6   |
-|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |        |         |        |        | ✅ clang-10.0.0 | ✅ clang-14.0.6 |
-|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |         |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 | ✅ cmake-3.24.2 |
-| 语言            | perl          |           |            |        |        |          |                 |        |         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 | ✅ perl-5.36.0 |
-|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |        |         |        | ✅	python-3.10.2       | ✅ python-3.8 | ✅ python-3.10.7 |
-|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |        |         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |         |
-|                 | ruby          |           |            |        |        |          |                 |        |         |        |        |           | ✅ ruby-3.1.2  |
-|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |        |         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |         |
-|                 | Nodejs        |           |            |        |        |          | ⚠️             |        |         |        | ✅ nodejs-v16.15.1 | ✅ nodejs-12.22.9 | ✅ nodejs-16.17.0   |
-|                 | Ocaml         |           |            |        |        |          |                |        |         |        | ✅ ocaml-4.12.0-3       |           |        | 
-|                 | golang        |           |            |        |        |          | ✅ golang-1.19 |        |         |        | ✅ golang-1.18.3       |           |        |
-|                 | erlang        |           |            |        |        |          |        |        |         |        |        |           | ✅ erlang-25.0.3 |
-| 构建工具        | obs           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        |
-| 容器            | runc          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | docker        |           |            |        |        |          |        |        |         |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  |
-| 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |         |        |        |           |        | 
-|                 | KDE           |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | LXDE          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | GNOME         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Deepin        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MATE          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | LXQT          |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Enlightenment |           |            |        |        |          |        |        |         |        |        |           |        |
-| 浏览器          | firefox       |           |            |        |        |          |        |        |         |        |  ✅      |           |        |
-|                 | chromium      |           |            |        |        |          |        |        |         |        |  ✅      |           |        |
-| 图像浏览编辑    | GIMP          |           |            |        |        |          |        |        |         |        |        |           |        |
-| 多媒体播放器    | VLC           |           |            |        |        |          |        |        |         |        |        |           |        |
-| 办公软件        | LibreOffice   |           |            |        |        |          |        |        |         |        | ✅       |           |        |
-|                 | Thunderbird   |           |            |        |        |          |        |        |         |        |        |           |        |
-| IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        |
-| DB              | sqlite        |           |            |        |        |          |        |        |         |        |  ✅      |           |        |
-|                 | Mysql         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | postgresql    |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MongoDB       |           |            |        |        |          |        |        |         |        |        |           |        |
-| http/web 服务器 | Apache2       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Nginx         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | HAProxy       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Lighttpd      |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Tengine       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Squid         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Varnish       |           |            |        |        |          |        |        |         |        |        |           |        |
-| web             | flask         |           |            |        |        |          |        |        |         |        |        |           |        |
-| 大数据          | HBase         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Hadoop        |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | hive          |           |            |        |        |          |        |        |         |        |        |           |        |
-| 中间件          | Redis         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | MemCache      |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | mybatis       |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | Dubbo         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | zookeeper     |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | numpy         |           |            |        |        |          |        |        |         |        |        |           |        |
-|                 | scipy         |           |            |        |        |          |        |        |         |        |        |           |        |
-| 机器学习        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        |
+| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian |                  openSUSE|                          Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
+| --------------- | ------------- | --------- | ---------- | ------ | ------ | ------------------------ | ------------------------ | ------ | ------- | ------ | ------ | --------- | ------ |
+| 编译器工具链    | gcc           |           |            |        |        | ✅ gcc-12.2.1           | ✅ gcc-12.1.1           |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 | ✅ gcc-12.1.1  |
+|                 | gdb           |           |            |        |        | ✅ gdb-12.1             | ✅ gdb-12.1             |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |✅ gdb-12.1 |
+|                 | llvm          |           |            |        |        | ✅ llvm-14.0.6          | ✅ llvm-14.0.5          |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 | ✅ llvm-14.0.6   |
+|                 | clang         |           |            |        |        | ✅ clang-14.0.6         | ✅ clang-14.0.5         |        |         |        |        | ✅ clang-10.0.0 | ✅ clang-14.0.6 |
+|                 | cmake         |           |            |        |        | ✅ cmake-3.24.2         | ✅ cmake-3.24.1         |        |         |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 | ✅ cmake-3.24.2 |
+| 语言            | perl          |           |            |        |        | ✅ perl-5.36.0          |                          |        |         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 | ✅ perl-5.36.0 |
+|                 | python        |           |            |        |        | ✅ python-3.10.7        | ✅ python-3.9.7         |        |         |        | ✅	python-3.10.2       | ✅ python-3.8 | ✅ python-3.10.7 |
+|                 | rust          |           |            |        |        | ✅ rust-1.63.0          | ✅ rust-1.63.0          |        |         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |         |
+|                 | ruby          |           |            |        |        | ✅ ruby-3.1             |                          |        |         |        |        |           | ✅ ruby-3.1.2  |
+|                 | openJDK       |           |            |        |        | ✅ openjdk-1.8/11/17/18 | ✅ openjdk-11           |        |         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |         |
+|                 | Nodejs        |           |            |        |        | ✅ nodejs-18.9.0        | ⚠️                       |        |         |        | ✅ nodejs-v16.15.1 | ✅ nodejs-12.22.9 | ✅ nodejs-16.17.0   |
+|                 | Ocaml         |           |            |        |        | ✅ ocaml-4.14.0         |                          |        |         |        | ✅ ocaml-4.12.0-3       |           |        | 
+|                 | golang        |           |            |        |        | ✅ go-1.19              | ✅ golang-1.19          |        |         |        | ✅ golang-1.18.3       |           |        |
+|                 | erlang        |           |            |        |        | ✅ erlang-25.0.4        |                          |        |         |        |        |           | ✅ erlang-25.0.3 |
+| 构建工具        | obs           |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | osc           |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | obs-server    |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 容器            | runc          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | docker        |           |            |        |        | ✅ docker-20.10.17      |                          |        |         |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  |
+| 桌面            | Xfce Desktop  |           |            |        |        |                          |                          |        |         |        |        |           |        | 
+|                 | KDE           |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | LXDE          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | GNOME         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Deepin        |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | MATE          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | LXQT          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Enlightenment |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 浏览器          | firefox       |           |            |        |        |                          |                          |        |         |        |  ✅      |           |        |
+|                 | chromium      |           |            |        |        |                          |                          |        |         |        |  ✅      |           |        |
+| 图像浏览编辑    | GIMP          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 多媒体播放器    | VLC           |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 办公软件        | LibreOffice   |           |            |        |        |                          |                          |        |         |        | ✅       |           |        |
+|                 | Thunderbird   |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| IDE             | eclipse       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | VSCode        |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | PyCharm       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| DB              | sqlite        |           |            |        |        |                          |                          |        |         |        |  ✅      |           |        |
+|                 | Mysql         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | postgresql    |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | MongoDB       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| http/web 服务器 | Apache2       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Nginx         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | HAProxy       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Lighttpd      |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Tengine       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Squid         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Varnish       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| web             | flask         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 大数据          | HBase         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Hadoop        |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | hive          |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 中间件          | Redis         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | MemCache      |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | mybatis       |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | Dubbo         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | zookeeper     |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | numpy         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+|                 | scipy         |           |            |        |        |                          |                          |        |         |        |        |           |        |
+| 机器学习        | tensorflow    |           |            |        |        |                          |                          |        |         |        |        |           |        |
 | ……              |               |           |            |        |        |          |        |        |         |        |        |           |        |
