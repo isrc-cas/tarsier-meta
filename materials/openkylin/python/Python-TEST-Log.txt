@@ -1,0 +1,424 @@
+Connecting to 214.10.1.69:22...
+Connection established.
+To escape to local shell, press 'Ctrl+Alt+]'.
+
+Welcome to openKylin 0.7.5 (GNU/Linux 5.18.0-rc4-starfive-rc5 riscv64)
+
+ * Support:        https://openkylin.top
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+The programs included with the openKylin system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+openKylin comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+openkylin@openkylin:~$ apt update
+正在读取软件包列表... 完成
+E: 无法打开锁文件 /var/lib/apt/lists/lock - open (13: 权限不够)
+E: 无法对目录 /var/lib/apt/lists/ 加锁
+W: 用 unlink 删除文件 /var/cache/apt/pkgcache.bin 出错 - RemoveCaches (13: 权限不够)
+W: 用 unlink 删除文件 /var/cache/apt/srcpkgcache.bin 出错 - RemoveCaches (13: 权限不够)
+openkylin@openkylin:~$ sudo apt update
+sudo: 无法解析主机：openkylin: 未知的名称或服务
+[sudo] openkylin 的密码： 
+命中:1 http://archive.build.openkylin.top/openkylin yangtze InRelease
+命中:2 http://archive.build.openkylin.top/openkylin yangtze-security InRelease
+命中:3 http://archive.build.openkylin.top/openkylin yangtze-updates InRelease
+命中:4 http://archive.build.openkylin.top/openkylin yangtze-proposed InRelease
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+有 270 个软件包可以升级。请执行 ‘apt list --upgradable’ 来查看它们。
+openkylin@openkylin:~$ python3
+Python 3.8.10 (default, Mar 15 2022, 12:22:08) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print('Hello World!')
+Hello World!
+>>> exit()
+openkylin@openkylin:~$ sudo apt install python3-pip
+sudo: 无法解析主机：openkylin: 未知的名称或服务
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  apt-xapian-index bolt dnsmasq dvisvgm evolution-data-server-common fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-cabin fonts-cantarell fonts-comfortaa fonts-croscore fonts-crosextra-caladea
+  fonts-crosextra-carlito fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra fonts-font-awesome fonts-freefont-otf fonts-freefont-ttf fonts-gfs-artemisia fonts-gfs-complutum fonts-gfs-didot fonts-gfs-neohellenic
+  fonts-gfs-olga fonts-gfs-solomos fonts-go fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster fonts-lobstertwo fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-gentium
+  fonts-sil-gentium-basic fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-stix fonts-texgyre fonts-urw-base35 gcr gir1.2-accountsservice-1.0 gir1.2-atspi-2.0 gir1.2-gck-1 gir1.2-gcr-3 gir1.2-gdesktopenums-3.0
+  gir1.2-gdm-1.0 gir1.2-geoclue-2.0 gir1.2-graphene-1.0 gir1.2-gweather-3.0 gir1.2-ibus-1.0 gir1.2-ical-3.0 gir1.2-json-1.0 gir1.2-mutter-6 gir1.2-nm-1.0 gir1.2-nma-1.0 gir1.2-polkit-1.0 gir1.2-rsvg-2.0 gir1.2-upowerglib-1.0 gjs
+  gkbd-capplet gsettings-ubuntu-schemas ibus ibus-data ibus-gtk ibus-gtk3 icu-devtools indicator-application indicator-common iputils-arping kde-cli-tools-data kdesignerplugin-data kdoctools5 kgendesignerplugin
+  kgendesignerplugin-bin kinit kinit-dev kpeople-vcard liba52-0.7.4 libaccounts-glib0 libaccounts-qt5-1 libapache-pom-java libappindicator3-1 libaribb24-0 libbasicusageenvironment1 libboost-dev libboost-thread1.71.0 libboost1.71-dev
+  libc-dev-bin libc6-dev libcamel-1.2-62 libcanberra-dev libcanberra-gtk3-0 libcanberra-gtk3-module libcddb2 libcommons-logging-java libcommons-parent-java libcrypt-dev libdb-dev libdb5.3-dev libdbus-glib-1-2 libdca0 libdmtx0b
+  libdvbpsi10 libebackend-1.2-10 libebml4v5 libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-24 libedataserverui-1.2-2 libegl-dev libetonyek-0.1-1 libfaad2 libfakekey0
+  libfontbox-java libgcc-8-dev libgdm1 libgeocode-glib0 libgjs0g libgl-dev libgles2 libglu1-mesa-dev libglx-dev libgnomekbd-common libgnomekbd8 libgroupsock8 libgs9 libgs9-common libgweather-3-16 libgweather-common libibus-1.0-5
+  libical-dev libicu-dev libido3-0.1-0 libijs-0.35 libindicator3-7 libixml10 libjbig2dec0 libkaccounts1 libkate1 libkchart2 libkchart2-l10n libkdecorations2private7 libkf5archive-dev libkf5archive-doc libkf5attica-dev
+  libkf5attica-doc libkf5auth-dev libkf5auth-dev-bin libkf5auth-doc libkf5bookmarks-data libkf5bookmarks-doc libkf5calendarcore-dev libkf5calendarcore5abi2 libkf5codecs-dev libkf5codecs-doc libkf5completion-dev libkf5completion-doc
+  libkf5config-dev libkf5config-dev-bin libkf5config-doc libkf5configwidgets-doc libkf5coreaddons-dev libkf5coreaddons-dev-bin libkf5coreaddons-doc libkf5crash-dev libkf5crash-doc libkf5dbusaddons-dev libkf5dbusaddons-doc
+  libkf5dnssd-data libkf5dnssd-dev libkf5dnssd-doc libkf5dnssd5 libkf5doctools-dev libkf5emoticons-bin libkf5emoticons-data libkf5emoticons-doc libkf5emoticons5 libkf5globalaccel-doc libkf5guiaddons-dev libkf5guiaddons-doc
+  libkf5i18n-doc libkf5iconthemes-doc libkf5idletime-dev libkf5idletime-doc libkf5itemmodels-dev libkf5itemmodels-doc libkf5itemviews-dev libkf5itemviews-doc libkf5jobwidgets-dev libkf5jobwidgets-doc libkf5js5 libkf5jsapi5
+  libkf5kcmutils-doc libkf5kdelibs4support-data libkf5khtml-data libkf5kio-doc libkf5kjs-dev libkf5krosscore5 libkf5mediaplayer-data libkf5mime-data libkf5mime5abi2 libkf5newstuff-doc libkf5notifications-dev libkf5notifications-doc
+  libkf5notifyconfig-data libkf5notifyconfig-doc libkf5notifyconfig5 libkf5parts-data libkf5parts-doc libkf5people-data libkf5people5 libkf5peoplebackend5 libkf5peoplewidgets5 libkf5plotting-dev libkf5plotting-doc libkf5plotting5
+  libkf5prison5 libkf5pty-data libkf5pty-doc libkf5pty5 libkf5pulseaudioqt2 libkf5purpose-bin libkf5purpose5 libkf5service-doc libkf5solid-dev libkf5solid-doc libkf5sonnet-dev libkf5sonnet-dev-bin libkf5sonnet-doc libkf5style5
+  libkf5su-bin libkf5su-data libkf5su-doc libkf5su5 libkf5textwidgets-doc libkf5threadweaver-dev libkf5threadweaver-doc libkf5threadweaver5 libkf5unitconversion-data libkf5unitconversion-doc libkf5unitconversion5 libkf5wallet-dev
+  libkf5wallet-doc libkf5widgetsaddons-dev libkf5widgetsaddons-doc libkf5windowsystem-dev libkf5windowsystem-doc libkf5xmlgui-doc libkpathsea6 libkworkspace5-5 libkysdk-disk libkysdk-filesystem libkysdk-hardware libkysdk-package
+  libkysdk-powermanagement libkysdk-proc libkysdk-systime libkysdk-timer liblangtag-common liblangtag1 liblirc-client0 liblivemedia77 libmad0 libmatroska6v5 libmozjs-68-0 libmpcdec6 libmpeg2-4 libmutter-6-0 libnautilus-extension1a
+  libodfgen-0.1-1 libopenmpt-modplug1 libpaper-utils libpaper1 libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libpdfbox-java libphonenumber7 libphonon4qt5-4 libphonon4qt5-data libphonon4qt5experimental4 libplacebo7
+  libprotobuf-lite17 libprotobuf17 libproxy-tools libptexenc1 libpthread-stubs0-dev libqapt3 libqapt3-runtime libqca-qt5-2 libqca-qt5-2-plugins libqrencode4 libqt5opengl5 libqt5opengl5-dev libqt5quickparticles5 libqt5quickshapes5
+  libqt5quicktest5 libqt5script5 libqt5scripttools5 libqt5test5 libqt5webkit5-dev libresid-builder0c2a librevenge-0.0-0 libruby2.7 libsdl-image1.2 libsdl1.2debian libsidplay2 libsignon-plugins-common1 libsignon-qt5-1
+  libspatialaudio0 libspnav0 libsrt1 libssh2-1 libssl-dev libstdc++-8-dev libsynctex2 libtcl8.6 libteckit0 libtexlua53 libtk8.6 libukcc-dev libupnp13 libusageenvironment3 libvlc-bin libvlc5 libvlccore9 libvulkan-dev libwpd-0.10-10
+  libwpg-0.3-3 libwps-0.4-4 libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxext-dev libzzip-0-13 lmodern manpages-dev mobile-broadband-provider-info mutter-common nautilus-data p11-kit p11-kit-modules phonon4qt5
+  phonon4qt5-backend-vlc polkit-kde-agent-1 preview-latex-style python3-debian python3-ibus-1.0 python3-xapian qml-module-org-kde-bluezqt qml-module-org-kde-people qml-module-org-kde-purpose qml-module-ubuntu-onlineaccounts
+  qt5-qmake qt5-qmake-bin qtbase5-dev qtbase5-dev-tools qtchooser qtdeclarative5-dev qtdeclarative5-dev-tools qtscript5-dev rake ruby ruby-minitest ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.7
+  rubygems-integration session-migration signon-plugin-oauth2 ssh-import-id sshfs switcheroo-control t1utils tcl tcl8.6 tex-common tex-gyre tk tk8.6 ubuntu-wallpapers ubuntu-wallpapers-focal unzip vlc-data vlc-plugin-base
+  vlc-plugin-video-output x11proto-core-dev x11proto-dev x11proto-xext-dev xorg-sgml-doctools xtrans-dev zip
+使用'sudo apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python-pip-whl python3-distutils python3-lib2to3 python3-pkg-resources python3-setuptools python3-wheel
+建议安装：
+  python-setuptools-doc
+推荐安装：
+  build-essential python3-dev
+下列【新】软件包将被安装：
+  python-pip-whl python3-distutils python3-lib2to3 python3-pip python3-setuptools python3-wheel
+下列软件包将被升级：
+  python3-pkg-resources
+升级了 1 个软件包，新安装了 6 个软件包，要卸载 0 个软件包，有 269 个软件包未被升级。
+需要下载 2,916 kB 的归档。
+解压缩后会消耗 7,553 kB 的额外空间。
+您希望继续执行吗？ [Y/n] 
+y
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python-pip-whl all 20.0.2-ok1 [1,786 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-lib2to3 all 3.8.2-ok1 [73.5 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-distutils all 3.8.2-ok1 [140 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 python3-pkg-resources all 65.3.0-ok5 [210 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 python3-setuptools all 65.3.0-ok5 [454 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-wheel all 0.34.2-ok1 [22.2 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pip all 20.0.2-ok1 [232 kB]
+已下载 2,916 kB，耗时 1秒 (4,637 kB/s)
+正在选中未选择的软件包 python-pip-whl。
+dpkg: 警告: 无法找到软件包 udisks2 的文件列表，现假定目前该软件包没有任何文件被安装在系统里。
+dpkg: 警告: 无法找到软件包 libfprint0:riscv64 的文件列表，现假定目前该软件包没有任何文件被安装在系统里。
+(正在读取数据库 ... 系统当前共安装有 181035 个文件和目录。)
+准备解压 .../0-python-pip-whl_20.0.2-ok1_all.deb  ...
+正在解压 python-pip-whl (20.0.2-ok1) ...
+正在选中未选择的软件包 python3-lib2to3。
+准备解压 .../1-python3-lib2to3_3.8.2-ok1_all.deb  ...
+正在解压 python3-lib2to3 (3.8.2-ok1) ...
+正在选中未选择的软件包 python3-distutils。
+准备解压 .../2-python3-distutils_3.8.2-ok1_all.deb  ...
+正在解压 python3-distutils (3.8.2-ok1) ...
+准备解压 .../3-python3-pkg-resources_65.3.0-ok5_all.deb  ...
+正在解压 python3-pkg-resources (65.3.0-ok5) 并覆盖 (45.2.0-ok1) ...
+正在选中未选择的软件包 python3-setuptools。
+准备解压 .../4-python3-setuptools_65.3.0-ok5_all.deb  ...
+正在解压 python3-setuptools (65.3.0-ok5) ...
+正在选中未选择的软件包 python3-wheel。
+准备解压 .../5-python3-wheel_0.34.2-ok1_all.deb  ...
+正在解压 python3-wheel (0.34.2-ok1) ...
+正在选中未选择的软件包 python3-pip。
+准备解压 .../6-python3-pip_20.0.2-ok1_all.deb  ...
+正在解压 python3-pip (20.0.2-ok1) ...
+正在设置 python3-pkg-resources (65.3.0-ok5) ...
+正在设置 python3-wheel (0.34.2-ok1) ...
+正在设置 python-pip-whl (20.0.2-ok1) ...
+正在设置 python3-lib2to3 (3.8.2-ok1) ...
+正在设置 python3-distutils (3.8.2-ok1) ...
+正在设置 python3-setuptools (65.3.0-ok5) ...
+正在设置 python3-pip (20.0.2-ok1) ...
+正在处理用于 man-db (2.9.1-ok2) 的触发器 ...
+root@openkylin:~/cmake# pip3 install pip-hello-world
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 1.13.1-unknown is an invalid version and will not be supported in a future release
+  warnings.warn(
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 2.3.0-ok2 is an invalid version and will not be supported in a future release
+  warnings.warn(
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.1.36ubuntu1 is an invalid version and will not be supported in a future release
+  warnings.warn(
+Collecting pip-hello-world
+  Downloading pip-hello-world-0.1.tar.gz (1.4 kB)
+Building wheels for collected packages: pip-hello-world
+  Building wheel for pip-hello-world (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-aar5mx4_
+       cwd: /tmp/pip-install-livftszj/pip-hello-world/
+  Complete output (66 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib
+  creating build/lib/helloworld
+  copying helloworld/__init__.py -> build/lib/helloworld
+  copying helloworld/hello.py -> build/lib/helloworld
+  creating build/lib/helloworld/images
+  copying helloworld/images/__init__.py -> build/lib/helloworld/images
+  running egg_info
+  writing pip_hello_world.egg-info/PKG-INFO
+  writing dependency_links to pip_hello_world.egg-info/dependency_links.txt
+  writing top-level names to pip_hello_world.egg-info/top_level.txt
+  reading manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  writing manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+  copying helloworld/images/hello.gif -> build/lib/helloworld/images
+  /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+    warnings.warn(
+  installing to build/bdist.linux-riscv64/wheel
+  running install
+  running install_lib
+  Traceback (most recent call last):
+    File "<string>", line 1, in <module>
+    File "/tmp/pip-install-livftszj/pip-hello-world/setup.py", line 3, in <module>
+      setup(
+    File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+      return distutils.core.setup(**attrs)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+      return run_commands(dist)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+      dist.run_commands()
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+      self.run_command(cmd)
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+      cmd_obj.run()
+    File "/usr/lib/python3/dist-packages/wheel/bdist_wheel.py", line 259, in run
+      self.run_command('install')
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+      self.distribution.run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+      cmd_obj.run()
+    File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+      return orig.install.run(self)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
+      self.run_command(cmd_name)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+      self.distribution.run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+      super().run_command(command)
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+      cmd_obj.ensure_finalized()
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+      self.finalize_options()
+    File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+      self.set_undefined_options('install',('install_layout','install_layout'))
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+      setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+    File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+      raise AttributeError(attr)
+  AttributeError: install_layout
+  ----------------------------------------
+  ERROR: Failed building wheel for pip-hello-world
+  Running setup.py clean for pip-hello-world
+Failed to build pip-hello-world
+Installing collected packages: pip-hello-world
+    Running setup.py install for pip-hello-world ... error
+    ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-n827wdkv/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/pip-hello-world
+         cwd: /tmp/pip-install-livftszj/pip-hello-world/
+    Complete output (56 lines):
+    running install
+    /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+      warnings.warn(
+    running build
+    running build_py
+    creating build
+    creating build/lib
+    creating build/lib/helloworld
+    copying helloworld/__init__.py -> build/lib/helloworld
+    copying helloworld/hello.py -> build/lib/helloworld
+    creating build/lib/helloworld/images
+    copying helloworld/images/__init__.py -> build/lib/helloworld/images
+    running egg_info
+    writing pip_hello_world.egg-info/PKG-INFO
+    writing dependency_links to pip_hello_world.egg-info/dependency_links.txt
+    writing top-level names to pip_hello_world.egg-info/top_level.txt
+    reading manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip_hello_world.egg-info/SOURCES.txt'
+    copying helloworld/images/hello.gif -> build/lib/helloworld/images
+    running install_lib
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-install-livftszj/pip-hello-world/setup.py", line 3, in <module>
+        setup(
+      File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+        return run_commands(dist)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+        dist.run_commands()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+        self.run_command(cmd)
+      File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+        super().run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+        cmd_obj.run()
+      File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+        return orig.install.run(self)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
+        self.run_command(cmd_name)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+        super().run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+        cmd_obj.ensure_finalized()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+        self.finalize_options()
+      File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+        self.set_undefined_options('install',('install_layout','install_layout'))
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+        setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+        raise AttributeError(attr)
+    AttributeError: install_layout
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /usr/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"'; __file__='"'"'/tmp/pip-install-livftszj/pip-hello-world/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-n827wdkv/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/pip-hello-world Check the logs for full command output.
+root@openkylin:~/cmake# 
+
+root@openkylin:~# python3 -m test --matchfile tests.txt | tee py38_testlog.txt
+== CPython 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
+== Linux-5.18.0-rc4-starfive-rc5-riscv64-with-glibc2.28 little-endian
+== cwd: /tmp/test_python_2871
+== CPU count: 2
+== encodings: locale=UTF-8, FS=utf-8
+0:00:00 load avg: 0.20 Run tests sequentially
+0:00:00 load avg: 0.20 [ 1/10] test_grammar
+test test_grammar crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_grammar'
+
+0:00:00 load avg: 0.20 [ 2/10/1] test_opcodes -- test_grammar failed
+test test_opcodes crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_opcodes'
+
+0:00:00 load avg: 0.20 [ 3/10/2] test_dict -- test_opcodes failed
+test test_dict crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_dict'
+
+0:00:01 load avg: 0.20 [ 4/10/3] test_builtin -- test_dict failed
+test test_builtin crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_builtin'
+
+0:00:01 load avg: 0.20 [ 5/10/4] test_exceptions -- test_builtin failed
+test test_exceptions crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_exceptions'
+
+0:00:01 load avg: 0.20 [ 6/10/5] test_types -- test_exceptions failed
+test test_types crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_types'
+
+0:00:01 load avg: 0.26 [ 7/10/6] test_unittest -- test_types failed
+test test_unittest crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_unittest'
+
+0:00:02 load avg: 0.26 [ 8/10/7] test_doctest -- test_unittest failed
+test test_doctest crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_doctest'
+
+0:00:02 load avg: 0.26 [ 9/10/8] test_doctest2 -- test_doctest failed
+test test_doctest2 crashed -- Traceback (most recent call last):
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 270, in _runtest_inner
+    refleak = _runtest_inner2(ns, test_name)
+  File "/usr/lib/python3.8/test/libregrtest/runtest.py", line 221, in _runtest_inner2
+    the_module = importlib.import_module(abstest)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test.test_doctest2'
+
+0:00:02 load avg: 0.26 [10/10/9] test_support -- test_doctest2 failed
+test_support passed in 59.2 sec
+
+== Tests result: FAILURE ==
+
+1 test OK.
+
+9 tests failed:
+    test_builtin test_dict test_doctest test_doctest2 test_exceptions
+    test_grammar test_opcodes test_types test_unittest
+
+Total duration: 1 min 2 sec
+Tests result: FAILURE
+root@openkylin:~# 
