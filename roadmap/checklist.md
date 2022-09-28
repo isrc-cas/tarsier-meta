@@ -2,8 +2,8 @@
 
 ## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
 
-| 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine |
-|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ |
+| 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine | OpenBSD |
+|-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ | ------- |
 | 镜像仓库 | [ISCAS 仓库][oeRepo] | [开发者仓库][archrv] |   | [DQIB][debImage] | [官方仓库][suseImage] | [官方仓库][fedora] | [Server 22.04.1][ubuntuImage], 另见 Wiki 页 | [官方仓库][freebsdImage] |        | [官方仓库][OpenAnolis Image]       | [兰州大学镜像][openkylinlzuImage] <br /> [网易镜像][openkylin163Image] | [官方仓库][alpineImage] |
 | 软件包仓库 | [openEuler OBS][oeOBS] |  |  | [buildd][debBuildD] | [OBS][suseOBS] |  |  |||[OpenAnolis 增补][OpenAnolis]|[官方仓库][openkylin]| [官方软件包][alpineAPK]|
 | Wiki 支持页 | [RISC-V SIG 组][oerv] |  |  | [Debian Wiki][DebWiki] | [Category:RISC-V][susewiki] |  | [Wiki 页][UbuntuWiki] | [Wiki页][freebsdwiki] |  | [OpenAnolis RISC-V SIG 组][OpenAnolis SIG] | | |
@@ -39,8 +39,8 @@
 
 ## 流行 Linux 发行版 for RISC-V 硬件适配情况（主流 RISC-V 开发板）
 
-| 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
-| ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- | ------ |
+| 运行环境                 | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine | OpenBSD |
+| ------------------------ | --------- | ---------- | ------ | ------ | -------- | ------ | ------ | ------- | ------ | ------ | --------- | ------ | ------- |
 | QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |        |
 | 全志哪吒 D1              | √         | √          | √      | √      | √        | √      | √      |         |        | √      |           |        |
 | 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |        |
@@ -51,8 +51,8 @@
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
 
-| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
-| --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
+| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine | OpenBSD |
+| --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ | ------- |
 | 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |        |         |        | ✅ gcc-12.0.1 | ✅ gcc-10 | ✅ gcc-12.1.1  |
 |                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |        |         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |✅ gdb-12.1 |
 |                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |        |         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 | ✅ llvm-14.0.6   |
