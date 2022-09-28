@@ -2,73 +2,66 @@ DB:
   MongoDB:
     Debian: ⚠️
     openSUSE: ⚠️
-    Ubuntu: ❌
   mariadb(Mysql):
     Arch Linux: ✅ mariadb-10.9.3
     Debian: ✅ mariadb-1:10.6.8
     Gentoo: ✅ mysql-8.0.27
+    openKylin: ✅ mysql-8.0
     openSUSE: ⚠️
     Ubuntu: mysql-server-8.0.30
   postgresql:
     Debian: ✅ postgresql-243
     Gentoo: ✅ postgresql-14.5
+    openKylin: ✅ postgresql-12.2
     openSUSE: ✅ postgresql-14.5
-    Ubuntu: ✔️ postgresql-14+238
+    Ubuntu: ✅ postgresql-14+238
   sqlite:
     Anolis: ✅
     Arch Linux: ✅ sqlite-3.39.1
     Debian: ✅ sqlite-2.8.17
     Gentoo: ✅ sqlite-3.39.3
+    openKylin: ✅ sqlite-3.31.1
     openSUSE: ✅ sqlite-3.39.3
-    Ubuntu: ✔️ sqlite3-3.37.2-2
-IDE:
-  PyCharm:
-    Ubuntu: ❌
-  VSCode:
-    Ubuntu: ❌
-  eclipse:
-    Ubuntu: ❌
+    Ubuntu: ✅ sqlite3-3.37.2-2
 http/web 服务器:
   Apache2:
     Arch Linux: ✅ apache-2.4.54
     Debian: ✅ apache-2.4.54
     Gentoo: ✅ apache-2.4.54
     openSUSE: ✅ apache-22.4.54
-    Ubuntu: ✔️ apache2-2.4.52-1ubuntu4.1
+    Ubuntu: ✅ apache2-2.4.52-1ubuntu4.1
   HAProxy:
-    Ubuntu: ✔️ haproxy 2.4.18-0ubuntu1
+    Ubuntu: ✅ haproxy 2.4.18-0ubuntu1
   Lighttpd:
     Debian: ✅ lighttpd-1.4.67
     Gentoo: ✅ lighttpd-1.4.67
     openSUSE: ✅ lighttpd-1.4.66
-    Ubuntu: ✔️ lighttpd 1.4.63-1ubuntu3
+    Ubuntu: ✅ lighttpd 1.4.63-1ubuntu3
   Nginx:
     Arch Linux: ✅ nginx-1.22.0
-    Debian: ⚠️
+    Debian: ✅ nginx-1.22.0
     Fedora: ✅ nginx-1.23.1
     openSUSE: ✅ nginx-1.23.1
-    Ubuntu: ✔️ nginx-1.18.0-6ubuntu14.2
+    Ubuntu: ✅ nginx-1.18.0-6ubuntu14.2
   Squid:
     Debian: ✅ squid-5.6
     Gentoo: ✅ squid-5.4.1
     openSUSE: ✅ squid-5.7
-    Ubuntu: ✔️ squid-5.2-1ubuntu4.1
+    Ubuntu: ✅ squid-5.2-1ubuntu4.1
   Tengine:
     Debian: ⚠️
-    Ubuntu: ❌
   Varnish:
     Debian: ✅ varnish-7.1.1
     Ubuntu: ✔️ varnish 6.6.1-1ubuntu0.2
 web:
   flask:
     Arch Linux: ✅
-  Ubuntu: ❌
 中间件:
   Dubbo: {}
   MemCache:
     Debian: ✅ libmemcached-1.0.18
     Gentoo: ✅ memcached-1.6.17
-    Ubuntu: ✔️ memcached-1.6.14-1
+    Ubuntu: ✅ memcached-1.6.14-1
   Redis:
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.5
@@ -83,97 +76,89 @@ web:
   zookeeper:
     Debian: ✅ zookeeper-3.8.0
     Ubuntu: ✔️ zookeeper-bin-3.4.13-6ubuntu4
+其他:
+  openssl:
+    Arch Linux: ✅ 1.1.1.q
+    Debian: ✅ 3.0.5
+  tensorflow: {}
 办公软件:
   LibreOffice:
     Anolis: ✅
+    Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅
-    Ubuntu: ❌
   Thunderbird:
+    Debian: ⚠️
     Gentoo: ✅ thunderbird-94.0-beta1
-    Ubuntu: ❌
 图像浏览编辑:
   GIMP:
+    Debian: ✅ gimp-2.10.32
     Gentoo: ✅ gimp-2.10.32
-    Ubuntu: ✔️ gimp-2.10.30-1build1
+    Ubuntu: ✅ gimp-2.10.30-1build1
 多媒体播放器:
   VLC:
+    Debian: ✅ vlc-3.0.17.4
     Gentoo: ✅ vlc-3.0.17
-    Ubuntu: ✔️ vlc-3.0.16-1build7
+    Ubuntu: ✅ vlc-3.0.16-1build7
 大数据:
-  HBase:
-    Ubuntu: ❌
-  Hadoop:
-    Ubuntu: ❌
-  hive:
-    Ubuntu: ❌
+  HBase: {}
+  Hadoop: {}
+  hive: {}
 容器:
   docker:
     Alpine: ✅ docker-20.10.18
     Arch Linux: ✅ docker-20.10.17
+    Debian: ✅ docker-20.10.17
     Gentoo: ✅ docker-20.10.17
     openKylin: ✅ docker.io-19.03.8
     openSUSE: ✅ docker-20.10.17
     Ubuntu: ⚠️ 非官方支持
   runc:
+    Debian: ✅ runc-1.1.4
     Gentoo: ✅ runc-1.1.3
-    Ubuntu: ❌
-机器学习:
-  openssl:
-    Arch Linux: ✅ 1.1.1.q
-  tensorflow:
-    Ubuntu: ❌
+
 构建工具:
-  obs:
-    Ubuntu: ❌
-  obs-server:
-    Ubuntu: ❌
-  osc:
-    Ubuntu: ❌
+  obs: {}
+  obs-server: {}
+  osc: {}
 桌面:
   Deepin:
     Gentoo: ✅ dde-meta-20.0 [^1]
     openSUSE: ']'
-    Ubuntu: ❌
   Enlightenment:
+    Debian: ✅ enlightenment-0.25.4
     Gentoo: ✅ enlightenment-0.25.4
     Ubuntu: ✔️ enlightenment-0.25.3-1
   GNOME:
     Debian: ✅ gnome-1:42
     Gentoo: ✅ gnome-40.0
-    Ubuntu: ❌
   KDE:
-    Debian: ✅ kde-5:129
+    Debian: ✅ plasma-desktop-5.25.5
     Gentoo: ✅ plasma-meta-5.25.5
-    Ubuntu: ❌
   LXDE:
-    Debian: ✅ lxde-11
+    Debian: ✅ lxdm-0.5.3
     Gentoo: ✅ lxde-meta-0.5.5
     Ubuntu: ✔️ lubuntu-desktop-22.04.3
   LXQT:
-    Debian: ✅ lxqt-30
+    Debian: ✅ lxqt-meta-30
     Gentoo: ✅ lxqt-meta-1.1.0
     Ubuntu: ✔️ lubuntu-desktop-22.04.3
   MATE:
     Gentoo: ✅ mate-1.24
-    Ubuntu: ❌
   Xfce Desktop:
     Debian: ✅ xfce4-4.16
     Gentoo: ✅ xfce4-meta-4.16
-    Ubuntu: ❌
 浏览器:
   chromium:
     Anolis: ✅
     Debian: ⚠️
     FreeBSD: ✅
     Gentoo: ✅ chromium-98.0.4750.0
-    Ubuntu: ❌
   firefox:
     Anolis: ✅
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅ firefox-103.0.1
-    Ubuntu: ❌
 编译器工具链:
   clang:
     Alpine: ✅ clang-14.0.6
@@ -184,7 +169,7 @@ web:
     Gentoo: ✅ clang-15.0.1
     openKylin: ✅ clang-10.0.0
     openSUSE: ✅ clang-14.0.6
-    Ubuntu: ✔️ clang-14.0.0
+    Ubuntu: ✅ clang-14.0.0
   cmake:
     Alpine: ✅ cmake-3.24.2
     Anolis: ✅ cmake-3.22.2
@@ -195,7 +180,7 @@ web:
     Gentoo: ✅ cmake-3.24.2
     openKylin: ✅ cmake-3.16.3
     openSUSE: ✅ cmake-3.24.2
-    Ubuntu: 	✔️ cmake-3.22.1
+    Ubuntu: 	✅ cmake-3.22.1
   gcc:
     Alpine: ✅ gcc-12.1.1
     Anolis: ✅ gcc-12.0.1
@@ -206,7 +191,7 @@ web:
     Gentoo: ✅ gcc-12.1.1
     openKylin: ✅ gcc-10
     openSUSE: ✅ gcc-12.2.1
-    gcc: ✔️ gcc-12.1.1
+    gcc: ✅ gcc-12.1.1
   gdb:
     Alpine: ✅ gdb-12.1
     Anolis: ✅ gdb-11.2
@@ -217,7 +202,7 @@ web:
     Gentoo: ✅ gdb-12.1
     openKylin: ✅ gdb-9.1
     openSUSE: ✅ gdb-12.1
-    Ubuntu: ✔️ gdb-12.0.90
+    Ubuntu: ✅ gdb-12.0.90
   llvm:
     Alpine: ✅ llvm-14.0.6
     Anolis: ✅ llvm-13.0.1
@@ -228,7 +213,7 @@ web:
     Gentoo: ✅ llvm-15.0.1
     openKylin: ✅ llvm-10.0.0
     openSUSE: ✅ llvm-14.0.6
-    Ubuntu: ✔️ llvm-14.0.0
+    Ubuntu: ✅ llvm-14.0.0
 语言:
   Nodejs:
     Alpine: ✅ nodejs-16.17.0
@@ -240,19 +225,18 @@ web:
     Gentoo: ✅ nodejs-18.9.1
     openKylin: ✅ nodejs-12.22.9
     openSUSE: ✅ nodejs-18.9.0
-    Ubuntu: ❌
   Ocaml:
     Anolis: ✅ ocaml-4.12.0-3
     Debian: ✅ ocaml-4.13.1
     Gentoo: ✅ ocaml-4.14.0
     openSUSE: ✅ ocaml-4.14.0
-    Ubuntu: ✔️ ocaml-4.13.1-3
+    Ubuntu: ✅ ocaml-4.13.1-3
   erlang:
     Alpine: ✅ erlang-25.0.3
     Debian: ✅ erlang-1:24.3.4.5
     Gentoo: ✅ erlang-25.0.4
     openSUSE: ✅ erlang-25.0.4
-    Ubuntu: ✔️ erlang-24.2.1
+    Ubuntu: ✅ erlang-24.2.1
   golang:
     Anolis: ✅ golang-1.18.3
     Arch Linux: ✅ golang-1.19
@@ -261,7 +245,7 @@ web:
     FreeBSD: ⚠️
     Gentoo: ✅ golang-1.19.1
     openSUSE: ✅ golang-1.19
-    Ubuntu: ✔️ golang-go-1.18
+    Ubuntu: ✅ golang-go-1.18
   openJDK:
     Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
     Arch Linux: ✅ openJDK-17.0.1, 11.0.15 (openJDK & Bisheng)
@@ -271,7 +255,7 @@ web:
     Gentoo: ✅ openjdk-17.0.5
     openKylin: ✅ openjdk-8
     openSUSE: ✅ openjdk-1.8/11/17/18
-    Ubuntu: ✔️ OpenJDK-18.0.2
+    Ubuntu: ✅ OpenJDK-18.0.2
   perl:
     Alpine: ✅ perl-5.36.0
     Anolis: ⚠️ perl-5.34.0
@@ -281,7 +265,7 @@ web:
     Gentoo: ✅ perl-5.36.0
     openKylin: ✅ perl-5.30.0
     openSUSE: ✅ perl-5.36.0
-    Ubuntu: ✔️ perl-5.34.0
+    Ubuntu: ✅ perl-5.34.0
   python:
     Alpine: ✅ python-3.10.7
     Anolis: "✅\tpython-3.10.2"
@@ -292,7 +276,7 @@ web:
     Gentoo: ✅ python-3.11.0
     openKylin: ✅ python-3.8
     openSUSE: ✅ python-3.10.7
-    Ubuntu: ✔️ python3-3.10.6
+    Ubuntu: ✅ python3-3.10.6
   ruby:
     Alpine: ✅ ruby-3.1.2
     Arch Linux: ✅ ruby-3.0.4p208
@@ -300,7 +284,7 @@ web:
     FreeBSD: ✅ ruby-2.7.4
     Gentoo: ✅ ruby-3.1.2
     openSUSE: ✅ ruby-3.1
-    Ubuntu: ✔️ ruby3.0-3.0.2
+    Ubuntu: ✅ ruby3.0-3.0.2
   rust:
     Anolis: ✅ rust-1.58.1
     Arch Linux: ✅ rust-1.63.0
@@ -310,4 +294,4 @@ web:
     Gentoo: ✅ rust-1.64.0
     openKylin: ✅ rust-1.59.0
     openSUSE: ✅ rust-1.63.0
-    Ubuntu: ✔️ rust-1.59.0
+    Ubuntu: ✅ rust-1.59.0

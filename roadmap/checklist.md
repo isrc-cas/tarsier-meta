@@ -41,71 +41,72 @@
 | QEMU                     | √         | √          | √      | √      | √        | √      | √      | √       |        | √      |           |        |
 | 全志哪吒 D1              | √         | √          | √      | √      | √        | √      | √      |         |        | √      |           |        |
 | 赛昉 VisionFive          | √         | √          | √      | √      | √        | √      | √      |         |        |        | √         |        |
-| HiFive Unleashed         |           | √          | √      |        | √        |        |        | √       |        |        |           |        |
+| HiFive Unleashed         |           | √          | √      | √      | √        |        |        | √       |        |        |           |        |
 | HiFive Unmatched         | √         | √          | √      | √      | √        | √      | √      | √       |        |        | √         |        |
-| PolarFire SoC Icicle Kit |           | √          |        |        | √        | √      |        |         |        |        |           |        |
+| PolarFire SoC Icicle Kit |           | √          |        | √      | √        | √      |        |         |        |        |           |        |
 
 ## 流行 Linux 发行版 for RISC-V 的应用支持情况测评和对比
 
-| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine |
-| --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ |
-| 编译器工具链    | gcc           |           |            |        |        |            | ✅ gcc-12.1.1  |✔️ gcc-12.1.1|         |        | ✅ gcc-12.0.1 | ✅ gcc-10 |        |
-|                 | gdb           |           |            |        |        |          | ✅ gdb-12.1  |✔️ gdb-12.0.90|         |        | ✅ gdb-11.2 | ✅ gdb-9.1 |        |
-|                 | llvm          |           |            |        |        |          | ✅ llvm-14.0.5 |✔️ llvm-14.0.0|         |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 |        |
-|                 | clang         |           |            |        |        |          | ✅ clang-14.0.5 |✔️ clang-14.0.0|         |        |        | ✅ clang-10.0.0 |        |
-|                 | cmake         |           |            |        |        |  | ✅ cmake-3.24.1   |        |✔️ cmake-3.22.1|        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 |        |
-| 语言            | perl          |           |            |        |        |          |                 |✔️ perl-5.34.0|         |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 |        |
-|                 | python        |           |            |        |        |          | ✅ python-3.9.7 |✔️ python3-3.10.6|         |        | ✅ python-3.10.2       | ✅ python-3.8 |        |
-|                 | rust          |           |            |        |        |          | ✅ rust-1.63.0  |✔️ rust-1.59.0|         |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |        |
-|                 | ruby          |           |            |        |        |          |                 |✔️ ruby3.0-3.0.2|         |        |        |           |        |
-|                 | openJDK       |           |            |        |        |          | ✅ openjdk-11 |✔️ OpenJDK-18.0.2|         |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |        |
-|                 | Nodejs        |           |            |        |        |          | ⚠️             |❌|         |        |        | ✅ nodejs-12.22.9 |  |
-|                 | Ocaml         |           |            |        |        |          |                |✔️ ocaml-4.13.1-3|         |        | ✅ ocaml-4.12.0-3       |           |        |
-|                 | golang        |           |            |        |        |          | ✅ golang-1.19 |✔️ golang-go-1.18|         |        |        |           |        |
-|                 | erlang        |           |            |        |        |          |        |        |✔️ erlang-24.2.1|        |        |           |        |
-| 构建工具        | obs           |           |            |        |        |          |        |        |✔️ obs-build-20210120-1|        |        |           |        |
-|                 | osc           |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | obs-server    |           |            |        |        |          |        |        |❌|        |        |           |        |
-| 容器            | runc          |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | docker        |           |            |        |        |          |        |        |⚠️ 非官方支持|        |        | ✅ docker.io-19.03.8 |        |
-| 桌面            | Xfce Desktop  |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | KDE           |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | LXDE          |           |            |        |        |          |        |        |✔️ lubuntu-desktop-22.04.3|        |        |           |        |
-|                 | GNOME         |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | Deepin        |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | MATE          |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | LXQT          |           |            |        |        |          |        |        |✔️ lubuntu-desktop-22.04.3|        |        |           |        |
-|                 | Enlightenment |           |            |        |        |          |        |        |✔️ enlightenment-0.25.3-1         |        |        |           |        |
-| 浏览器          | firefox       |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | chromium      |           |            |        |        |          |        |        |❌|        |        |           |        |
-| 图像浏览编辑    | GIMP          |           |            |        |        |          |        |        |✔️ gimp-2.10.30-1build1|        |        |           |        |
-| 多媒体播放器    | VLC           |           |            |        |        |          |        |        |✔️ vlc-3.0.16-1build7|        |        |           |        |
-| 办公软件        | LibreOffice   |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | Thunderbird   |           |            |        |        |          |        |        |❌|        |        |           |        |
-| IDE             | eclipse       |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | VSCode        |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | PyCharm       |           |            |        |        |          |        |        |❌|        |        |           |        |
-| DataBase              | sqlite        |           |            |        |        |          |        |✔️ sqlite3/jammy 3.37.2-2|         |        |        |           |        |
-|                 | Mysql         |           |            |        |        |          |        |        |✔️ mysql-server-8.0.30-0ubuntu0.22.04.1|        |        |           |        |
-|                 | postgresql    |           |            |        |        |          |        |        |✔️ postgresql-14+238 all|        |        |           |        |
-|                 | MongoDB       |           |            |        |        |          |        |        |❌|        |        |           |        |
-| http/web 服务器 | Apache2       |           |            |        |        |          |        |        |✔️ apache2-2.4.52-1ubuntu4.1|        |        |           |        |
-|                 | Nginx         |           |            |        |        |          |        |        |✔️ nginx-1.18.0-6ubuntu14.2|        |        |           |        |
-|                 | HAProxy       |           |            |        |        |          |        |        |✔️ haproxy 2.4.18-0ubuntu1|        |        |           |        |
-|                 | Lighttpd      |           |            |        |        |          |        |        |✔️ lighttpd 1.4.63-1ubuntu3|        |        |           |        |
-|                 | Tengine       |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | Squid         |           |            |        |        |          |        |        |✔️ squid-5.2-1ubuntu4.1|        |        |           |        |
-|                 | Varnish       |           |            |        |        |          |        |        |✔️ varnish 6.6.1-1ubuntu0.2|        |        |           |        |
-| web             | flask         |           |            |        |        |          |        |        |❌|        |        |           |        |
-| 大数据          | HBase         |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | Hadoop        |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | hive          |           |            |        |        |          |        |        |❌|        |        |           |        |
-| 中间件          | Redis         |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | MemCache      |           |            |        |        |          |        |        |memcached-1.6.14-1|        |        |           |        |
-|                 | mybatis       |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | Dubbo         |           |            |        |        |          |        |        |❌|        |        |           |        |
-|                 | zookeeper     |           |            |        |        |          |        |        |✔️ zookeeper-bin-3.4.13-6ubuntu4|        |        |           |        |
-|                 | numpy         |           |            |        |        |          |        |        |✔️ python3-numpy-1.21.5-1build2|        |        |           |        |
-|                 | scipy         |           |            |        |        |          |        |        |✔️ python3-scipy-1.8.0-1exp2ubuntu1|        |        |           |        |
-| 机器学习        | tensorflow    |           |            |        |        |          |        |        |❌|        |        |           |        |
-| ……              |               |           |            |        |        |          |        |        |         |        |        |           |        |
+| 分组            | 测试项        | openEuler | Arch Linux | Gentoo | Debian | openSUSE | Fedora | Ubuntu | FreeBSD | Deepin | Anolis | openKylin | Alpine | OpenBSD |
+| --------------- | ------------- | --------- | ---------- | ------ | ------ | -------- | -------------- | ------ | ------- | ------ | ------ | --------- | ------ | ------- |
+| 编译器工具链    | gcc           |           | ✅ gcc-12.2.0 | ✅ gcc-12.1.1 | ✅ gcc-12.2.0 | ✅ gcc-12.2.1 | ✅ gcc-12.1.1  |        | ✅gcc-9.3.0 |        | ✅ gcc-12.0.1 | ✅ gcc-10 | ✅ gcc-12.1.1  ||
+|                 | gdb           |           | ✅ gdb-12.1 | ✅ gdb-12.1 | ✅ gdb-12.1 | ✅ gdb-12.1 | ✅ gdb-12.1  |        | ✅ gdb-11.1 |        | ✅ gdb-11.2 | ✅ gdb-9.1 |✅ gdb-12.1 ||
+|                 | llvm          |           | ✅ llvm-14.0.6 | ✅ llvm-15.0.1 | ✅ llvm-14.0.6 | ✅ llvm-14.0.6 | ✅ llvm-14.0.5 |        | ✅ llvm-9.0.1 |        | ✅ llvm-13.0.1 | ✅ llvm-10.0.0 | ✅ llvm-14.0.6   ||
+|                 | clang         |           | ✅ clang-14.0.6 | ✅ clang-15.0.1 |  ✅ clang-14.0.6 | ✅ clang-14.0.6 | ✅ clang-14.0.5 |        | ✅ clang-14.0.5 |        |        | ✅ clang-10.0.0 | ✅ clang-14.0.6 ||
+|                 | cmake         |           | ✅ cmake-3.24.2 | ✅ cmake-3.24.2 | ✅ cmake-3.24.2 | ✅ cmake-3.24.2 | ✅ cmake-3.24.1   |        | ✅ cmake-3.21.4 |        | ✅ cmake-3.22.2 | ✅ cmake-3.16.3 | ✅ cmake-3.24.2 ||
+| 语言            | perl          |           | ✅ perl-5.36.0 | ✅ perl-5.36.0 | ✅ perl-5.34.0 | ✅ perl-5.36.0  |                 |        | ✅ perl-5.32.1 |        | ⚠️ perl-5.34.0 | ✅ perl-5.30.0 | ✅ perl-5.36.0 ||
+|                 | python        |           | ✅ python-3.10.7 | ✅ python-3.11.0 | ✅ python-3.10.6 | ✅ python-3.10.7 | ✅ python-3.9.7 |        | ✅python-3.8.12 |        | ✅	python-3.10.2       | ✅ python-3.8 | ✅ python-3.10.7 ||
+|                 | rust          |           | ✅ rust-1.63.0 | ✅ rust-1.64.0 | ✅ rust-1.61 | ✅ rust-1.63.0 | ✅ rust-1.63.0  |        | ⚠️ |        | ✅ rust-1.58.1       | ✅ rust-1.59.0 |         ||
+|                 | ruby          |           | ✅ ruby-3.0.4p208 | ✅ ruby-3.1.2 | ✅ ruby-1:3.0 | ✅ ruby-3.1 |                 |        | ✅ ruby-2.7.4 |        |        |           | ✅ ruby-3.1.2  ||
+|                 | openJDK       |           | ✅ openJDK-17.0.1, 11.0.15 (openJDK & Bisheng) | ✅ openjdk-17.0.5 | ✅ openjdk-19 | ✅ openjdk-1.8/11/17/18 | ✅ openjdk-11 |        | ⚠️ |        | ✅ openjdk-11 (bisheng & dragonwell & OpenJDK) | ✅ openjdk-8 |         ||
+|                 | Nodejs        |           | ✅ Nodejs-18.9.1 | ✅ nodejs-18.9.1 | ✅ nodejs-18.7.0 | ✅ nodejs-18.9.0 | ⚠️             |        | ⚠️ |        | ✅ nodejs-v16.15.1 | ✅ nodejs-12.22.9 | ✅ nodejs-16.17.0   ||
+|                 | Ocaml         |           |  | ✅ ocaml-4.14.0 | ✅ ocaml-4.13.1 | ✅ ocaml-4.14.0 |                |        |         |        | ✅ ocaml-4.12.0-3       |           |        ||
+|                 | golang        |           | ✅ golang-1.19 |  ✅ golang-1.19.1 | ✅ golang-1.19 | ✅ golang-1.19 | ✅ golang-1.19 |        | ⚠️ |        | ✅ golang-1.18.3       |           |        ||
+|                 | erlang        |           |            | ✅ erlang-25.0.4 | ✅ erlang-1:24.3.4.5 | ✅ erlang-25.0.4 |        |        |         |        |        |           | ✅ erlang-25.0.3 ||
+| 构建工具        | obs           |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | osc           |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | obs-server    |           |            |        |        |          |        |        |         |        |        |           |        ||
+| 容器            | runc          |           |            | ✅ runc-1.1.3 | ✅ runc-1.1.4    |          |        |        |         |        |        |           |        ||
+|                 | docker        |           | ✅ docker-20.10.17 | ✅ docker-20.10.17 | ✅ docker-20.10.17  | ✅ docker-20.10.17 |        |        |  |        |        | ✅ docker.io-19.03.8 | ✅ docker-20.10.18  ||
+| 桌面            | Xfce Desktop  |           |            | ✅ xfce4-meta-4.16 | ✅ xfce4-4.16 |  |        |        |         |        |        |           |        ||
+|                 | KDE           |           |            | ✅ plasma-meta-5.25.5 | ✅ plasma-desktop-5.25.5 |  |        |        |         |        |        |           |        ||
+|                 | LXDE          |           |            | ✅ lxde-meta-0.5.5 | ✅ lxdm-0.5.3 |  |        |        |         |        |        |           |        ||
+|                 | GNOME         |           |            | ✅ gnome-40.0 | ✅ gnome-1:42 |  |        |        |         |        |        |           |        ||
+|                 | Deepin        |           |            | ✅ dde-meta-20.0 [^1] |        | ] |        |        |         |        |        |           |        ||
+|                 | MATE          |           |            | ✅ mate-1.24 |        |  |        |        |         |        |        |           |        ||
+|                 | LXQT          |           |            | ✅ lxqt-meta-1.1.0 | ✅ lxqt-meta-30 |  |        |        |         |        |        |           |        ||
+|                 | Enlightenment |           |            | ✅ enlightenment-0.25.4 | ✅ enlightenment-0.25.4  |  |        |        |         |        |        |           |        ||
+| 浏览器          | firefox       |           |            | ✅ firefox-103.0.1 | ⚠️ |  |        |        | ⚠️ |        |  ✅      |           |        ||
+|                 | chromium      |           |            | ✅ chromium-98.0.4750.0 | ⚠️ |  |        |        | ✅ |        |  ✅      |           |        ||
+| 图像浏览编辑    | GIMP          |           |            | ✅ gimp-2.10.32 | ✅ gimp-2.10.32   |  |        |        |         |        |        |           |        ||
+| 多媒体播放器    | VLC           |           |            | ✅ vlc-3.0.17 | ✅ vlc-3.0.17.4  ||        |        |         |        |        |           |        ||
+| 办公软件        | LibreOffice   |           |            | ✅ | ⚠️      |          |        |        | ⚠️ |        | ✅       |           |        ||
+|                 | Thunderbird   |           |            | ✅ thunderbird-94.0-beta1 | ⚠️      |  |        |        |         |        |        |           |        ||
+| IDE             | eclipse       |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | VSCode        |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | PyCharm       |           |            |        |        |          |        |        |         |        |        |           |        ||
+| DB              | sqlite        |           | ✅ sqlite-3.39.1 | ✅ sqlite-3.39.3 | ✅ sqlite-2.8.17 | ✅ sqlite-3.39.3 |        |        |         |        |  ✅      | ✅ sqlite-3.31.1 |        ||
+|                 | mariadb(Mysql) |           | ✅ mariadb-10.9.3 | ✅ mysql-8.0.27 | ✅ mariadb-1:10.6.8 | ⚠️ |        |        |         |        |        | ✅ mysql-8.0 |        ||
+|                 | postgresql    |           |            | ✅ postgresql-14.5 | ✅ postgresql-243 | ✅ postgresql-14.5 |        |        |         |        |        | ✅ postgresql-12.2 |        ||
+|                 | MongoDB       |           |            |        | ⚠️ | ⚠️ |        |        |         |        |        |           |        ||
+| http/web 服务器 | Apache2       |           | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-2.4.54 | ✅ apache-22.4.54 |        |        |         |        |        |           |        ||
+|                 | Nginx         |           | ✅ nginx-1.22.0 |        | ✅ nginx-1.22.0 | ✅ nginx-1.23.1 | ✅ nginx-1.23.1 |        |         |        |        |           |        ||
+|                 | HAProxy       |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | Lighttpd      |           |            | ✅ lighttpd-1.4.67 | ✅ lighttpd-1.4.67 | ✅ lighttpd-1.4.66 |        |        |         |        |        |           |        ||
+|                 | Tengine       |           |            |        | ⚠️ |          |        |        |         |        |        |           |        ||
+|                 | Squid         |           |            | ✅ squid-5.4.1 | ✅ squid-5.6 | ✅ squid-5.7 |        |        |         |        |        |           |        ||
+|                 | Varnish       |           |            |        | ✅ varnish-7.1.1 |          |        |        |         |        |        |           |        ||
+| web             | flask         |           | ✅ |        |        |          |        |        |         |        |        |           |        ||
+| 大数据          | HBase         |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | Hadoop        |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | hive          |           |            |        |        |          |        |        |         |        |        |           |        ||
+| 中间件          | Redis         |           |            | ✅ redis-7.0.5 | ✅ redis-7.0.5 | ✅ redis-7.0.5 |        |        |         |        |        |           |        ||
+|                 | MemCache      |           |            | ✅ memcached-1.6.17 | ✅ libmemcached-1.0.18 |  |        |        |         |        |        |           |        ||
+|                 | mybatis       |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | Dubbo         |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | zookeeper     |           |            |        | ✅ zookeeper-3.8.0 |          |        |        |         |        |        |           |        ||
+|                 | numpy         |           |            | ✅ numpy-1.23.3 | ✅ numpy-1:1.21.5 |  |        |        |         |        |        |           |        ||
+|                 | scipy         |           |            | ✅ scipy-1.9.1 | ✅ scipy-1.8.1 |   |        |        |         |        |        |           |        ||
+| 其他        | tensorflow    |           |            |        |        |          |        |        |         |        |        |           |        ||
+|                 | openssl       |           | ✅ 1.1.1.q                             |        | ✅ 3.0.5       |          |                 |        |         |        |                                                |                      |        |
+[^1]: 在 deepin-overlay 中，https://github.com/deepin-community/deepin-overlay
