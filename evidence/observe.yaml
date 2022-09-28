@@ -124,7 +124,6 @@ web:
 桌面:
   Deepin:
     Gentoo: ✅ dde-meta-20.0 [^1]
-    openSUSE: ']'
   Enlightenment:
     Debian: ✅ enlightenment-0.25.4
     Gentoo: ✅ enlightenment-0.25.4
@@ -180,7 +179,7 @@ web:
     Gentoo: ✅ cmake-3.24.2
     openKylin: ✅ cmake-3.16.3
     openSUSE: ✅ cmake-3.24.2
-    Ubuntu: 	✅ cmake-3.22.1
+    Ubuntu:  ✅ cmake-3.22.1
   gcc:
     Alpine: ✅ gcc-12.1.1
     Anolis: ✅ gcc-12.0.1
@@ -191,7 +190,6 @@ web:
     Gentoo: ✅ gcc-12.1.1
     openKylin: ✅ gcc-10
     openSUSE: ✅ gcc-12.2.1
-    gcc: ✅ gcc-12.1.1
   gdb:
     Alpine: ✅ gdb-12.1
     Anolis: ✅ gdb-11.2
@@ -268,7 +266,7 @@ web:
     Ubuntu: ✅ perl-5.34.0
   python:
     Alpine: ✅ python-3.10.7
-    Anolis: "✅\tpython-3.10.2"
+    Anolis: ✅ python-3.10.2
     Arch Linux: ✅ python-3.10.7
     Debian: ✅ python-3.10.6
     Fedora: ✅ python-3.9.7
@@ -295,3 +293,7 @@ web:
     openKylin: ✅ rust-1.59.0
     openSUSE: ✅ rust-1.63.0
     Ubuntu: ✅ rust-1.59.0
+IDE:
+  eclipse: {}
+  VSCode: {}
+  PyCharm: {}
