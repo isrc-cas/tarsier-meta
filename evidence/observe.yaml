@@ -25,7 +25,7 @@ DB:
     openKylin: ✅ sqlite-3.31.1
     openSUSE: ✅ sqlite-3.39.3
     Ubuntu: ✅ sqlite3-3.37.2-2
-    OpenBSD: ⚠️
+    OpenBSD: ✅ sqlite3-3.39.3
 http/web 服务器:
   Apache2:
     Arch Linux: ✅ apache-2.4.54
@@ -80,7 +80,7 @@ web:
   numpy:
     Debian: ✅ numpy-1:1.21.5
     Gentoo: ✅ numpy-1.23.3
-    OpenBSD: ⚠️
+    OpenBSD: ✅ py3-numpy-1.23.2
   scipy:
     Debian: ✅ scipy-1.8.1
     Gentoo: ✅ scipy-1.9.1
@@ -189,7 +189,7 @@ web:
     openKylin: ✅ clang-10.0.0
     openSUSE: ✅ clang-14.0.6
     Ubuntu: ✅ clang-14.0.0
-    OpenBSD: ⚠️
+    OpenBSD: ✅ clang-13.0.0
   cmake:
     Alpine: ✅ cmake-3.24.2
     Anolis: ✅ cmake-3.22.2
@@ -303,7 +303,7 @@ web:
     openKylin: ✅ python-3.8
     openSUSE: ✅ python-3.10.7
     Ubuntu: ✅ python3-3.10.6
-    OpenBSD: ⚠️
+    OpenBSD: ✅python-3.10.7
   ruby:
     Alpine: ✅ ruby-3.1.2
     Arch Linux: ✅ ruby-3.0.4p208
