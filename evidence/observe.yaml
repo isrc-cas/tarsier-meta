@@ -3,6 +3,7 @@ DB:
     Debian: ⚠️
     openSUSE: ⚠️
     openEuler: ⚠️
+    Deepin: ⚠️
   mariadb(Mysql):
     Arch Linux: ✅ mariadb-10.9.3
     Debian: ✅ mariadb-1:10.6.8
@@ -10,7 +11,8 @@ DB:
     openKylin: ✅ mysql-8.0
     openSUSE: ⚠️
     Ubuntu: mysql-server-8.0.30
-    openEuler: ✅ mariadb-10.5.16 
+    openEuler: ✅ mariadb-10.5.16
+    Deepin: ✅ mysql-server-8.0.29-1
   postgresql:
     Debian: ✅ postgresql-14.5
     Gentoo: ✅ postgresql-14.5
@@ -18,6 +20,7 @@ DB:
     openSUSE: ✅ postgresql-14.5
     Ubuntu: ✅ postgresql-14+238
     openEuler: ⚠️
+    Deepin: postgresql-14-14.1-1
   sqlite:
     Anolis: ✅
     Arch Linux: ✅ sqlite-3.39.1
@@ -27,6 +30,7 @@ DB:
     openSUSE: ✅ sqlite-3.39.3
     Ubuntu: ✅ sqlite3-3.37.2-2
     openEuler: ✅ sqlite-3.36.0
+    Deepin: sqlite3-3.36.0-2
 http/web 服务器:
   Apache2:
     Arch Linux: ✅ apache-2.4.54
@@ -35,15 +39,18 @@ http/web 服务器:
     openSUSE: ✅ apache-22.4.54
     Ubuntu: ✅ apache2-2.4.52-1ubuntu4.1
     openEuler: ⚠️
+    Deepin: apache2-2.4.51-2
   HAProxy:
     Ubuntu: ✅ haproxy 2.4.18-0ubuntu1
     openEuler: ✅ haproxy-2.2.16
+    Deepin: ⚠️
   Lighttpd:
     Debian: ✅ lighttpd-1.4.67
     Gentoo: ✅ lighttpd-1.4.67
     openSUSE: ✅ lighttpd-1.4.66
     Ubuntu: ✅ lighttpd 1.4.63-1ubuntu3
     openEuler: ✅ lighttpd-1.4.53
+    Deepin: ⚠️
   Nginx:
     Arch Linux: ✅ nginx-1.22.0
     Debian: ✅ nginx-1.22.0
@@ -51,58 +58,71 @@ http/web 服务器:
     openSUSE: ✅ nginx-1.23.1
     Ubuntu: ✅ nginx-1.18.0-6ubuntu14.2
     openEuler: ✅ nginx-1.21.5
+    Deepin: ⚠️
   Squid:
     Debian: ✅ squid-5.6
     Gentoo: ✅ squid-5.4.1
     openSUSE: ✅ squid-5.7
     Ubuntu: ✅ squid-5.2-1ubuntu4.1
     openEuler: ⚠️
+    Deepin: ⚠️
   Tengine:
     Debian:
     openEuler: ⚠️
+    Deepin: ⚠️
   Varnish:
     Debian: ✅ varnish-7.1.1
     Ubuntu: ✔️ varnish 6.6.1-1ubuntu0.2
     openEuler: ⚠️
-    
+    Deepin: ⚠️
 web:
   flask:
     Arch Linux: ✅
     openEuler: ✅ python-flask-1.1.2
+    Deepin: python3-flask-2.0.1-2
 中间件:
-  Dubbo: 
+  Dubbo:
     openEuler: ⚠️
+    Deepin: ⚠️
   MemCache:
     Debian: ✅ libmemcached-1.0.18
     Gentoo: ✅ memcached-1.6.17
     Ubuntu: ✅ memcached-1.6.14-1
     openEuler: ✅ memcached-1.6.12
+    Deepin: ✔️ memcached-1.6.12
   Redis:
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.5
     openSUSE: ✅ redis-7.0.5
     openEuler: ✅ redis-6.0.11
-  mybatis: 
+    Deepin: redis-server-5:6.0.16-1
+  mybatis:
     openEuler: ⚠️
+    Deepin: ⚠️
   numpy:
     Debian: ✅ numpy-1:1.21.5
     Gentoo: ✅ numpy-1.23.3
     openEuler: ✅ numpy-1.21.4
+    Deepin: ⚠️
   scipy:
     Debian: ✅ scipy-1.8.1
     Gentoo: ✅ scipy-1.9.1
     openEuler: ✅ scipy-1.6.2
+    Deepin: ⚠️
   zookeeper:
     Debian: ✅ zookeeper-3.8.0
     Ubuntu: ✔️ zookeeper-bin-3.4.13-6ubuntu4
     openEuler: ⚠️
+    Deepin: ⚠️
 其他:
   openssl:
     Arch Linux: ✅ 1.1.1.q
     Debian: ✅ 3.0.5
     openEuler: ✅ openssl-1.1.1f
-  tensorflow: 
+    Deepin: openssl/-3.0.2-1
+  tensorflow:
     openEuler: ⚠️
+    Deepin: ⚠️
 办公软件:
   LibreOffice:
     Anolis: ✅
@@ -127,11 +147,11 @@ web:
     Ubuntu: ✅ vlc-3.0.16-1build7
     openEuler: ⚠️
 大数据:
-  HBase: 
+  HBase:
     openEuler: ⚠️
-  Hadoop: 
+  Hadoop:
     openEuler: ⚠️
-  hive: 
+  hive:
     openEuler: ⚠️
 容器:
   docker:
@@ -143,17 +163,18 @@ web:
     openSUSE: ✅ docker-20.10.17
     Ubuntu: ⚠️ 非官方支持
     openEuler: ✅ docker-18.09.0
+    Deepin: ⚠️
   runc:
     Debian: ✅ runc-1.1.4
     Gentoo: ✅ runc-1.1.3
     openEuler: ✅ runc-1.0.0-rc3
-
+    Deepin: ⚠️
 构建工具:
-  obs: 
+  obs:
     openEuler: ✅ obs-build-20211125
-  obs-server: 
+  obs-server:
     openEuler: ⚠️
-  osc: 
+  osc:
     openEuler: ✅ osc-0.175.0
 桌面:
   Deepin:
@@ -214,6 +235,7 @@ web:
     openSUSE: ✅ clang-14.0.6
     Ubuntu: ✅ clang-14.0.0
     openEuler: ✅ clang-12.0.1
+    Deepin: ✔️ clang-14-1:14.0.6-2
   cmake:
     Alpine: ✅ cmake-3.24.2
     Anolis: ✅ cmake-3.22.2
@@ -226,6 +248,7 @@ web:
     openSUSE: ✅ cmake-3.24.2
     Ubuntu:  ✅ cmake-3.22.1
     openEuler: ✅ cmake-3.22.0
+    Deepin: ✔️ cmake-3.24.1-1
   gcc:
     Alpine: ✅ gcc-12.1.1
     Anolis: ✅ gcc-12.0.1
@@ -237,6 +260,7 @@ web:
     openKylin: ✅ gcc-10
     openSUSE: ✅ gcc-12.2.1
     openEuler: ✅ gcc-10.3.0
+    Deepin: ✔️ gcc-12-12.2.0-1+deepin+0u1
   gdb:
     Alpine: ✅ gdb-12.1
     Anolis: ✅ gdb-11.2
@@ -249,6 +273,7 @@ web:
     openSUSE: ✅ gdb-12.1
     Ubuntu: ✅ gdb-12.0.90
     openEuler: ✅ gdb-11.1
+    Deepin: ✔️ gdb-11.2-1
   llvm:
     Alpine: ✅ llvm-14.0.6
     Anolis: ✅ llvm-13.0.1
@@ -261,6 +286,7 @@ web:
     openSUSE: ✅ llvm-14.0.6
     Ubuntu: ✅ llvm-14.0.0
     openEuler: ⚠️
+    Deepin: ✔️ llvm-14-1:14.0.6-2
 语言:
   Nodejs:
     Alpine: ✅ nodejs-16.17.0
@@ -273,6 +299,7 @@ web:
     openKylin: ✅ nodejs-12.22.9
     openSUSE: ✅ nodejs-18.9.0
     openEuler: ⚠️
+    Deepin: ✔️ nodejs-16.15.1+dfsg-1
   Ocaml:
     Anolis: ✅ ocaml-4.12.0-3
     Debian: ✅ ocaml-4.13.1
@@ -280,6 +307,7 @@ web:
     openSUSE: ✅ ocaml-4.14.0
     Ubuntu: ✅ ocaml-4.13.1-3
     openEuler: ✅ ocaml-4.13.1
+    Deepin: ✔️ ocaml-4.13.1-3
   erlang:
     Alpine: ✅ erlang-25.0.3
     Debian: ✅ erlang-1:24.3.4.5
@@ -287,6 +315,7 @@ web:
     openSUSE: ✅ erlang-25.0.4
     Ubuntu: ✅ erlang-24.2.1
     openEuler: ✅ erlang-23.3.4.9
+    x
   golang:
     Anolis: ✅ golang-1.18.3
     Arch Linux: ✅ golang-1.19
@@ -297,6 +326,7 @@ web:
     openSUSE: ✅ golang-1.19
     Ubuntu: ✅ golang-go-1.18
     openEuler: ✅ golang-1.17.3
+    Deepin: ✔️ golang-1.17~1
   openJDK:
     Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
     Arch Linux: ✅ openjdk-18.0.2.1 openjdk17-17.0.4.1 openjdk11 11.0.15
@@ -308,6 +338,7 @@ web:
     openSUSE: ✅ openjdk-1.8/11/17/18
     Ubuntu: ✅ OpenJDK-18.0.2
     openEuler: ✅ openjdk-11
+    Deepin: ✔️ openjdk-17-jdk-17.0.1+12-1
   perl:
     Alpine: ✅ perl-5.36.0
     Anolis: ⚠️ perl-5.34.0
@@ -319,6 +350,7 @@ web:
     openSUSE: ✅ perl-5.36.0
     Ubuntu: ✅ perl-5.34.0
     openEuler: ✅ perl-5.34.0
+    Deepin: ✔️ perl-5.34.0-5
   python:
     Alpine: ✅ python-3.10.7
     Anolis: ✅ python-3.10.2
@@ -331,6 +363,7 @@ web:
     openSUSE: ✅ python-3.10.7
     Ubuntu: ✅ python3-3.10.6
     openEuler: ⚠️
+    Deepin: ✔️ python3-3.10.4-2
   ruby:
     Alpine: ✅ ruby-3.1.2
     Arch Linux: ✅ ruby-3.0.4p208
@@ -340,6 +373,7 @@ web:
     openSUSE: ✅ ruby-3.1
     Ubuntu: ✅ ruby3.0-3.0.2
     openEuler: ✅ ruby-3.0.3
+    Deepin: ✔️ ruby-3.0+1
   rust:
     Anolis: ✅ rust-1.58.1
     Arch Linux: ✅ rust-1.63.0
@@ -351,10 +385,11 @@ web:
     openSUSE: ✅ rust-1.63.0
     Ubuntu: ✅ rust-1.59.0
     openEuler: ⚠️
+    Deepin: ⚠️
 IDE:
-  eclipse: 
+  eclipse:
     openEuler: ⚠️
-  VSCode: 
+  VSCode:
     openEuler: ⚠️
-  PyCharm: 
+  PyCharm:
     openEuler: ⚠️
