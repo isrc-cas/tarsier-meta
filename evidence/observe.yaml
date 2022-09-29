@@ -10,7 +10,7 @@ DB:
     openSUSE: ⚠️
     Ubuntu: mysql-server-8.0.30
   postgresql:
-    Debian: ✅ postgresql-243
+    Debian: ✅ postgresql-14.5
     Gentoo: ✅ postgresql-14.5
     openKylin: ✅ postgresql-12.2
     openSUSE: ✅ postgresql-14.5
@@ -49,7 +49,7 @@ http/web 服务器:
     openSUSE: ✅ squid-5.7
     Ubuntu: ✅ squid-5.2-1ubuntu4.1
   Tengine:
-    Debian: ⚠️
+    Debian:
   Varnish:
     Debian: ✅ varnish-7.1.1
     Ubuntu: ✔️ varnish 6.6.1-1ubuntu0.2
