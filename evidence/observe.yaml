@@ -299,7 +299,7 @@ web:
     openEuler: ✅ golang-1.17.3
   openJDK:
     Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
-    Arch Linux: ✅ openJDK-17.0.1, 11.0.15 (openJDK & Bisheng)
+    Arch Linux: ✅ openjdk-18.0.2.1 openjdk17-17.0.4.1 openjdk11 11.0.15
     Debian: ✅ openjdk-19
     Fedora: ✅ openjdk-11
     FreeBSD: ⚠️
