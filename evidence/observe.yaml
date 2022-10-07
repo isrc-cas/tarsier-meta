@@ -315,6 +315,7 @@ web:
     openSUSE: ✅ erlang-25.0.4
     Ubuntu: ✅ erlang-24.2.1
     openEuler: ✅ erlang-23.3.4.9
+    x
   golang:
     Anolis: ✅ golang-1.18.3
     Arch Linux: ✅ golang-1.19
