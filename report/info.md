@@ -1,6 +1,6 @@
 # RISC-V Linux 观测内容
 
-## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
+## 流行 Linux 发行版 for RISC-V 的镜像仓库、软件包仓库、Wiki 支持页等信息
 
 | 运行环境 | openEuler               | Arch Linux           | Gentoo | Debian | openSUSE | Fedora             | Ubuntu | FreeBSD             | Deepin | Anolis | openKylin   | Alpine |
 |-| ----------------------- | -------------------- | ------ | ------ | -------- | ------------------ | ------ | ------------------- | ------ | ------ | ----------- | ------ |
