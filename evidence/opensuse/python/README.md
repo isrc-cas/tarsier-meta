@@ -1,6 +1,6 @@
 # OpenSUSE Python3测试
 
-OS: openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2022.09.29
+OS: openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2022.09.29  
 VERSION: Python 3.10.7  
 TIME: 2022/10/09 
 
