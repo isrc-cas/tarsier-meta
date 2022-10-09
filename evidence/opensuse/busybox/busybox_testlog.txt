@@ -1,0 +1,848 @@
+PASS: busybox as unknown name
+PASS: busybox --help busybox
+PASS: busybox
+PASS: busybox unknown
+PASS: busybox --help
+PASS: busybox cat
+PASS: busybox --help cat
+PASS: busybox --help unknown
+PASS: ./busybox-suffix
+PASS: ./busybox-suffix unknown
+PASS: ./busybox-suffix --help
+PASS: ./busybox-suffix cat
+PASS: ./busybox-suffix --help cat
+PASS: ./busybox-suffix --help unknown
+PASS: ar creates archives
+PASS: ar replaces things in archives
+PASS: awk -F case 0
+PASS: awk -F case 1
+PASS: awk -F case 2
+PASS: awk -F case 3
+PASS: awk -F case 4
+PASS: awk -F case 5
+PASS: awk -F case 6
+PASS: awk -F case 7
+PASS: awk if operator == 
+PASS: awk if operator != 
+PASS: awk if operator >= 
+PASS: awk if operator < 
+PASS: awk if string == 
+PASS: awk bitwise op
+PASS: awk handles empty function f(arg){}
+PASS: awk handles empty function f(){}
+PASS: awk properly handles function from other scope
+PASS: awk properly handles undefined function
+PASS: awk 'v (a)' is not a function call, it is a concatenation
+PASS: awk unused function args are evaluated
+PASS: awk hex const 1
+PASS: awk hex const 2
+PASS: awk oct const
+PASS: awk floating const with leading zeroes
+PASS: awk long field sep
+PASS: awk -F handles escapes
+PASS: awk gsub falls back to non-extended-regex
+PASS: awk 'gcc build bug'
+PASS: awk NF in BEGIN
+PASS: awk string cast (bug 725)
+PASS: awk handles whitespace before array subscript
+PASS: awk handles non-existing file correctly
+PASS: awk nested loops with the same variable
+PASS: awk 'delete a[v--]' evaluates v-- once
+PASS: awk func arg parsing 1
+PASS: awk func arg parsing 2
+PASS: awk func arg parsing 3
+PASS: awk func arg parsing 4
+PASS: awk handles empty ()
+PASS: awk FS assignment
+SKIPPED: awk large integer
+PASS: awk length(array)
+PASS: awk length()
+PASS: awk print length, 1
+PASS: awk print length 1
+PASS: awk length == 0
+PASS: awk if (length == 0)
+PASS: awk -f and ARGC
+PASS: awk -e and ARGC
+PASS: awk break
+PASS: awk continue
+PASS: awk handles invalid for loop
+PASS: awk handles colon not preceded by ternary
+PASS: awk errors on missing delete arg
+PASS: awk printf('%c') can output NUL
+PASS: awk printf('%-10c') can output NUL
+PASS: awk negative field access
+PASS: awk do not allow "str"++
+PASS: awk FS regex which can match empty string
+PASS: awk $NF is empty
+PASS: awk exit N propagates through END's exit
+PASS: awk print + redirect
+PASS: awk "cmd" | getline
+PASS: awk printf %% prints one %
+PASS: basename-does-not-remove-identical-extension
+PASS: basename-works
+PASS: bc comment
+PASS: bc /*/ is not a closed comment
+PASS: bc comment with "
+PASS: bc "string/*" is not a comment
+PASS: bc comment 3: unterminated #comment
+PASS: bc backslash 1
+PASS: bc string 1
+PASS: bc read() 4<EOF>
+PASS: bc read()^2
+PASS: bc read()*read()
+PASS: bc if 0 else
+PASS: bc if 1 else
+PASS: bc if 1 if 1 else else
+PASS: bc if 0 else if 1
+PASS: bc for (;;)
+PASS: bc for (;cond;)
+PASS: bc for (;cond;upd)
+PASS: bc for (init;cond;upd)
+PASS: bc for (;;) {break}
+PASS: bc define {return}
+PASS: bc define auto
+PASS: bc define auto array same name
+PASS: bc define with body on next line
+PASS: bc void function
+PASS: bc function named 'void'
+PASS: bc variable named 'void'
+PASS: bc if(cond)<NL>
+PASS: bc if(cond) stmt else<NL>
+PASS: bc while(cond)<NL>
+PASS: bc ifz does not match if keyword
+PASS: bc -l 'e(0)-2'
+PASS: bc (!a&&b)
+PASS: bc print ""
+PASS: bc print 1,2,3
+PASS: bc length
+PASS: bc { print 1 }
+PASS: bc comparison 1
+PASS: bc nested loops and breaks
+PASS: bc continue in if
+PASS: bc continue in for
+PASS: bc ibase
+PASS: bc parsing of numbers
+PASS: bc printing of numbers
+PASS: bc -lq bc_add.bc
+PASS: bc -lq bc_arctangent.bc
+PASS: bc -lq bc_array.bc
+PASS: bc -lq bc_arrays.bc
+PASS: bc -lq bc_bessel.bc
+PASS: bc -lq bc_boolean.bc
+PASS: bc -lq bc_cosine.bc
+PASS: bc -lq bc_decimal.bc
+PASS: bc -lq bc_divide.bc
+PASS: bc -lq bc_exponent.bc
+PASS: bc -lq bc_log.bc
+PASS: bc -lq bc_misc.bc
+PASS: bc -lq bc_misc1.bc
+PASS: bc -lq bc_misc2.bc
+PASS: bc -lq bc_modulus.bc
+PASS: bc -lq bc_multiply.bc
+PASS: bc -lq bc_numbers1.bc
+PASS: bc -lq bc_numbers2.bc
+PASS: bc -lq bc_pi.bc
+PASS: bc -lq bc_power.bc
+PASS: bc -lq bc_references.bc
+PASS: bc -lq bc_sine.bc
+PASS: bc -lq bc_sqrt.bc
+PASS: bc -lq bc_strings.bc
+PASS: bc -lq bc_subtract.bc
+PASS: bc -lq bc_vars.bc
+PASS: bunzip2-reads-from-standard-input
+PASS: bunzip2-removes-compressed-file
+PASS: bunzip2: doesnt exist
+PASS: bunzip2: unknown suffix
+PASS: bunzip2: already exists
+PASS: bunzip2: stream unpack
+PASS: bunzip2: delete src
+PASS: bunzip2: test_bz2 file
+PASS: bunzip2: pbzip_4m_zeros file
+PASS: bunzip2: bz2_issue_11.bz2 corrupted example
+PASS: bunzip2: bz2_issue_12.bz2 corrupted example
+PASS: bzcat-does-not-remove-compressed-file
+PASS: zcat: dont delete gz src
+PASS: zcat: dont delete bz2 src
+PASS: zcat: dont delete Z src
+PASS: bzcat can print many files
+PASS: bzcat can handle compressed zero-length bzip2 files
+PASS: zcat can print many files
+PASS: zcat can handle compressed zero-length (.Z) files
+PASS: cal 2000
+PASS: cat-prints-a-file
+PASS: cat-prints-a-file-and-standard-input
+PASS: cat -e
+PASS: cat -v
+PASS: cat -n
+PASS: cat -b
+PASS: cmp-detects-difference
+PASS: comm test 1
+PASS: comm test 2
+PASS: comm test 3
+PASS: comm test 4
+PASS: comm test 5
+PASS: comm test 6
+PASS: comm unterminated line 1
+PASS: comm unterminated line 2
+PASS: cp-RHL-does_not_preserve-links
+PASS: cp-a-files-to-dir
+PASS: cp-a-preserves-links
+PASS: cp-copies-empty-file
+PASS: cp-copies-large-file
+PASS: cp-copies-small-file
+PASS: cp-d-files-to-dir
+PASS: cp-dev-file
+PASS: cp-dir-create-dir
+PASS: cp-dir-existing-dir
+PASS: cp-does-not-copy-unreadable-file
+PASS: cp-files-to-dir
+PASS: cp-follows-links
+PASS: cp-parents
+PASS: cp-preserves-hard-links
+PASS: cp-preserves-links
+PASS: cp-preserves-source-file
+PASS: cp
+PASS: cp -d
+PASS: cp -P
+PASS: cp -L
+PASS: cp -H
+PASS: cp -R
+PASS: cp -Rd
+PASS: cp -RP
+PASS: cp -RL
+PASS: cp -RHL
+PASS: cpio extracts zero-sized hardlinks
+PASS: cpio extracts zero-sized hardlinks 2
+PASS: cpio -p with absolute paths
+PASS: cpio restores suid/sgid bits
+PASS: cpio extracts in existing directory
+PASS: cpio uses by default uid/gid
+PASS: cpio -R with create
+PASS: cpio -R with extract
+PASS: cryptpw des 12
+PASS: cryptpw des 55
+PASS: cryptpw des zz
+SKIPPED: cryptpw sha256
+SKIPPED: cryptpw sha256 rounds=99999
+SKIPPED: cryptpw sha512
+SKIPPED: cryptpw sha512 rounds=99999
+PASS: cut-cuts-a-character
+PASS: cut-cuts-a-closed-range
+PASS: cut-cuts-a-field
+PASS: cut-cuts-an-open-range
+PASS: cut-cuts-an-unclosed-range
+PASS: cut '-' (stdin) and multi file handling
+PASS: cut -b a,a,a
+PASS: cut -b overlaps
+PASS: -b encapsulated
+PASS: cut high-low error
+PASS: cut -c a-b
+PASS: cut -c a-
+PASS: cut -c -b
+PASS: cut -c a
+PASS: cut -c a,b-c,d
+PASS: cut -f a-
+PASS: cut show whole line with no delim
+PASS: cut with echo, -c (a-b)
+PASS: cut with echo, -c (a)
+PASS: cut with -c (a,b,c)
+PASS: cut with -b (a,b,c)
+PASS: cut with -d -f(:) -s
+PASS: cut with -d -f( ) -s
+PASS: cut with -d -f(a) -s
+PASS: cut with -d -f(a) -s -n
+PASS: cut -DF
+PASS: cut empty field
+PASS: cut empty field 2
+PASS: date-@-works
+PASS: date-R-works
+PASS: date-format-works
+PASS: date-timezone
+PASS: date-u-works
+PASS: date-works
+PASS: date-works-1
+PASS: dd-accepts-if
+PASS: dd-accepts-of
+PASS: dd-copies-from-standard-input-to-standard-output
+PASS: dd-count-bytes
+PASS: dd-prints-count-to-standard-error
+PASS: dd-reports-write-errors
+PASS: diff of stdin
+PASS: diff of stdin, no newline in the file
+PASS: diff of stdin, twice
+PASS: diff of empty file against stdin
+PASS: diff of empty file against nonempty one
+PASS: diff -b treats EOF as whitespace
+PASS: diff -b treats all spaces as equal
+PASS: diff -B ignores changes whose lines are all blank
+PASS: diff -B does not ignore changes whose lines are not all blank
+PASS: diff -B ignores blank single line change
+PASS: diff -B does not ignore non-blank single line change
+PASS: diff always takes context from old file
+PASS: diff diff1 diff2/subdir
+PASS: diff dir dir2/file/-
+PASS: diff of dir and fifo
+PASS: diff of file and fifo
+PASS: diff -rN does not read non-regular files
+PASS: diff diff1 diff2/
+PASS: dirname-handles-absolute-path
+PASS: dirname-handles-empty-path
+PASS: dirname-handles-multiple-slashes
+PASS: dirname-handles-relative-path
+PASS: dirname-handles-root
+PASS: dirname-handles-single-component
+PASS: dirname-works
+PASS: du-h-works
+PASS: du-k-works
+PASS: du-l-works
+PASS: du-m-works
+PASS: du-s-works
+PASS: du-works
+PASS: echo-does-not-print-newline
+PASS: echo-prints-argument
+PASS: echo-prints-arguments
+PASS: echo-prints-dash
+PASS: echo-prints-newline
+PASS: echo-prints-non-opts
+PASS: echo-prints-slash-zero
+PASS: echo-prints-slash_00041
+PASS: echo-prints-slash_0041
+PASS: echo-prints-slash_041
+PASS: echo-prints-slash_41
+PASS: expand
+PASS: expand with unicode characher 0x394
+PASS: expr-big
+PASS: expr-works
+PASS: factor '  0'
+PASS: factor +1
+PASS: factor ' +2'
+PASS: factor 1024
+PASS: factor 2^61-1
+PASS: factor 2^62-1
+PASS: factor 2^64-1
+PASS: factor $((2*3*5*7*11*13*17*19*23*29*31*37*41*43*47))
+PASS: factor 2 * 3037000493 * 3037000493
+PASS: factor 3 * 2479700513 * 2479700513
+PASS: factor 3 * 37831 * 37831 * 37831 * 37831
+PASS: factor 3 * 13^16
+PASS: factor 13^16
+PASS: false-is-silent
+PASS: false-returns-failure
+PASS: find-supports-minus-xdev
+PASS: find -type f
+PASS: find -exec exitcode 1
+PASS: find -exec exitcode 2
+PASS: find -exec exitcode 3
+PASS: find -exec exitcode 4
+PASS: find / -maxdepth 0 -name /
+PASS: find // -maxdepth 0 -name /
+PASS: find / -maxdepth 0 -name //
+PASS: find // -maxdepth 0 -name //
+PASS: find ./// -name .
+PASS: find ./// -name .///
+PASS: fold -s
+PASS: fold -w1
+PASS: fold with NULs
+PASS: fold -sw66 with unicode input
+PASS: grep (exit with error)
+PASS: grep (exit success)
+PASS: grep (default to stdin)
+PASS: grep - (specify stdin)
+PASS: grep input (specify file)
+PASS: grep (no newline at EOL)
+PASS: grep two files
+PASS: grep - infile (specify stdin and file)
+PASS: grep - nofile (specify stdin and nonexisting file)
+PASS: grep -q - nofile (specify stdin and nonexisting file, no match)
+PASS: grep -q - nofile (specify stdin and nonexisting file, match)
+PASS: grep -s nofile (nonexisting file, no match)
+PASS: grep -s nofile - (stdin and nonexisting file, match)
+SKIPPED: grep handles NUL in files
+SKIPPED: grep handles NUL on stdin
+SKIPPED: grep matches NUL
+PASS: grep handles multiple regexps
+PASS: grep -F handles multiple expessions
+PASS: grep -F handles -i
+PASS: grep can read regexps from stdin
+PASS: grep -x (full match)
+PASS: grep -x (partial match 1)
+PASS: grep -x (partial match 2)
+PASS: grep -x -F (full match)
+PASS: grep -x -F (partial match 1)
+PASS: grep -x -F (partial match 2)
+PASS: grep -L exitcode 0
+PASS: grep -L exitcode 0 #2
+PASS: grep -L exitcode 1
+PASS: grep -E supports extended regexps
+PASS: grep is also egrep
+PASS: egrep is not case insensitive
+PASS: grep -E -o prints all matches
+PASS: grep -o does not loop forever
+PASS: grep -o does not loop forever on zero-length match
+PASS: grep -f EMPTY_FILE
+PASS: grep -v -f EMPTY_FILE
+PASS: grep -vxf EMPTY_FILE
+PASS: grep -Fw matches only words
+PASS: grep -Fw doesn't stop on 1st mismatch
+PASS: grep -w doesn't stop on 1st mismatch
+PASS: grep -w ^str doesn't match str not at the beginning
+PASS: grep -w ^ doesn't hang
+PASS: grep -w word doesn't match wordword
+PASS: grep -F -w w doesn't match ww
+PASS: grep -w word match second word
+PASS: grep -x -v -e EXP1 -e EXP2 finds nothing if either EXP matches
+PASS: grep PATTERN can be a newline-delimited list
+PASS: grep -e PATTERN can be a newline-delimited list
+PASS: grep -r on symlink to dir
+PASS: grep -r on dir/symlink to dir
+PASS: gunzip-reads-from-standard-input
+PASS: gunzip: doesnt exist
+PASS: gunzip: unknown suffix
+PASS: gunzip: already exists
+PASS: gunzip: stream unpack
+PASS: gunzip: delete src
+PASS: gzip-accepts-multiple-files
+PASS: gzip-accepts-single-minus
+UNTESTED: gzip-compression-levels
+PASS: gzip-removes-original-file
+PASS: head (without args)
+PASS: head -n <positive number>
+PASS: head -n <negative number>
+PASS: hexdump -C with four NULs
+PASS: hexdump does not think last padded block matches any full block
+PASS: hexdump thinks last full block can match
+PASS: hostid-works
+PASS: hostname-d-works
+PASS: hostname-i-works
+PASS: hostname-s-works
+PASS: hostname-works
+PASS: id-g-works
+PASS: id-u-works
+PASS: id-un-works
+PASS: id-ur-works
+PASS: ln-creates-hard-links
+PASS: ln-creates-soft-links
+PASS: ln-force-creates-hard-links
+PASS: ln-force-creates-soft-links
+PASS: ln-preserves-hard-links
+PASS: ln-preserves-soft-links
+PASS: ls-1-works
+PASS: ls-h-works
+PASS: ls-l-works
+PASS: ls-s-works
+PASS: ls unicode test with codepoints limited to 767
+PASS: ls symlink_to_dir
+PASS: md5sum-verifies-non-binary-file
+PASS: md5sum
+PASS: md5sum -c EMPTY
+SKIPPED: mdev add /block/sda
+SKIPPED: mdev deletes /block/sda
+SKIPPED: mdev stops on first rule
+SKIPPED: mdev does not stop on dash-rule
+SKIPPED: mdev $ENVVAR=regex match
+SKIPPED: mdev move/symlink rule '>bar/baz'
+SKIPPED: mdev move/symlink rule '>bar/'
+SKIPPED: mdev move rule '=bar/baz/fname'
+SKIPPED: mdev regexp substring match + replace
+SKIPPED: mdev command
+SKIPPED: mdev move and command
+SKIPPED: mdev #maj,min and no explicit uid
+SKIPPED: move rule does not delete node with name == device_name
+PASS: mkdir-makes-a-directory
+PASS: mkdir-makes-parent-directories
+SKIPPED: mount
+PASS: mv-files-to-dir
+PASS: mv-files-to-dir-2
+PASS: mv-follows-links
+PASS: mv-moves-empty-file
+PASS: mv-moves-file
+PASS: mv-moves-hardlinks
+PASS: mv-moves-large-file
+PASS: mv-moves-small-file
+PASS: mv-moves-symlinks
+PASS: mv-moves-unreadable-files
+PASS: mv-preserves-hard-links
+PASS: mv-preserves-links
+PASS: mv-refuses-mv-dir-to-subdir
+PASS: mv-removes-source-file
+PASS: nl numbers all lines
+PASS: nl numbers non-empty lines
+PASS: nl numbers no lines
+PASS: od -b
+PASS: od -f
+PASS: od -b --traditional
+PASS: od -b --traditional FILE
+PASS: paste
+PASS: paste-back-cuted-lines
+PASS: paste-multi-stdin
+PASS: paste-pairs
+PASS: paste-separate
+PASS: patch with old_file == new_file
+PASS: patch with nonexistent old_file
+PASS: patch -R with nonexistent old_file
+PASS: patch detects already applied hunk
+PASS: patch detects already applied hunk at the EOF
+PASS: patch -N ignores already applied hunk
+PASS: patch FILE PATCH
+PASS: patch at the beginning
+PASS: patch creates new file
+PASS: patch understands ...dir///dir...
+PASS: patch internal buffering bug?
+PASS: pidof (exit with error)
+PASS: pidof (exit with success)
+PASS: pidof this
+PASS: pidof -o init
+PASS: printf produces no further output 1
+PASS: printf produces no further output 2
+PASS: printf repeatedly uses pattern for each argv
+PASS: printf understands %b escaped_string
+PASS: printf understands %d '"x' "'y" "'zTAIL"
+PASS: printf understands %s '"x' "'y" "'zTAIL"
+PASS: printf understands %23.12f
+PASS: printf understands %*.*f
+PASS: printf understands %*f with negative width
+PASS: printf understands %.*f with negative precision
+PASS: printf understands %*.*f with negative width/precision
+PASS: printf understands %zd
+PASS: printf understands %ld
+PASS: printf understands %Ld
+PASS: printf understands %%
+PASS: printf handles positive numbers for %d
+PASS: printf handles positive numbers for %i
+PASS: printf handles positive numbers for %x
+PASS: printf handles positive numbers for %f
+PASS: printf handles %d bad_input
+PASS: printf aborts on bare %
+PASS: printf aborts on %r
+PASS: printf treats leading 0 as flag
+PASS: printf handles multiple flags
+PASS: pwd-prints-working-directory
+PASS: readlink on a file
+PASS: readlink on a link
+PASS: readlink -f on a file
+PASS: readlink -f on a link
+PASS: readlink -f on an invalid link
+PASS: readlink -f on a weird dir
+PASS: realpath on non-existent absolute path 1
+PASS: realpath on non-existent absolute path 2
+PASS: realpath on non-existent absolute path 3
+PASS: realpath on non-existent absolute path 4
+PASS: realpath on non-existent local file 1
+PASS: realpath on non-existent local file 2
+PASS: realpath on link to non-existent file 1
+PASS: realpath on link to non-existent file 2
+PASS: realpath on link to non-existent file 3
+PASS: realpath on link to non-existent file 4
+PASS: rev works
+PASS: rev file with missing newline
+PASS: rev file with NUL character
+PASS: rev file with long line
+PASS: rm-removes-file
+PASS: rmdir-removes-parent-directories
+PASS: sed no files (stdin)
+PASS: sed explicit stdin
+PASS: sed handles empty lines
+PASS: sed stdin twice
+PASS: sed accepts blanks before command
+PASS: sed accepts newlines in -e
+PASS: sed accepts multiple -e
+PASS: sed -n
+PASS: sed with empty match
+PASS: sed s//p
+PASS: sed -n s//p
+PASS: sed s//g (exhaustive)
+PASS: sed s arbitrary delimiter
+PASS: sed s chains
+PASS: sed s chains2
+PASS: sed s [delimiter]
+PASS: sed s with \t (GNU ext)
+PASS: sed b (branch)
+PASS: sed b (branch with no label jumps to end)
+PASS: sed t (test/branch)
+PASS: sed t (test/branch clears test bit)
+PASS: sed T (!test/branch)
+PASS: sed n (flushes pattern space, terminates early)
+PASS: sed N (flushes pattern space (GNU behavior))
+PASS: sed N test2
+PASS: sed N test3
+PASS: sed address match newline
+PASS: sed N (stops at end of input) and P (prints to first newline only)
+PASS: sed G (append hold space to pattern space)
+PASS: sed d ends script iteration
+PASS: sed d ends script iteration (2)
+PASS: sed embedded NUL g
+PASS: sed normal newlines
+PASS: sed leave off trailing newline
+PASS: sed autoinsert newline
+PASS: sed empty file plus cat
+PASS: sed cat plus empty file
+PASS: sed append autoinserts newline
+PASS: sed append autoinserts newline 2
+PASS: sed append autoinserts newline 3
+PASS: sed insert doesn't autoinsert newline
+PASS: sed print autoinsert newlines
+PASS: sed print autoinsert newlines two files
+PASS: sed noprint, no match, no newline
+PASS: sed selective matches with one nl
+PASS: sed selective matches insert newline
+PASS: sed selective matches noinsert newline
+PASS: sed clusternewline
+PASS: sed subst+write
+PASS: sed trailing NUL
+PASS: sed escaped newline in command
+PASS: sed match EOF
+PASS: sed match EOF two files
+PASS: sed match EOF inline
+PASS: sed lie-to-autoconf
+PASS: sed backref from empty s uses range regex
+PASS: sed backref from empty s uses range regex with newline
+PASS: sed -i with no arg [GNUFAIL]
+PASS: sed s/xxx/[/
+PASS: sed n command must reset 'substituted' bit
+PASS: sed d does not break n,m matching
+PASS: sed d does not break n,regex matching
+PASS: sed d does not break n,regex matching #2
+PASS: sed 2d;2,1p (gnu compat)
+PASS: sed beginning (^) matches only once
+PASS: sed c
+PASS: sed nested {}s
+PASS: sed a cmd ended by double backslash
+PASS: sed a cmd understands \n,\t,\r
+PASS: sed i cmd understands \n,\t,\r
+PASS: sed with N skipping lines past ranges on next cmds
+PASS: sed -i with address modifies all files, not only first
+PASS: sed understands \r
+PASS: sed -i finishes ranges correctly
+PASS: sed zero chars match/replace advances correctly 1
+PASS: sed zero chars match/replace advances correctly 2
+PASS: sed zero chars match/replace logic must not falsely trigger here 1
+PASS: sed zero chars match/replace logic must not falsely trigger here 2
+PASS: sed /$_in_regex/ should not match newlines, only end-of-line
+PASS: sed s///NUM test
+PASS: sed /regex/,N{...} addresses work
+PASS: sed /regex/,+N{...} addresses work
+PASS: sed /regex/,+N{...} addresses work 2
+PASS: sed /regex/,+N{...} -i works
+PASS: sed /regex/,+0{...} -i works
+PASS: sed /regex/,+0<cmd> -i works
+PASS: sed 's///w FILE'
+PASS: sed uses previous regexp
+PASS: sed ^ OR not^
+PASS: seq (exit with error)
+PASS: seq (exit with error)
+PASS: seq one argument
+PASS: seq two arguments
+PASS: seq two arguments reversed
+PASS: seq two arguments equal
+PASS: seq two arguments equal, arbitrary negative step
+PASS: seq two arguments equal, arbitrary positive step
+PASS: seq count up by 2
+PASS: seq count down by 2
+PASS: seq count wrong way #1
+PASS: seq count wrong way #2
+PASS: seq count by .3
+PASS: seq count by .30
+PASS: seq count by .30 to 4.000
+PASS: seq count by -.9
+PASS: seq count by zero
+PASS: seq one argument with padding
+PASS: seq two arguments with padding
+PASS: seq count down by 3 with padding
+PASS: seq count by .3 with padding 1
+PASS: seq count by .3 with padding 2
+PASS: sha1sum
+PASS: sha1sum -c EMPTY
+PASS: sha256sum
+PASS: sha256sum -c EMPTY
+PASS: sha3sum
+PASS: sha3sum -c EMPTY
+PASS: sha512sum
+PASS: sha512sum -c EMPTY
+PASS: sort
+PASS: sort #2
+PASS: sort stdin
+PASS: sort numeric
+PASS: sort reverse
+PASS: sort one key
+PASS: sort key range with numeric option
+PASS: sort key range with numeric option and global reverse
+PASS: sort key range with multiple options
+PASS: sort key range with two -k options
+PASS: sort with non-default leading delim 1
+PASS: sort with non-default leading delim 2
+PASS: sort with non-default leading delim 3
+PASS: sort with non-default leading delim 4
+PASS: sort with ENDCHAR
+PASS: glibc build sort
+PASS: glibc build sort unique
+PASS: sort -u should consider field only when discarding
+PASS: sort -z outputs NUL terminated lines
+PASS: sort key doesn't strip leading blanks, disables fallback global sort
+PASS: sort file in place
+FAIL: strings-works-like-GNU
+PASS: sum -r file doesn't print file's name
+PASS: sum -r file file does print both names
+PASS: sum -s file does print file's name
+PASS: tail-n-works
+PASS: tail-works
+PASS: tail: +N with N > file length
+PASS: tail: -c +N with largish N
+PASS: tar-archives-multiple-files
+PASS: tar-complains-about-missing-file
+PASS: tar-demands-at-least-one-ctx
+PASS: tar-demands-at-most-one-ctx
+PASS: tar-extracts-all-subdirs
+PASS: tar-extracts-file
+PASS: tar-extracts-from-standard-input
+PASS: tar-extracts-multiple-files
+PASS: tar-extracts-to-standard-output
+PASS: tar-handles-cz-options
+PASS: tar-handles-empty-include-and-non-empty-exclude-list
+PASS: tar-handles-exclude-and-extract-lists
+PASS: tar-handles-multiple-X-options
+PASS: tar-handles-nested-exclude
+PASS: tar_with_link_with_size
+PASS: tar_with_prefix_fields
+PASS: tar Empty file is not a tarball
+PASS: tar Empty file is not a tarball.tar.gz
+PASS: tar Two zeroed blocks is a ('truncated') empty tarball
+PASS: tar Twenty zeroed blocks is an empty tarball
+PASS: tar hardlinks and repeated files
+PASS: tar hardlinks mode
+PASS: tar symlinks mode
+PASS: tar --overwrite
+PASS: tar extract tgz
+SKIPPED: tar extract txz
+PASS: tar strips /../ on extract
+SKIPPED: tar does not extract into symlinks
+SKIPPED: tar -k does not extract into symlinks
+SKIPPED: tar Pax-encoded UTF8 names and symlinks
+SKIPPED: tar Symlink attack: create symlink and then write through it
+PASS: tar Symlinks and hardlinks coexist
+PASS: tee-appends-input
+PASS: tee-tees-input
+PASS: test: should be false (1)
+PASS: test '': should be false (1)
+PASS: test !: should be true (0)
+PASS: test a: should be true (0)
+PASS: test --help: should be true (0)
+PASS: test -f: should be true (0)
+PASS: test ! -f: should be false (1)
+PASS: test a = a: should be true (0)
+PASS: test -lt = -gt: should be false (1)
+PASS: test a -a !: should be true (0)
+PASS: test -f = a -o b: should be true (0)
+PASS: test ! a = b -a ! c = c: should be false (1)
+PASS: test ! a = b -a ! c = d: should be true (0)
+PASS: test '!' = '!': should be true (0)
+PASS: test '(' = '(': should be true (0)
+PASS: test '!' '!' = '!': should be false (1)
+PASS: test '!' '(' = '(': should be false (1)
+PASS: touch-creates-file
+PASS: touch-does-not-create-file
+PASS: touch-touches-files-after-non-existent-file
+PASS: tr-d-alnum-works
+PASS: tr-d-works
+PASS: tr-non-gnu
+PASS: tr-rejects-wrong-class
+PASS: tr-works
+PASS: tr does not treat [] in [a-z] as special
+PASS: tr understands 0-9A-F
+PASS: tr understands [:xdigit:]
+PASS: tr does not stop after [:digit:]
+PASS: tr has correct xdigit sequence
+PASS: true-is-silent
+PASS: true-returns-success
+PASS: uncompress < \x1f\x9d\x90 \x01 x N
+PASS: unexpand case 1
+PASS: unexpand case 2
+PASS: unexpand case 3
+PASS: unexpand case 4
+PASS: unexpand case 5
+PASS: unexpand case 6
+PASS: unexpand case 7
+PASS: unexpand case 8
+PASS: unexpand flags 
+PASS: unexpand flags -f
+PASS: unexpand flags -f -t8
+PASS: unexpand flags -t8 -f
+PASS: unexpand flags -t8 --first-only
+PASS: unexpand flags -a
+PASS: unexpand flags -t8
+PASS: unexpand flags -a -t8
+PASS: unexpand flags -t4
+PASS: unexpand flags -a -t4
+PASS: unexpand flags -t4 -a
+PASS: unexpand flags -t4 -f
+PASS: unexpand flags -f -t4
+PASS: unexpand flags -t4 --first-only
+PASS: unexpand flags --first-only -t4
+PASS: unexpand with unicode characher 0x394
+PASS: uniq (exit with error)
+PASS: uniq (exit success)
+PASS: uniq (default to stdin)
+PASS: uniq - (specify stdin)
+PASS: uniq input (specify file)
+PASS: uniq input outfile (two files)
+PASS: uniq (stdin) outfile
+PASS: uniq input - (specify stdout)
+PASS: uniq -c (occurrence count)
+PASS: uniq -d (dups only)
+PASS: uniq -f -s (skip fields and chars)
+PASS: uniq -w (compare max characters)
+PASS: uniq -s -w (skip fields and compare max chars)
+PASS: uniq -u and -d produce no output
+PASS: unlzma (bad archive 1)
+PASS: unlzma (bad archive 2)
+PASS: unlzma (bad archive 3)
+PASS: unzip (subdir only)
+SKIPPED: unzip (bad archive)
+PASS: unzip (archive with corrupted lzma 1)
+PASS: unzip (archive with corrupted lzma 2)
+PASS: uptime-works
+PASS: uuencode sets standard input mode correctly
+PASS: uuencode correct encoding
+PASS: uuencode correct base64 encoding
+PASS: uuencode empty file
+PASS: uuencode -m empty file
+PASS: uuencode file 'A'
+PASS: uuencode -m file 'A'
+PASS: uuencode file 'AB'
+PASS: uuencode -m file 'AB'
+PASS: uuencode file 'ABC'
+PASS: uuencode -m file 'ABC'
+PASS: uuencode file 'ABCD'
+PASS: uuencode -m file 'ABCD'
+PASS: uuencode file 'ABCDE'
+PASS: uuencode -m file 'ABCDE'
+PASS: uuencode file 'ABCDEF'
+PASS: uuencode -m file 'ABCDEF'
+PASS: uuencode file 'A<NUL><0xff>Z'
+PASS: uuencode -m file 'A<NUL><0xff>Z'
+PASS: wc-counts-all
+PASS: wc-counts-characters
+PASS: wc-counts-lines
+PASS: wc-counts-words
+PASS: wc-prints-longest-line-length
+PASS: wget--O-overrides--P
+PASS: wget-handles-empty-path
+PASS: wget-retrieves-google-index
+PASS: wget-supports--P
+PASS: which-uses-default-path
+PASS: xargs-works
+PASS: xargs -E _ stops on underscore
+PASS: xargs -E ''
+PASS: xargs -e without param
+PASS: xargs does not stop on underscore ('new' GNU behavior)
+PASS: xargs -s7 can take one-char input
+PASS: xargs -sNUM test 1
+PASS: xargs -sNUM test 2
+PASS: xargs argument line too long
+PASS: xargs -n1
+PASS: xargs -n2
+PASS: xargs -I skips empty lines and leading whitespace
+PASS: xxd -p with one NUL
+PASS: xxd -p with 30 NULs
+PASS: xxd -p with 31 NULs
+PASS: xxd -p -r
+1 failure(s) detected; running with -v (verbose) will give more info
