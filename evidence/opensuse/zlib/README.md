@@ -13,7 +13,7 @@ TIME: 2022/10/09
 
 > zlib version 1.2.12 = 0x12c0, compile flags = 0xa9  
 > uncompress(): hello, hello!  
-gzread(): hello, hello!  
+> gzread(): hello, hello!  
 > gzgets() after gzseek:  hello!  
 > inflate(): hello, hello!  
 > large_inflate(): OK  
