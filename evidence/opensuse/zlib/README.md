@@ -4,7 +4,7 @@ OS: openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2022.09.29
 VERSION: zlib 1.2.12  
 TIME: 2022/10/09
 
-## 回归测试
+## 测试
 
 > zypper in zlib-testsuite  
 > /usr/libexec/zlib/testsuite  
