@@ -14,4 +14,5 @@ TIME: 2022/10/09
 
 > 1 failure(s) detected; running with -v (verbose) will give more info  
 
-具体见[busybox_testlog.txt](busybox_testlog.txt)
+具体见[busybox_testlog.txt](busybox_testlog.txt)  
+更详细的见[busybox_testlog_verbose.txt](busybox_testlog_verbose.txt)
