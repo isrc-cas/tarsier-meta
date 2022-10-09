@@ -9,7 +9,7 @@ TIME: 2022/10/09
 > zypper in zlib-testsuite  
 > /usr/libexec/zlib/testsuite  
 
-##  结果
+## 结果
 
 > zlib version 1.2.12 = 0x12c0, compile flags = 0xa9  
 > uncompress(): hello, hello!  
