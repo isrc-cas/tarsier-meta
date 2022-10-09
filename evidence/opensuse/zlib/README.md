@@ -1,7 +1,7 @@
-# OpenSUSE Python3测试
+# OpenSUSE zlib测试
 
 OS: openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2022.09.29  
-VERSION: Zlib 1.2.12  
+VERSION: zlib 1.2.12  
 TIME: 2022/10/09
 
 ## 回归测试
