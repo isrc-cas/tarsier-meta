@@ -1,0 +1,335 @@
+Fail2ban 0.11.2 test suite. Python 3.10.7 (main, Sep 11 2022, 22:42:41) [GCC 12.1.1 20220630]. Please wait...
+.............................ss.............2022-10-09 15:41:29,611 fail2ban.jail           [31]: INFO    Creating new jail 'veryveryverylongname'
+2022-10-09 15:41:29,617 fail2ban.jail           [31]: INFO    Jail 'veryveryverylongname' uses poller {}
+2022-10-09 15:41:29,618 fail2ban.filter         [31]: DEBUG   Setting usedns = warn for FilterPoll(Jail('veryveryverylongname'))
+2022-10-09 15:41:29,618 fail2ban.filter         [31]: DEBUG   Created FilterPoll(Jail('veryveryverylongname'))
+2022-10-09 15:41:29,619 fail2ban.filterpoll     [31]: DEBUG   Created FilterPoll
+2022-10-09 15:41:29,619 fail2ban.jail           [31]: INFO    Initiated 'polling' backend
+...........................E...................................................................s............E.E..F...........s...E.F.E............ss..........................s..............................................F...............F...............F....FFF......................FF....................................................................................EE........
+.F.........................EsE................ssssss...............s..
+======================================================================
+ERROR: testExecuteTimeoutWithNastyChildren (fail2ban.tests.actiontestcase.CommandActionTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/actiontestcase.py", line 527, in testExecuteTimeoutWithNastyChildren
+    self.assertTrue(Utils.wait_for(lambda: not pid_exists(cpid), 3))  # process should have been killed
+  File "/usr/lib/python3.10/site-packages/fail2ban/server/utils.py", line 325, in wait_for
+    ret = cond()
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/actiontestcase.py", line 527, in <lambda>
+    self.assertTrue(Utils.wait_for(lambda: not pid_exists(cpid), 3))  # process should have been killed
+  File "/usr/lib/python3.10/site-packages/fail2ban/server/utils.py", line 350, in pid_exists
+    if pid < 0:
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+======================================================================
+ERROR: testLogTypeOfBackendInJail (fail2ban.tests.clientreadertestcase.JailReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 368, in testLogTypeOfBackendInJail
+    stream = jail.convert()
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailreader.py", line 257, in convert
+    raise ValueError(msg)
+ValueError: Have not found any log file for checklogtype_file jail
+
+======================================================================
+ERROR: testOverrideFilterOptInJail (fail2ban.tests.clientreadertestcase.JailReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 337, in testOverrideFilterOptInJail
+    self.assertTrue(jail.getOptions())
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailreader.py", line 155, in getOptions
+    self.__filter.getOptions(self.__opts, all=True)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 343, in getOptions
+    self._opts = ConfigReader.getOptions(
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 178, in getOptions
+    return self._cfg.getOptions(section, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 264, in getOptions
+    v = self.get(sec, optname, vars=pOptions)
+  File "/usr/lib/python3.10/configparser.py", line 800, in get
+    return self._interpolation.before_get(self, section, option, value,
+  File "/usr/lib/python3.10/configparser.py", line 395, in before_get
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 434, in _interpolate_some
+    raise InterpolationMissingOptionError(
+configparser.InterpolationMissingOptionError: Bad value substitution: option 'failregex' in section 'Definition' contains an interpolation key '__prefix_line' which is not a valid option name. Raw value: '%(cmnfailre)s\n<mdre-<mode>>'
+
+======================================================================
+ERROR: testReadStockJailConf (fail2ban.tests.clientreadertestcase.JailsReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 799, in testReadStockJailConf
+    comm_commands = jails.convert()
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailsreader.py", line 104, in convert
+    stream.extend(jail.convert(allow_no_files=allow_no_files))
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailreader.py", line 257, in convert
+    raise ValueError(msg)
+ValueError: Have not found any log file for sshd jail
+
+======================================================================
+ERROR: testStockConfigurator (fail2ban.tests.clientreadertestcase.JailsReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 953, in testStockConfigurator
+    configurator.convertToProtocol()
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configurator.py", line 81, in convertToProtocol
+    self.__streams["jails"] = self.__jails.convert(allow_no_files=allow_no_files)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailsreader.py", line 104, in convert
+    stream.extend(jail.convert(allow_no_files=allow_no_files))
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/jailreader.py", line 257, in convert
+    raise ValueError(msg)
+ValueError: Have not found any log file for sshd jail
+
+======================================================================
+ERROR: testSampleRegexsZZZ-GENERIC-EXAMPLE (fail2ban.tests.samplestestcase.FilterSamplesRegex)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 216, in testFilter
+    flt = self._readFilter(fltName, name, basedir, opts=None)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 105, in _readFilter
+    filterConf.getOptions({})
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 343, in getOptions
+    self._opts = ConfigReader.getOptions(
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 178, in getOptions
+    return self._cfg.getOptions(section, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 264, in getOptions
+    v = self.get(sec, optname, vars=pOptions)
+  File "/usr/lib/python3.10/configparser.py", line 800, in get
+    return self._interpolation.before_get(self, section, option, value,
+  File "/usr/lib/python3.10/configparser.py", line 395, in before_get
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 434, in _interpolate_some
+    raise InterpolationMissingOptionError(
+configparser.InterpolationMissingOptionError: Bad value substitution: option 'ignoreregex' in section 'Definition' contains an interpolation key '__prefix_line' which is not a valid option name. Raw value: '^%(__prefix_line)sF2B: error from 192.0.2.251$\n^%(__prefix_line)sF2B: error from 192.0.2.252$'
+
+======================================================================
+ERROR: testSampleRegexsZZZ-SSHD-OBSOLETE-MULTILINE (fail2ban.tests.samplestestcase.FilterSamplesRegex)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 194, in testFilter
+    flt = self._readFilter(fltName, name, basedir, opts=fltOpts)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 105, in _readFilter
+    filterConf.getOptions({})
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 343, in getOptions
+    self._opts = ConfigReader.getOptions(
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 178, in getOptions
+    return self._cfg.getOptions(section, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 264, in getOptions
+    v = self.get(sec, optname, vars=pOptions)
+  File "/usr/lib/python3.10/configparser.py", line 800, in get
+    return self._interpolation.before_get(self, section, option, value,
+  File "/usr/lib/python3.10/configparser.py", line 395, in before_get
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 434, in _interpolate_some
+    raise InterpolationMissingOptionError(
+configparser.InterpolationMissingOptionError: Bad value substitution: option 'failregex' in section 'Definition' contains an interpolation key '__prefix_line' which is not a valid option name. Raw value: '%(cmnfailre)s\n<mdre-<mode>>'
+
+======================================================================
+ERROR: testFullGeneric (fail2ban.tests.fail2banregextestcase.Fail2banRegexTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/fail2banregextestcase.py", line 277, in testFullGeneric
+    self.assertTrue(_test_exec(
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/fail2banregextestcase.py", line 57, in _test_exec
+    return fail2banRegex.start(args)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/fail2banregex.py", line 727, in start
+    if not self.readRegex(cmd_regex, 'fail'): # pragma: no cover
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/fail2banregex.py", line 386, in readRegex
+    reader.getOptions(None)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 343, in getOptions
+    self._opts = ConfigReader.getOptions(
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 178, in getOptions
+    return self._cfg.getOptions(section, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 264, in getOptions
+    v = self.get(sec, optname, vars=pOptions)
+  File "/usr/lib/python3.10/configparser.py", line 800, in get
+    return self._interpolation.before_get(self, section, option, value,
+  File "/usr/lib/python3.10/configparser.py", line 395, in before_get
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 434, in _interpolate_some
+    raise InterpolationMissingOptionError(
+configparser.InterpolationMissingOptionError: Bad value substitution: option 'ignoreregex' in section 'Definition' contains an interpolation key '__prefix_line' which is not a valid option name. Raw value: '^%(__prefix_line)sF2B: error from 192.0.2.251$\n^%(__prefix_line)sF2B: error from 192.0.2.252$'
+
+======================================================================
+ERROR: testMultilineSshd (fail2ban.tests.fail2banregextestcase.Fail2banRegexTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/fail2banregextestcase.py", line 265, in testMultilineSshd
+    self.assertTrue(_test_exec(
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/fail2banregextestcase.py", line 57, in _test_exec
+    return fail2banRegex.start(args)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/fail2banregex.py", line 727, in start
+    if not self.readRegex(cmd_regex, 'fail'): # pragma: no cover
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/fail2banregex.py", line 386, in readRegex
+    reader.getOptions(None)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 343, in getOptions
+    self._opts = ConfigReader.getOptions(
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 178, in getOptions
+    return self._cfg.getOptions(section, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configreader.py", line 264, in getOptions
+    v = self.get(sec, optname, vars=pOptions)
+  File "/usr/lib/python3.10/configparser.py", line 800, in get
+    return self._interpolation.before_get(self, section, option, value,
+  File "/usr/lib/python3.10/configparser.py", line 395, in before_get
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 437, in _interpolate_some
+    self._interpolate_some(parser, option, accum, v,
+  File "/usr/lib/python3.10/site-packages/fail2ban/client/configparserinc.py", line 61, in _interpolate_some
+    return super(BasicInterpolationWithName, self)._interpolate_some(
+  File "/usr/lib/python3.10/configparser.py", line 434, in _interpolate_some
+    raise InterpolationMissingOptionError(
+configparser.InterpolationMissingOptionError: Bad value substitution: option 'failregex' in section 'Definition' contains an interpolation key '__prefix_line' which is not a valid option name. Raw value: '%(cmnfailre)s\n<mdre-<mode>>'
+
+======================================================================
+FAIL: testStockSSHJail (fail2ban.tests.clientreadertestcase.JailReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 327, in testStockSSHJail
+    self.assertFalse(jail.isEnabled())
+AssertionError: True is not false
+
+======================================================================
+FAIL: testReadStockJailFilterComplete (fail2ban.tests.clientreadertestcase.JailsReaderTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/clientreadertestcase.py", line 873, in testReadStockJailFilterComplete
+    self.assertTrue(filters_jail.issubset(filters),
+AssertionError: False is not true : Stock jail.conf references non-existent filters {'apache-nohome', 'mongodb-auth', 'courier-auth', 'apache-shellshock', 'apache-botsearch', 'squirrelmail', 'horde', 'nsd', 'softethervpn', 'qmail', 'alpine-sshd', 'named-refused', 'sieve', 'monit', 'mysqld-auth', 'vsftpd', 'sendmail-auth', 'grafana', 'apache-pass', 'phpmyadmin-syslog', 'cyrus-imap', 'apache-badbots', 'nginx-limit-req', 'exim-spam', 'drupal-auth', 'squid', 'zoneminder', 'php-url-fopen', 'proftpd', 'gssftpd', 'wuftpd', 'haproxy-http-auth', 'postfix', 'apache-modsecurity', 'dropbear', 'domino-smtp', 'webmin-auth', 'openhab', 'nagios', 'kerio', 'recidive', 'screensharingd', 'pam-generic', 'znc-adminlog', 'slapd', 'exim', 'nginx-http-auth', 'sogo-auth', 'oracleims', 'alpine-sshd-ddos', 'murmur', 'openwebmail', 'lighttpd-auth', 'tine20', 'stunnel', 'counter-strike', 'froxlor-auth', 'sendmail-reject', '3proxy', 'apache-fakegooglebot', 'traefik-auth', 'asterisk', 'apache-noscript', 'centreon', 'bitwarden', 'apache-auth', 'suhosin', 'dovecot', 'courier-smtp', 'perdition', 'directadmin', 'ejabberd-auth', 'groupoffice', 'assp', 'gitlab', 'guacamole', 'freeswitch', 'selinux-ssh', 'pure-ftpd', 'roundcube-auth', 'apache-overflows', 'solid-pop3d', 'nginx-botsearch', 'portsentry', 'uwimap-auth', 'xinetd-fail'}
+
+======================================================================
+FAIL: testIgnoreCmdApacheFakegooglebot (fail2ban.tests.filtertestcase.IgnoreIPDNS)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 606, in testIgnoreCmdApacheFakegooglebot
+    self.assertTrue(mod.is_googlebot(mod.process_args([cmd, str(ip)])), "test of googlebot ip %s failed" % ip)
+AssertionError: False is not true : test of googlebot ip 66.249.66.1 failed
+
+======================================================================
+FAIL: testGetFailuresUseDNS (fail2ban.tests.filtertestcase.GetFailures)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 1781, in testGetFailuresUseDNS
+    _assert_correct_last_attempt(self, filter_, output)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 188, in _assert_correct_last_attempt
+    _assert_equal_entries(utest, f, o)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 119, in _assert_equal_entries
+    utest.assertEqual(found[0], output[0])            # IP
+AssertionError: '93.184.216.34' != '2606:2800:220:1:248:1893:25c8:1946'
+
+======================================================================
+FAIL: testIPAddr_CompareDNS (fail2ban.tests.filtertestcase.DNSUtilsNetworkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 2180, in testIPAddr_CompareDNS
+    self.assertTrue(IPAddr("2606:2800:220:1:248:1893:25c8:1946").isInNet(ips))
+AssertionError: False is not true
+
+======================================================================
+FAIL: testIpToName (fail2ban.tests.filtertestcase.DNSUtilsNetworkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 2032, in testIpToName
+    self.assertTrue(res.endswith(('.google', '.google.com')))
+AssertionError: False is not true
+
+======================================================================
+FAIL: testTextToIp (fail2ban.tests.filtertestcase.DNSUtilsNetworkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 607, in assertSortedEqual
+    _assertSortedEqual(a, b, level, nestedOnly, key)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 584, in _assertSortedEqual
+    raise ValueError('%r != %r' % (a, b))
+ValueError: {'93.184.216.34'} != ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 2017, in testTextToIp
+    self.assertSortedEqual(res, ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946'])
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 614, in assertSortedEqual
+    self.fail(msg)
+AssertionError: {'93.184.216.34'} != ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+- {'93.184.216.34'}
++ ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+
+======================================================================
+FAIL: testUseDns (fail2ban.tests.filtertestcase.DNSUtilsNetworkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 607, in assertSortedEqual
+    _assertSortedEqual(a, b, level, nestedOnly, key)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 584, in _assertSortedEqual
+    raise ValueError('%r != %r' % (a, b))
+ValueError: {'93.184.216.34'} != ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/filtertestcase.py", line 2000, in testUseDns
+    self.assertSortedEqual(res, ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946'])
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 614, in assertSortedEqual
+    self.fail(msg)
+AssertionError: {'93.184.216.34'} != ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+- {'93.184.216.34'}
++ ['93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946']
+
+======================================================================
+FAIL: testSampleRegexsALPINE-SSHD (fail2ban.tests.samplestestcase.FilterSamplesRegex)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 146, in testFilter
+    self.assertTrue(
+AssertionError: False is not true : No sample log file available for 'alpine-sshd' filter
+
+======================================================================
+FAIL: testSampleRegexsALPINE-SSHD-DDOS (fail2ban.tests.samplestestcase.FilterSamplesRegex)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/samplestestcase.py", line 146, in testFilter
+    self.assertTrue(
+AssertionError: False is not true : No sample log file available for 'alpine-sshd-ddos' filter
+
+======================================================================
+FAIL: testKillAfterStart (fail2ban.tests.fail2banclienttestcase.Fail2banServerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/utils.py", line 243, in wrapper
+    return f(self, tmp, *args, **kwargs)
+  File "/usr/lib/python3.10/site-packages/fail2ban/tests/fail2banclienttestcase.py", line 809, in testKillAfterStart
+    self.assertTrue(_kill_srv(tmp))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 493 tests in 111.208s
+
+FAILED (failures=11, errors=9, skipped=15)
