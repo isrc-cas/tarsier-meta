@@ -1,7 +1,7 @@
 # OpenSUSE Busybox测试
 
 OS: openSUSE-Tumbleweed-RISC-V-JeOS-efi.riscv64-2022.09.29  
-VERSION: Python 3.10.7  
+VERSION: busybox 1.35.0-11.1  
 TIME: 2022/10/09
 
 ## 测试
