@@ -4,7 +4,6 @@ OS: riscv64/alpine:edge
 VERSION: Python 3.10.7  
 TIME: 2022/10/07  
 
-
 | 操作步骤                       | 输入数据                     | 预期结果                      | 实际结果                      | 测试结果  |
 | ----------------------------- | ---------------------------- | ---------------------------- | ---------------------------- | -------- |
 | apk add python3               | python3                      | 安装成功                      | 安装成功                     | 成功      |
@@ -18,6 +17,7 @@ TIME: 2022/10/07
 
 > python3 -m test -uall,-gui,-audio,-largefile --list-tests > tests.txt  
 > python3 -m test --matchfile tests.txt | tee py3_testlog.txt
+
 ### 结果
 
 > == Tests result: FAILURE ==  
