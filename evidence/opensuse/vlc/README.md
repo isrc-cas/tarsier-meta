@@ -1,8 +1,8 @@
 # OpenSUSE Python3测试
 
-OS: openSUSE-Tumbleweed-RISC-V-XFCE.riscv64-rootfs.riscv64-2022.10.11
-VERSION: VLC 3.0.17.4
-TIME: 2022/10/16
+OS: openSUSE-Tumbleweed-RISC-V-XFCE.riscv64-rootfs.riscv64-2022.10.11  
+VERSION: VLC 3.0.17.4  
+TIME: 2022/10/16  
 
 | 操作步骤                                 | 输入数据                       | 预期结果                      | 实际结果                      | 测试结果  | 附件              |
 | --------------------------------------- | ---------------------------- | ---------------------------- | ---------------------------- | -------- | ---------------- |
