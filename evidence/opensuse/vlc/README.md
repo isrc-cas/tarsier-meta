@@ -1,4 +1,4 @@
-# OpenSUSE Python3测试
+# OpenSUSE VLC测试
 
 OS: openSUSE-Tumbleweed-RISC-V-XFCE.riscv64-rootfs.riscv64-2022.10.11  
 VERSION: VLC 3.0.17.4  
