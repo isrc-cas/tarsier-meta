@@ -10,6 +10,8 @@ TIME: 2022/10/16
 | vlc                                     |                              | 正确打开                      | 正确打开                      | 成功      | start.png        |
 | 播放CompressedwithFlexClip.mp4           | CompressedwithFlexClip.mp4   | 正确播放                      | 播放失败                      | 失败      | mp4.png          |
 
+CompressedwithFlexClip.mp4: https://wiki.wumoe.cn/images/d/d0/CompressedwithFlexClip.mp4
+
 ## 结果
 
 基本功能无法使用
