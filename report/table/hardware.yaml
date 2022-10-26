@@ -1,0 +1,56 @@
+openEuler:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unmatched: True
+Arch Linux:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unleashed: True
+  HiFive Unmatched: True
+  PolarFire SoC Icicle Kit: True
+Gentoo:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unleashed: True
+  HiFive Unmatched: True
+Debian:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unleashed: True
+  HiFive Unmatched: True
+  PolarFire SoC Icicle Kit: True
+openSUSE:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unleashed: True
+  HiFive Unmatched: True
+  PolarFire SoC Icicle Kit: True
+Fedora:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unmatched: True
+  PolarFire SoC Icicle Kit: True
+Ubuntu:
+  QEMU: True
+  全志哪吒 D1: True
+  赛昉 VisionFive: True
+  HiFive Unmatched: True
+FreeBSD:
+  QEMU: True
+  全志哪吒 D1: False
+  HiFive Unleashed: True
+  HiFive Unmatched: True
+Deepin: {}
+Anolis:
+  QEMU: True
+  全志哪吒 D1: True
+openKylin:
+  赛昉 VisionFive: True
+  HiFive Unmatched: True
+Alpine: {}
