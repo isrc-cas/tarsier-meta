@@ -3,7 +3,7 @@ import pandas
 import yaml
 
 Distribution = ["种类", "Debian", "Gentoo", "openSUSE", "Arch Linux", "FreeBSD","OpenBSD", "Alpine", "openKylin", "Fedora", "OpenEuler", "Anolis", "Deepin", "Ubuntu"]
-with open("./evidence/observe.yaml", 'r', encoding='utf-8') as stream:
+with open("../table/package.yaml", 'r', encoding='utf-8') as stream:
     try:
         parsed_yaml = yaml.safe_load(stream)
         #print(parsed_yaml)

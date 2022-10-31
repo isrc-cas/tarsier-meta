@@ -2,8 +2,8 @@ from distutils.dist import Distribution
 import pandas
 import yaml
 
-Distribution = ["种类", "Debian", "Gentoo", "openSUSE", "Arch Linux", "FreeBSD","OpenBSD", "Alpine", "openKylin", "Fedora", "OpenEuler", "Anolis", "Deepin", "Ubuntu"]
-with open("./evidence/observe.yaml", 'r', encoding='utf-8') as stream:
+Distribution = ["开发板名称","QEMU","全志哪吒 D1","赛昉 VisionFive","HiFive Unleashed","HiFive Unmatched","PolarFire SoC Icicle Kit"]
+with open("../table/hardware.yaml", 'r', encoding='utf-8') as stream:
     try:
         parsed_yaml = yaml.safe_load(stream)
         #print(parsed_yaml)
@@ -14,8 +14,8 @@ frames = []
 keys = []
 index = list(parsed_yaml)
 print(parsed_yaml[index[0]])
-for packageCategory in index:
-    print(packageCategory)
+for dist in index:
+    print(dist)
     keys.append(packageCategory)
     df = pandas.DataFrame(columns=Distribution)
     for packageName in parsed_yaml[packageCategory].keys():
