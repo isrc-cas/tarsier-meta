@@ -5,7 +5,7 @@ DB:
     openEuler: ⚠️
     Deepin: ⚠️
   mariadb(Mysql):
-    Arch Linux: ✅ mariadb-10.9.3
+    Arch Linux: ✅ mariadb-10.9.3-1
     Debian: ✅ mariadb-1:10.6.8
     Gentoo: ✅ mysql-8.0.27
     openKylin: ✅ mysql-8.0
@@ -15,6 +15,7 @@ DB:
     openEuler: ✅ mariadb-10.5.16
     Deepin: ✅ mysql-server-8.0.29-1
   postgresql:
+    Arch Linux: ✅ postgresql-14.5-2
     Debian: ✅ postgresql-14.5
     Gentoo: ✅ postgresql-14.5
     openKylin: ✅ postgresql-12.2
@@ -25,7 +26,7 @@ DB:
     Deepin: postgresql-14-14.1-1
   sqlite:
     Anolis: ✅
-    Arch Linux: ✅ sqlite-3.39.1
+    Arch Linux: ✅ sqlite-3.39.4-1
     Debian: ✅ sqlite-2.8.17
     Gentoo: ✅ sqlite-3.39.3
     openKylin: ✅ sqlite-3.31.1
@@ -36,7 +37,7 @@ DB:
     Deepin: sqlite3-3.36.0-2
 http/web 服务器:
   Apache2:
-    Arch Linux: ✅ apache-2.4.54
+    Arch Linux: ✅ apache-2.4.54-2
     Debian: ✅ apache-2.4.54
     Gentoo: ✅ apache-2.4.54
     openSUSE: ✅ apache-22.4.54
@@ -57,7 +58,7 @@ http/web 服务器:
     openEuler: ✅ lighttpd-1.4.53
     Deepin: ⚠️
   Nginx:
-    Arch Linux: ✅ nginx-1.22.0
+    Arch Linux: ✅ nginx-1.22.1-1
     Debian: ✅ nginx-1.22.0
     Fedora: ✅ nginx-1.23.1
     openSUSE: ✅ nginx-1.23.1
@@ -80,12 +81,12 @@ http/web 服务器:
   Varnish:
     Debian: ✅ varnish-7.1.1
     Ubuntu: ✔️ varnish 6.6.1-1ubuntu0.2
-    OpenBSD:⚠️
+    OpenBSD: ⚠️
     openEuler: ⚠️
     Deepin: ⚠️
 web:
   flask:
-    Arch Linux: ✅
+    Arch Linux: ✅ python-flask-2.2.2-1
     openEuler: ✅ python-flask-1.1.2
     Deepin: python3-flask-2.0.1-2
 中间件:
@@ -100,6 +101,7 @@ web:
     openEuler: ✅ memcached-1.6.12
     Deepin: ✔️ memcached-1.6.12
   Redis:
+    Arch Linux: redis-7.0.5-1
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.5
     openSUSE: ✅ redis-7.0.5
@@ -110,6 +112,7 @@ web:
     openEuler: ⚠️
     Deepin: ⚠️
   numpy:
+    Arch Linux: python-numpy-1.23.4-1
     Debian: ✅ numpy-1:1.21.5
     Gentoo: ✅ numpy-1.23.3
     OpenBSD: ✅ py3-numpy-1.23.2
@@ -128,7 +131,7 @@ web:
     Deepin: ⚠️
 其他:
   openssl:
-    Arch Linux: ✅ 1.1.1.q
+    Arch Linux: ✅ openssl-1.1.1.q-1
     Debian: ✅ 3.0.5
     OpenBSD: ⚠️
     openEuler: ✅ openssl-1.1.1f
@@ -144,11 +147,13 @@ web:
     Gentoo: ✅
     openEuler: ⚠️
   Thunderbird:
+    Arch Linux: thunderbird-91.12.0-1
     Debian: ⚠️
     Gentoo: ✅ thunderbird-94.0-beta1
     openEuler: ⚠️
 图像浏览编辑:
   GIMP:
+    Arch Linux: gimp-2.10.32-2
     Debian: ✅ gimp-2.10.32
     Gentoo: ✅ gimp-2.10.32
     Ubuntu: ✅ gimp-2.10.30-1build1
@@ -156,11 +161,15 @@ web:
     openEuler: ⚠️
 多媒体播放器:
   VLC:
+    Arch Linux: vlc-3.0.17.4-10
     Debian: ✅ vlc-3.0.17.4
     Gentoo: ✅ vlc-3.0.17
     Ubuntu: ✅ vlc-3.0.16-1build7
     OpenBSD: ⚠️
     openEuler: ⚠️
+  MPV:
+    Arch Linux: mpv-1:0.34.1-5
+
 大数据:
   HBase:
     openEuler: ⚠️
@@ -170,7 +179,7 @@ web:
     openEuler: ⚠️
 容器:
   docker:
-    Alpine: ✅ docker-20.10.18
+    Alpine: ✅ docker-1:20.10.21-1
     Arch Linux: ✅ docker-20.10.17
     Debian: ✅ docker-20.10.17
     Gentoo: ✅ docker-20.10.17
@@ -215,6 +224,7 @@ web:
     Ubuntu: ✔️ lubuntu-desktop-22.04.3
     openEuler: ⚠️
   LXQT:
+    Arch Linux: ✅
     Debian: ✅ lxqt-meta-30
     Gentoo: ✅ lxqt-meta-1.1.0
     Ubuntu: ✔️ lubuntu-desktop-22.04.3
@@ -230,12 +240,14 @@ web:
     openEuler: ⚠️
 浏览器:
   chromium:
+    Arch Linux: chromium-104.0.5112.101-1
     Anolis: ✅
     Debian: ⚠️
     FreeBSD: ✅
     Gentoo: ✅ chromium-98.0.4750.0
     openEuler: ⚠️
   firefox:
+    Arch Linux: ✅ firefox-105.0.3-1
     Anolis: ✅
     Debian: ⚠️
     FreeBSD: ⚠️
@@ -244,7 +256,7 @@ web:
 编译器工具链:
   clang:
     Alpine: ✅ clang-14.0.6
-    Arch Linux: ✅ clang-14.0.6
+    Arch Linux: ✅ clang-14.0.6-3.1
     Debian: ✅ clang-14.0.6
     Fedora: ✅ clang-14.0.5
     FreeBSD: ✅ clang-14.0.5
@@ -258,7 +270,7 @@ web:
   cmake:
     Alpine: ✅ cmake-3.24.2
     Anolis: ✅ cmake-3.22.2
-    Arch Linux: ✅ cmake-3.24.2
+    Arch Linux: ✅ cmake-3.24.2-1
     Debian: ✅ cmake-3.24.2
     Fedora: ✅ cmake-3.24.1
     FreeBSD: ✅ cmake-3.21.4
@@ -272,7 +284,7 @@ web:
   gcc:
     Alpine: ✅ gcc-12.1.1
     Anolis: ✅ gcc-12.0.1
-    Arch Linux: ✅ gcc-12.2.0
+    Arch Linux: ✅ gcc-12.2.0-1
     Debian: ✅ gcc-12.2.0
     Fedora: ✅ gcc-12.1.1
     FreeBSD: ✅gcc-9.3.0
@@ -285,7 +297,7 @@ web:
   gdb:
     Alpine: ✅ gdb-12.1
     Anolis: ✅ gdb-11.2
-    Arch Linux: ✅ gdb-12.1
+    Arch Linux: ✅ gdb-12.1-1
     Debian: ✅ gdb-12.1
     Fedora: ✅ gdb-12.1
     FreeBSD: ✅ gdb-11.1
@@ -299,7 +311,7 @@ web:
   llvm:
     Alpine: ✅ llvm-14.0.6
     Anolis: ✅ llvm-13.0.1
-    Arch Linux: ✅ llvm-14.0.6
+    Arch Linux: ✅ llvm-14.0.6-3
     Debian: ✅ llvm-14.0.6
     Fedora: ✅ llvm-14.0.5
     FreeBSD: ✅ llvm-9.0.1
@@ -314,7 +326,7 @@ web:
   Nodejs:
     Alpine: ✅ nodejs-16.17.0
     Anolis: ✅ nodejs-v16.15.1
-    Arch Linux: ✅ Nodejs-18.9.1
+    Arch Linux: ✅ nodejs-18.11.0-2
     Debian: ✅ nodejs-18.7.0
     Fedora: ⚠️
     FreeBSD: ⚠️
@@ -324,6 +336,7 @@ web:
     openEuler: ⚠️
     Deepin: ✔️ nodejs-16.15.1+dfsg-1
   Ocaml:
+    Arch Linux: ocaml-4.14.0-1
     Anolis: ✅ ocaml-4.12.0-3
     Debian: ✅ ocaml-4.13.1
     Gentoo: ✅ ocaml-4.14.0
@@ -333,6 +346,7 @@ web:
     openEuler: ✅ ocaml-4.13.1
     Deepin: ✔️ ocaml-4.13.1-3
   erlang:
+    Arch Linux: erlang-25.1.1-1
     Alpine: ✅ erlang-25.0.3
     Debian: ✅ erlang-1:24.3.4.5
     Gentoo: ✅ erlang-25.0.4
@@ -340,10 +354,9 @@ web:
     Ubuntu: ✅ erlang-24.2.1
     OpenBSD: ⚠️
     openEuler: ✅ erlang-23.3.4.9
-    x
   golang:
     Anolis: ✅ golang-1.18.3
-    Arch Linux: ✅ golang-1.19
+    Arch Linux: ✅ go-2:1.19.1-1
     Debian: ✅ golang-1.19
     Fedora: ✅ golang-1.19
     FreeBSD: ⚠️
@@ -354,7 +367,7 @@ web:
     Deepin: ✔️ golang-1.17~1
   openJDK:
     Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
-    Arch Linux: ✅ openjdk-18.0.2.1 openjdk17-17.0.4.1 openjdk11 11.0.15
+    Arch Linux: jdk-openjdk-19.0.1.u10-3
     Debian: ✅ openjdk-19
     Fedora: ✅ openjdk-11
     FreeBSD: ⚠️
@@ -367,7 +380,7 @@ web:
   perl:
     Alpine: ✅ perl-5.36.0
     Anolis: ⚠️ perl-5.34.0
-    Arch Linux: ✅ perl-5.36.0
+    Arch Linux: perl-5.36.0-1
     Debian: ✅ perl-5.34.0
     FreeBSD: ✅ perl-5.32.1
     Gentoo: ✅ perl-5.36.0
@@ -380,7 +393,7 @@ web:
   python:
     Alpine: ✅ python-3.10.7
     Anolis: ✅ python-3.10.2
-    Arch Linux: ✅ python-3.10.7
+    Arch Linux: ✅ python-3.10.8-2
     Debian: ✅ python-3.10.6
     Fedora: ✅ python-3.9.7
     FreeBSD: ✅python-3.8.12
@@ -393,7 +406,7 @@ web:
     Deepin: ✔️ python3-3.10.4-2
   ruby:
     Alpine: ✅ ruby-3.1.2
-    Arch Linux: ✅ ruby-3.0.4p208
+    Arch Linux: ✅ ruby-3.0.4-18.2
     Debian: ✅ ruby-1:3.0
     FreeBSD: ✅ ruby-2.7.4
     Gentoo: ✅ ruby-3.1.2
@@ -404,7 +417,7 @@ web:
     Deepin: ✔️ ruby-3.0+1
   rust:
     Anolis: ✅ rust-1.58.1
-    Arch Linux: ✅ rust-1.63.0
+    Arch Linux: ✅ rust-1:1.64.0-1
     Debian: ✅ rust-1.61
     Fedora: ✅ rust-1.63.0
     FreeBSD: ⚠️
@@ -422,3 +435,8 @@ IDE:
     openEuler: ⚠️
   PyCharm:
     openEuler: ⚠️
+IME:
+  fcitx5:
+    Arch Linux: fcitx5-5.0.19-1
+  librime:
+    Arch Linux: librime-1:1.7.3-13
