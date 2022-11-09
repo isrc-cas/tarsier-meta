@@ -66,6 +66,7 @@ http/web 服务器:
     OpenBSD: ⚠️
     openEuler: ✅ nginx-1.21.5
     Deepin: ⚠️
+    FreeBSD: ✅ nginx-1.20.2
   Squid:
     Debian: ✅ squid-5.6
     Gentoo: ✅ squid-5.4.1
@@ -105,6 +106,7 @@ web:
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.5
     openSUSE: ✅ redis-7.0.5
+    FreeBSD: ✅ redis-6.2.6
     OpenBSD: ⚠️
     openEuler: ✅ redis-6.0.11
     Deepin: redis-server-5:6.0.16-1
@@ -188,6 +190,7 @@ web:
     Ubuntu: ⚠️ 非官方支持
     openEuler: ✅ docker-18.09.0
     Deepin: ⚠️
+    FreeBSD: ⚠️
   runc:
     Debian: ✅ runc-1.1.4
     Gentoo: ✅ runc-1.1.3
