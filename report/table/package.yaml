@@ -214,6 +214,7 @@ web:
     OpenBSD: ⚠️
     openEuler: ⚠️
   GNOME:
+    Alpine: gnome-43
     Debian: ✅ gnome-1:42
     Gentoo: ✅ gnome-40.0
     OpenBSD: ⚠️
@@ -234,9 +235,11 @@ web:
     OpenBSD: ⚠️
     openEuler: ⚠️
   MATE:
+    Alpine: mate-1.2.0
     Gentoo: ✅ mate-1.24
     openEuler: ⚠️
   Xfce Desktop:
+    Alpine: ✅ xfce4-4.16
     Debian: ✅ xfce4-4.16
     Gentoo: ✅ xfce4-meta-4.16
     OpenBSD: ⚠️
