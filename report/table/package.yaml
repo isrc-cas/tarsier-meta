@@ -66,6 +66,7 @@ http/web 服务器:
     OpenBSD: ⚠️
     openEuler: ✅ nginx-1.21.5
     Deepin: ⚠️
+    FreeBSD: ✅ nginx-1.20.2
   Squid:
     Debian: ✅ squid-5.6
     Gentoo: ✅ squid-5.4.1
@@ -101,10 +102,12 @@ web:
     openEuler: ✅ memcached-1.6.12
     Deepin: ✔️ memcached-1.6.12
   Redis:
+    Alpine: ✅ redis-7.0.5
     Arch Linux: redis-7.0.5-1
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.5
     openSUSE: ✅ redis-7.0.5
+    FreeBSD: ✅ redis-6.2.6
     OpenBSD: ⚠️
     openEuler: ✅ redis-6.0.11
     Deepin: redis-server-5:6.0.16-1
@@ -188,6 +191,7 @@ web:
     Ubuntu: ⚠️ 非官方支持
     openEuler: ✅ docker-18.09.0
     Deepin: ⚠️
+    FreeBSD: ⚠️
   runc:
     Debian: ✅ runc-1.1.4
     Gentoo: ✅ runc-1.1.3
@@ -211,6 +215,7 @@ web:
     OpenBSD: ⚠️
     openEuler: ⚠️
   GNOME:
+    Alpine: gnome-43
     Debian: ✅ gnome-1:42
     Gentoo: ✅ gnome-40.0
     OpenBSD: ⚠️
@@ -231,9 +236,11 @@ web:
     OpenBSD: ⚠️
     openEuler: ⚠️
   MATE:
+    Alpine: mate-1.2.0
     Gentoo: ✅ mate-1.24
     openEuler: ⚠️
   Xfce Desktop:
+    Alpine: ✅ xfce4-4.16
     Debian: ✅ xfce4-4.16
     Gentoo: ✅ xfce4-meta-4.16
     OpenBSD: ⚠️
