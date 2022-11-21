@@ -12,6 +12,7 @@ DB:
     openSUSE: ⚠️
     Ubuntu: mysql-server-8.0.30
     OpenBSD: ⚠️
+    FreeBSD: ✅ mariadb-10.5.13
     openEuler: ✅ mariadb-10.5.16
     Deepin: ✅ mysql-server-8.0.29-1
   postgresql:
