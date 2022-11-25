@@ -16,6 +16,59 @@
 
 
 
+
+
+### 手动功能性测试
+
+
+#### 简单测试
+
+root@openkylin:/home/openkylin# mysqlslap --auto-generate-sql
+Benchmark
+	Average number of seconds to run all queries: 0.114 seconds
+	Minimum number of seconds to run all queries: 0.114 seconds
+	Maximum number of seconds to run all queries: 0.114 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 0
+
+#### 添加并发
+
+root@openkylin:/home/openkylin# mysqlslap --concurrency=100 --number-of-queries=1000 --auto-generate-sql
+Benchmark
+	Average number of seconds to run all queries: 3.694 seconds
+	Minimum number of seconds to run all queries: 3.694 seconds
+	Maximum number of seconds to run all queries: 3.694 seconds
+	Number of clients running queries: 100
+	Average number of queries per client: 10
+
+
+#### 测试复杂表
+
+
+root@openkylin:/home/openkylin# mysqlslap --number-int-cols=5 --number-char-cols=20 --auto-generate-sql
+Benchmark
+	Average number of seconds to run all queries: 0.207 seconds
+	Minimum number of seconds to run all queries: 0.207 seconds
+	Maximum number of seconds to run all queries: 0.207 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 0
+
+
+#### 重复测试
+
+root@openkylin:/home/openkylin# mysqlslap --auto-generate-sql --iterations=10
+Benchmark
+	Average number of seconds to run all queries: 0.116 seconds
+	Minimum number of seconds to run all queries: 0.100 seconds
+	Maximum number of seconds to run all queries: 0.136 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 0
+
+
+
+
+
+
 ### 自动模块测试
 
 创建及执行测试
@@ -52,4 +105,4 @@ mysql-test-run: *** ERROR: Could not create testcase server port: Invalid argume
 
 ### 结果
 
-失败
+成功*（mysql-testsuite失败）
