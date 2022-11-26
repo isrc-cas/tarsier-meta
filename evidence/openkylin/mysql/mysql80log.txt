@@ -1,0 +1,1373 @@
+root@NICONICONI:/usr/lib/mysql-test# ./mysql-test-run.pl
+Logging: ./mysql-test-run.pl
+MySQL Version 8.0.31
+Checking supported features
+Using suite(s): auth_sec,binlog,binlog_gtid,binlog_nogtid,clone,collations,component_keyring_file,connection_control,encryption,federated,funcs_2,gcol,gis,information_schema,innodb,innodb_fts,innodb_gis,innodb_undo,innodb_zip,interactive_utilities,json,main,opt_trace,parts,perfschema,query_rewrite_plugins,rpl,rpl_gtid,rpl_nogtid,secondary_engine,service_status_var_registration,service_sys_var_registration,service_udf_registration,sys_vars,sysschema,test_service_sql_api,test_services,x
+Collecting tests
+ - Adding combinations for binlog
+ - Adding combinations for binlog_gtid
+ - Adding combinations for binlog_nogtid
+ - Adding combinations for rpl
+ - Adding combinations for rpl_gtid
+ - Adding combinations for rpl_nogtid
+Removing old var directory
+Creating var directory '/usr/lib/mysql-test/var'
+Installing system database
+Using parallel: 1
+
+==============================================================================
+                  TEST NAME                       RESULT  TIME (ms) COMMENT
+------------------------------------------------------------------------------
+worker[1] mysql-test-run: WARNING: running this script as _root_ will cause some tests to be skipped
+[  0%] clone.ddl_compress                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.ddl_compress_encrypt                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.ddl_encrypt                         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.ddl_undo_encrypt                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.local_insert                        [ skipped ]  Test needs debug binaries.
+[  0%] clone.monitor_progress                    [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_ddl_basic_restart            [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_ddl_compress                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.remote_ddl_compress_encrypt         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.remote_ddl_encrypt                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] clone.remote_ddl_rename_restart           [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_ddl_truncate_restart         [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_insert                       [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_monitor_progress             [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_restart                      [ skipped ]  Test needs debug binaries.
+[  0%] clone.remote_stage_restart                [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.alter_rename_table  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.alter_table        [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.clone_local_encrypt  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.clone_remote_encrypt  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.create_table       [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.database           [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.dd_upgrade_encrypted  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.encrypt_explicit   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.import_compress_encrypt  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.keyring_encryption_test  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.log_encrypt_4      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.log_encrypt_5      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.log_encrypt_6      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.log_encrypt_kill   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.migration          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.mysql_ts_alter_encrypt_2  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.mysqldump          [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rename_table       [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rpl_binlog_cache_encryption  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.rpl_binlog_cache_temp_file_encryption  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rpl_default_table_encryption  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rpl_encryption     [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rpl_encryption_master_key_generation_recovery  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.rpl_encryption_master_key_rotation_at_startup  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_1    [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_4    [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_6    [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_debug  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_fts  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.table_encrypt_kill  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace         [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.tablespace_encrypt_10  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_encrypt_11  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_encrypt_2  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_encrypt_3  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.tablespace_encrypt_5  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_encrypt_7  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_encrypt_8  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.tablespace_encrypt_9  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.tablespace_with_tables  [ skipped ]  Test needs debug binaries.
+[  0%] component_keyring_file.undo_encrypt_basic  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.undo_encrypt_bootstrap  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.undo_encrypt_crash  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.undo_tablespace_encrypt  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] component_keyring_file.upgrade            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] secondary_engine.load_debug               [ skipped ]  Test needs debug binaries.
+[  0%] secondary_engine.plan_cost_debug          [ skipped ]  Test needs debug binaries.
+[  0%] secondary_engine.query_preparation_debug  [ skipped ]  Test needs debug binaries.
+[  0%] x.blob_partial_update                     [ skipped ]  Test needs debug binaries.
+[  0%] x.client_accepting                        [ skipped ]  Test needs debug binaries.
+[  0%] x.initialization                          [ skipped ]  Test needs debug binaries.
+[  0%] x.notice_kill                             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] x.session_close                           [ skipped ]  Test needs debug binaries.
+[  0%] x.session_connect_timeout                 [ skipped ]  Test needs debug binaries.
+[  0%] x.shutdown_before_initialization          [ skipped ]  Test needs debug binaries.
+[  0%] x.switch_to_user                          [ skipped ]  Test needs debug binaries.
+[  0%] auth_sec.acl_tables_locking_big_debug_1   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_debug_2   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_negative_rc  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_negative_rr  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_negative_ru  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_negative_ser  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_positive_rc  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_positive_rr  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  0%] auth_sec.acl_tables_locking_big_positive_ru  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] auth_sec.acl_tables_locking_big_positive_ser  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] auth_sec.acl_tables_row_locking           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] auth_sec.initialize_admin_channel         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] auth_sec.openssl_cert_generation_debug    [ skipped ]  Test needs debug binaries.
+[  1%] auth_sec.server_send_client_plugin        [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_cache_temp_file_encrypt_cover  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_cache_write_failure         [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_check_flush_log_assertion   [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_crash_safe_ddl              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog.binlog_crash_safe_master_checksum  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_crash_safe_master_checksum_myisam  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_database                    [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_database_myisam             [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_enforce_gtid_consistency_create_select_consistent  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_enforce_gtid_consistency_nontrx_create_select_violation  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_enforce_gtid_consistency_trx_nontrx_consistent  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_enforce_gtid_consistency_trx_nontrx_violation  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_error_action                [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_expire_warnings             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog.binlog_group_commit_flush_crash    [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_group_commit_sync_no_delay_count  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_half_crash_safe_ddl         [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_index                       [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_killed_simulate             [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_magic_buffer_read_failure   [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_purge_binary_logs_stall     [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_reader_coverage             [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_reencrypt_logs              [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_reset_master                [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_reset_master_active_trx     [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_rotate_binlog_master_key_crash_recovery  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_rotate_binlog_master_key_crash_recovery_at_startup  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_rotate_binlog_master_key_errors  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_server_start_options        [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_table_map_optional_metadata  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_transaction_dependency_tracking_on_start  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog.binlog_transaction_write_set_savepoint_clear_identifiers  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_transaction_write_set_savepoint_insert_overwrite_identifier  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_transaction_write_set_savepoint_level  [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_write_error                 [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_xa_commit_failure           [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_xa_prepare_failure          [ skipped ]  Test needs debug binaries.
+[  1%] binlog.binlog_xa_recovery_errors          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog.compression_incident_event         [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_flush_logs_error       [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_group_commit_gtid_order  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_accessible_table_with_readonly  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_binlog_recovery_errors  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_cache             [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_errors            [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_log_status_errors  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_mix_ok_packet_all_gtids  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_mix_response_packet  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_ps_reprepare      [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_purge_binlog_at_startup  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_table_readonly    [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_failure_after_rotate  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_one_phase_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_one_phase_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_one_phase_failure_before_prepare_in_engines  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_commit_one_phase_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_multiple_failures  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_plus_normal_multiple_failures  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_prepare_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_prepare_failure_before_prepare_2nd_phase  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_prepare_failure_before_prepare_in_engines  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_prepare_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_rollback_failure_after_rotate  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_rollback_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_rollback_failure_before_rollback_engines  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtid_xa_rollback_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_gtids_table_gcov       [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_replay_oct_cross_version  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_simulate_crash_and_error_on_compress_gtid_table  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.binlog_warning_same_server_id  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog_gtid.binlog_xa_trx_gtid_response_packet  [ skipped ]  Test needs debug binaries.
+[  1%] binlog_gtid.cstreams_reader_basic         [ skipped ]  Test needs debug binaries.
+[  1%] binlog_nogtid.binlog_enforce_gtid_consistency_option  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  1%] binlog_nogtid.binlog_enforce_gtid_consistency_tmp_consistent  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_gtid_reset_consistency_violation_on_fail  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_gtid_state_update_deadlock  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] binlog_nogtid.binlog_mysqlbinlog_start_stop_slave_server_id  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_nogtid_mix_response_packet  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_binlog           [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_binlog_myisam    [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_create_select_crash  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_kill_create_select  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_kill_create_select_myisam  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_row_mixed_enforce_gtid_consistency_tmp_violation  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_stm_binlog           [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_stm_binlog_myisam    [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_stm_enforce_gtid_consistency_tmp_violation  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_unsafe_stmt_capable_engine  [ skipped ]  Test needs debug binaries.
+[  2%] binlog_nogtid.binlog_xa_gtid_consistency_violation  [ skipped ]  Test needs debug binaries.
+[  2%] connection_control.connection_control_long_hostname  [ skipped ]  Test needs debug binaries.
+[  2%] encryption.alter_rename_table             [ skipped ]  Test needs debug binaries.
+[  2%] encryption.alter_table                    [ skipped ]  Test needs debug binaries.
+[  2%] encryption.create_table                   [ skipped ]  Test needs debug binaries.
+[  2%] encryption.database                       [ skipped ]  Test needs debug binaries.
+[  2%] encryption.mysqldump                      [ skipped ]  Test needs debug binaries.
+[  2%] encryption.rename_table                   [ skipped ]  Test needs debug binaries.
+[  2%] encryption.tablespace                     [ skipped ]  Test needs debug binaries.
+[  2%] encryption.tablespace_with_tables         [ skipped ]  Test needs debug binaries.
+[  2%] encryption.upgrade                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] federated.federated_bug_33500956          [ skipped ]  Test needs debug binaries.
+[  2%] federated.federated_bug_33962357          [ skipped ]  Test needs debug binaries.
+[  2%] federated.federated_debug                 [ skipped ]  Test needs debug binaries.
+[  2%] federated.federated_get_table_share       [ skipped ]  Test needs debug binaries.
+[  2%] gcol.gcol_insert_ignore                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] gcol.gcol_rollback                        [ skipped ]  Test needs debug binaries.
+[  2%] gcol.gcol_update                          [ skipped ]  Test needs debug binaries.
+[  2%] information_schema.applicable_roles_debug  [ skipped ]  Test needs debug binaries.
+[  2%] information_schema.i_s_schema_definition_debug  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.alter_crash                        [ skipped ]  Test needs debug binaries.
+[  2%] innodb.alter_rename_files                 [ skipped ]  Test needs debug binaries.
+[  2%] innodb.analyze_table                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.atomic_rename_debug_database       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.atomic_truncate_crash              [ skipped ]  Test needs debug binaries.
+[  2%] innodb.attachable_trx                     [ skipped ]  Test needs debug binaries.
+[  2%] innodb.auto_increment                     [ skipped ]  Test needs debug binaries.
+[  2%] innodb.autoinc_debug                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.autoinc_persist_debug              [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob-crash-16k                     [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob-crash-4k                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob-crash                         [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob-update-debug                  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob_page_reserve                  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob_partial_update                [ skipped ]  Test needs debug binaries.
+[  2%] innodb.blob_partial_update_2              [ skipped ]  Test needs debug binaries.
+[  2%] innodb.buf_pool_resize_oom                [ skipped ]  Test needs debug binaries.
+[  2%] innodb.buf_pool_resize_status_codes       [ skipped ]  Test needs debug binaries.
+[  2%] innodb.cascade_lock_wait                  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.checkpoint_too_soon                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.choose_tbsp_location-debug         [ skipped ]  Test needs debug binaries.
+[  2%] innodb.cmp_per_index                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.constraint_check_locks_in_read_committed  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.create_drop_temp_table_perf_debug  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.create_table                       [ skipped ]  Test needs debug binaries.
+[  2%] innodb.create_tablespace_debug            [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_disable                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_encrypt                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_encrypt_recover              [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_encrypt_recover1             [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_encrypt_rowcomp              [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_lz4_encrypt                  [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_lz4_encrypt_recv             [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_recover_general_tablespace   [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_recover_zeroes               [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_unencrypt                    [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_zlib_encrypt                 [ skipped ]  Test needs debug binaries.
+[  2%] innodb.dblwr_zlib_encrypt_recv            [ skipped ]  Test needs debug binaries.
+[  2%] innodb.ddl_crash_alter_partition          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_crash_alter_table              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_crash_alter_table_partition    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_crash_alter_table_tablespace   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_crash_basic                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_kill                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  2%] innodb.ddl_log_error                      [ skipped ]  Test needs debug binaries.
+[  2%] innodb.ddl_prepare                        [ skipped ]  Test needs debug binaries.
+[  2%] innodb.deadlock_on_lock_upgrade           [ skipped ]  Test needs debug binaries.
+[  3%] innodb.dirty_invalid_page                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.dml_operations_temp_table_debug    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.doublewrite                        [ skipped ]  Test needs debug binaries.
+[  3%] innodb.doublewrite_on_to_reduced          [ skipped ]  Test needs debug binaries.
+[  3%] innodb.doublewrite_reduced                [ skipped ]  Test needs debug binaries.
+[  3%] innodb.doublewrite_reduced_odirect        [ skipped ]  Test needs debug binaries.
+[  3%] innodb.doublewrite_reduced_to_on          [ skipped ]  Test needs debug binaries.
+[  3%] innodb.end_range_check                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.end_range_check_2                  [ skipped ]  Test needs debug binaries.
+[  3%] innodb.fast_shutdown                      [ skipped ]  Test needs debug binaries.
+[  3%] innodb.flush-hang                         [ skipped ]  Test needs debug binaries.
+[  3%] innodb.fseg_reserve_factor                [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_1                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_2                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_3                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_4                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_5                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_6                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_7                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_commit_crash         [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_debug                [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_fk                   [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_predicate            [ skipped ]  Test needs debug binaries.
+[  3%] innodb.high_prio_trx_rpl                  [ skipped ]  Test needs debug binaries.
+[  3%] innodb.histogram-debug                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.histogram                          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.hp_deadlock                        [ skipped ]  Test needs debug binaries.
+[  3%] innodb.hp_deadlock_shutdown               [ skipped ]  Test needs debug binaries.
+[  3%] innodb.ibuf_not_empty                     [ skipped ]  Test needs debug binaries.
+[  3%] innodb.import_cfg                         [ skipped ]  Test needs debug binaries.
+[  3%] innodb.import_tablespace_page_corrupt     [ skipped ]  Test needs debug binaries.
+[  3%] innodb.index-lock-mode                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.index_merge_threshold              [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-2byte-collation             [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-alter-debug                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-alter-varchar-debug         [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-change-buffer-recovery      [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-copy-alter-debug            [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-import-lctn_1               [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-index-debug                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-index-online-fk             [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-lock-inherit-read_commited  [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-new-fk                      [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-replace-debug               [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb-status-output               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_autoextend_dml_1            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_autoextend_dml_2            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_autoextend_table_ddl        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_autoextend_tbsp_ddl         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_autoextend_upgrade          [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_buffer_pool_chunk_size_rounding  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_buffer_pool_resize          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_buffer_pool_resize_debug    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_buffer_pool_resize_with_chunks  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_buffer_pool_resize_with_instances  [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug11754376                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug11766634                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug12400341                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug14007109                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug14007649                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug14147491                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug14704286                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug19164038                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug29692250                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug30113362                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug30423                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug30594501                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug30899683                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug31205266                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug33405696                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug33766482                 [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug52663                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug53290                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug53756                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug56143                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bug56947                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bug84958                    [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bulk_create_index           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bulk_create_index_debug     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  3%] innodb.innodb_bulk_create_index_flush     [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_bulk_inject_errors          [ skipped ]  Test needs debug binaries.
+[  3%] innodb.innodb_collation_test              [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_corrupt_bit                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_corrupt_readonly            [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_deadlock_with_autoinc       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_extend_and_initialize_debug  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_file_limit_check            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.innodb_fts_limit_check             [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_idle_flush_pct              [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_init_rseg_parallel          [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_mysql                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.innodb_read_only-1                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.innodb_redo_debug_1                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_redo_debug_2                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_redo_debug_3                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_redo_debug_4                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_redo_debug_5                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_redo_debug_6                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_rename_index_err            [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_row_log_read                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.innodb_stats_del_mark              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.innodb_stats_race_condition        [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_thread_concurrency_debug    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_upd_stats_if_needed_not_inited  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.innodb_ut_format_name              [ skipped ]  Test needs debug binaries.
+[  4%] innodb.insert_debug                       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_add_column_basic           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.instant_add_column_debug           [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_add_column_recovery        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.instant_ddl_basic_debug            [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_import_debug           [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_import_old_debug       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_import_old_part_debug  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_import_partition_debug  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_misc                   [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_recovery_debug         [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_recovery_old_2         [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_rollback_debug         [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_update_debug           [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_upgrade_debug          [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_upgrade_metadata_debug  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_upgrade_part_debug     [ skipped ]  Test needs debug binaries.
+[  4%] innodb.instant_ddl_upgrade_part_metadata_debug  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.iodku_debug                        [ skipped ]  Test needs debug binaries.
+[  4%] innodb.json-read-uncommitted              [ skipped ]  Test needs debug binaries.
+[  4%] innodb.json_small_partial_update_04       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.json_small_partial_update_05       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.json_small_partial_update_06       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.large_partitions_ddl               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.lob-being-modified-bit             [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob-format                         [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob-read-uncommitted               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob-single-zstream                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_big_purge                      [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_double_purge                   [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_ibd_size_replace               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_insert_noindex                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_long_partial_update            [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_no_space                       [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_partial_update                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_partial_update_concurrent      [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_print                          [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_purge                          [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_crash                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_crash_2               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_crash_3               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_crash_4               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_crash_5               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lob_rollback_update                [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lock_contention                    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.lock_contention_big                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.lock_sys_resize                    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_5_7_9_case4                    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_5_7_9_case5                    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_alter_table                    [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_corruption                     [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_corruption_1                   [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_crash                          [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_ddl_must_flush                 [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_deprecated_params_upgrade      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  4%] innodb.log_file_consumer                  [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_file_from_future               [ skipped ]  Test needs debug binaries.
+[  4%] innodb.log_file_invalid_lsn_ranges        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.log_file_missing                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.log_file_name_1                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_name_discover             [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_producer                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_resize_1                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_resize_2                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_size_1                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_truncate_1                [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_file_truncate_2                [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_flush_order                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_invalid_format                 [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_read_only                      [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_upgrade                        [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_writer_extra_margin            [ skipped ]  Test needs debug binaries.
+[  5%] innodb.log_writer_threads                 [ skipped ]  Test needs debug binaries.
+[  5%] innodb.max_trx_id                         [ skipped ]  Test needs debug binaries.
+[  5%] innodb.monitor_restart                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.multi_value_debug                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.mvcc_cache                         [ skipped ]  Test needs debug binaries.
+[  5%] innodb.mysql_ts_alter_encrypt_2           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.nonmonotone_trx_ids                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.open_file_lru                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.page_reorganize                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.parallel_read                      [ skipped ]  Test needs debug binaries.
+[  5%] innodb.parallel_read_kill                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.partition_debug                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8013_debug        [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8015_debug        [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8017_debug        [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_lin_lctn_0_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_lin_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_mac_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_mac_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_win_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_import_8019_win_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_lin_lctn_0_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_lin_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_mac_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_mac_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_win_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_5727_win_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8013_debug       [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8015_debug       [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8017_debug       [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_lin_lctn_0_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_lin_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_mac_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_mac_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_win_lctn_1_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.partition_upgrade_8019_win_lctn_2_debug  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.records_in_range                   [ skipped ]  Test needs debug binaries.
+[  5%] innodb.redo_log_archive_03                [ skipped ]  Test needs debug binaries.
+[  5%] innodb.row_format_redundant               [ skipped ]  Test needs debug binaries.
+[  5%] innodb.sdi_debug                          [ skipped ]  Test needs debug binaries.
+[  5%] innodb.sdi_delete_marked                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.sdi_fail                           [ skipped ]  Test needs debug binaries.
+[  5%] innodb.session_temp_tablespaces           [ skipped ]  Test needs debug binaries.
+[  5%] innodb.shutdown_threads                   [ skipped ]  Test needs debug binaries.
+[  5%] innodb.skip_locked_nowait                 [ skipped ]  Test needs debug binaries.
+[  5%] innodb.sp_temp_table                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.strict_checksum                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_compress                     [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_1                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_4                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_6                    [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_debug                [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_fts                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_kill                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.table_encrypt_portable_32          [ skipped ]  Test needs debug binaries.
+[  5%] innodb.table_encrypt_portable_64          [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_encrypt_10              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_encrypt_11              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_encrypt_2               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_encrypt_3               [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_encrypt_5               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_encrypt_7               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_encrypt_8               [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_encrypt_9               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  5%] innodb.tablespace_remove                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_rename                  [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_temp_table_debug        [ skipped ]  Test needs debug binaries.
+[  5%] innodb.tablespace_truncate_stress_debug   [ skipped ]  Test needs debug binaries.
+[  6%] innodb.temptable_write_row                [ skipped ]  Test needs debug binaries.
+[  6%] innodb.tinytext-groupby                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.too_many_concurrent_trxs           [ skipped ]  Test needs debug binaries.
+[  6%] innodb.transportable_tbsp-debug           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.truncate_debug                     [ skipped ]  Test needs debug binaries.
+[  6%] innodb.undo-order                         [ skipped ]  Test needs debug binaries.
+[  6%] innodb.undo_encrypt_bootstrap             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.undo_encrypt_crash                 [ skipped ]  Test needs debug binaries.
+[  6%] innodb.undo_log_temp_table_debug          [ skipped ]  Test needs debug binaries.
+[  6%] innodb.upgrade_compressed_recv            [ skipped ]  Test needs debug binaries.
+[  6%] innodb.upgrade_fts                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.upgrade_fts_shared_tablespace      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.upgrade_geometry_56                [ skipped ]  Test needs debug binaries.
+[  6%] innodb.upgrade_index_stats                [ skipped ]  Test needs debug binaries.
+[  6%] innodb.upgrade_partition                  [ skipped ]  Test needs debug binaries.
+[  6%] innodb.upgrade_unknown_directory          [ skipped ]  Test needs debug binaries.
+[  6%] innodb.virtual_debug                      [ skipped ]  Test needs debug binaries.
+[  6%] innodb.virtual_debug_purge                [ skipped ]  Test needs debug binaries.
+[  6%] innodb.xa_prepare_lock_release            [ skipped ]  Test needs debug binaries.
+[  6%] innodb.xa_recovery_debug                  [ skipped ]  Test needs debug binaries.
+[  6%] innodb.xdes_fseg_frag                     [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_big_purge                     [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_fragments                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.zlob_ibd_size                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.zlob_ibd_size_replace              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb.zlob_insert_by_update              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_long_partial_update           [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_no_space                      [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_partial_update_concurrent     [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_print                         [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_purge                         [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash                [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash_2              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash_3              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash_4              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash_5              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_crash_6              [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_rollback_update               [ skipped ]  Test needs debug binaries.
+[  6%] innodb.zlob_update_purge                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_fts.bug_32831765                   [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.fulltext_table_evict           [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.index_table                    [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.innobase_drop_fts_index_table  [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.limit_union                    [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.misc_debug                     [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.ngram_debug                    [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.plugin_debug                   [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.result_cache_limit             [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.sync                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_fts.sync_block                     [ skipped ]  Test needs debug binaries.
+[  6%] innodb_fts.tablespace_location_error      [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.bug16266012                    [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.check_rtree                    [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.geometry                       [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.gis_split_inf                  [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.gis_split_nan                  [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.kill_server                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.multi_pk                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.point_big                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rollback                       [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.rtree_compress                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_compress2                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_concurrent_srch          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_concurrent_srch_2        [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.rtree_create_inplace           [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.rtree_debug                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_drop_index               [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.rtree_estimate                 [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.rtree_purge                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_rollback1                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_rollback2                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_split                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.rtree_split_geographic         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_gis.types                          [ skipped ]  Test needs debug binaries.
+[  6%] innodb_gis.update_root                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_undo.trunc_multi_client_01         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_undo.trunc_multi_client_02         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  6%] innodb_undo.truncate                      [ skipped ]  Test needs debug binaries.
+[  6%] innodb_undo.truncate_explicit             [ skipped ]  Test needs debug binaries.
+[  6%] innodb_undo.truncate_recover_01           [ skipped ]  Test needs debug binaries.
+[  6%] innodb_undo.truncate_recover_02           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_03           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_04           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_05           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_06           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_07           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_08           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_09           [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e01          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e02          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e03          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e04          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e05          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e06          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e07          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e08          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.truncate_recover_e09          [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.undo_ddl_recover              [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.undo_tablespace_125           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_undo.undo_tablespace_debug         [ skipped ]  Test needs debug binaries.
+[  7%] innodb_undo.undo_tablespace_encrypt_rotate  [ skipped ]  Test needs debug binaries.
+[  7%] innodb_zip.16k                            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.atomic_truncate_table_scale_1  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.index_level_comp_stat          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.innochecksum_2                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.innochecksum_3                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.large_blob                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] innodb_zip.transportable_tbsp_debug_zip   [ skipped ]  Test needs debug binaries.
+[  7%] innodb_zip.undo_log_tmp_table             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] json.array_index_debug                    [ skipped ]  Test needs debug binaries.
+[  7%] main.all_persisted_variables              [ skipped ]  Test needs debug binaries.
+[  7%] main.alter_debug                          [ skipped ]  Test needs debug binaries.
+[  7%] main.alter_table-big                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.alter_table-big_myisam               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.archive_debug                        [ skipped ]  Test needs debug binaries.
+[  7%] main.bad_alloc                            [ skipped ]  Test needs debug binaries.
+[  7%] main.big_packets                          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.big_packets_async                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.big_packets_boundary                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.big_packets_boundary_async           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.check_constraints_debug              [ skipped ]  Test needs debug binaries.
+[  7%] main.component_debug                      [ skipped ]  Test needs debug binaries.
+[  7%] main.count_distinct3                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.create-big                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.create_select_atomic                 [ skipped ]  Test needs debug binaries.
+[  7%] main.ctype_cp932_binlog_stm               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.ctype_eucjpms                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.ctype_euckr                          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.ctype_gb18030_conversion             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.ctype_like_range                     [ skipped ]  Test needs debug binaries.
+[  7%] main.ctype_ujis                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.ctype_unicode900_casetable           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_bootstrap                         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_bootstrap_debug                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_debug                             [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_debug_lowercase1                  [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_is_debug                          [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_is_debug_myisam                   [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_schema_dd_properties_debug        [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_schema_definition_after_upgrade_57_debug  [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_schema_definition_after_upgrade_80_debug  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_schema_definition_debug           [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_table_access                      [ skipped ]  Test needs debug binaries.
+[  7%] main.dd_upgrade_cs                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_encrypted                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_error_debug               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_lctn_ci_mac               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_lctn_ci_win               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_lctn_cs_lin               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_upgrade_test                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dd_view_columns_debug                [ skipped ]  Test needs debug binaries.
+[  7%] main.default_as_expr_debug                [ skipped ]  Test needs debug binaries.
+[  7%] main.deprecation_56                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.dictionary_tablespace                [ skipped ]  Test needs debug binaries.
+[  7%] main.disable_drop_rename_user             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.drop_debug                           [ skipped ]  Test needs debug binaries.
+[  7%] main.ds_mrr-big                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  7%] main.engine_attribute_debug               [ skipped ]  Test needs debug binaries.
+[  7%] main.eq_range_idx_stat                    [ skipped ]  Test needs debug binaries.
+[  7%] main.error_simulation                     [ skipped ]  Test needs debug binaries.
+[  7%] main.events_bugs_debug                    [ skipped ]  Test needs debug binaries.
+[  7%] main.events_sql_mode                      [ skipped ]  Test needs debug binaries.
+[  7%] main.events_stress                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.events_time_zone                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.explain_dml                          [ skipped ]  Test needs debug binaries.
+[  8%] main.explain_for_connection_small_json    [ skipped ]  Test needs debug binaries.
+[  8%] main.explain_for_connection_small_json_innodb  [ skipped ]  Test needs debug binaries.
+[  8%] main.explain_for_connection_small_trad    [ skipped ]  Test needs debug binaries.
+[  8%] main.explain_other                        [ skipped ]  Test needs debug binaries.
+[  8%] main.filesort_debug                       [ skipped ]  Test needs debug binaries.
+[  8%] main.flush_read_lock_kill                 [ skipped ]  Test needs debug binaries.
+[  8%] main.foreign_key_debug                    [ skipped ]  Test needs debug binaries.
+[  8%] main.foreign_key_debug_myisam             [ skipped ]  Test needs debug binaries.
+[  8%] main.functional_index_debug               [ skipped ]  Test needs debug binaries.
+[  8%] main.get_diagnostics_debug                [ skipped ]  Test needs debug binaries.
+[  8%] main.get_table_share                      [ skipped ]  Test needs debug binaries.
+[  8%] main.gis-debug                            [ skipped ]  Test needs debug binaries.
+[  8%] main.grant_debug                          [ skipped ]  Test needs debug binaries.
+[  8%] main.grant_dynamic_flush_upgrade          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.greedy_optimizer                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.group_min_max_ext-debug              [ skipped ]  Test needs debug binaries.
+[  8%] main.handler_debug                        [ skipped ]  Test needs debug binaries.
+[  8%] main.histograms_debug                     [ skipped ]  Test needs debug binaries.
+[  8%] main.hostname_length                      [ skipped ]  Test needs debug binaries.
+[  8%] main.hostname_length_ipv4                 [ skipped ]  Test needs debug binaries.
+[  8%] main.hostname_length_ipv6                 [ skipped ]  Test needs debug binaries.
+[  8%] main.import_debug                         [ skipped ]  Test needs debug binaries.
+[  8%] main.index_merge_innodb                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.information_schema_keywords          [ skipped ]  Test needs debug binaries.
+[  8%] main.information_schema_statistics        [ skipped ]  Test needs debug binaries.
+[  8%] main.information_schema_stats_expiry_debug  [ skipped ]  Test needs debug binaries.
+[  8%] main.initialize-bug20350099               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize-bug20504142               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize-bug21335821               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize-errors                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize-init-acls                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize-sha256                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.initialize                           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.innodb_explain_json_non_select_all   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.innodb_explain_json_non_select_none  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.innodb_explain_non_select_all        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.innodb_explain_non_select_none       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.innodb_mysql_sync                    [ skipped ]  Test needs debug binaries.
+[  8%] main.innodb_tmp_table_heap_to_disk        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.insert_debug                         [ skipped ]  Test needs debug binaries.
+[  8%] main.ipv6_debug                           [ skipped ]  Test needs debug binaries.
+[  8%] main.kill_debug                           [ skipped ]  Test needs debug binaries.
+[  8%] main.lock_backup_debug                    [ skipped ]  Test needs debug binaries.
+[  8%] main.log_backtrace_debug                  [ skipped ]  Test needs debug binaries.
+[  8%] main.log_buffered-big                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.log_components                       [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_config                [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_eventlog              [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_filter                [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_implicit              [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_split                 [ skipped ]  Test needs debug binaries.
+[  8%] main.log_components_syslog                [ skipped ]  Test needs debug binaries.
+[  8%] main.log_options_cmdline                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.log_tables-big                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.log_tables_debug                     [ skipped ]  Test needs debug binaries.
+[  8%] main.log_timestamp_ts                     [ skipped ]  Test needs debug binaries.
+[  8%] main.lowercase_table4                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.lowercase_utf8                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.lowercase_view                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.max_statement_time                   [ skipped ]  Test needs debug binaries.
+[  8%] main.mdl_tablespace                       [ skipped ]  Test needs debug binaries.
+[  8%] main.mem_cnt_common_debug                 [ skipped ]  Test needs debug binaries.
+[  8%] main.mem_cnt_sql_keys                     [ skipped ]  Test needs debug binaries.
+[  8%] main.mem_cnt_temptable_keys               [ skipped ]  Test needs debug binaries.
+[  8%] main.merge-big                            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.multi_update2                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.myisam_crash_before_flush_keys       [ skipped ]  Test needs debug binaries.
+[  8%] main.myisam_debug                         [ skipped ]  Test needs debug binaries.
+[  8%] main.mysql_57_inplace_upgrade             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysql_80_inplace_upgrade             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysql_client_test_valgrind           [ skipped ]  Test needs debug binaries.
+[  8%] main.mysql_inplace_upgrade                [ skipped ]  Test needs debug binaries.
+[  8%] main.mysql_upgrade                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysql_upgrade_grant                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysql_upgrade_slave_master_info      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysqlbinlog_row_big                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysqlpump                            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysqlpump_filters                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.mysqlpump_multi_thread               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  8%] main.no_binlog_gtid_next_partially_failed_stmts  [ skipped ]  Test needs debug binaries.
+[  9%] main.no_binlog_gtid_next_partially_failed_stmts_anonymous  [ skipped ]  Test needs debug binaries.
+[  9%] main.no_binlog_gtid_next_partially_failed_stmts_error  [ skipped ]  Test needs debug binaries.
+[  9%] main.non_table_atomic_ddl                 [ skipped ]  Test needs debug binaries.
+[  9%] main.opt_costmodel_upgrade                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.outfile_fsync_debug                  [ skipped ]  Test needs debug binaries.
+[  9%] main.packet_big_test                      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.parser-big-32bit                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.parser-big-64bit                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.partition_debug                      [ skipped ]  Test needs debug binaries.
+[  9%] main.partition_debug_sync                 [ skipped ]  Test needs debug binaries.
+[  9%] main.partition_debug_sync_stmt            [ skipped ]  Test needs debug binaries.
+[  9%] main.partition_sync                       [ skipped ]  Test needs debug binaries.
+[  9%] main.per_thread_connection_handler        [ skipped ]  Test needs debug binaries.
+[  9%] main.persisted_variables_bugs_debug       [ skipped ]  Test needs debug binaries.
+[  9%] main.plugin                               [ skipped ]  Test needs debug binaries.
+[  9%] main.plugin_is_dying                      [ skipped ]  Test needs debug binaries.
+[  9%] main.ps_sys_upgrade                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.query_expression_big                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.read_only_ddl                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.rename_debug                         [ skipped ]  Test needs debug binaries.
+[  9%] main.rename_debug_myisam                  [ skipped ]  Test needs debug binaries.
+[  9%] main.reset_connection                     [ skipped ]  Test needs debug binaries.
+[  9%] main.resource_group_debug                 [ skipped ]  Test needs debug binaries.
+[  9%] main.resource_group_thr_prio_unsupported_debug  [ skipped ]  Test needs debug binaries.
+[  9%] main.restart_server_no_acl                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.roles_bugs_debug                     [ skipped ]  Test needs debug binaries.
+[  9%] main.savepoint_debug                      [ skipped ]  Test needs debug binaries.
+[  9%] main.schema_read_only_ci                  [ skipped ]  Test needs debug binaries.
+[  9%] main.schema_read_only_cs                  [ skipped ]  Test needs debug binaries.
+[  9%] main.sensitive_variables_permission       [ skipped ]  Test needs debug binaries.
+[  9%] main.sensitive_variables_persistence_without_keyring  [ skipped ]  Test needs debug binaries.
+[  9%] main.sensitive_variables_rewrite          [ skipped ]  Test needs debug binaries.
+[  9%] main.server_offline_debug                 [ skipped ]  Test needs debug binaries.
+[  9%] main.signal_code                          [ skipped ]  Test needs debug binaries.
+[  9%] main.skip_records_in_range                [ skipped ]  Test needs debug binaries.
+[  9%] main.slow_log_extra-big                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.sp-code                              [ skipped ]  Test needs debug binaries.
+[  9%] main.sp_debug                             [ skipped ]  Test needs debug binaries.
+[  9%] main.ssl-big                              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.ssl_connect                          [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.subplan_tokens                       [ skipped ]  Test needs debug binaries.
+[  9%] main.subselect_debug                      [ skipped ]  Test needs debug binaries.
+[  9%] main.sum_distinct-big                     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.tablespace                           [ skipped ]  Test needs debug binaries.
+[  9%] main.tablespace_myisam                    [ skipped ]  Test needs debug binaries.
+[  9%] main.temp_table_debug                     [ skipped ]  Test needs debug binaries.
+[  9%] main.temptable_basic                      [ skipped ]  Test needs debug binaries.
+[  9%] main.temptable_error_injection            [ skipped ]  Test needs debug binaries.
+[  9%] main.temptable_fallback                   [ skipped ]  Test needs debug binaries.
+[  9%] main.temptable_tests_injection            [ skipped ]  Test needs debug binaries.
+[  9%] main.time_zone_debug                      [ skipped ]  Test needs debug binaries.
+[  9%] main.trigger-compat-debug                 [ skipped ]  Test needs debug binaries.
+[  9%] main.trigger_debug                        [ skipped ]  Test needs debug binaries.
+[  9%] main.trigger_mdl                          [ skipped ]  Test needs debug binaries.
+[  9%] main.type_newdecimal-big                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.upgrade_system_tables                [ skipped ]  Test needs debug binaries.
+[  9%] main.user_account_password_lock_dbug      [ skipped ]  Test needs debug binaries.
+[  9%] main.validate_password_component          [ skipped ]  Test needs debug binaries.
+[  9%] main.validate_password_component_random_password  [ skipped ]  Test needs debug binaries.
+[  9%] main.variables-big                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.variables_debug                      [ skipped ]  Test needs debug binaries.
+[  9%] main.view_debug                           [ skipped ]  Test needs debug binaries.
+[  9%] main.wait_for_disk_space                  [ skipped ]  Test needs debug binaries.
+[  9%] main.window_functions_big                 [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.with_recursive_closure               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[  9%] main.xa_commit_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_failure_before_commit_engines_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_failure_before_commit_tc   [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_failure_before_commit_tc_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_failure_before_gtid_externalization_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_commit_engines_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_commit_tc  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_commit_tc_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_commit_one_phase_failure_before_gtid_externalization_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_debug                             [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_prepare_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_prepare_failure_before_gtid_externalization_mmap  [ skipped ]  Test needs debug binaries.
+[  9%] main.xa_prepare_failure_before_prepare_2nd_phase  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_prepare_failure_before_prepare_2nd_phase_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_prepare_failure_before_prepare_in_engines  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_prepare_failure_before_prepare_in_engines_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_prepare_failure_before_prepare_tc  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_prepare_failure_before_prepare_tc_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_recovery_errors                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] main.xa_recovery_errors_mmap              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] main.xa_rollback_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_rollback_failure_before_gtid_externalization_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_rollback_failure_before_rollback_engines  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_rollback_failure_before_rollback_engines_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_rollback_failure_before_rollback_tc  [ skipped ]  Test needs debug binaries.
+[ 10%] main.xa_rollback_failure_before_rollback_tc_mmap  [ skipped ]  Test needs debug binaries.
+[ 10%] opt_trace.debug                           [ skipped ]  Test needs debug binaries.
+[ 10%] opt_trace.eq_range_statistics             [ skipped ]  Test needs debug binaries.
+[ 10%] parts.part_supported_sql_func_innodb      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter1_1_2_innodb         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter1_1_innodb           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter1_2_innodb           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter2_1_1_innodb         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter2_1_2_innodb         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter2_2_1_innodb         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter2_2_2_innodb         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_alter4_innodb             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.partition_basic_innodb              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] parts.rpl_partition                       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] perfschema.alter_table_progress           [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.connection_type_notwin         [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.connection_type_win            [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.dd_version_check               [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.error_log_debug                [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_again_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_again_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_bad_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_bad_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_good_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_good_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_noname_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_addrinfo_noname_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_auth_plugin     [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_blocked         [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_format          [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_max_con         [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_nameinfo_again_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_nameinfo_again_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_nameinfo_noname_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_nameinfo_noname_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_passwd          [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv4_ssl             [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_again_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_again_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_bad_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_bad_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_good_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_good_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_noname_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_addrinfo_noname_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_auth_plugin     [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_blocked         [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_max_con         [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_nameinfo_again_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_nameinfo_again_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_nameinfo_noname_allow  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_nameinfo_noname_deny  [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_passwd          [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_ipv6_ssl             [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostcache_peer_addr            [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.hostname_length                [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.idx_compare_ees_by_thread_by_error  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] perfschema.idx_compare_metadata_locks     [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.init_pfs_from_dd               [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.mdl_func                       [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.memory_key_descriptions        [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.processlist                    [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.service_pfs_notification       [ skipped ]  Test needs debug binaries.
+[ 10%] perfschema.statement_program_concurrency  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] rpl.rpl_alter_user                        [ skipped ]  Test needs debug binaries.
+[ 10%] rpl.rpl_atomic_ddl                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] rpl.rpl_atomic_ddl_no_binlog              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] rpl.rpl_autoinc_lock_style                [ skipped ]  Test needs debug binaries.
+[ 10%] rpl.rpl_binlog_cache_encryption           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 10%] rpl.rpl_binlog_cache_temp_file_encryption  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_binlog_cache_temp_file_encryption_myisam  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_binlog_errors                     [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_binlog_failed_drop_table          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_binlog_failed_drop_table_myisam   [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_bug26395                          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_bug33931                          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_bug38694                          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_bug41902                          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_change_master_compress            [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_change_master_dbug                [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_check_net_interrupted_error       [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_checksum_undef                    [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_corruption                        [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_crash_safe_master                 [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_crash_safe_master_myisam          [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_create_select_replay              [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_deadlock_globalsystemvariable_channelmap  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_different_index_master_slave      [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_drop_db                           [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_encryption                        [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_encryption_master_key_generation_recovery  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_encryption_master_key_rotation_at_startup  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_error_on_multiple_row_update      [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_extra_row_data                    [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_filter_warnings                   [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_filters_error_cases_on_startup    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_filters_gcov                      [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_functional_index                  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_get_master_version_and_clock      [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_group_commit_deadlock             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_group_commit_deadlock_myisam      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_half_atomic_ddl                   [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_half_atomic_ddl_no_binlog         [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_heartbeat_version                 [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_high_prio_trx_slave               [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_init_replica_errors               [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_innodb_auto_increment             [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_invalid_mem_access_with_rows_query_log_event  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_invisible_indexes_row             [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_io_thd_blocked_show_slave_status  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_io_thd_wait_for_disk_space        [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_killed_ddl                        [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_known_bugs_detection              [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_late_abort                        [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_lock_for_backup_blocks_stop_slave  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_log_info_repository_persistence   [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_log_info_repository_persistence_assign_gtids_to_anonymous_transactions  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_log_info_repository_persistence_require_row  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_log_info_repository_persistence_require_table_primary_key_check  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 11%] rpl.rpl_long_invoker_hostname             [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_lost_events_on_rotate             [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_logical_clock_assertion_failure  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_logical_clock_crash           [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_logical_clock_recovery        [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_logical_clock_timestamping    [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_logical_clock_transaction_retry  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_deadlock  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_deadlock_error  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_drop_database  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_error  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_error_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_trans_DDL_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_wait_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_commit  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_commit_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_commit_one_phase  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_commit_one_phase_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_prepare  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_prepare_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_rollback  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_replica_preserve_commit_order_xa_rollback_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_slave_hang_with_partial_trx   [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_spco_deadlock_hang_on_non_temp_error  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_spco_deadlock_slave_trans_retries_hang  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_spco_xa_prepare_error_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_stop_slave_report_pos         [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_submode_switch_without_reset_slave  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_mts_submode_switch_without_reset_slave_myisam  [ skipped ]  Test needs debug binaries.
+[ 11%] rpl.rpl_multi_valued_index_debug          [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_non_atomic_ddl                    [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_null_pending_rows_event           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_oom_creating_temp_table_for_conversion_error  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_parallel_alter_db_table           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_parallel_seconds_behind_master    [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_partition_info                    [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_partition_info_hash_list          [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_perfschema_log_status_blockage    [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_priv_checks_user_set_inplace_upgrade  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_ps_worker_retry_transaction_mts   [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_ps_worker_retry_transaction_sts   [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_relay_log_locking                 [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_relay_log_space_synchronization   [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_replica_read_lock                 [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_replication_observers_example_before_dml  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_replication_observers_example_plugin_channels_initialization  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_replication_observers_example_plugin_ongoing_transaction  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_rotate_binlog_master_key_errors   [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_crash_safe                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl.rpl_row_hash_scan_sanity              [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_invisible_columns             [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_jsondiff_binarydiff           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_jsondiff_error                [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_mts_rec_crash_safe            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl.rpl_row_slave_skip_error_all          [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_row_stages                        [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_seconds_behind_master             [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_seconds_behind_master_mts         [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_semi_sync_compressed_protocol_connection_drop  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_show_slave_running                [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_show_slave_status_deadlock        [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_simulate_short_heartbeat_period_and_signal_delay  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_skip_incident_error_cross         [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_slave_load_remove_tmpfile         [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_slave_register_coverage           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_sql_delay_old                     [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_sql_thread_error                  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_stm_mixed_crash_safe              [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl.rpl_stm_mixed_mts_rec_crash_safe      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl.rpl_stm_mixed_mts_rec_crash_safe_checksum  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl.rpl_stm_mixed_mts_rec_crash_safe_small  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_stop_slave_blocks_lock_for_backup  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_sync                              [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_temporary_errors                  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_terminology_use_previous          [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_terminology_use_previous_logs     [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_terminology_use_previous_replica_connect  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_transaction_write_set_extraction  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_trx_boundary_parser_warning       [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_unknown_ignorable_event           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_xa_gap_lock                       [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_xa_survive_crash_debug            [ skipped ]  Test needs debug binaries.
+[ 12%] rpl.rpl_zombie_dump_threads               [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_async_conn_failover_udf_register_error  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl_gtid.rpl_check_gtid                   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl_gtid.rpl_gtid_atomic_cross_repl       [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_commit_order_manager_seq_nr_wrap_around  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_create_select           [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_deleted_binlog_fail_to_connect  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_execution               [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_huge_gtid_set           [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl_gtid.rpl_gtid_incident_event_cache_failure  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_mixed_rows_and_stmts_tx_isolation_error  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_mts_relay_log_recovery_auto_pos_on_off  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_parallel                [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl_gtid.rpl_gtid_purged_fail_to_connect  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_purged_maintained       [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 12%] rpl_gtid.rpl_gtid_replay_relaylog         [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_skip_partial_trx        [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_skips_no_sync_source_info  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_spanned_trx             [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_split_statements_debug  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_table_repository_split_trx  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_failure_after_rotate  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_one_phase_failure_before_commit_engines  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_one_phase_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_one_phase_failure_before_prepare_in_engines  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_commit_one_phase_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[ 12%] rpl_gtid.rpl_gtid_xa_multiple_failures    [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_prepare_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_prepare_failure_before_prepare_2nd_phase  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_prepare_failure_before_prepare_in_engines  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_prepare_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_rollback_failure_after_rotate  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_rollback_failure_before_gtid_externalization  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_rollback_failure_before_rollback_engines  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtid_xa_rollback_failure_before_write_binlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtids_restart_slave_io_lost_trx  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtids_table                  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtids_table_disable_binlog_on_slave  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_gtids_table_disable_log_replica_updates  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_log_info_repository_persistence_gtid_only  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_master_errors                [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_execute_partial_trx_with_auto_pos_off  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_execute_partial_trx_with_auto_pos_on  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_execute_partial_trx_with_auto_pos_on_binlogless_slave  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_gtids_restart_slave_io_lost_trx  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_crash_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_empty_gtid_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_nobinlog_filter  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_optimize_table_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_repair_table_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_with_binlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_xa_commit_error  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_xa_commit_error_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_xa_prepare_gtid_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_xa_rollback_error  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_replica_preserve_commit_order_xa_rollback_error_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_acl_commands_binlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_acl_commands_nobinlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_algo_copy_binlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_algo_copy_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_analyze_partition  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_analyze_partition_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_commands_binlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_commands_nobinlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_generated_columns_binlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_alter_table_generated_columns_nobinlog  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_mts_spco_check_worker_states_binlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_check_worker_states_nobinlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_commands_binlog     [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_commands_nobinlog   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_partition_commands_binlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_spco_partition_commands_nobinlog  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_gtid.rpl_mts_until                    [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_partial_gtid_trx_followed_by_anonymous_trx_by_receiver  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_partial_gtid_trx_followed_by_trx_at_startup  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_partial_transaction_timestamps  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_replication_observers_example_is_stopping  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_replication_observers_example_plugin_channels  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_replication_observers_example_plugin_channels_receiver_thread  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_replication_observers_example_plugin_server_requirements  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_rotate_gtid                  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_simulate_create_chunk_failure  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_sync_relay_log_info          [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_sync_relay_log_info_myisam   [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_transaction_before_commit_failure  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_transaction_ctx_service      [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_trx_boundary_parser_row      [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_trx_boundary_parser_row_myisam  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_trx_boundary_parser_stmt     [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_trx_boundary_parser_stmt_myisam  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_gtid.rpl_xa_prepare                   [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_binlog_corruption          [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_binlog_index               [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_nogtid.rpl_bug58546                   [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_checksum                   [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_gtid_mode                  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_load_query_priv_check      [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_loaddata_fatal             [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_mixed_drop_create_temp_table  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_nogtid.rpl_mts_debug                  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_mts_submode_switch         [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_no_gtid_split_statements_debug  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_nogtid_atomic_cross_repl   [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_nogtid_create_select       [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_nogtid_encryption_read     [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_nogtid_rollback_on_anonymous_gtid  [ skipped ]  Test needs debug binaries.
+[ 13%] rpl_nogtid.rpl_non_direct_row_mixing_engines  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 13%] rpl_nogtid.rpl_parallel_switch_sequential  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_rotate_row_trans           [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_row_001                    [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_row_corruption             [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_row_ignorable_event        [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_row_mixing_engines         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_row_mts_crash_safe         [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_row_mysqlbinlog            [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync                  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync_group_commit_deadlock  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync_group_commit_deadlock_ssl  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync_non_group_commit_deadlock  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync_optimize_for_static_plugin_config  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_semi_sync_sender_observe_commit_only  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_set_gtid_mode_on_after_implicit_pre_commit  [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_sql_thread_killed_waiting_commit_lock  [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_stm_mixed_mts_crash_safe   [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] rpl_nogtid.rpl_stm_stop_middle_group      [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_stop_slave                 [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.rpl_write_ignored_events_fail_writing_rotate  [ skipped ]  Test needs debug binaries.
+[ 14%] rpl_nogtid.transactional_ddl_locking      [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] sys_vars.debug_basic                      [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.debug_sensitive_session_string_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_background_drop_list_empty_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_buf_flush_list_now_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_buffer_pool_debug_basic   [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_buffer_pool_evict_basic   [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_change_buffering_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_checkpoint_disabled_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_compress_debug_basic      [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_ddl_log_crash_reset_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_dict_stats_disabled_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_disable_background_merge_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_fil_make_page_dirty_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_force_recovery_crash_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_interpreter_basic         [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_interpreter_output_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_limit_optimistic_insert_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_log_checkpoint_fuzzy_now_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_log_checkpoint_now_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_log_flush_now_basic       [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_master_thread_disabled_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_merge_threshold_set_all_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_page_cleaner_disabled_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_page_hash_locks_basic     [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_print_ddl_logs_basic      [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_purge_run_now_basic       [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_purge_stop_now_basic      [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_saved_page_number_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_semaphore_wait_timeout_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_sync_debug_basic          [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_trx_purge_view_update_only_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.innodb_trx_rseg_n_slots_debug_basic  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.sysvars_with_aliases_32bit_debug  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.sysvars_with_aliases_64bit_debug  [ skipped ]  Test needs debug binaries.
+[ 14%] sys_vars.tmpdir_basic_debug               [ skipped ]  Test needs debug binaries.
+[ 14%] sysschema.v_schema_auto_increment_columns_ci  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] sysschema.v_schema_auto_increment_columns_cs  [ skipped ]  Test needs 'big-test' or 'only-big-test' option.
+[ 14%] binlog_gtid.binlog_xa_select_gtid_executed_explicitly_crash  [ disabled ]   Bug#28588717 Fails both on FreeBSD and other platforms
+[ 14%] binlog_nogtid.binlog_gtid_next_xa         [ disabled ]   BUG#33650776 Failure of XA COMMIT of prepared txn, can result in txn rollback
+[ 14%] component_keyring_file.mysql_ts_alter_encrypt_1  [ disabled ]   BUG#29531106 - ATTACHABLE_TRX(): ASSERTION `!M_THD->TRANSACTION_ROLLBACK_REQUEST' FAILED
+[ 14%] innodb.alter_tablespace_partition         [ disabled ]   WL#12034 Enable again once shared tablespaces are allowed in partitioned table.
+[ 14%] innodb.create_tablespace_partition        [ disabled ]   WL#12034 Enable again once shared tablespaces are allowed in partitioned table.
+[ 14%] innodb.ddl_crash_alter_table_partition_tablespace  [ disabled ]   WL#12034 Enable again once shared tablespaces are allowed in partitioned table.
+[ 14%] innodb.fts_exec_interrupt                 [ disabled ]   Bug#28534199 The test is unstable and should be rewritten
+[ 14%] innodb.innodb_bug14676111                 [ disabled ]   BUG#18200831 The test has never worked correctly
+[ 14%] innodb.instant_ddl_recovery_old           [ disabled ]   WL#12527 Redo format has changed - crashed_datadir.zip needs to be recreated.
+[ 14%] innodb.log_first_rec_group                [ disabled ]   Bug#29692047 Disable for now until we can find a better way to test this.
+[ 14%] innodb.log_logical_size                   [ disabled ]   WL#12527 Test is shaky - needs to be fixed.
+[ 14%] innodb.mysql_ts_alter_encrypt_1           [ disabled ]   BUG#29531106 - ATTACHABLE_TRX(): ASSERTION `!M_THD->TRANSACTION_ROLLBACK_REQUEST' FAILED
+[ 14%] innodb.slow_shutdown                      [ disabled ]   Bug#31763837 mtr hits this debug assert post test run cleanup
+[ 14%] innodb.subpartition                       [ disabled ]   WL#12034 Enable again once shared tablespaces are allowed in partitioned table.
+[ 14%] innodb.truncate                           [ disabled ]   WL#12034 Enable again once shared tablespaces are allowed in partitioned table.
+[ 14%] innodb.upgrade_fts_aux                    [ disabled ]   Bug#33034679 Test needs an upgrade of its 5.7 data files
+[ 14%] main.gtid_next_xa_binlog_off              [ disabled ]   BUG#33650776 Failure of XA COMMIT of prepared txn, can result in txn rollback
+[ 14%] main.internal_tmp_disk_storage_engine     [ disabled ]   BUG#26917416 Disabled it since it's failing on pb2.
+[ 14%] perfschema.idx_compare_events_waits_current  [ disabled ]   BUG#27865960
+[ 14%] perfschema.idx_compare_ews_by_instance    [ disabled ]   BUG#31791537
+[ 14%] perfschema.idx_compare_ews_by_thread_by_event_name  [ disabled ]   BUG#31041671
+[ 14%] perfschema.idx_compare_rwlock_instances   [ disabled ]   BUG#31791537
+[ 14%] perfschema.ssl                            [ disabled ]   BUG#30910698
+[ 14%] perfschema.threads_history                [ disabled ]   BUG#27712231
+[ 14%] rpl.rpl_io_thd_wait_for_disk_space_stress  [ disabled ]   BUG#23581287 Disabled until bug is fixed.
+[ 15%] rpl.rpl_writeset_add_unique_key           [ disabled ]   Bug#33134835 RPL_WRITESET_ADD_UNIQUE_KEY FAILS SPORADICALLY
+[ 15%] rpl_gtid.rpl_gtid_mts_spco_deadlock_other_locks  [ disabled ]   Bug#32499883 RPL_GTID.RPL_GTID_MTS_SPCO_DEADLOCK_OTHER_LOCKS FAILS ON PB2
+[ 15%] rpl_gtid.rpl_gtid_perfschema_applier_xa_status  [ disabled ]   BUG#27914287 Disabled until the WL#9075 (Performance Schema, XA Transactions) be implemented
+[ 15%] rpl_gtid.rpl_gtid_truncate_memory_table_after_start_server  [ disabled ]   BUG#24351040
+[ 15%] rpl_gtid.rpl_start_replica_until_pos_with_gtid_only  [ disabled ]   Bug#33119241 START REPLICA UNTIL SOURCE_LOG_POS SHOULD NOT STOP ON REPLICA EVENTS
+[ 15%] rpl_nogtid.rpl_binlog_format_errors       [ disabled ]   BUG#29776083 EXPLICIT BINLOG INJECTION WITH SELF LOGGING ENGINES IS BROKEN
+[ 15%] rpl_nogtid.rpl_perfschema_applier_xa_status_check  [ disabled ]   BUG#27914287 Disabled until the WL#9075 (Performance Schema, XA Transactions) be implemented
+[ 15%] sys_vars.innodb_log_writer_threads_basic  [ disabled ]   Bug#32129814 SYS_VARS.INNODB_LOG_WRITER_THREADS_BASIC TIMES OUT SPORADICALLY ON PB2
+[ 15%] sysschema.v_wait_classes_global_by_avg_latency  [ disabled ]   BUG#21550054 Test fails too often.
+[ 15%] binlog_gtid.binlog_gtid_myisam 'mix'      [ pass ]    318
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row_myisam 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_mts_logical_clock_gtid_myisam 'mix'  [ pass ]    146
+[ 15%] binlog_gtid.binlog_gtid_exhausted 'mix'   [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_automatic_using_rolled_back 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_compress_at_server_start 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_implicit_commit 'mix'  [ pass ]   2457
+[ 15%] binlog_gtid.binlog_gtid_innodb 'mix'      [ pass ]    569
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row_innodb 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_start_stop 'mix'  [ pass ]   5356
+[ 15%] binlog_gtid.binlog_gtid_mysqldump 'mix'   [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_mysqlpump 'mix'   [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_next_begin_caused_trx 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_next_partially_failed_grant 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_next_partially_failed_stmts 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_not_yet_determined_reacquire 'mix'  [ pass ]     85
+[ 15%] binlog_gtid.binlog_gtid_rbr_only_flag 'mix'  [ pass ]    534
+[ 15%] binlog_gtid.binlog_gtid_row_ctype_ucs 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_select_taking_write_locks 'mix'  [ pass ]    504
+[ 15%] binlog_gtid.binlog_gtid_show_binlog_events 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_stm_ctype_ucs 'mix'  [ pass ]    394
+[ 15%] binlog_gtid.binlog_gtid_unknown_xid 'mix'  [ pass ]    169
+[ 15%] binlog_gtid.binlog_gtid_utils 'mix'       [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_mts_logical_clock_gtid 'mix'  [ pass ]    789
+[ 15%] binlog_gtid.binlog_mysqlbinlog_concat 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_shutdown_hang 'mix'    [ pass ]   4260
+[ 15%] binlog_gtid.binlog_use_gtid_skip 'mix'    [ pass ]    177
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_interrupted 'mix'  [ pass ]    190
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_invalid_input 'mix'  [ pass ]    441
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_unsafe_statement 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_xa_empty_rollback 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_xa_modify_gtid_executed_explicitly 'mix'  [ skipped ]  Doesn't support --binlog-format = 'mixed'
+[ 15%] binlog_gtid.binlog_gtid_myisam 'row'      [ pass ]    330
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row_myisam 'row'  [ pass ]   6485
+[ 15%] binlog_gtid.binlog_mts_logical_clock_gtid_myisam 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_exhausted 'row'   [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_automatic_using_rolled_back 'row'  [ pass ]    153
+[ 15%] binlog_gtid.binlog_gtid_compress_at_server_start 'row'  [ pass ]   3572
+[ 15%] binlog_gtid.binlog_gtid_implicit_commit 'row'  [ pass ]   2598
+[ 15%] binlog_gtid.binlog_gtid_innodb 'row'      [ pass ]    578
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row 'row'  [ pass ]  26291
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row_innodb 'row'  [ pass ]   6906
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_start_stop 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_mysqldump 'row'   [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_mysqlpump 'row'   [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_next_begin_caused_trx 'row'  [ pass ]    147
+[ 15%] binlog_gtid.binlog_gtid_next_partially_failed_grant 'row'  [ pass ]    342
+[ 15%] binlog_gtid.binlog_gtid_next_partially_failed_stmts 'row'  [ pass ]    767
+[ 15%] binlog_gtid.binlog_gtid_not_yet_determined_reacquire 'row'  [ pass ]    149
+[ 15%] binlog_gtid.binlog_gtid_rbr_only_flag 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_row_ctype_ucs 'row'  [ pass ]    390
+[ 15%] binlog_gtid.binlog_gtid_select_taking_write_locks 'row'  [ pass ]    438
+[ 15%] binlog_gtid.binlog_gtid_show_binlog_events 'row'  [ pass ]    121
+[ 15%] binlog_gtid.binlog_gtid_stm_ctype_ucs 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_gtid_unknown_xid 'row'  [ pass ]    327
+[ 15%] binlog_gtid.binlog_gtid_utils 'row'       [ pass ]    629
+[ 15%] binlog_gtid.binlog_mts_logical_clock_gtid 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_mysqlbinlog_concat 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_shutdown_hang 'row'    [ pass ]   4372
+[ 15%] binlog_gtid.binlog_use_gtid_skip 'row'    [ pass ]    191
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_interrupted 'row'  [ pass ]    254
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_invalid_input 'row'  [ pass ]    454
+[ 15%] binlog_gtid.binlog_wait_for_executed_gtid_set_unsafe_statement 'row'  [ skipped ]  Doesn't support --binlog-format = 'row'
+[ 15%] binlog_gtid.binlog_xa_empty_rollback 'row'  [ pass ]    285
+[ 15%] binlog_gtid.binlog_xa_modify_gtid_executed_explicitly 'row'  [ pass ]    213
+[ 15%] binlog_gtid.binlog_gtid_myisam 'stmt'     [ pass ]    508
+[ 15%] binlog_gtid.binlog_gtid_mysqlbinlog_row_myisam 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 15%] binlog_gtid.binlog_mts_logical_clock_gtid_myisam 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 15%] binlog_gtid.binlog_gtid_exhausted 'stmt'  [ pass ]  17382
+[ 15%] binlog_gtid.binlog_gtid_automatic_using_rolled_back 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 15%] binlog_gtid.binlog_gtid_compress_at_server_start 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 15%] binlog_gtid.binlog_gtid_implicit_commit 'stmt'  [ pass ]   2341
+[ 16%] binlog_gtid.binlog_gtid_innodb 'stmt'     [ pass ]    781
+[ 16%] binlog_gtid.binlog_gtid_mysqlbinlog_row 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_mysqlbinlog_row_innodb 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_mysqlbinlog_start_stop 'stmt'  [ pass ]   5366
+[ 16%] binlog_gtid.binlog_gtid_mysqldump 'stmt'  [ pass ]   7160
+[ 16%] binlog_gtid.binlog_gtid_mysqlpump 'stmt'  [ pass ]   6915
+[ 16%] binlog_gtid.binlog_gtid_next_begin_caused_trx 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_next_partially_failed_grant 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_next_partially_failed_stmts 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_not_yet_determined_reacquire 'stmt'  [ pass ]    109
+[ 16%] binlog_gtid.binlog_gtid_rbr_only_flag 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_row_ctype_ucs 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_select_taking_write_locks 'stmt'  [ pass ]    341
+[ 16%] binlog_gtid.binlog_gtid_show_binlog_events 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_gtid_stm_ctype_ucs 'stmt'  [ pass ]    362
+[ 16%] binlog_gtid.binlog_gtid_unknown_xid 'stmt'  [ pass ]    330
+[ 16%] binlog_gtid.binlog_gtid_utils 'stmt'      [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_mts_logical_clock_gtid 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_mysqlbinlog_concat 'stmt'  [ pass ]  10807
+[ 16%] binlog_gtid.binlog_shutdown_hang 'stmt'   [ pass ]   3761
+[ 16%] binlog_gtid.binlog_use_gtid_skip 'stmt'   [ pass ]    298
+[ 16%] binlog_gtid.binlog_wait_for_executed_gtid_set_interrupted 'stmt'  [ pass ]    124
+[ 16%] binlog_gtid.binlog_wait_for_executed_gtid_set_invalid_input 'stmt'  [ pass ]    439
+[ 16%] binlog_gtid.binlog_wait_for_executed_gtid_set_unsafe_statement 'stmt'  [ pass ]    228
+[ 16%] binlog_gtid.binlog_xa_empty_rollback 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] binlog_gtid.binlog_xa_modify_gtid_executed_explicitly 'stmt'  [ skipped ]  Doesn't support --binlog-format = 'statement'
+[ 16%] clone.remote_basic_replace                [ fail ]
+        Test ended at 2022-11-24 19:14:51
+
+CURRENT_TEST: clone.remote_basic_replace
+mysqltest: At line 54: Server failed to restart
+In included file ./include/wait_until_connected_again.inc: 57
+included from /usr/lib/mysql-test/suite/clone/include/clone_connection_begin.inc: 107
+included from /usr/lib/mysql-test/suite/clone/t/local_basic.test: 5
+included from /usr/lib/mysql-test/suite/clone/t/remote_basic_replace.test: 24
+
+The result from queries just before the failure was:
+Install clone plugin on recipient server
+INSTALL PLUGIN clone SONAME 'CLONE_PLUGIN';
+safe_process[5711]: Child process: 5712, exit: 1
+
+ - the logfile can be found in '/usr/lib/mysql-test/var/log/clone.remote_basic_replace/remote_basic_replace.log'
+
+
+Only  1332  of 8156 completed.
+mysql-test-run: *** ERROR: Not all tests completed: clone.remote_dml_recovery clone.remote_dml_replace clone.remote_dml_upgrade federated.federated_plugin federated.federated federated.federated_archive federated.federated_bug_13118 federated.federated_bug_25714 federated.federated_bug_35333 federated.federated_connection_attrs federated.federated_innodb federated.federated_server federated.percona_bug1739734 perfschema.cnf_option rpl.rpl_plugin_load rpl.rpl_plugin_load rpl.rpl_plugin_load rpl.rpl_key_rotation rpl.rpl_key_rotation rpl.rpl_key_rotation rpl.rpl_encryption_max_binlog_size rpl.rpl_default_table_encryption rpl.rpl_encryption_max_binlog_size rpl.rpl_default_table_encryption rpl.rpl_encryption_max_binlog_size rpl.rpl_default_table_encryption rpl.rpl_mix_or_row_secondary_engine_load rpl.rpl_stmt_secondary_engine_load rpl.rpl_mix_or_row_secondary_engine_load rpl.rpl_stmt_secondary_engine_load rpl.rpl_mix_or_row_secondary_engine_load rpl.rpl_stmt_secondary_engine_load rpl.rpl_grant_plugin rpl.rpl_master_connection rpl.rpl_grant_plugin rpl.rpl_master_connection rpl.rpl_grant_plugin rpl.rpl_master_connection rpl.rpl_replication_observers_example_plugin rpl.rpl_replication_observers_example_plugin_server_startup_win rpl.rpl_replication_observers_example_plugin_server_startup rpl.rpl_replication_observers_example_plugin_io rpl.rpl_replication_observers_example_plugin rpl.rpl_replication_observers_example_plugin_server_startup_win rpl.rpl_replication_observers_example_plugin_server_startup rpl.rpl_replication_observers_example_plugin_io rpl.rpl_replication_observers_example_plugin rpl.rpl_replication_observers_example_plugin_server_startup_win rpl.rpl_replication_observers_example_plugin_server_startup rpl.rpl_replication_observers_example_plugin_io ... and 6774 more
+root@NICONICONI:/usr/lib/mysql-test#
