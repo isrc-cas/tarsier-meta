@@ -2,7 +2,7 @@ from distutils.dist import Distribution
 import pandas
 import yaml
 
-Distribution = ["开发板名称","QEMU","全志哪吒 D1","赛昉 VisionFive","HiFive Unleashed","HiFive Unmatched","PolarFire SoC Icicle Kit"]
+Distribution = ["开发板名称","QEMU","全志哪吒 D1","赛昉 VisionFive 1","赛昉 VisionFive 2","HiFive Unleashed","HiFive Unmatched","PolarFire SoC Icicle Kit"]
 with open("../table/hardware.yaml", 'r', encoding='utf-8') as stream:
     try:
         parsed_yaml = yaml.safe_load(stream)
