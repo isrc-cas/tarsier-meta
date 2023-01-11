@@ -139,7 +139,7 @@ web:
     Debian: ✅ 3.0.5
     OpenBSD: ⚠️
     openEuler: ✅ openssl-1.1.1f
-    openKylin: ✅ openssl-1.1.1f
+    openKylin: ✅ openssl-1.1.1f-ok3
     Deepin: openssl/-3.0.2-1
   tensorflow:
     openEuler: ⚠️
