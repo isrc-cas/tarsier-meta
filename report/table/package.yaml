@@ -10,7 +10,7 @@ DB:
     Gentoo: ✅ mysql-8.0.27
     openKylin: ⚠️ mysql-8.0.28
     openSUSE: ⚠️
-    Ubuntu: mysql-server-8.0.30
+    Ubuntu: ✅mysql-server-8.0.30/✅mariadb-server-10.6
     OpenBSD: ⚠️
     FreeBSD: ✅ mariadb-10.5.13
     openEuler: ✅ mariadb-10.5.16

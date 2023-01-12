@@ -3,6 +3,7 @@ openEuler:
   全志哪吒 D1: True
   赛昉 VisionFive 1: True
   HiFive Unmatched: True
+  Lichee RV Dock: True
 Arch Linux:
   QEMU: True
   全志哪吒 D1: True
@@ -23,6 +24,7 @@ Debian:
   HiFive Unleashed: True
   HiFive Unmatched: True
   PolarFire SoC Icicle Kit: True
+  Lichee RV Dock: True
 openSUSE:
   QEMU: True
   全志哪吒 D1: True
@@ -41,6 +43,7 @@ Ubuntu:
   全志哪吒 D1: True
   赛昉 VisionFive 1: True
   HiFive Unmatched: True
+  Lichee RV Dock: True
 FreeBSD:
   QEMU: True
   全志哪吒 D1: False
@@ -53,4 +56,5 @@ Anolis:
 openKylin:
   赛昉 VisionFive 1: True
   HiFive Unmatched: True
+  平头哥 曳影1520: True
 Alpine: {}
