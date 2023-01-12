@@ -1,4 +1,9 @@
-# RISC-V Linux 观测内容
+# 此表格目前不再更新 仅用作存档
+# 请移步 https://github.com/isrc-cas/tarsier-meta/blob/main/report/info.md
+
+
+
+## RISC-V Linux 观测内容
 
 ## 流行 Linux 发行版 for RISC-V 的镜像仓库 , 软件包仓库, Wiki 支持页等讯息
 
