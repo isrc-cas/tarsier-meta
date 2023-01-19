@@ -384,7 +384,7 @@ web:
     openKylin: ⚠️ openjdk-8
     openSUSE: ✅ openjdk-1.8/11/17/18
     Ubuntu: ✅ OpenJDK-19
-    openEuler: ✅ openjdk-19
+    openEuler: ✅ openjdk-11
     Deepin: ✅ openjdk-17-jdk-17.0.1+12-1
   perl:
     Alpine: ✅ perl-5.36.0
