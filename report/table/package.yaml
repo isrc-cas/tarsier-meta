@@ -150,12 +150,12 @@ web:
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅
-    openEuler: ⚠️
+    openEuler: ✅ libreoffice-1:7.3.5.2-2.oe2209.riscv64
   Thunderbird:
     Arch Linux: thunderbird-91.12.0-1
     Debian: ⚠️
     Gentoo: ✅ thunderbird-94.0-beta1
-    openEuler: ⚠️
+    openEuler: ✅ thunderbird-97.0-1.oe2209.riscv64
 图像浏览编辑:
   GIMP:
     Arch Linux: gimp-2.10.32-2
@@ -246,7 +246,7 @@ web:
     Debian: ✅ xfce4-4.16
     Gentoo: ✅ xfce4-meta-4.16
     OpenBSD: ⚠️
-    openEuler: ⚠️
+    openEuler: ✅ xfce4
 浏览器:
   chromium:
     Arch Linux: chromium-104.0.5112.101-1
@@ -254,14 +254,14 @@ web:
     Debian: ⚠️
     FreeBSD: ✅
     Gentoo: ✅ chromium-98.0.4750.0
-    openEuler: ⚠️
+    openEuler: ✅ chromium-103.0.5060.114-1.oe2209.riscv64
   firefox:
     Arch Linux: ✅ firefox-105.0.3-1
     Anolis: ✅
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅ firefox-103.0.1
-    openEuler: ⚠️
+    openEuler: ✅ firefox-97.0.1-1.oe2209.riscv64
 编译器工具链:
   clang:
     Alpine: ✅ clang-14.0.6
@@ -373,19 +373,19 @@ web:
     openSUSE: ✅ golang-1.19
     Ubuntu: ✅ golang-go-1.18
     openEuler: ✅ golang-1.17.3
-    Deepin: ✔️ golang-1.17~1
+    Deepin: ✅ golang-1.17~1
   openJDK:
     Anolis: ✅ openjdk-11 (bisheng & dragonwell & OpenJDK)
-    Arch Linux: jdk-openjdk-19.0.1.u10-3
+    Arch Linux: ✅ openjdk-19.0.1.u10-3
     Debian: ✅ openjdk-19
     Fedora: ✅ openjdk-11
     FreeBSD: ⚠️
     Gentoo: ✅ openjdk-17.0.5
     openKylin: ⚠️ openjdk-8
     openSUSE: ✅ openjdk-1.8/11/17/18
-    Ubuntu: ✅ OpenJDK-18.0.2
-    openEuler: ✅ openjdk-11
-    Deepin: ✔️ openjdk-17-jdk-17.0.1+12-1
+    Ubuntu: ✅ OpenJDK-19
+    openEuler: ✅ openjdk-19
+    Deepin: ✅ openjdk-17-jdk-17.0.1+12-1
   perl:
     Alpine: ✅ perl-5.36.0
     Anolis: ⚠️ perl-5.34.0
@@ -398,7 +398,7 @@ web:
     Ubuntu: ✅ perl-5.34.0
     OpenBSD: ⚠️
     openEuler: ✅ perl-5.34.0
-    Deepin: ✔️ perl-5.34.0-5
+    Deepin: ✅ perl-5.34.0-5
   python:
     Alpine: ✅ python-3.10.7
     Anolis: ✅ python-3.10.2
@@ -412,7 +412,7 @@ web:
     Ubuntu: ✅ python3-3.10.6
     OpenBSD: ✅python-3.10.7
     openEuler: ⚠️
-    Deepin: ✔️ python3-3.10.4-2
+    Deepin: ✅ python3-3.10.4-2
   ruby:
     Alpine: ✅ ruby-3.1.2
     Arch Linux: ✅ ruby-3.0.4-18.2
@@ -423,7 +423,7 @@ web:
     Ubuntu: ✅ ruby3.0-3.0.2
     OpenBSD: ⚠️
     openEuler: ✅ ruby-3.0.3
-    Deepin: ✔️ ruby-3.0+1
+    Deepin: ✅ ruby-3.0+1
   rust:
     Anolis: ✅ rust-1.58.1
     Arch Linux: ✅ rust-1:1.64.0-1
