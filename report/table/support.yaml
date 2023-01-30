@@ -5,7 +5,10 @@ openEuler:
   support: [RISC-V SIG](https://gitee.com/openEuler/RISC-V)
 Arch Linux:
   mirror: [开发者仓库](https://archriscv.felixc.at/)
-Gentoo: {}
+Gentoo: 
+  mirror: [Gentoo 仓库](https://gentoo.osuosl.org//releases/riscv/autobuilds/)
+  wiki: [wiki](https://wiki.gentoo.org/wiki/Project:RISC-V)  
+  support: [support](https://wiki.gentoo.org/wiki/Project:RISC-V)
 Debian:
   mirror: [DQIB](https://gitlab.com/api/v4/projects/giomasce%2Fdqib/jobs/artifacts/master/download?job=convert_riscv64-virt)
   package: [Debian-Port](http://ftp.ports.debian.org/debian-ports/pool-riscv64/)
@@ -14,7 +17,6 @@ openSUSE:
   wiki: [SUSE Wiki](https://en.opensuse.org/Category:RISC-V)
 Fedora: 
   mirror: [freebsdImage]: https://download.freebsd.org/ftp/snapshots/VM-IMAGES/14.0-CURRENT/riscv64/Latest/
-  package: 
   wiki: [freebsdwiki]: https://wiki.freebsd.org/riscv
 Ubuntu:
   mirror: [Server Image](https://cdimage.ubuntu.com/releases/)
@@ -25,7 +27,9 @@ FreeBSD:
   package: [bsdpkgs](https://cdn.openbsd.org/pub/OpenBSD/7.1/packages/riscv64/)
   wiki: [bsddoc](https://www.openbsd.org/riscv64.html)
 Deepin: {}
-Anolis: {}
+Anolis: 
+  mirror: [Image](https://mirrors.openanolis.cn/alt/risc-v/images/)
+  package: [Package](http://build.openanolis.cn/kojifiles/rsync/alt/risc-v/)
 openKylin: 
   mirror: [openkylinlzuImage](https://mirror.lzu.edu.cn/openkylin-cdimage/)
   package: [openkylin](http://archive.build.openkylin.top/openkylin)
