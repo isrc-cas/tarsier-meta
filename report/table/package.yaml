@@ -31,7 +31,6 @@ DB:
     Debian: ✅ sqlite-2.8.17
     Gentoo: ✅ sqlite-3.40.1
     openKylin: ✅ sqlite-3.31.1
-    openSUSE: ✅ sqlite-3.39.3
     openSUSE: ✅ sqlite-3.40.1
     Ubuntu: ✅ sqlite3-3.39.3-1
     OpenBSD: ✅ sqlite3-3.39.3
@@ -42,7 +41,6 @@ http/web 服务器:
     Arch Linux: ✅ apache-2.4.54-2
     Debian: ✅ apache-2.4.54
     Gentoo: ✅ apache-2.4.54-r8
-    openSUSE: ✅ apache-22.4.54
     openSUSE: ✅ apache2-2.4.54
     Ubuntu: ✅ apache2-2.4.54-2ubuntu1
     openEuler: ⚠️
@@ -55,7 +53,6 @@ http/web 服务器:
   Lighttpd:
     Debian: ✅ lighttpd-1.4.67
     Gentoo: ✅ lighttpd-1.4.67
-    openSUSE: ✅ lighttpd-1.4.66
     openSUSE: ✅ lighttpd-1.4.68
     Ubuntu: ✅ lighttpd-1.4.65-2ubuntu1
     OpenBSD: ⚠️
@@ -65,7 +62,6 @@ http/web 服务器:
     Arch Linux: ✅ nginx-1.22.1-1
     Debian: ✅ nginx-1.22.0
     Fedora: ✅ nginx-1.23.1
-    openSUSE: ✅ nginx-1.23.1
     openSUSE: ✅ nginx-1.23.3
     Ubuntu: ✅ nginx-1.22.0-1ubuntu1
     OpenBSD: ⚠️
@@ -118,7 +114,6 @@ web:
     Arch Linux: redis-7.0.5-1
     Debian: ✅ redis-7.0.5
     Gentoo: ✅ redis-7.0.8
-    openSUSE: ✅ redis-7.0.5
     openSUSE: ✅ redis-7.0.8
     FreeBSD: ✅ redis-6.2.6
     OpenBSD: ⚠️
@@ -316,7 +311,6 @@ web:
     FreeBSD: ✅ cmake-3.21.4
     Gentoo: ✅ cmake-3.25.2
     openKylin: ✅ cmake-3.16.3
-    openSUSE: ✅ cmake-3.24.2
     openSUSE: ✅ cmake-3.25.2
     Ubuntu:  ✅ cmake-3.24.2-1ubuntu1
     OpenBSD: ⚠️
@@ -359,7 +353,6 @@ web:
     FreeBSD: ✅ llvm-9.0.1
     Gentoo: ✅ llvm-15.0.7
     openKylin: ✅ llvm-10.0.0
-    openSUSE: ✅ llvm-14.0.6
     openSUSE: ✅ llvm-14.0.6/15
     Ubuntu: ✅ llvm-15.0-55.1ubuntu1
     OpenBSD: ⚠️
@@ -417,7 +410,6 @@ web:
     FreeBSD: ⚠️
     Gentoo: ✅ openjdk-17.0.6_p10
     openKylin: ⚠️ openjdk-8
-    openSUSE: ✅ openjdk-1.8/11/17/18
     openSUSE: ✅ openjdk-1.8/19
     Ubuntu: ✅ OpenJDK-19
     openEuler: ✅ openjdk-11
@@ -444,7 +436,6 @@ web:
     FreeBSD: ✅python-3.8.12
     Gentoo: ✅ python-3.12.0_alpha4-r1
     openKylin: ✅ python-3.8
-    openSUSE: ✅ python-3.10.7
     openSUSE: ✅ python-3.11
     Ubuntu: ✅ python3-3.10.6
     OpenBSD: ✅python-3.10.7

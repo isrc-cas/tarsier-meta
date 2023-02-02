@@ -15,6 +15,7 @@ Debian:
   wiki: [Debian Wiki](https://wiki.debian.org/RISC-V)
 openSUSE: 
   wiki: [SUSE Wiki](https://en.opensuse.org/Category:RISC-V)
+  package: [Build SUSE](https://build.opensuse.org/project/show/openSUSE:Factory:RISCV)
 Fedora: 
   mirror: [freebsdImage]: https://download.freebsd.org/ftp/snapshots/VM-IMAGES/14.0-CURRENT/riscv64/Latest/
   wiki: [freebsdwiki]: https://wiki.freebsd.org/riscv
