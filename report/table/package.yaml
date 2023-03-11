@@ -378,7 +378,7 @@ web:
     Ubuntu: ✅ llvm-15.0-55.1ubuntu1
     OpenBSD: ⚠️
     openEuler: ⚠️
-    Deepin: ✔️ llvm-14-1:14.0.6-2
+    Deepin: ✅ llvm-14_14.0.6-2
 语言:
   Nodejs:
     Alpine: ✅ nodejs-16.17.0
@@ -488,7 +488,7 @@ web:
     openSUSE: ✅ rust-1.63.0
     Ubuntu: ✅ rust-1.59.0
     openEuler: ⚠️
-    Deepin: ⚠️
+    Deepin: ✅ rust-1.61
     OpenBSD: ⚠️
 IDE:
   eclipse:
