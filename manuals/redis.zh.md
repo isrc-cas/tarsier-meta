@@ -2,17 +2,7 @@
 
 ## 安装
 
-```
 
-apt install redis
-
-redis-server --version
-
-echo 'redis_enable="YES"' >> /etc/rc.conf
-
-service redis start
-
-```
 
 ## 测试
 
