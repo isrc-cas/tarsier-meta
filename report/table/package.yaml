@@ -14,7 +14,7 @@ DB:
     OpenBSD: ⚠️
     FreeBSD: ✅ mariadb-10.5.13
     openEuler: ✅ mariadb-10.5.16
-    Deepin: ✅ mysql-server-8.0.29-1
+    Deepin: ✅ mysql-server-8.0.29-1/✅mariadb-server-10.6
     Fedora: ✅ mariadb-10.4.13-2.0
   postgresql:
     Arch Linux: ✅ postgresql-15.1-1
@@ -37,7 +37,7 @@ DB:
     Ubuntu: ✅ sqlite3-3.39.3-1
     OpenBSD: ✅ sqlite3-3.39.3
     openEuler: ✅ sqlite-3.36.0
-    Deepin: sqlite3-3.36.0-2
+    Deepin: ✅ sqlite3-3.36.0-2
     Fedora: ✅ sqlite-3.39.2-2.0
 http/web 服务器:
   Apache2:
@@ -47,7 +47,7 @@ http/web 服务器:
     openSUSE: ✅ apache2-2.4.54
     Ubuntu: ✅ apache2-2.4.54-2ubuntu1
     openEuler: ⚠️
-    Deepin: apache2-2.4.51-2
+    Deepin: ✅ apache2-2.4.51-2
   HAProxy:
     Ubuntu: ✅ haproxy-2.4.18-1ubuntu1
     Arch Linux: ✅ haproxy-2.7.2-1
@@ -182,6 +182,7 @@ web:
     FreeBSD: ⚠️
     Gentoo: ✅
     openEuler: ✅ libreoffice-1:7.3.5.2-2
+    deepin: ✅ libreoffice-core-1:7.4.1~rc2-3+0u1 
   Thunderbird:
     Arch Linux: ✅ thunderbird-102.7.1-1
     Debian: ⚠️
@@ -197,6 +198,7 @@ web:
     openEuler: ✅ gimp-2.99.6-3
     openSUSE: ✅ gimp-2.10.32
     Fedora: ✅ gimp-2.10.24-1
+    deepin: ✅ gimp-2.10.32
 多媒体播放器:
   VLC:
     Arch Linux: ✅ vlc-3.0.18-6
@@ -206,11 +208,13 @@ web:
     OpenBSD: ⚠️
     openEuler: ✅ vlc-3.0.17.4-2
     openSUSE: ✅ vlc-3.0.18
+    deepin: ✅ vlc-3.0.17
   MPV:
     Arch Linux: ✅ mpv-1:0.35.0-4
     Ubuntu: ✅ mpv-0.34.1-1ubuntu5
     openEuler: ✅ mpv-0.32.0-2
     Gentoo: ✅ mpv-0.35.1
+    deepin: ✅ mpv-0.34.1
 大数据:
   HBase:
     openEuler: ⚠️
@@ -226,7 +230,7 @@ web:
     Gentoo: ✅ docker-20.10.22
     openKylin: ✅ docker.io-19.03.8
     openSUSE: ✅ docker-20.10.17
-    Ubuntu: ⚠️ 非官方支持
+    Ubuntu: ⚠️ 
     openEuler: ✅ docker-18.09.0
     Deepin: ⚠️
     FreeBSD: ⚠️
@@ -250,6 +254,7 @@ web:
   Deepin:
     Gentoo: ✅ dde-meta-20.0
     openEuler: ✅ dde-desktop-5.2.39-5
+    deepin: ✅ dde-2022.03.29+deepin+0u2
   Enlightenment:
     Debian: ✅ enlightenment-0.25.4
     Arch Linux: ✅ enlightenment-0.25.4-1
@@ -302,6 +307,7 @@ web:
     FreeBSD: ✅
     Gentoo: ✅ chromium-98.0.4750.0
     openEuler: ✅ chromium-103.0.5060.114-1
+    deepin: ✅ chromium-104.0.5112.101-1+deepin+0u1
   firefox:
     Arch Linux: ✅ firefox-108.0.2-1
     Anolis: ✅
@@ -309,6 +315,7 @@ web:
     FreeBSD: ⚠️
     Gentoo: ✅ firefox-103.0.1
     openEuler: ✅ firefox-97.0.1-1
+    deepin: ✅ firefox-105.0.1-1+deepin+0u2
 编译器工具链:
   clang:
     Alpine: ✅ clang-14.0.6
