@@ -10,11 +10,11 @@ DB:
     Gentoo: ✅ mysql-8.0.32-r1/mariadb-10.6.11
     openKylin: ⚠️ mysql-8.0.28
     openSUSE: ⚠️
-    Ubuntu: ✅mysql-server-8.0.32/✅mariadb-server-10.6.9-1
+    Ubuntu: ✅mysql-server-8.0.32/✅ mariadb-server-10.6.9-1
     OpenBSD: ⚠️
     FreeBSD: ✅ mariadb-10.5.13
-    openEuler: ✅ mariadb-10.5.16
-    Deepin: ✅ mysql-server-8.0.29-1/✅mariadb-server-10.6
+    openEuler: ✅ mariadb-10.5.16-3/✅ mysql-8.0.30-2
+    Deepin: ✅ mysql-server-8.0.29-1/✅ mariadb-server-10.6
     Fedora: ✅ mariadb-10.4.13-2.0
   postgresql:
     Arch Linux: ✅ postgresql-15.1-1
@@ -36,7 +36,7 @@ DB:
     openSUSE: ✅ sqlite-3.40.1
     Ubuntu: ✅ sqlite3-3.39.3-1
     OpenBSD: ✅ sqlite3-3.39.3
-    openEuler: ✅ sqlite-3.36.0
+    openEuler: ✅ sqlite-3.37.2-5
     Deepin: ✅ sqlite3-3.36.0-2
     Fedora: ✅ sqlite-3.39.2-2.0
 http/web 服务器:
@@ -62,7 +62,7 @@ http/web 服务器:
     openSUSE: ✅ lighttpd-1.4.68
     Ubuntu: ✅ lighttpd-1.4.65-2ubuntu1
     OpenBSD: ⚠️
-    openEuler: ✅ lighttpd-1.4.53
+    openEuler: ✅ lighttpd-1.4.67
     Deepin: ⚠️
     Fedora: ✅ lighttpd-1.4.55-4
   Nginx:
@@ -72,7 +72,7 @@ http/web 服务器:
     openSUSE: ✅ nginx-1.23.3
     Ubuntu: ✅ nginx-1.22.0-1ubuntu1
     OpenBSD: ⚠️
-    openEuler: ✅ nginx-1.21.5
+    openEuler: ✅ nginx-1.23.2-2
     Deepin: ⚠️
     FreeBSD: ✅ nginx-1.20.2
     Gentoo: ✅ nginx-1.23.3
@@ -166,7 +166,7 @@ web:
     Arch Linux: ✅ openssl-3.0.7-2.1
     Debian: ✅ 3.0.5
     OpenBSD: ⚠️
-    openEuler: ✅ openssl-1.1.1m
+    openEuler: ✅ openssl-1:3.0.8-3
     openKylin: ✅ openssl-1.1.1f-ok3
     Deepin: openssl/-3.0.2-1
     Ubuntu: ✅ libssl3-3.0.5-2ubuntu2
@@ -181,7 +181,7 @@ web:
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅
-    openEuler: ✅ libreoffice-1:7.3.5.2-2
+    openEuler: ✅ libreoffice-1:7.5.2.1-1
     Deepin: ✅ libreoffice-core-1:7.4.1~rc2-3+0u1 
   Thunderbird:
     Arch Linux: ✅ thunderbird-102.7.1-1
