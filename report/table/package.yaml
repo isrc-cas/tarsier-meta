@@ -167,7 +167,7 @@ web:
     Debian: ✅ 3.0.5
     OpenBSD: ⚠️
     openEuler: ✅ openssl-1:3.0.8-3
-    openKylin: ✅ openssl-1.1.1f-ok3
+    openKylin: ✅ openssl-3.0.8-ok3
     Deepin: openssl/-3.0.2-1
     Ubuntu: ✅ libssl3-3.0.5-2ubuntu2
     Gentoo: ✅ openssl-3.0.7-r2
@@ -338,7 +338,7 @@ web:
     Fedora: ✅ cmake-3.18.4-2.0
     FreeBSD: ✅ cmake-3.21.4
     Gentoo: ✅ cmake-3.25.2
-    openKylin: ✅ cmake-3.16.3
+    openKylin: ✅ cmake-3.25.1-ok2
     openSUSE: ✅ cmake-3.25.2
     Ubuntu:  ✅ cmake-3.24.2-1ubuntu1
     OpenBSD: ⚠️
@@ -352,7 +352,7 @@ web:
     Fedora: ✅ gcc-12.1.1-4.1
     FreeBSD: ✅gcc-9.3.0
     Gentoo: ✅ gcc-12.2.1_p20230121-r1
-    openKylin: ✅ gcc-10
+    openKylin: ✅ gcc-9.3.0-ok7
     openSUSE: ✅ gcc-12.2.1
     OpenBSD: ⚠️
     openEuler: ✅ gcc-10.3.0
