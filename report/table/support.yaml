@@ -28,7 +28,8 @@ FreeBSD:
   package: [bsdpkgs](https://cdn.openbsd.org/pub/OpenBSD/7.1/packages/riscv64/)
   wiki: [bsddoc](https://www.openbsd.org/riscv64.html)
 Deepin: 
-  package: [Package](https://ci.deepin.com/repo/deepin/deepin-ports/deepin-stage1/)
+  package: [ISCAS Package](https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1)
+  mirror: [deepincd](https://cdimage.deepin.com/RISC-V/)
 Anolis: 
   mirror: [Image](https://mirrors.openanolis.cn/alt/risc-v/images/)
   package: [Package](http://build.openanolis.cn/kojifiles/rsync/alt/risc-v/)
