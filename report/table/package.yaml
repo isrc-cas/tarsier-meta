@@ -21,7 +21,7 @@ DB:
     Debian: ✅ postgresql-14.5
     Gentoo: ✅ postgresql-15.1
     openKylin: ✅ postgresql-12.2
-    openSUSE: ✅ postgresql-15.2
+    openSUSE: ✅ postgresql-15.3
     Ubuntu: ✅ postgresql-14.5-1ubuntu1
     OpenBSD: ⚠️
     openEuler: ✅ postgresql-13.3-6
@@ -33,7 +33,7 @@ DB:
     Debian: ✅ sqlite-2.8.17
     Gentoo: ✅ sqlite-3.40.1
     openKylin: ✅ sqlite-3.31.1
-    openSUSE: ✅ sqlite-3.41.1
+    openSUSE: ✅ sqlite-3.42.0
     Ubuntu: ✅ sqlite3-3.39.3-1
     OpenBSD: ✅ sqlite3-3.39.3
     openEuler: ✅ sqlite-3.37.2-5
@@ -55,12 +55,12 @@ http/web 服务器:
     openEuler: ✅ haproxy-2.2.16
     Deepin: ⚠️
     Fedora: ✅ haproxy-1.8.19-1
-    openSUSE: ✅ haproxy-1.6.0
+    openSUSE: ✅ haproxy-2.7.8
   Lighttpd:
     Debian: ✅ lighttpd-1.4.67
     Arch Linux: ✅ lighttpd-1.4.68-1
     Gentoo: ✅ lighttpd-1.4.67
-    openSUSE: ✅ lighttpd-1.4.69
+    openSUSE: ✅ lighttpd-1.4.70
     Ubuntu: ✅ lighttpd-1.4.65-2ubuntu1
     OpenBSD: ⚠️
     openEuler: ✅ lighttpd-1.4.67
@@ -81,7 +81,7 @@ http/web 服务器:
     Debian: ✅ squid-5.6
     Arch Linux: ✅ squid-5.7-4
     Gentoo: ✅ squid-5.4.1
-    openSUSE: ✅ squid-5.8
+    openSUSE: ✅ squid-5.9
     Ubuntu: ✅ squid-5.6-1ubuntu3
     OpenBSD: ⚠️
     openEuler: ✅ squid-4.9
@@ -107,7 +107,7 @@ web:
     Deepin: ✅ python3-flask-2.0.1-2
     Ubuntu: ✅ python3-flask-2.0.3-1ubuntu1
     Gentoo: ✅ python-flask-2.2.2
-    openSUSE: ✅ python-flask-2.2.2
+    openSUSE: ✅ python-flask-2.2.5
     Fedora: ✅ python3-flask-1.1.2-4
 中间件:
   Dubbo:
