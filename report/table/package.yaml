@@ -48,6 +48,7 @@ http/web 服务器:
     Ubuntu: ✅ apache2-2.4.54-2ubuntu1
     openEuler: ⚠️
     Deepin: ✅ apache2-2.4.51-2
+    openKylin: ✅ apache2_2.4.54-ok4
   HAProxy:
     Ubuntu: ✅ haproxy-2.4.18-1ubuntu1
     Arch Linux: ✅ haproxy-2.7.2-1
@@ -217,6 +218,7 @@ web:
     openEuler: ✅ mpv-0.32.0-2
     Gentoo: ✅ mpv-0.35.1
     Deepin: ✅ mpv-0.34.1
+    openKylin: ✅ mpv_0.32.0.4kylin6k12-ok1
 大数据:
   HBase:
     openEuler: ⚠️
@@ -444,7 +446,7 @@ web:
     Fedora: ✅ openjdk-11
     FreeBSD: ⚠️
     Gentoo: ✅ openjdk-17.0.6_p10
-    openKylin: ⚠️ openjdk-8
+    openKylin: ⚠️ openjdk-8/⚠️ openjdk-19-jdk_19+36-ok1
     openSUSE: ✅ openjdk-1.8/19
     Ubuntu: ✅ OpenJDK-19
     openEuler: ✅ openjdk-11
