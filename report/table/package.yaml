@@ -21,10 +21,10 @@ DB:
     Debian: ✅ postgresql-14.5
     Gentoo: ✅ postgresql-15.1
     openKylin: ✅ postgresql-12.2
-    openSUSE: ✅ postgresql-15.2
+    openSUSE: ✅ postgresql-15.3
     Ubuntu: ✅ postgresql-14.5-1ubuntu1
     OpenBSD: ⚠️
-    openEuler: ✅ postgresql-13.3-6
+    openEuler: ✅ postgresql-13.3-7
     Deepin: ✅ postgresql-14-14.1-1
     Fedora: ✅ postgresql-12.2-2.0
   sqlite:
@@ -33,7 +33,7 @@ DB:
     Debian: ✅ sqlite-2.8.17
     Gentoo: ✅ sqlite-3.40.1
     openKylin: ✅ sqlite-3.31.1
-    openSUSE: ✅ sqlite-3.41.1
+    openSUSE: ✅ sqlite-3.42.0
     Ubuntu: ✅ sqlite3-3.39.3-1
     OpenBSD: ✅ sqlite3-3.39.3
     openEuler: ✅ sqlite-3.37.2-5
@@ -48,22 +48,23 @@ http/web 服务器:
     Ubuntu: ✅ apache2-2.4.54-2ubuntu1
     openEuler: ⚠️
     Deepin: ✅ apache2-2.4.51-2
+    openKylin: ✅ apache2_2.4.54-ok4
   HAProxy:
     Ubuntu: ✅ haproxy-2.4.18-1ubuntu1
     Arch Linux: ✅ haproxy-2.7.2-1
     OpenBSD: ⚠️
-    openEuler: ✅ haproxy-2.2.16
+    openEuler: ✅ haproxy-2.6.6-2.oe2303
     Deepin: ⚠️
     Fedora: ✅ haproxy-1.8.19-1
-    openSUSE: ✅ haproxy-1.6.0
+    openSUSE: ✅ haproxy-2.7.8
   Lighttpd:
     Debian: ✅ lighttpd-1.4.67
     Arch Linux: ✅ lighttpd-1.4.68-1
     Gentoo: ✅ lighttpd-1.4.67
-    openSUSE: ✅ lighttpd-1.4.69
+    openSUSE: ✅ lighttpd-1.4.70
     Ubuntu: ✅ lighttpd-1.4.65-2ubuntu1
     OpenBSD: ⚠️
-    openEuler: ✅ lighttpd-1.4.67
+    openEuler: ✅ lighttpd-1.4.67-2.oe2303
     Deepin: ⚠️
     Fedora: ✅ lighttpd-1.4.55-4
   Nginx:
@@ -81,10 +82,10 @@ http/web 服务器:
     Debian: ✅ squid-5.6
     Arch Linux: ✅ squid-5.7-4
     Gentoo: ✅ squid-5.4.1
-    openSUSE: ✅ squid-5.8
+    openSUSE: ✅ squid-5.9
     Ubuntu: ✅ squid-5.6-1ubuntu3
     OpenBSD: ⚠️
-    openEuler: ✅ squid-4.9
+    openEuler: ✅ squid-5.7-1.oe2303
     Deepin: ⚠️
   Tengine:
     Debian: ⚠️
@@ -95,7 +96,7 @@ http/web 服务器:
     Arch Linux: ✅ varnish-7.2.1-1
     Ubuntu: ✅ varnish-6.6.1-1ubuntu0.2
     OpenBSD: ⚠️
-    openEuler: ✅ varnish-7.0.1-3
+    openEuler: ✅ varnish-7.0.1-5
     Deepin: ⚠️
     Gentoo: ✅ varnish-7.1.2-r1
     openSUSE: ✅ varnish-7.2.1
@@ -103,11 +104,11 @@ http/web 服务器:
 web:
   flask:
     Arch Linux: ✅ python-flask-2.2.2-1
-    openEuler: ✅ python-flask-1.1.2
+    openEuler: ✅ python-flask-2.1.2-3.oe2303
     Deepin: ✅ python3-flask-2.0.1-2
     Ubuntu: ✅ python3-flask-2.0.3-1ubuntu1
     Gentoo: ✅ python-flask-2.2.2
-    openSUSE: ✅ python-flask-2.2.2
+    openSUSE: ✅ python-flask-2.2.5
     Fedora: ✅ python3-flask-1.1.2-4
 中间件:
   Dubbo:
@@ -118,7 +119,7 @@ web:
     Gentoo: ✅ memcached-1.6.18
     Ubuntu: ✅ memcached-1.6.14-1
     OpenBSD: ⚠️
-    openEuler: ✅ memcached-1.6.12
+    openEuler: ✅ memcached-1.6.12-2.oe2303
     Deepin: ✅ memcached-1.6.12
     openSUSE: ✅ memcached-1.6.19
     Arch Linux: ✅ memcached-1.6.17-1
@@ -131,7 +132,7 @@ web:
     openSUSE: ✅ redis-7.0.11
     FreeBSD: ✅ redis-6.2.6
     OpenBSD: ⚠️
-    openEuler: ✅ redis-6.0.11
+    openEuler: ✅ redis-4.0.14-4.oe2303
     Deepin: ✅ redis-server-5:6.0.16-1
     Ubuntu: ✅ redis-5:7.0.4-1
     Fedora: ✅ redis-4.0.9-1.0
@@ -143,7 +144,7 @@ web:
     Debian: ✅ numpy-1:1.21.5
     Gentoo: ✅ numpy-1.24.0
     OpenBSD: ✅ py3-numpy-1.23.2
-    openEuler: ✅ numpy-1.21.4
+    openEuler: ✅ python3-numpy-1.21.4-6.oe2303
     Deepin: ✅ python3-numpy-1:1.21.5-1
     Ubuntu: ✅ python3-numpy-1:1.21.5-1build2
     openSUSE: ✅ numpy-1.24.2
@@ -182,7 +183,7 @@ web:
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅
-    openEuler: ✅ libreoffice-1:7.5.2.1-1
+    openEuler: ✅ libreoffice-7.5.2.1-1.oe2303.oe2303
     Deepin: ✅ libreoffice-core-1:7.4.1~rc2-3+0u1 
     openSUSE: ✅ libreoffice-7.5.2.2
   Thunderbird:
@@ -217,6 +218,7 @@ web:
     openEuler: ✅ mpv-0.32.0-2
     Gentoo: ✅ mpv-0.35.1
     Deepin: ✅ mpv-0.34.1
+    openKylin: ✅ mpv_0.32.0.4kylin6k12-ok1
 大数据:
   HBase:
     openEuler: ⚠️
@@ -233,7 +235,7 @@ web:
     openKylin: ✅ docker.io-19.03.8
     openSUSE: ✅ docker-20.10.17
     Ubuntu: ⚠️ 
-    openEuler: ✅ docker-18.09.0
+    openEuler: ✅ docker-18.09.0-320.oe2303
     Deepin: ⚠️
     FreeBSD: ⚠️
   runc:
@@ -318,7 +320,7 @@ web:
     Debian: ⚠️
     FreeBSD: ⚠️
     Gentoo: ✅ firefox-103.0.1
-    openEuler: ✅ firefox-97.0.1-1
+    openEuler: ✅ firefox-108.0.1-2.oe2303
     Deepin: ✅ firefox-105.0.1-1+Deepin+0u2
     openSUSE: ✅ firefox-112.0.1
 编译器工具链:
@@ -444,7 +446,7 @@ web:
     Fedora: ✅ openjdk-11
     FreeBSD: ⚠️
     Gentoo: ✅ openjdk-17.0.6_p10
-    openKylin: ⚠️ openjdk-8
+    openKylin: ⚠️ openjdk-8/⚠️ openjdk-19-jdk_19+36-ok1
     openSUSE: ✅ openjdk-1.8/19
     Ubuntu: ✅ OpenJDK-19
     openEuler: ✅ openjdk-11

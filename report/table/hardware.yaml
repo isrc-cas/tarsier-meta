@@ -4,6 +4,8 @@ openEuler:
   赛昉 VisionFive 1: True
   HiFive Unmatched: True
   Lichee RV Dock: True
+  平头哥 曳影1520: True
+  算能 SG2042: True
 Arch Linux:
   QEMU: True
   全志哪吒 D1: True
