@@ -8,11 +8,8 @@
 
 硬件环境：visionfive v1
 
-系统：oe2209.riscv64
+系统：oe2303.riscv64
 
-openjdk version "11.0.11" 2021-04-20
-OpenJDK Runtime Environment Bisheng (build 11.0.11+9)
-OpenJDK 64-Bit Server VM Bisheng (build 11.0.11+9, mixed mode, sharing)
 
 
 ### 手动功能性测试
