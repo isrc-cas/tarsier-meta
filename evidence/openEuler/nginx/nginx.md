@@ -8,8 +8,9 @@
 
 硬件环境：Visionfive v1
 
-系统：oe2203.riscv64 (6.1.0-0.rc3.8.oe2203.riscv64)
+系统：oe2303.riscv64
 
+nginx version: nginx/1.23.2
 
 
 ## 安装并启动
